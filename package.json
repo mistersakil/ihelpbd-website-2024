@@ -1,0 +1,33 @@
+{
+  "name": "call-center-solution-using-html-css-js-by-octapia",
+  "version": "1.0.0",
+  "description": "Call center solution using html,css,js by Octapia under MIT licence",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["web design", "responsive web design", "image optimization","minify css", "minify js"],
+  "author": "Sakil Jomadder <mister.sakil.cse@gmail.com> (https://www.facebook.com/octapia.com.bd)",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "browser-sync": "^2.27.5",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-changed": "^4.0.3",
+    "gulp-clean": "^0.4.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^9.0.0",
+    "sass": "^1.37.5"
+  }
+}
