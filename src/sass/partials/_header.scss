@@ -1,0 +1,236 @@
+.header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  border-bottom-right-radius: 35%;
+  border-bottom-left-radius: 10%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* .logo */
+  .logo {
+    width: 25rem;
+    height: 25rem;
+    clip-path: circle(25rem at 8% -40%);
+    display: flex;
+    align-items: self-start;
+    justify-content: flex-start;
+    z-index: 10;
+    position: relative;
+    background: var(--bgLight);
+    .link {
+      padding: 4rem 0 0 2rem;
+      width: 65%;
+      display: flex;
+      align-items: center;
+      gap: 0 0.5rem;
+      font-size: 2rem;
+      color: var(--colorGrey);
+      font-weight: 700;
+      text-decoration: none;
+      span {
+        width: 5rem;
+        height: 5rem;
+        line-height: 5rem;
+        border-radius: 5rem;
+        background: var(--bgSecondary);
+        color: var(--colorSecondary);
+        display: inline-block;
+        text-align: center;
+        text-transform: initial;
+        font-size: 4rem;
+        font-weight: 400;
+      }
+      @include _xSmallScreen {
+        padding: 1rem 0 0 1rem;
+        width: 60%;
+      }
+    }
+    @include _xSmallScreen {
+      width: 20rem;
+      height: 20rem;
+      clip-path: circle(20rem at 0% -45%);
+    }
+  }
+
+  /* .navbar */
+  .navbar {
+    position: relative;
+    z-index: 87;
+    display: flex;
+    align-items: center;
+    gap: 1rem 4rem;
+    height: 6rem;
+    padding: 1rem 5rem 0 0;
+    .link {
+      color: var(--colorSecondary);
+      text-decoration: none;
+      font-size: 1.6rem;
+      transition: all 0.2s linear;
+      &:hover {
+        color: var(--colorBrand);
+        text-decoration: underline;
+        text-underline-offset: 0.5rem;
+      }
+    }
+    .close {
+      font-size: 2rem;
+      color: var(--colorBrand);
+      display: none;
+    }
+    @include _smallScreen {
+      position: absolute;
+      height: 100%;
+      width: 40vw;
+      right: 0;
+      background: var(--bgSecondary);
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 2rem 0;
+      padding: 2rem;
+      z-index: 1000;
+      clip-path: inset(0 0 0 100%);
+      &.active {
+        clip-path: inset(0);
+        .link {
+          color: var(--colorSecondary);
+        }
+        .close {
+          display: inline-block;
+          position: absolute;
+          right: 2rem;
+          top: 2rem;
+          color: var(--colorSecondary);
+        }
+      }
+    }
+    @include _xSmallScreen {
+      width: 50vw;
+    }
+    @include _xxSmallScreen {
+      width: 100vw;
+    }
+  }
+  /* .bars */
+
+  .bars {
+    padding: 1rem;
+    color: var(--colorSecondary);
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 5rem;
+    height: 5rem;
+    align-items: center;
+    justify-content: center;
+    .icon {
+      font-size: 2rem;
+      cursor: pointer;
+    }
+    @include _smallScreen {
+      display: flex;
+    }
+  }
+
+  /* .banner */
+  .banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    .img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: left;
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+      border-bottom-right-radius: 35%;
+      border-bottom-left-radius: 10%;
+      @include _mediumScreen {
+        object-position: center;
+      }
+      @include _smallScreen {
+        object-position: left;
+      }
+    }
+  }
+
+  /* .jumbotron */
+  .jumbotron {
+    width: 32%;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--colorSecondary);
+    .title {
+      font-size: 4rem;
+      @include _smallScreen {
+        font-size: 3rem;
+        text-shadow: 0 0 10px var(--bgSecondary);
+      }
+      @include _xSmallScreen {
+        font-size: 2rem;
+        font-weight: 900;
+      }
+    }
+    .content {
+      font-size: 1.4rem;
+      padding: 3rem 0;
+      line-height: 2rem;
+      @include _smallScreen {
+        text-shadow: 0 0 10px var(--bgSecondary);
+      }
+    }
+    @include _largeScreen {
+      width: 50%;
+    }
+    @include _mediumScreen {
+      width: 65%;
+    }
+    @include _smallScreen {
+      width: 70%;
+    }
+    @include _xSmallScreen {
+      width: 90%;
+    }
+  }
+  /* .social */
+  .social {
+    width: 5rem;
+    height: 20rem;
+    position: absolute;
+    top: 20%;
+    right: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    .link {
+      width: 3rem;
+      height: 3rem;
+      background: var(--bgLight);
+      color: var(--colorGrey);
+      text-align: center;
+      line-height: 3rem;
+      border-radius: 50%;
+      font-size: 1.8rem;
+      transition: all 0.2s linear;
+      &:hover {
+        background: var(--bgPrimary);
+        color: var(--colorSecondary);
+      }
+    }
+    @include _smallScreen {
+      top: 10%;
+      right: 1rem;
+      height: 15rem;
+    }
+  }
+}

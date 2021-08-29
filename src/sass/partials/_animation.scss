@@ -1,0 +1,38 @@
+@keyframes btnBlink {
+  0% {
+    transform: translateY(0rem);
+  }
+  50% {
+    transform: translateY(0.5rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+
+@keyframes imgZoom {
+  0% {
+    transform: scale(1) rotate(0deg);
+    backface-visibility: hidden;
+  }
+  50% {
+    transform: scale(1.5) rotate(20deg);
+    backface-visibility: hidden;
+  }
+  100% {
+    backface-visibility: hidden;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes blinkLeftRight {
+  0% {
+    transform: translateX(-0.5rem);
+  }
+  50% {
+    transform: translateX(0.5rem);
+  }
+  100% {
+    transform: translateX(-0.5rem);
+  }
+}

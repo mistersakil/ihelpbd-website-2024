@@ -1,0 +1,133 @@
+.clients {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bgSecondary);
+  color: var(--colorSecondary);
+  clip-path: polygon(0% 15%, 100% 0%, 100% 95%, 0% 100%);
+  @include _padding($top: 12rem);
+  .title {
+    font-size: 4rem;
+    @include _xxSmallScreen {
+      font-size: 3rem;
+    }
+  }
+  .subTitle {
+    font-size: 1.6rem;
+    color: var(--colorBrand);
+  }
+  /* .main */
+  .main {
+    position: relative;
+    width: 100%;
+    /* .filter */
+    .filter {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      margin: 4rem 0 5rem 0;
+
+      .filterBtn {
+        padding: 1rem 2rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+        background-color: var(--bgSecondary);
+        color: var(--bgLight);
+        text-decoration: none;
+        outline: none;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 0.1rem 0.1rem var(--bgLight);
+        cursor: pointer;
+        &:hover {
+          background-color: var(--bgLight);
+          color: var(--colorPrimary);
+        }
+        @include _xSmallScreen {
+          padding: 0.2rem 0.5rem;
+        }
+      }
+      @include _xSmallScreen {
+        gap: 1rem;
+        margin: 1rem 0 2rem 0;
+      }
+    }
+    /* .filter end */
+    /* .content */
+    .content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 0.3rem 1rem;
+      /* .img */
+      .box {
+        width: calc((100% - 7rem) / 8);
+        height: 6rem;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        border-radius: 1rem;
+        .boxTitle {
+          position: absolute;
+          display: flex;
+          left: 0;
+          top: 0;
+          z-index: 10;
+          color: var(--colorSecondary);
+          background: var(--bgSecondary);
+          width: 100%;
+          height: 100%;
+          align-items: center;
+          justify-content: center;
+          opacity: 0.8;
+          font-size: 1.6rem;
+          font-weight: 500;
+          text-align: center;
+          clip-path: inset(0 100% 0 0);
+        }
+        .img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          object-position: center;
+          border-radius: 2rem;
+        }
+        &:hover {
+          .boxTitle {
+            clip-path: inset(0);
+          }
+        }
+        &.hidden {
+          display: none;
+        }
+        @include _mediumScreen {
+          width: calc((100% - 4rem) / 5);
+        }
+        @include _smallScreen {
+          width: calc((100% - 3rem) / 4);
+        }
+
+        @include _xxSmallScreen {
+          width: calc((100% - 1rem) / 2);
+        }
+      }
+    }
+    /* .content end */
+  }
+
+  /* .main end */
+  @include _largeScreen {
+    @include _padding($top: 14rem);
+  }
+  @include _xSmallScreen {
+    @include _padding($left: 0.5rem, $right: 0.5rem, $top: 2rem);
+    clip-path: unset;
+  }
+}
+/* .client end */

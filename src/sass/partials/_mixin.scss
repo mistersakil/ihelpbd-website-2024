@@ -1,0 +1,42 @@
+$largeScreen: 1200px;
+$mediumScreen: 992px;
+$smallScreen: 768px;
+$xSmallScreen: 576px;
+$xxSmallScreen: 350px;
+/* Large 993px to 1200px */
+@mixin _largeScreen {
+  @media screen and (max-width: $largeScreen) {
+    @content;
+  }
+}
+/* Medium 769px to 992px */
+@mixin _mediumScreen {
+  @media screen and (max-width: $mediumScreen) {
+    @content;
+  }
+}
+
+/* Small 577px to 768px */
+@mixin _smallScreen {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+/* Small 351px to 576px */
+@mixin _xSmallScreen {
+  @media screen and (max-width: $xSmallScreen) {
+    @content;
+  }
+}
+
+/* Small 0 to 350px */
+@mixin _xxSmallScreen {
+  @media screen and (max-width: $xxSmallScreen) {
+    @content;
+  }
+}
+
+@mixin _padding($top: 5rem, $right: 10%, $bottom: 5rem, $left: 10%) {
+  padding: $top $right $bottom $left;
+}

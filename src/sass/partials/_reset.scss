@@ -1,0 +1,51 @@
+@font-face {
+  font-family: Oswald;
+  src: url(../webfonts/Oswald-Light.ttf);
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../webfonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: Poppins;
+  src: url(../webfonts/Poppins-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s linear;
+  text-transform: capitalize;
+}
+:root {
+  --bgPrimary: rgb(236, 39, 36);
+  --bgSecondary: rgb(126, 69, 211);
+  --bgLight: rgb(255, 255, 255);
+  --bgGrey: rgb(100, 100, 100);
+  --bgGreyLight: rgb(220, 220, 220);
+  --colorPrimary: rgb(30, 30, 30);
+  --colorSecondary: rgb(255, 255, 255);
+  --colorGrey: rgb(100, 100, 100);
+  --colorBrand: rgb(231, 124, 241);
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-size: 1.6rem;
+  color: var(--colorPrimary);
+  min-height: 150vh;
+  font-family: "Oswald", "Roboto", "Poppins", Arial, Helvetica, sans-serif;
+  background: var(--bgLight);
+}
+.dark {
+  --bgLight: rgb(20, 20, 20);
+  --bgPrimary: rgb(255, 255, 255);
+  --colorPrimary: rgb(255, 255, 255);
+  --colorGrey: rgb(255, 255, 255);
+  --colorSecondary: rgb(20, 20, 20);
+  --colorBrand: rgb(20, 20, 20);
+}
+p {
+  font-family: "Roboto", "Poppins", sans-serif;
+}

@@ -1,0 +1,125 @@
+.product {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 100%;
+  height: 70vh;
+  gap: 3rem;
+  z-index: 10;
+  overflow: hidden;
+  margin-bottom: 5rem;
+  @include _padding;
+  /* .figure */
+  .figure {
+    width: 50%;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+    transform: translateX(150%);
+    transition: all 1s ease-in;
+    overflow: hidden;
+    border-radius: 1rem;
+    animation: btnBlink 3s linear infinite;
+    .img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 1rem solid var(--bgSecondary);
+      padding: 1rem;
+    }
+    &.active {
+      transform: translate(0%);
+    }
+    @include _smallScreen {
+      width: 100%;
+    }
+  }
+  /* .figure end */
+  /* .main */
+  .main {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transform: translateX(-150%);
+    transition: all 1s ease-in;
+    overflow: hidden;
+    border-radius: 1rem;
+    .circle {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: var(--bgSecondary);
+      z-index: -1;
+      clip-path: circle(90% at 0% 50%);
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: red;
+        clip-path: inset(100% 100% 0% 0%);
+        transition: 0.5s;
+      }
+      @include _mediumScreen {
+        clip-path: unset;
+      }
+    }
+
+    .content {
+      width: 70%;
+      text-align: center;
+      color: var(--colorSecondary);
+      position: absolute;
+      left: 1rem;
+      .title {
+        font-size: 3rem;
+        padding-right: 1rem;
+        @include _mediumScreen {
+          font-size: 2.4rem;
+        }
+      }
+      .info {
+        padding: 2rem 1rem 0 0;
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+      }
+      @include _mediumScreen {
+        width: 100%;
+        left: 0;
+        right: 0;
+        padding: 1rem;
+      }
+    }
+
+    &.active {
+      transform: translateX(0%);
+    }
+    &:hover {
+      .circle::after {
+        clip-path: inset(0);
+      }
+    }
+    @include _smallScreen {
+      width: 100%;
+    }
+  }
+  /* .main end */
+  @include _smallScreen {
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100vh;
+    padding-top: 1rem;
+  }
+  @include _xxSmallScreen {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,43 @@
+.btn {
+  background: var(--bgLight);
+  border: none;
+  outline: none;
+  padding: 1.5rem 3rem;
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(74, 72, 72);
+  border-radius: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: capitalize;
+  z-index: 10;
+  transition: all 0.3s linear;
+  overflow: hidden;
+  position: relative;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--bgPrimary);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  clip-path: inset(0% 0% 100% 0%);
+  transition: all 0.3s linear;
+}
+.btn:hover {
+  color: var(--bgLight);
+}
+.btn:hover::after {
+  clip-path: inset(0%);
+}
+.btnAnimate {
+  @extend .btn;
+  animation: btnBlink 2s linear infinite;
+}
+
+.textShadow {
+  text-shadow: 0 0 10px var(--bgSecondary);
+}
