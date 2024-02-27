@@ -9,6 +9,8 @@
   z-index: 10;
   overflow: hidden;
   margin-bottom: 5rem;
+  background-color: rgba(109, 106, 106,0.6);
+  backdrop-filter: blur(10px);
   @include _padding;
   /* .figure */
   .figure {
