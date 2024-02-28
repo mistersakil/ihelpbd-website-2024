@@ -10,6 +10,10 @@
   font-family: Poppins;
   src: url(../webfonts/Poppins-Regular.ttf);
 }
+@font-face {
+  font-family: HKGrotesk;
+  src: url(../webfonts/hk-grotesk.light-legacy.ttf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -49,5 +53,5 @@ body {
   --colorBrand: rgb(20, 20, 20);
 }
 p {
-  font-family: "Roboto", "Poppins", sans-serif;
+  font-family: "HKGrotesk","Roboto", "Poppins", sans-serif;
 }
