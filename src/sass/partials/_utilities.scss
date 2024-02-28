@@ -3,7 +3,8 @@
     top: 0;
     left: 0;
     right: 0;
-    background-color: var(--bgLight);
+    background-color: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     justify-content: end;
@@ -18,13 +19,14 @@
 
 .logo_scroll{
     width: 30rem !important;
-    background-color: #000 !important;
+    background-color: #fff !important;
     position: fixed !important;
+    padding-top: 10px;
     top: 0;
     left: 0;
-    z-index: 12000;
+    z-index: 12000 !important;
     clip-path: polygon(100% 0, 0 0, 50% 100%) !important;
-    height: 9rem !important;
+    height: 10rem !important;
 
     .link{
         width: 60% !important;
@@ -36,4 +38,15 @@
         font-size: 1.75rem !important;
         color: var(--colorLight) !important;
     }
+}
+
+
+.hidden{
+    width: 100%;
+    opacity: 0 !important;
+    z-index: -10 !important;
+}
+.shown{
+    opacity: 1 !important;
+    z-index: 10 !important;
 }

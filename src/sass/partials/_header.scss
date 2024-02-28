@@ -24,39 +24,53 @@ body{
   z-index: 10000;
   
   background-color: rgba(109, 106, 106,0.95);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  border-bottom: 1px solid rgba(0,0,0,0.25);
   /* .logo */
   .logo {
     width: 25rem;
     height: 25rem;
     clip-path: circle(25rem at 8% -40%);
-    display: flex;
-    align-items: self-start;
-    justify-content: flex-start;
-    position: relative;
     background: var(--bgLight);
+    z-index: 10000;
+    padding: 3rem 0 0 3rem;
+    transition: all 300ms ease-in;
     .link {
-      padding: 4rem 0 0 2rem;
-      width: 65%;
-      display: flex;
-      align-items: center;
-      gap: 0 0.5rem;
+      width: 12rem;
+      height: 5rem;
+      display: block;
       font-size: 2rem;
       color: var(--colorGrey);
       font-weight: 700;
       text-decoration: none;
       span {
-        width: 5rem;
-        height: 5rem;
-        line-height: 5rem;
+        width: 100%;
+        height: 100%;
         border-radius: 5rem;
-        background: var(--bgSecondary);
-        color: var(--colorSecondary);
-        display: inline-block;
-        text-align: center;
-        text-transform: initial;
-        font-size: 4rem;
-        font-weight: 400;
+        position: relative;
+
+        
+      .fav-image{
+        opacity: 0;
+        z-index: -10;
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all 300ms ease-in;
       }
+      .logo-image{
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        z-index: 10;
+        transition: all 300ms ease-in;
+      }
+      }
+
       @include _xSmallScreen {
         padding: 1rem 0 0 1rem;
         width: 60%;
@@ -71,10 +85,15 @@ body{
 
   /* .navbar */
   .navbar{
-    position: relative;
+    position: fixed;
+    top: 0;
+    left:0;
+    right: 0;
     display: flex;
     align-items: center;
+    justify-content: end;
     gap: 1rem 4rem;
+    width: 100%;
     height: 6rem;
     padding: 1rem 5rem 0 0;
     z-index: 10000;
