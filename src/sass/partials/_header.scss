@@ -1,21 +1,8 @@
-*{margin: 0;padding: 0; box-sizing: border-box;}
-body{
- .body_background{
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -10;
- }
-}
-
 .header {
   width: 100%;
   height: calc(100vh - 20px);
   position: relative;
   overflow: hidden;
-  
   border-bottom-right-radius: 35%;
   border-bottom-left-radius: 10%;
   display: flex;
@@ -27,12 +14,12 @@ body{
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
   border-bottom: 1px solid rgba(0,0,0,0.25);
   /* .logo */
-  .logo {
+  .logo{
     width: 25rem;
     height: 25rem;
     clip-path: circle(25rem at 8% -40%);
     background: var(--bgLight);
-    z-index: 10000;
+    z-index: 12000;
     padding: 3rem 0 0 3rem;
     transition: all 300ms ease-in;
     .link {

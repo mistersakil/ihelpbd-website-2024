@@ -9,6 +9,9 @@
   background: var(--bgSecondary);
   color: var(--colorSecondary);
   clip-path: polygon(0% 15%, 100% 0%, 100% 95%, 0% 100%);
+  margin-top: -14rem;
+  margin-bottom: -10rem;
+  z-index: 10;
   @include _padding($top: 12rem);
   .title {
     font-size: 4rem;
@@ -18,7 +21,6 @@
   }
   .subTitle {
     font-size: 1.6rem;
-    color: var(--colorBrand);
   }
   /* .main */
   .main {

@@ -31,22 +31,27 @@
     .link{
         width: 60% !important;
         padding: 0 !important;
-        margin: 0 auto;
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 1.75rem !important;
         color: var(--colorLight) !important;
+
+        span{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 }
 
 
 .hidden{
     width: 100%;
+    display: none;
     opacity: 0 !important;
-    z-index: -10 !important;
 }
 .shown{
+    display: block !important;
     opacity: 1 !important;
-    z-index: 10 !important;
 }
