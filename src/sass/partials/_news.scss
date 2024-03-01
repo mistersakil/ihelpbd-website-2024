@@ -5,14 +5,12 @@
   width: 100%;
   min-height: 100vh;
   position: relative;
+  background-color: rgba(109, 106, 106,0.6);
+  backdrop-filter: blur(10px);
+  margin-top: -14rem;
+  padding-top: 17rem!important;
   @include _padding;
-  .title {
-    font-size: 4rem;
-  }
-  .subTitle {
-    font-size: 1.6rem;
-    color: var(--colorGrey);
-  }
+
   /* .boxContainer */
   .main {
     width: 100%;

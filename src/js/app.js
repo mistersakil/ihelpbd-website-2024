@@ -54,7 +54,11 @@ themeChangeBtn.onclick = function (event) {
 
 /* window scroll event */
 
-window.onscroll = function (event) {
+window.onscroll = function (event) { 
+
+
+
+
   const scrollTopPos = window.pageYOffset || document.documentElement.scrollTop;
   const featuredTopPos = featuredFigure.getBoundingClientRect().top;
   const productTopPos = productFigure.getBoundingClientRect().top;
