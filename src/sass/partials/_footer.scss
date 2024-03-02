@@ -1,194 +1,113 @@
-.footer {
+.footer{
+  font-family: "HKGrotesk","Roboto", "Poppins", sans-serif;
   width: 100%;
-  min-height: 60vh;
-  position: relative;
-  padding: 5rem 10% 5rem 10%;
-  margin-top: 15rem;
-  background-color: var(--bgSecondary);
+  min-height: 55vh;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
 
-  /* .ticketForm */
-  .ticket {
-    background-color: var(--bgLight);
-    height: 25rem;
-    width: 80%;
-    position: absolute;
-    z-index: 100;
-    left: 50%;
-    transform: translateX(-50%) translateY(-80%);
-
-    /* .figure */
-    .figure {
+  .footer_main{
+    width: 100%;
+    position: relative;
+    .footer_background{
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-      position: absolute;
-      left: 0;
-      top: 0;
-      overflow: hidden;
-      .img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        opacity: 0.9;
-        animation: blinkLeftRight 10s infinite linear;
-      }
-    }
-    /* .figure end */
-    .heading {
-      text-align: center;
-      color: var(--bgSecondary);
-      font-weight: 600;
-      z-index: 100;
-      position: relative;
-      font-size: 4rem;
-    }
-    .supportForm {
-      position: relative;
-      z-index: 99;
-      display: flex;
-      width: 100%;
-      flex-direction: row;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 2rem;
-      padding: 1rem 5rem;
-      input {
-        flex: 1 1 20%;
-        font-size: 1.6rem;
-        border: none;
-        outline: none;
-        background: var(--bgGreyLight);
-        padding: 1rem;
-        border-radius: 1rem;
-        border-bottom: 1px solid var(--bgSecondary);
-        color: var(--bgSecondary);
-      }
-      .btnSubmit {
-        cursor: pointer;
-        font-weight: 700;
-      }
-    }
-    @include _xSmallScreen {
-      height: 28rem;
-    }
-  }
-  /* .ticketForm end */
+      background-color: #c5c2c2;
+      display: block;
 
-  /* .main */
-  .main {
-    width: 80%;
-    overflow: hidden;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -32%);
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 2rem 1rem;
-    .box {
-      width: calc((100% - 3rem) / 4);
-      height: 30rem;
-      padding: 1rem;
-      color: var(--colorSecondary);
-      .logo {
-        position: relative;
-        display: flex;
-        align-items: center;
-        margin-bottom: 2rem;
-        .icon {
-          text-transform: lowercase;
-          font-size: 3rem;
-          width: 5rem;
-          height: 5rem;
-          background: var(--bgPrimary);
-          display: inline-block;
-          line-height: 5rem;
-          text-align: center;
-          font-weight: 400;
-          border-radius: 50%;
-        }
-        .text {
-          font-size: 2rem;
-          margin-left: 1rem;
-          font-weight: 700;
-          letter-spacing: 0.2rem;
-          text-transform: capitalize;
-        }
+      .top_color{
+        width: 20rem;
+        height: 10rem;
+        display: block;
+        background-color: #000;
       }
-      .about {
-        font-size: 1.6rem;
-        line-height: 2.5rem;
-        text-align: left;
-      }
-      .title {
-        font-size: 2rem;
-        font-weight: 700;
-        letter-spacing: 0.2rem;
-        margin-bottom: 4rem;
-        position: relative;
-        &::after {
-          content: "";
-          position: absolute;
-          top: 100%;
-          left: 0;
-          width: 3rem;
-          height: 0.5rem;
-          background-color: var(--colorBrand);
-          margin-top: 1rem;
-        }
-      }
-      .nav {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem 0;
-        .link {
-          text-decoration: none;
-          font-family: "Poppins", sans-serif;
-          font-size: 1.6rem;
-          color: inherit;
-          display: flex;
-          align-items: center;
-          gap: 1rem;
-          i {
-            font-size: 1.6rem;
-            display: inline-block;
-            color: var(--colorBrand);
+    }
+    .footer_container{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      .footer_top{
+        display: grid;
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+        padding: 3rem;
+        border-bottom: 1px solid #c5c2c2;
+        background-color: #fff;
+      
+        .footer_logo{
+          grid-column: span 2 / span 2;
+          display: grid;
+          justify-content: start;
+          align-items: end;
+      
+          .logo{
+            width: 15rem;
+            height: 6rem;
+      
+            img{
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
           }
         }
+      
+        .footer_title{
+          font-size: 15px;
+          margin-bottom: 2.5rem;
+          font-weight: bold;
+        }
+        .quick_links_area{
+          grid-column: span 1 / span 1;
+        }
+      
+        .services_area{
+          grid-column: span 3 / span 3;
+        }
+      
+        .works_area{
+          grid-column: span 1 / span 1;
+        }
+      
+        .quick_links, .services, .works{
+          list-style: none;
+      
+          .quick_link_item, .service_item, .work_item{
+            padding: 4px 0;
+          }
+          a{
+            text-decoration: none;
+            font-size: 14px;
+            color: var(--colorGrey);
+      
+            &:hover{
+              color: rgb(240, 162, 18);
+            }
+          }
+        }
+       
       }
-      @include _mediumScreen {
-        width: calc((100% - 1rem) / 2);
+    
+      .footer_bottom{
+        padding: 2rem 3rem 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    
+        .copyright{
+          font-size: 14px;
+        }
       }
-      @include _xSmallScreen {
-        width: 100%;
-        height: 25rem;
-      }
-      @include _xxSmallScreen {
-        width: 100%;
-        height: 27rem;
-      }
-    }
-    @include _xSmallScreen {
-      width: 100%;
-      top: 15rem;
-      left: 0;
-      transform: translate(0%, 0%);
-      gap: 2rem 0rem;
     }
   }
 
-  /* .main end */
-  @include _mediumScreen {
-    min-height: 100vh;
-    padding: 10rem 10% 0 10%;
-  }
-  @include _xSmallScreen {
-    min-height: 135vh;
-  }
-  @include _xxSmallScreen {
-    min-height: 140vh;
-    @include _padding($left: 0.5rem, $right: 0.5rem);
-  }
 }
+
+
+
+
+

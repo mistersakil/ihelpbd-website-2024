@@ -11,6 +11,7 @@
   background: var(--bgSecondary);
   box-shadow: 10px 10px 5px rgba(0,0,0,0.3), -10px -10px -5px rgba(0,0,0,0.3) !important;
   border: 10px solid rgba(0,0,0,0.25);
+  z-index: 10;
   @include _padding;
   /* .figure */
   .figure {
