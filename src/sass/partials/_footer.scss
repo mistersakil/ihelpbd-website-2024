@@ -1,11 +1,11 @@
 .footer{
   font-family: "HKGrotesk","Roboto", "Poppins", sans-serif;
   width: 100%;
-  min-height: 55vh;
+  min-height: 75vh;
   position: fixed;
   bottom: 0;
   left: 0;
-  background-color: #fff;
+  background-color: #8b8989;
 
   .footer_main{
     width: 100%;
@@ -16,33 +16,25 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: #c5c2c2;
-      display: block;
-
-      .top_color{
-        width: 20rem;
-        height: 10rem;
-        display: block;
-        background-color: #000;
-      }
     }
     .footer_container{
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
+      height: 100%;
       .footer_top{
         display: grid;
-        grid-template-columns: repeat(7, minmax(0, 1fr));
-        padding: 3rem;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        padding: 5rem 3rem 1.5rem;
         border-bottom: 1px solid #c5c2c2;
-        background-color: #fff;
+        background-color: rgba(255,255,255,0.9);
       
         .footer_logo{
-          grid-column: span 2 / span 2;
+          grid-column: span 1 / span 1;
           display: grid;
           justify-content: start;
-          align-items: end;
+          align-items: center;
       
           .logo{
             width: 15rem;
@@ -66,7 +58,7 @@
         }
       
         .services_area{
-          grid-column: span 3 / span 3;
+          grid-column: span 1 / span 1;
         }
       
         .works_area{
@@ -97,6 +89,7 @@
         display: flex;
         align-items: center;
         justify-content: end;
+        background-color: rgba(255,255,255,0.9);
     
         .copyright{
           font-size: 14px;
