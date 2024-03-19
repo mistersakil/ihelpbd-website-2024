@@ -18,9 +18,13 @@
 </head>
 
 <body>
+    <x-frontend.layout.topbar></x-frontend.layout.topbar>
 
+    <x-frontend.layout.navbar></x-frontend.layout.navbar>
 
     {{ $slot }}
+
+    <x-frontend.layout.footer></x-frontend.layout.footer>
 
     @livewireScripts
 </body>

@@ -1,5 +1,3 @@
 <main>
-    <x-frontend.layout.topbar></x-frontend.layout.topbar>
-
-    <x-frontend.layout.navbar></x-frontend.layout.navbar>
+    <livewire:frontend.partials.home-banner>
 </main>
