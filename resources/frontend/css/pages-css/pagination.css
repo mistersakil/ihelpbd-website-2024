@@ -1,0 +1,36 @@
+.pagination-area {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.pagination-area .page-numbers {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: var(--orangeColor);
+  background-color: #f2f1f1;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  margin-left: 3px;
+  margin-right: 3px;
+  font-size: 18px;
+  border-radius: 2px;
+}
+
+.pagination-area .page-numbers:hover {
+  background-color: var(--orangeColor);
+  color: var(--whiteColor);
+}
+
+.pagination-area .page-numbers i {
+  position: relative;
+  font-size: 25px;
+  top: 5px;
+}
+
+.pagination-area .page-numbers.current {
+  background-color: var(--orangeColor);
+  color: var(--whiteColor);
+}
+/*# sourceMappingURL=pagination.css.map */

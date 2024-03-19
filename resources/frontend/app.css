@@ -1,0 +1,16 @@
+
+/* Template css */
+/* @import url("./css/animate.min.css"); */
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../../node_modules/boxicons/css/boxicons.min.css";
+/* @import url("./css/magnific-popup.min.css");
+@import url("./css/meanmenu.min.css");
+@import url("./css/odometer.min.css");
+@import url("./css/owl.carousel.min.css");
+@import url("./css/owl.theme.default.min.css");
+@import url("./css/theme-dark.css"); */
+
+@import url("./css/pages-css/navbar.css");
+@import url("./css/pages-css/home-one.css");
+@import url("./css/style.css");
+

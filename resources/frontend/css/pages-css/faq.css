@@ -1,0 +1,101 @@
+.faq-accordion {
+  max-width: 610px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.faq-accordion .accordion {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.faq-accordion .accordion .accordion-item {
+  border-radius: 15px;
+  display: block;
+  background-color: #ffffff;
+  margin-bottom: 15px;
+  border: none;
+}
+
+.faq-accordion .accordion .accordion-item:last-child {
+  margin-bottom: 0;
+}
+
+.faq-accordion .accordion .accordion-title {
+  padding: 15px 60px 12px 20px;
+  color: var(--titleColor);
+  background-color: #f4f3f3;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.faq-accordion .accordion .accordion-title i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 25px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 20px;
+  width: 35px;
+  height: 35px;
+  color: var(--orangeColor);
+  border-radius: 50px;
+  border: none;
+  text-align: center;
+  line-height: 35px;
+  background-color: transparent;
+}
+
+.faq-accordion .accordion .accordion-title.active {
+  background-color: var(--orangeColor);
+  color: var(--whiteColor);
+}
+
+.faq-accordion .accordion .accordion-title.active i {
+  color: var(--whiteColor);
+}
+
+.faq-accordion .accordion .accordion-title.active i::before {
+  content: "\eb8b";
+}
+
+.faq-accordion .accordion .accordion-content {
+  display: none;
+  position: relative;
+  margin-top: 10px;
+  padding-bottom: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.faq-accordion .accordion .accordion-content p {
+  line-height: 1.8;
+}
+
+.faq-accordion .accordion .accordion-content.show {
+  display: block;
+}
+
+/*=================================
+Responsive Css 
+====================================*/
+@media only screen and (max-width: 767px) {
+  .faq-accordion {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .faq-accordion {
+    max-width: 100%;
+  }
+}
+/*# sourceMappingURL=faq.css.map */

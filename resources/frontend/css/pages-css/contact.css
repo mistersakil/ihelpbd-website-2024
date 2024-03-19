@@ -1,0 +1,153 @@
+.contact-map iframe {
+  display: block;
+  width: 100%;
+  height: 550px;
+  margin-bottom: 30px;
+}
+
+.contact-widget-form .contact-form h3 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.contact-widget-form .contact-form .default-btn {
+  width: 100%;
+  text-align: center;
+}
+
+.contact-card {
+  margin-bottom: 30px;
+  padding: 35px;
+  text-align: center;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-card i {
+  width: 60px;
+  height: 60px;
+  line-height: 70px;
+  text-align: center;
+  display: inline-block;
+  font-size: 26px;
+  background-color: transparent;
+  color: var(--orangeColor);
+  border-radius: 50px;
+  border: 1px solid var(--orangeColor);
+  margin-bottom: 15px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.contact-card h3 {
+  margin-bottom: 10px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.contact-card p {
+  margin-bottom: 5px;
+}
+
+.contact-card p:last-child {
+  margin-bottom: 0;
+}
+
+.contact-card p a {
+  color: var(--bodyColor);
+}
+
+.contact-card p a:hover {
+  color: var(--orangeColor);
+}
+
+.contact-card p:hover {
+  color: var(--orangeColor);
+}
+
+.contact-card:hover i {
+  background-color: var(--orangeColor);
+  color: var(--whiteColor);
+}
+
+.contact-card:hover h3 {
+  color: var(--orangeColor);
+}
+
+.user-all-form .contact-form {
+  padding: 30px;
+  background-color: var(--whiteColor);
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.user-all-form .contact-form h3 {
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.user-all-form .contact-form .form-group label {
+  margin-bottom: 15px;
+  color: var(--titleColor);
+}
+
+.user-all-form .contact-form .default-btn {
+  width: 100%;
+  text-align: center;
+  border-radius: 0;
+}
+
+.user-all-form .contact-form .account-desc {
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.user-all-form .contact-form .account-desc a {
+  color: var(--orangeColor);
+}
+
+.user-all-form .contact-form .account-desc a:hover {
+  color: var(--greenColor);
+}
+
+.user-img {
+  margin-bottom: 30px;
+}
+
+/*=================================
+Responsive Css 
+====================================*/
+@media only screen and (max-width: 767px) {
+  .contact-card {
+    padding: 30px 10px;
+  }
+  .contact-form .agree-label label a.forget {
+    position: inherit;
+    right: 0;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .contact-card {
+    padding: 30px 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .contact-card {
+    padding: 30px 10px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .contact-card {
+    padding: 30px 10px;
+  }
+  .contact-card h3 {
+    font-size: 19px;
+  }
+  .contact-card p {
+    font-size: 14px;
+  }
+}
+/*# sourceMappingURL=contact.css.map */
