@@ -4,8 +4,7 @@
             <div class="mobile-responsive-menu">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="assets/images/logos/logo-1.png" class="logo-one" alt="Logo">
-                        <img src="assets/images/logos/logo-3.png" class="logo-two" alt="Logo">
+                        <img src="{{ Vite::asset('resources/images/logo.png') }}" class="logo-one" alt="Logo">
                     </a>
                 </div>
             </div>
@@ -16,8 +15,7 @@
         <div class="container-fluid">
             <nav class="navbar navbar-expand-md navbar-light ">
                 <a class="navbar-brand" href="index.html">
-                    <img src="assets/images/logos/logo-1.png" class="logo-one" alt="Logo">
-                    <img src="assets/images/logos/logo-3.png" class="logo-two" alt="Logo">
+                    <img src="{{ Vite::asset('resources/images/logo.png') }}" class="logo-one" alt="Logo">
                 </a>
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto">
@@ -221,34 +219,13 @@
                         </li>
                     </ul>
                     <div class="nav-sidebar">
-                        <div class="navbar-language dropdown language-option">
-                            <button class="dropdown-toggle" type="button" id="language1" data-bs-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                <i class="bx bx-world"></i>
-                                <span class="lang-name"></span>
-                            </button>
-                            <div class="dropdown-menu language-dropdown-menu" aria-labelledby="language1">
-                                <a class="dropdown-item" href="#">
-                                    <img src="assets/images/uk.png" alt="flag">
-                                    English
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <img src="assets/images/china.png" alt="flag">
-                                    简体中文
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <img src="assets/images/uae.png" alt="flag">
-                                    العربيّة
-                                </a>
-                            </div>
-                        </div>
                         <div class="nav-btn">
-                            <a href="contact.html" class="default-btn border-radius-5">Free Consultation</a>
+                            <a href="contact.html" class="default-btn border-radius-5">Request For Demo</a>
                         </div>
                     </div>
                     <div class="mobile-nav-area">
                         <div class="mobile-btn">
-                            <a href="contact.html" class="default-btn border-radius-5">Free Consultation</a>
+                            <a href="contact.html" class="default-btn border-radius-5">Request For Demo</a>
                         </div>
                     </div>
                 </div>

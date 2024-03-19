@@ -36,22 +36,22 @@ This files table contents are outlined below>>>>>
 *******************************************
 /*
 ******************************************* */
-
-/* @import url("./pages-css/home-one.css");
-@import url("./pages-css/home-two.css");
-@import url("./pages-css/home-three.css");
-@import url("./pages-css/inner-banner.css");
-@import url("./pages-css/contact.css");
-@import url("./pages-css/faq.css");
-@import url("./pages-css/blog-details.css");
-@import url("./pages-css/service-details.css");
-@import url("./pages-css/project-details.css");
-@import url("./pages-css/team.css");
-@import url("./pages-css/author.css");
-@import url("./pages-css/pagination.css");
-@import url("./pages-css/error.css");
-@import url("./pages-css/coming-soon.css");
-@import url("./pages-css/footer.css"); */
+/* @import url("../css/pages-css/navbar.css");
+@import url("../css/pages-css/home-one.css");
+@import url("../css/pages-css/home-two.css");
+@import url("../css/pages-css/home-three.css");
+@import url("../css/pages-css/inner-banner.css");
+@import url("../css/pages-css/contact.css");
+@import url("../css/pages-css/faq.css");
+@import url("../css/pages-css/blog-details.css");
+@import url("../css/pages-css/service-details.css");
+@import url("../css/pages-css/project-details.css");
+@import url("../css/pages-css/team.css");
+@import url("../css/pages-css/author.css");
+@import url("../css/pages-css/pagination.css");
+@import url("../css/pages-css/error.css");
+@import url("../css/pages-css/coming-soon.css");
+@import url("../css/pages-css/footer.css"); */
 /*================================================
 Default CSS
 =================================================*/
