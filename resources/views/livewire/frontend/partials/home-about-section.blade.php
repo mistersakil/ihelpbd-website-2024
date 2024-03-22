@@ -3,9 +3,9 @@
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-6">
                 <div class="about-img">
-                    <img src="assets/images/about-img/about-img1.jpg" alt="About Images">
+                    <img src="{{ Vite::asset('resources/images/frontend/about-img1.jpg') }}" alt="About Images">
                     <div class="line">
-                        <img src="assets/images/about-img/about-line.png" alt="About Images">
+                        <img src="{{ Vite::asset('resources/images/frontend/about-line.png') }}" alt="About Line Images">
                     </div>
                 </div>
             </div>
