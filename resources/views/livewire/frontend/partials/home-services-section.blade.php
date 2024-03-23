@@ -25,7 +25,7 @@
                     </h3>
                     <p>
                         Lorem ipsum dolor sit amet, consecteturadipig elit, sed do eiusmod tempor incididunt utlit
-                        abore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.lacus
+                        abore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
                     </p>
                     <a href="service-details.html" class="read-btn">Read More</a>
                     <div class="top">
