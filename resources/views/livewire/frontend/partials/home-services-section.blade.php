@@ -1,5 +1,5 @@
 <div class="services-area services-area-bg pt-100 pb-70"
-    style="background-image: {{ Vite::asset('resources/images/frontend/service-bg.jpg') }}">
+    style="background-image: url({{ Vite::asset('resources/frontend/images/service-bg.jpg') }})">
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
@@ -29,7 +29,7 @@
                     </p>
                     <a href="service-details.html" class="read-btn">Read More</a>
                     <div class="top">
-                        <img src="{{ Vite::asset('resources/images/frontend/services-top.png') }}" alt="Images">
+                        <img src="{{ Vite::asset('resources/frontend/images/services-top.png') }}" alt="Images">
                     </div>
                 </div>
             </div>
@@ -47,7 +47,7 @@
                     </p>
                     <a href="service-details.html" class="read-btn">Read More</a>
                     <div class="top">
-                        <img src="{{ Vite::asset('resources/images/frontend/services-top.png') }}" alt="Images">
+                        <img src="{{ Vite::asset('resources/frontend/images/services-top.png') }}" alt="Images">
                     </div>
                 </div>
             </div>
@@ -65,7 +65,7 @@
                     </p>
                     <a href="service-details.html" class="read-btn">Read More</a>
                     <div class="top">
-                        <img src="{{ Vite::asset('resources/images/frontend/services-top.png') }}" alt="Images">
+                        <img src="{{ Vite::asset('resources/frontend/images/services-top.png') }}" alt="Images">
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                     </p>
                     <a href="service-details.html" class="read-btn">Read More</a>
                     <div class="top">
-                        <img src="{{ Vite::asset('resources/images/frontend/services-top.png') }}" alt="Images">
+                        <img src="{{ Vite::asset('resources/frontend/images/services-top.png') }}" alt="Images">
                     </div>
                 </div>
             </div>
