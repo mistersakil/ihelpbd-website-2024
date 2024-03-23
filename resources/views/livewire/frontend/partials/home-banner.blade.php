@@ -22,23 +22,23 @@
                 <div class="banner-img wow animate__animated animate__fadeInDown" data-wow-delay="1200ms"
                     data-wow-duration="1200ms" data-speed="0.08">
                     <div class="banner-img-box">
-                        <img src="{{ Vite::asset('resources/images/frontend/home-one-img.jpg') }}" alt="Banner Images">
+                        <img src="{{ Vite::asset('resources/frontend/images/home-one-img.jpg') }}" alt="Banner Images">
                     </div>
                     <div class="circle1"></div>
                     <div class="circle2"></div>
                     <div class="banner-img-shape">
-                        <img src="{{ Vite::asset('resources/images/frontend/shape2.png') }}" alt="Images">
-                        <img src="{{ Vite::asset('resources/images/frontend/facebook.png') }}" alt="Images">
-                        <img src="{{ Vite::asset('resources/images/frontend/whatsapp.png') }}" alt="Images">
-                        <img src="{{ Vite::asset('resources/images/frontend/instagram.png') }}" alt="Images">
-                        <img src="{{ Vite::asset('resources/images/frontend/tik-tok.png') }}" alt="Images">
-                        <img src="{{ Vite::asset('resources/images/frontend/mail.png') }}" alt="Images">
+                        <img src="{{ Vite::asset('resources/frontend/images/shape2.png') }}" alt="Images">
+                        <img src="{{ Vite::asset('resources/frontend/images/facebook.png') }}" alt="Images">
+                        <img src="{{ Vite::asset('resources/frontend/images/whatsapp.png') }}" alt="Images">
+                        <img src="{{ Vite::asset('resources/frontend/images/instagram.png') }}" alt="Images">
+                        <img src="{{ Vite::asset('resources/frontend/images/tik-tok.png') }}" alt="Images">
+                        <img src="{{ Vite::asset('resources/frontend/images/mail.png') }}" alt="Images">
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="banner-shape">
-        <img src="{{ Vite::asset('resources/images/frontend/shape1.png') }}" alt="Banner Shape">
+        <img src="{{ Vite::asset('resources/frontend/images/shape1.png') }}" alt="Banner Shape">
     </div>
 </div>

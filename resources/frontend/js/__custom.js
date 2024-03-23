@@ -82,7 +82,10 @@ window.$ = jQuery;
         center: true,
         autoplay: true,
         autoplayHoverPause: true,
-
+        navText: [
+            "<i class='bx bx-right-arrow-alt'></i>",
+            "<i class='bx bx-right-arrow-alt'></i>",
+        ],
         responsive: {
             0: {
                 items: 1,
@@ -236,13 +239,13 @@ window.$ = jQuery;
         });
 
     // Odometer JS
-    $(".odometer").appear(function (e) {
-        var odo = $(".odometer");
-        odo.each(function () {
-            var countNumber = $(this).attr("data-count");
-            $(this).html(countNumber);
-        });
-    });
+    // $(".odometer").appear(function (e) {
+    //     var odo = $(".odometer");
+    //     odo.each(function () {
+    //         var countNumber = $(this).attr("data-count");
+    //         $(this).html(countNumber);
+    //     });
+    // });
 
     // Tabs Single Page
     $(".tab ul.tabs").addClass("active").find("> li:eq(0)").addClass("current");
@@ -262,17 +265,17 @@ window.$ = jQuery;
     });
 
     // Popup Gallery
-    $(".gallery-photo").magnificPopup({
-        delegate: "a",
-        type: "image",
-        tLoading: "Loading image #%curr%...",
-        mainClass: "mfp-img-mobile",
-        gallery: {
-            enabled: true,
-            navigateByImgClick: true,
-            preload: [0, 1],
-        },
-    });
+    // $(".gallery-photo").magnificPopup({
+    //     delegate: "a",
+    //     type: "image",
+    //     tLoading: "Loading image #%curr%...",
+    //     mainClass: "mfp-img-mobile",
+    //     gallery: {
+    //         enabled: true,
+    //         navigateByImgClick: true,
+    //         preload: [0, 1],
+    //     },
+    // });
 
     // Count Time JS
     function makeTimer() {
@@ -306,52 +309,6 @@ window.$ = jQuery;
     }, 300);
 
     // Subscribe form
-    $(".newsletter-form")
-        .validator()
-        .on("submit", function (event) {
-            if (event.isDefaultPrevented()) {
-                // Handle The Invalid Form...
-                formErrorSub();
-                submitMSGSub(false, "Please enter your email correctly");
-            } else {
-                // Everything Looks Good!
-                event.preventDefault();
-            }
-        });
-    function callbackFunction(resp) {
-        if (resp.result === "success") {
-            formSuccessSub();
-        } else {
-            formErrorSub();
-        }
-    }
-    function formSuccessSub() {
-        $(".newsletter-form")[0].reset();
-        submitMSGSub(true, "Thank you for subscribing!");
-        setTimeout(function () {
-            $("#validator-newsletter").addClass("hide");
-        }, 4000);
-    }
-    function formErrorSub() {
-        $(".newsletter-form").addClass("animated shake");
-        setTimeout(function () {
-            $(".newsletter-form").removeClass("animated shake");
-        }, 1000);
-    }
-    function submitMSGSub(valid, msg) {
-        if (valid) {
-            var msgClasses = "validation-success";
-        } else {
-            var msgClasses = "validation-danger";
-        }
-        $("#validator-newsletter").removeClass().addClass(msgClasses).text(msg);
-    }
-
-    // AJAX MailChimp
-    $(".newsletter-form").ajaxChimp({
-        url: "https://envyTheme.us20.list-manage.com/subscribe/post?u=60e1ffe2e8a68ce1204cd39a5&amp;id=42d6d188d9", // Your url MailChimp
-        callback: callbackFunction,
-    });
 
     // Back To Top
     $("body").append(
@@ -377,12 +334,7 @@ window.$ = jQuery;
     });
 
     //WOW JS
-    new WOW().init();
-
-    // Buy Now Btn
-    $("body").append(
-        "<a href='https://themeforest.net/checkout/from_item/35282746?license=regular&support=bundle_6month&_ga=2.253812488.1095024147.1646685914-918236941.1644836235' target='_blank' class='buy-now-btn'><img src='assets/images/envato.png' alt='envato'/>Buy Now</a>"
-    );
+    // new WOW().init();
 
     // Switch Btn
     $("body").append(
