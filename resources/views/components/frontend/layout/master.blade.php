@@ -9,7 +9,7 @@
 
     <title>Home | iHelpKL</title>
 
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    {{-- <link rel="icon" type="image/png" href="assets/images/favicon.png"> --}}
 
 
     @vite(['resources/frontend/app.css', 'resources/frontend/app.js'])

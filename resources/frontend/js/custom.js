@@ -102,125 +102,6 @@ window.$ = jQuery;
         },
     });
 
-    // Services Slider Two
-    $(".services-slider-two").owlCarousel({
-        loop: true,
-        margin: 30,
-        autoHeight: true,
-        nav: true,
-        dots: false,
-        animateOut: "fadeOutUp",
-        animateIn: "fadeInUp",
-        autoplay: true,
-        autoplayHoverPause: true,
-        navText: [
-            "<i class='flaticon-arrow-pointing-to-left'></i>",
-            "<i class='flaticon-arrow-pointing-to-right'></i>",
-        ],
-        responsive: {
-            0: {
-                items: 1,
-            },
-            576: {
-                items: 2,
-            },
-            1000: {
-                items: 3,
-            },
-        },
-    });
-
-    // Project Slider
-    $(".project-slider").owlCarousel({
-        loop: true,
-        margin: 30,
-        autoHeight: true,
-        nav: true,
-        dots: false,
-        autoplay: true,
-        autoplayHoverPause: true,
-        navText: [
-            "<i class='flaticon-arrow-pointing-to-left'></i>",
-            "<i class='flaticon-arrow-pointing-to-right'></i>",
-        ],
-        responsive: {
-            0: {
-                items: 1,
-            },
-            769: {
-                items: 2,
-            },
-            1000: {
-                items: 3,
-            },
-            1200: {
-                items: 4,
-            },
-        },
-    });
-
-    // Project Slider Two
-    $(".project-slider-two").owlCarousel({
-        loop: true,
-        margin: 30,
-        items: 1,
-        thumbs: true,
-        thumbsPrerendered: true,
-        nav: true,
-        dots: false,
-        autoplay: true,
-        smartSpeed: 1500,
-        autoplayHoverPause: true,
-        navText: [
-            "<i class='flaticon-arrow-pointing-to-left'></i>",
-            "<i class='flaticon-arrow-pointing-to-right'></i>",
-        ],
-    });
-
-    // Testimonial Slider
-    $(".testimonial-slider").owlCarousel({
-        loop: true,
-        margin: 10,
-        autoHeight: true,
-        nav: true,
-        dots: false,
-        autoplay: true,
-        autoplayHoverPause: true,
-        navText: [
-            "<i class='flaticon-arrow-pointing-to-left'></i>",
-            "<i class='flaticon-arrow-pointing-to-right'></i>",
-        ],
-        responsive: {
-            0: {
-                items: 1,
-            },
-            576: {
-                items: 2,
-            },
-            1000: {
-                items: 3,
-            },
-        },
-    });
-
-    // Testimonial Slider Two
-    $(".testimonial-slider-two").owlCarousel({
-        loop: true,
-        margin: 10,
-        autoHeight: true,
-        nav: true,
-        items: 1,
-        animateOut: "fadeOutUp",
-        animateIn: "fadeInUp",
-        dots: false,
-        autoplay: true,
-        autoplayHoverPause: true,
-        navText: [
-            "<i class='flaticon-arrow-pointing-to-left'></i>",
-            "<i class='flaticon-arrow-pointing-to-right'></i>",
-        ],
-    });
-
     // FAQ Accordion JS
     $(".accordion")
         .find(".accordion-title")
@@ -236,13 +117,13 @@ window.$ = jQuery;
         });
 
     // Odometer JS
-    $(".odometer").appear(function (e) {
-        var odo = $(".odometer");
-        odo.each(function () {
-            var countNumber = $(this).attr("data-count");
-            $(this).html(countNumber);
-        });
-    });
+    // $(".odometer").appear(function (e) {
+    //     var odo = $(".odometer");
+    //     odo.each(function () {
+    //         var countNumber = $(this).attr("data-count");
+    //         $(this).html(countNumber);
+    //     });
+    // });
 
     // Tabs Single Page
     $(".tab ul.tabs").addClass("active").find("> li:eq(0)").addClass("current");
@@ -262,17 +143,17 @@ window.$ = jQuery;
     });
 
     // Popup Gallery
-    $(".gallery-photo").magnificPopup({
-        delegate: "a",
-        type: "image",
-        tLoading: "Loading image #%curr%...",
-        mainClass: "mfp-img-mobile",
-        gallery: {
-            enabled: true,
-            navigateByImgClick: true,
-            preload: [0, 1],
-        },
-    });
+    // $(".gallery-photo").magnificPopup({
+    //     delegate: "a",
+    //     type: "image",
+    //     tLoading: "Loading image #%curr%...",
+    //     mainClass: "mfp-img-mobile",
+    //     gallery: {
+    //         enabled: true,
+    //         navigateByImgClick: true,
+    //         preload: [0, 1],
+    //     },
+    // });
 
     // Count Time JS
     function makeTimer() {
@@ -305,54 +186,6 @@ window.$ = jQuery;
         makeTimer();
     }, 300);
 
-    // Subscribe form
-    $(".newsletter-form")
-        .validator()
-        .on("submit", function (event) {
-            if (event.isDefaultPrevented()) {
-                // Handle The Invalid Form...
-                formErrorSub();
-                submitMSGSub(false, "Please enter your email correctly");
-            } else {
-                // Everything Looks Good!
-                event.preventDefault();
-            }
-        });
-    function callbackFunction(resp) {
-        if (resp.result === "success") {
-            formSuccessSub();
-        } else {
-            formErrorSub();
-        }
-    }
-    function formSuccessSub() {
-        $(".newsletter-form")[0].reset();
-        submitMSGSub(true, "Thank you for subscribing!");
-        setTimeout(function () {
-            $("#validator-newsletter").addClass("hide");
-        }, 4000);
-    }
-    function formErrorSub() {
-        $(".newsletter-form").addClass("animated shake");
-        setTimeout(function () {
-            $(".newsletter-form").removeClass("animated shake");
-        }, 1000);
-    }
-    function submitMSGSub(valid, msg) {
-        if (valid) {
-            var msgClasses = "validation-success";
-        } else {
-            var msgClasses = "validation-danger";
-        }
-        $("#validator-newsletter").removeClass().addClass(msgClasses).text(msg);
-    }
-
-    // AJAX MailChimp
-    $(".newsletter-form").ajaxChimp({
-        url: "https://envyTheme.us20.list-manage.com/subscribe/post?u=60e1ffe2e8a68ce1204cd39a5&amp;id=42d6d188d9", // Your url MailChimp
-        callback: callbackFunction,
-    });
-
     // Back To Top
     $("body").append(
         "<div class='go-top'><i class='bx bx-caret-up'></i></div>"
@@ -375,9 +208,6 @@ window.$ = jQuery;
     jQuery(window).on("load", function () {
         jQuery(".preloader").fadeOut(500);
     });
-
-    //WOW JS
-    new WOW().init();
 
     // Buy Now Btn
     $("body").append(

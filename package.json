@@ -11,9 +11,12 @@
         "vite": "^5.0"
     },
     "dependencies": {
+        "animate.css": "^4.1.1",
         "bootstrap": "^5.3.3",
         "boxicons": "^2.1.4",
         "jquery": "^3.7.1",
-        "sweetalert2": "^11.10.6"
+        "sweetalert2": "^11.10.6",
+        "wow.js": "^1.2.2",
+        "wowjs": "^1.1.3"
     }
 }
