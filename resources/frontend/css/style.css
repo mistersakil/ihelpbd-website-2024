@@ -1,12 +1,4 @@
 /*
-@File: Vconn HTML Template
-
-* This file contains the styling for the actual template, this
-is the file you need to edit to change the look of the
-template.
-
-This files table contents are outlined below>>>>>
-
 *******************************************
 *******************************************
 ** - Navbar CSS
@@ -356,11 +348,11 @@ Section Title Style
 Section Title Style End
 ===================================*/
 .work-area::before {
-  background-image: url(../images/work-img/work-bg.jpg);
+  background-image: url(../images/work-bg.jpg);
 }
 
 .testimonial-area::before {
-  background-image: url(../images/testimonial/testimonial-bg.jpg);
+  background-image: url(../images/testimonial-bg.jpg);
 }
 
 /*================================

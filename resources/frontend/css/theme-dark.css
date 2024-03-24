@@ -38,7 +38,7 @@
   transition: 0.4s;
   -webkit-box-shadow: 0 0px 15px #2020203d;
           box-shadow: 0 0px 15px #2020203d;
-  background: white url("../images/night.png");
+  background: white url("../images/moon.png");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -77,7 +77,7 @@
 .switch-box input:checked + .slider:before {
   -webkit-transform: translateX(24px);
           transform: translateX(24px);
-  background: white url("../images/sunny.png");
+  background: white url("../images/sun2.png");
   background-repeat: no-repeat;
   background-position: center;
 }

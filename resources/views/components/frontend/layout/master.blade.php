@@ -26,6 +26,7 @@
 
     <x-frontend.layout.footer></x-frontend.layout.footer>
 
+
     @livewireScripts
 </body>
 
