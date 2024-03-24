@@ -4,6 +4,9 @@ namespace App\Livewire\Frontend\Partials;
 
 use Livewire\Component;
 
+/**
+ * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
+ */
 class HomeServicesSection extends Component
 {
     public function render()

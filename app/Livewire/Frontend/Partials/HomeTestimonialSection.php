@@ -7,10 +7,10 @@ use Livewire\Component;
 /**
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
  */
-class HomeWorkProcessSection extends Component
+class HomeTestimonialSection extends Component
 {
     public function render()
     {
-        return view('livewire.frontend.partials.home-work-process-section');
+        return view('livewire.frontend.partials.home-testimonial-section');
     }
 }

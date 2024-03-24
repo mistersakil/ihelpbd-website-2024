@@ -102,6 +102,29 @@ window.$ = jQuery;
         },
     });
 
+    // Testimonial Slider
+    $(".testimonial-slider").owlCarousel({
+        loop: true,
+        margin: 10,
+        autoHeight: true,
+        nav: true,
+        dots: false,
+        autoplay: true,
+        autoplayHoverPause: true,
+
+        responsive: {
+            0: {
+                items: 1,
+            },
+            576: {
+                items: 2,
+            },
+            1000: {
+                items: 3,
+            },
+        },
+    });
+
     // FAQ Accordion JS
     $(".accordion")
         .find(".accordion-title")
