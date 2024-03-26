@@ -29,10 +29,10 @@
                     <div class="banner-img-shape">
                         <img src="{{ Vite::asset('resources/frontend/images/shape2.png') }}" alt="Images">
                         <img src="{{ Vite::asset('resources/frontend/images/crm.png') }}" alt="Images">
-                        <img src="{{ Vite::asset('resources/frontend/images/facebook.png') }}" alt="Images">
+                        <img src="{{ Vite::asset('resources/frontend/images/voice5.png') }}" alt="Images">
                         <img src="{{ Vite::asset('resources/frontend/images/mail.png') }}" alt="Images">
                         <img src="{{ Vite::asset('resources/frontend/images/whatsapp.png') }}" alt="Images">
-                        <img src="{{ Vite::asset('resources/frontend/images/voice3.png') }}" alt="Images">
+                        <img src="{{ Vite::asset('resources/frontend/images/facebook.png') }}" alt="Images">
                     </div>
                 </div>
             </div>
