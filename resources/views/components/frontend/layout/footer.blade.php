@@ -175,11 +175,7 @@
         <div class="container">
             <div class="copy-right-text text-center">
                 <p>
-                    Copyright @
-
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script>. All Rights Reserved by
+                    {{ 'Copyright @ ' . date('Y') }}. All Rights Reserved by
                     <a href="https://ihelpbd.com/" target="_blank">iHelpBD</a>
                 </p>
             </div>

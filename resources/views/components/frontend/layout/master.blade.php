@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zxx">
+<html lang="en" data-sidenav-view="hidden">
 
 <head>
 
@@ -18,13 +18,17 @@
 </head>
 
 <body>
-    <x-frontend.layout.topbar></x-frontend.layout.topbar>
+    @persist('header')
+        <x-frontend.layout.topbar />
 
-    <x-frontend.layout.navbar></x-frontend.layout.navbar>
+        <x-frontend.layout.navbar />
+    @endpersist
 
     {{ $slot }}
 
-    <x-frontend.layout.footer></x-frontend.layout.footer>
+    @persist('footer')
+        <x-frontend.layout.footer />
+    @endpersist
 
 
     @livewireScripts

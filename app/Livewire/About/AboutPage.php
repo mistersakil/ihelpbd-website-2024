@@ -4,6 +4,9 @@ namespace App\Livewire\About;
 
 use Livewire\Component;
 
+/**
+ * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
+ */
 class AboutPage extends Component
 {
     public function render()

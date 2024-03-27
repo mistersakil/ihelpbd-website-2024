@@ -20,8 +20,13 @@
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto">
                         <li class="nav-item">
-                            <a href="contact.html" class="nav-link">
+                            <a href="{{ route('web.home') }}" class="nav-link" wire:navigate>
                                 Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('web.about') }}" class="nav-link" wire:navigate>
+                                {{ __('about') }}
                             </a>
                         </li>
                         <li class="nav-item">
