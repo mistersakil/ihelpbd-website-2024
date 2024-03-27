@@ -21,7 +21,7 @@
                     <ul class="navbar-nav m-auto">
                         <li class="nav-item">
                             <a href="{{ route('web.home') }}" class="nav-link" wire:navigate>
-                                Home
+                                {{ __('home') }}
                             </a>
                         </li>
                         <li class="nav-item">
@@ -30,87 +30,34 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                Pages
-                                <i class="bx bx-chevron-down"></i>
+                            <a href="{{ route('web.contact') }}" class="nav-link" wire:navigate>
+                                {{ __('contact') }}
                             </a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a href="about.html" class="nav-link">
-                                        About Us
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                Project
-                                <i class="bx bx-chevron-down"></i>
+                            <a href="{{ route('web.blogs') }}" class="nav-link" wire:navigate>
+                                {{ __('blog') }}
                             </a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a href="project.html" class="nav-link">
-                                        Project
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="project-details.html" class="nav-link">
-                                        Project Details
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                Services
-                                <i class="bx bx-chevron-down"></i>
+                            <a href="{{ route('web.products') }}" class="nav-link" wire:navigate>
+                                {{ __('products') }}
                             </a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a href="service-1.html" class="nav-link">
-                                        Services Style One
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="service-2.html" class="nav-link">
-                                        Services Style Two
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="service-details.html" class="nav-link">
-                                        Service Details
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                Blog
-                                <i class="bx bx-chevron-down"></i>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a href="blog-1.html" class="nav-link">
-                                        Blog Grid
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="contact.html" class="nav-link">
-                                Contact Us
+                            <a href="{{ route('web.solutions') }}" class="nav-link" wire:navigate>
+                                {{ __('solutions') }}
                             </a>
                         </li>
                     </ul>
                     <div class="nav-sidebar">
                         <div class="nav-btn">
-                            <a href="contact.html" class="default-btn border-radius-5">Request For Demo</a>
+                            <a href="javascript:void(0)" class="default-btn border-radius-5">Request For Demo</a>
                         </div>
                     </div>
                     <div class="mobile-nav-area">
                         <div class="mobile-btn">
-                            <a href="contact.html" class="default-btn border-radius-5">Request For Demo</a>
+                            <a href="javascript:void(0)" class="default-btn border-radius-5">Request For Demo</a>
                         </div>
                     </div>
                 </div>
