@@ -1,12 +1,19 @@
+@props(['metaTitle' => 'default page title'])
 <div class="inner-banner" style="background-image:url({{ Vite::asset('resources/frontend/images/inner-banner1.jpg') }})">
     <div class="container">
         <div class="inner-title text-center">
-            <h3>About Us</h3>
+            <h3>
+                {{ __($metaTitle) }}
+            </h3>
             <ul>
                 <li>
-                    <a href="index.html">Home</a>
+                    <a wire:navigate href="{{ route('web.home') }}">
+                        {{ __('home') }}
+                    </a>
                 </li>
-                <li>About Us</li>
+                <li>
+                    {{ __($metaTitle) }}
+                </li>
             </ul>
         </div>
     </div>

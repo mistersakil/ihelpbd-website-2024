@@ -9,8 +9,11 @@ use Livewire\Component;
  */
 class AboutPage extends Component
 {
+    public string $metaTitle = 'about us';
+
+
     public function render()
     {
-        return view('livewire.about.about-page');
+        return view('livewire.about.about-page')->title($this->metaTitle);
     }
 }
