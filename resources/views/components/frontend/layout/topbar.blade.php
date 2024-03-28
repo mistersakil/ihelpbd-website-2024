@@ -20,13 +20,7 @@
                 <div class="header-right">
 
                     <ul>
-                        <li>
-                            <select class="form-select" aria-label="Default select example">
-                                <option value="en" selected>English</option>
-                                <option value="bd">Bangla</option>
-                                <option value="my">Malay</option>
-                            </select>
-                        </li>
+                        @livewire('frontend.partials.local-change-component')
                         <li>
                             <a href="https://www.facebook.com/" target="_blank">
                                 <i class="bx bxl-facebook"></i>
