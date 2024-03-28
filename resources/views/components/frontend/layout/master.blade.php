@@ -29,10 +29,10 @@
 </head>
 
 <body>
-    @persist('header')
-        <x-frontend.layout.topbar />
-        <x-frontend.layout.navbar />
-    @endpersist
+
+    <x-frontend.layout.topbar />
+    <x-frontend.layout.navbar />
+
     @if (!request()->routeIs('web.home'))
         @isset($innerBanner)
             {{ $innerBanner }}
@@ -43,10 +43,7 @@
 
     {{ $slot }}
 
-    @persist('footer')
-        <x-frontend.layout.footer />
-    @endpersist
-
+    <x-frontend.layout.footer />
 
     @livewireScripts
 </body>
