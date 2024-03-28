@@ -29,7 +29,6 @@
 </head>
 
 <body>
-
     <x-frontend.layout.topbar />
     <x-frontend.layout.navbar />
 
