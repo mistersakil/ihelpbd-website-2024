@@ -20,8 +20,8 @@
 <body>
     @persist('header')
         <x-frontend.layout.topbar />
-
         <x-frontend.layout.navbar />
+        <x-frontend.layout.inner-banner />
     @endpersist
 
     {{ $slot }}
