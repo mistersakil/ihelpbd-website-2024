@@ -25,10 +25,34 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a wire:navigate href="{{ route('web.about') }}" class="nav-link">
+                            <a href="javascript:void(0)" class="nav-link">
                                 {{ __('about') }}
+                                <i class="bx bx-chevron-down"></i>
                             </a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a wire:navigate href="{{ route('web.about') }}" class="nav-link">
+                                        {{ __('about us') }}
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a wire:navigate href="{{ route('web.about') }}" class="nav-link">
+                                        {{ __('privacy policy') }}
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a wire:navigate href="{{ route('web.about') }}" class="nav-link">
+                                        {{ __('terms and conditions') }}
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a wire:navigate href="{{ route('web.about') }}" class="nav-link">
+                                        {{ __('team') }}
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
+
                         <li class="nav-item">
                             <a wire:navigate href="{{ route('web.contact') }}" class="nav-link">
                                 {{ __('contact') }}

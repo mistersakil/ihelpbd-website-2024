@@ -20,3 +20,6 @@
     height: 100%;
     padding: 0;
 }
+.desktop-nav .navbar .navbar-nav .nav-item .dropdown-menu {
+    z-index: 100;
+}
