@@ -164,7 +164,7 @@
         <div class="container">
             <div class="copy-right-text text-center">
                 <p>
-                    {{ 'Copyright @ ' . date('Y') }}. All Rights Reserved by
+                    {{ __('copyright') }} @ {{ date('Y') }}. {{ __('all rights reserved by') }}
                     <a href="https://ihelpbd.com/" target="_blank">iHelpBD</a>
                 </p>
             </div>
