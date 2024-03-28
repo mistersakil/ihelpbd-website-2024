@@ -10,6 +10,7 @@ use Livewire\Component;
 class AboutPage extends Component
 {
     public string $metaTitle = 'about us';
+    public string $module = 'about';
 
     public function render()
     {

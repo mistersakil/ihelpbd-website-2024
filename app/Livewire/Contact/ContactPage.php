@@ -7,6 +7,7 @@ use Livewire\Component;
 class ContactPage extends Component
 {
     public string $metaTitle = 'contact us';
+    public string $module = 'contact';
 
     public function render()
     {

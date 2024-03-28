@@ -1,4 +1,4 @@
-@props(['metaTitle' => 'default page title'])
+@props(['metaTitle' => 'default page title', 'module' => 'default module'])
 <div class="inner-banner" style="background-image:url({{ Vite::asset('resources/frontend/images/inner-banner1.jpg') }})">
     <div class="container">
         <div class="inner-title text-center">
@@ -12,7 +12,7 @@
                     </a>
                 </li>
                 <li>
-                    {{ __($metaTitle) }}
+                    {{ __($module) }}
                 </li>
             </ul>
         </div>
