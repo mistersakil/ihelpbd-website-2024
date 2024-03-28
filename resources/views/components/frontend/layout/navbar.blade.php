@@ -52,12 +52,16 @@
                     </ul>
                     <div class="nav-sidebar">
                         <div class="nav-btn">
-                            <a href="javascript:void(0)" class="default-btn border-radius-5">Request For Demo</a>
+                            <a href="javascript:void(0)" class="default-btn border-radius-5">
+                                {{ __('request a demo') }}
+                            </a>
                         </div>
                     </div>
                     <div class="mobile-nav-area">
                         <div class="mobile-btn">
-                            <a href="javascript:void(0)" class="default-btn border-radius-5">Request For Demo</a>
+                            <a href="javascript:void(0)" class="default-btn border-radius-5">
+                                {{ __('request a demo') }}
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -1,11 +1,12 @@
 {
-    "home" : "Home",
-    "about" : "About",
-    "about us" : "About us",
-    "contact" : "Contact",
-    "contact us" : "Contact us",
-    "blog" : "Blog",
-    "blogs" : "Blogs",
-    "solutions" : "Solutions",
-    "products":"Products"
+    "home": "Home",
+    "about": "About",
+    "about us": "About us",
+    "contact": "Contact",
+    "contact us": "Contact us",
+    "blog": "Blog",
+    "blogs": "Blogs",
+    "solutions": "Solutions",
+    "products": "Products",
+    "request a demo": "Request demo"
 }

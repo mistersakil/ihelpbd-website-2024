@@ -7,17 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>
-        @isset($title)
-            {{ __($title) }}
-        @else
-            {{ __('meta title') }}
-        @endisset
+    @isset($title)
+        <title> {{ __($title) }} | iHelpKL </title>
+    @else
+        <title>{{ __('meta title') }} | iHelpKL </title>
+    @endisset
 
-        | iHelpKL
-    </title>
-
-    {{-- <link rel="icon" type="image/png" href="assets/images/favicon.png"> --}}
+    <link rel="icon" type="image/png" href="{{ Vite::asset('resources/images/favicon.png') }}">
 
 
     @vite(['resources/frontend/app.css', 'resources/frontend/app.js'])
