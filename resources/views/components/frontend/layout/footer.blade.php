@@ -1,55 +1,44 @@
-<footer class="footer-area footer-area-bg">
+<footer class="footer-area footer-area-bg-two">
     <div class="container">
-        <div class="footer-top pt-100 pb-70">
+        <div class="footer-top-two">
             <div class="row justify-content-center">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="footer-contact">
-                        <div class="icon">
-                            <i class="bx bxl-facebook"></i>
-                        </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-contact-two">
+                        <div class="icon"><i class="flaticon-phone-call-1"></i></div>
                         <div class="content">
                             <h3><a href="tel:+8256483321">+8256483321</a></h3>
                             <p> Give us a call </p>
                         </div>
-                        <div class="right">
-                            <i class="bx bxl-facebook"></i>
-                        </div>
+                        <div class="right"><i class="flaticon-phone-call-1"></i></div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="footer-contact">
-                        <div class="icon">
-                            <i class='bx bx-envelope'></i>
-                        </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-contact-two">
+                        <div class="icon"><i class="flaticon-email"></i></div>
                         <div class="content">
-                            <h3>
-                                <a href="mailto:webmaster@example.com">info@ihelpkl.com</a>.<br>
+                            <h3><a href="/cdn-cgi/l/email-protection#147d7a727b5462777b7a7a3a777b79"><span
+                                        class="__cf_email__"
+                                        data-cfemail="5930373f36192f3a363737773a3634">[email&#160;protected]</span></a>
                             </h3>
                             <p> Drop us a line</p>
                         </div>
-                        <div class="right">
-                            <i class='bx bx-envelope'></i>
-                        </div>
+                        <div class="right"><i class="flaticon-email"></i></div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-7">
-                    <div class="footer-contact">
-                        <div class="icon">
-                            <i class='bx bxs-edit-location'></i>
-                        </div>
+                <div class="col-lg-4 col-md-7">
+                    <div class="footer-contact-two">
+                        <div class="icon"><i class="flaticon-pin"></i></div>
                         <div class="content">
                             <h3><a href="https://goo.gl/maps/uNmtNyknSA3gBH198" target="_blank">58 ut Sunset road
                                     East Block</a></h3>
                             <p> Location</p>
                         </div>
-                        <div class="right">
-                            <i class='bx bxs-edit-location'></i>
-                        </div>
+                        <div class="right"><i class="flaticon-pin"></i></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer-middel pb-70">
+        <div class="footer-middel pt-100 pb-70">
             <div class="row">
                 <div class="col-lg-4 col-sm-6">
                     <div class="footer-widget">
@@ -175,8 +164,12 @@
         <div class="container">
             <div class="copy-right-text text-center">
                 <p>
-                    {{ 'Copyright @ ' . date('Y') }}. All Rights Reserved by
-                    <a href="https://ihelpbd.com/" target="_blank">iHelpBD</a>
+                    Copyright @
+                    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script> Vconn. All Rights Reserved by
+                    <a href="https://hibootstrap.com/" target="_blank">HiBootstrap</a>
                 </p>
             </div>
         </div>
