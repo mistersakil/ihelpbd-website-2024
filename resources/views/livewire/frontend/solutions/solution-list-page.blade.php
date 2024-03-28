@@ -1,3 +1,6 @@
-<div>
-    {{-- Nothing in the world is as soft and yielding as water. --}}
-</div>
+<main>
+    <x-slot:innerBanner>
+        <x-frontend.layout.inner-banner :metaTitle="$metaTitle" :module="$module" />
+    </x-slot:innerBanner>
+    <livewire:frontend.partials.home-about-section />
+</main>
