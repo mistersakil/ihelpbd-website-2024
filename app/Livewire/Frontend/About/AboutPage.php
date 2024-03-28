@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\About;
+namespace App\Livewire\Frontend\About;
 
 use Livewire\Component;
 
@@ -14,6 +14,6 @@ class AboutPage extends Component
 
     public function render()
     {
-        return view('livewire.about.about-page')->title($this->metaTitle);
+        return view('livewire.frontend.about.about-page')->title($this->metaTitle);
     }
 }

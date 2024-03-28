@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Contact;
+namespace App\Livewire\Frontend\Contact;
 
 use Livewire\Component;
 
@@ -14,6 +14,6 @@ class ContactPage extends Component
 
     public function render()
     {
-        return view('livewire.contact.contact-page')->title($this->metaTitle);
+        return view('livewire.frontend.contact.contact-page')->title($this->metaTitle);
     }
 }

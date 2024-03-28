@@ -1,10 +1,10 @@
 <?php
 
-use App\Livewire\About\AboutPage;
-use App\Livewire\Contact\ContactPage;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Frontend\Home\HomePage;
+use App\Livewire\Frontend\About\AboutPage;
 use App\Livewire\Frontend\Blogs\BlogListPage;
+use App\Livewire\Frontend\Contact\ContactPage;
 use App\Livewire\Frontend\Products\ProductListPage;
 use App\Livewire\Frontend\Solutions\SolutionListPage;
 
