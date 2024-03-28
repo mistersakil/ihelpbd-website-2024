@@ -16,5 +16,3 @@ import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.min";
 import "./js/meanmenu.min";
 import "./js/owl.carousel.min";
 import "./js/carousel-thumbs";
-
-// import "./js/custom";

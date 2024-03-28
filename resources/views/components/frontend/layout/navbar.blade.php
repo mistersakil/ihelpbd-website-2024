@@ -47,7 +47,7 @@
                                 </li>
                                 <li class="nav-item">
                                     <a wire:navigate href="{{ route('web.about') }}" class="nav-link">
-                                        {{ __('team') }}
+                                        {{ __('meet our team') }}
                                     </a>
                                 </li>
                             </ul>
