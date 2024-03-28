@@ -17,4 +17,4 @@ import "./js/meanmenu.min";
 import "./js/owl.carousel.min";
 import "./js/carousel-thumbs";
 
-import "./js/custom";
+// import "./js/custom";
