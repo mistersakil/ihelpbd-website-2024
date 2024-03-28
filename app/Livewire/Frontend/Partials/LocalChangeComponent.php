@@ -11,7 +11,8 @@ use Livewire\Component;
 class LocalChangeComponent extends Component
 {
     public array $locals = [];
-    public string $selectedLocal = 'en';
+    public string $selectedLocal;
+    public $segments;
 
     /**
      *  Initialize the component
@@ -22,14 +23,38 @@ class LocalChangeComponent extends Component
     {
         $this->locals = [
             'en' => 'English',
-            'bd' => 'bangla',
-            'my' => 'my'
+            'bd' => 'বাংলা',
+            'my' => 'Malay'
         ];
+
+        if (session()->has('locale')) {
+            app()->setLocale(session()->get('locale'));
+            $this->selectedLocal = session()->get('locale');
+        } else {
+            $this->selectedLocal = 'en';
+            app()->setLocale($this->selectedLocal);
+        }
     }
 
-    public function changeLocaleAction(): void
+    /**
+     * changeLocaleAction to change one language to another
+     *
+     * @return mixed
+     */
+    public function changeLocaleAction(): mixed
     {
-        dump($this->selectedLocal);
+
+        if (!array_key_exists($this->selectedLocal, $this->locals)) {
+            abort(400);
+        }
+
+        app()->setLocale($this->selectedLocal);
+        session()->put('locale', $this->selectedLocal);
+
+        $url = url()->previous();
+        $this->segments = parse_url($url)['path'];
+
+        return $this->redirect($this->segments, navigate: true);
     }
 
     /**
