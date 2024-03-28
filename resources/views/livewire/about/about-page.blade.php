@@ -1,3 +1,3 @@
 <main>
-about page
+    <livewire:frontend.partials.home-about-section />
 </main>

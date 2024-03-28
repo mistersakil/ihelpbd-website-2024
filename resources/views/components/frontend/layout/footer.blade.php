@@ -164,12 +164,8 @@
         <div class="container">
             <div class="copy-right-text text-center">
                 <p>
-                    Copyright @
-                    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script> Vconn. All Rights Reserved by
-                    <a href="https://hibootstrap.com/" target="_blank">HiBootstrap</a>
+                    {{ 'Copyright @ ' . date('Y') }}. All Rights Reserved by
+                    <a href="https://ihelpbd.com/" target="_blank">iHelpBD</a>
                 </p>
             </div>
         </div>
