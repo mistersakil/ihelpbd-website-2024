@@ -10,7 +10,7 @@
                         </li>
                         <li>
                             <i class='bx bx-envelope'></i>
-                            <a href="mailto:webmaster@example.com">info@ihelpkl.com</a>.<br>
+                            <a href="mailto:webmaster@example.com">info@ihelpbd.com</a><br>
                         </li>
                     </ul>
                 </div>
