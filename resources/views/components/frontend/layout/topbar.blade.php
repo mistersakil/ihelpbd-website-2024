@@ -6,7 +6,7 @@
                     <ul>
                         <li>
                             <i class='bx bx-phone'></i>
-                            <a href="tel:+8256987456">+8256987456</a>
+                            <a href="tel:+8801720092787">+8801720092787</a>
                         </li>
                         <li>
                             <i class='bx bx-envelope'></i>

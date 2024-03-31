@@ -6,7 +6,7 @@
                     <div class="footer-contact-two">
                         <div class="icon"><i class="flaticon-phone-call-1"></i></div>
                         <div class="content">
-                            <h3><a href="tel:+8256483321">+8256483321</a></h3>
+                            <h3><a href="tel:+8801720092787">+8801720092787</a></h3>
                             <p> Give us a call </p>
                         </div>
                         <div class="right"><i class="flaticon-phone-call-1"></i></div>
@@ -16,9 +16,8 @@
                     <div class="footer-contact-two">
                         <div class="icon"><i class="flaticon-email"></i></div>
                         <div class="content">
-                            <h3><a href="/cdn-cgi/l/email-protection#147d7a727b5462777b7a7a3a777b79"><span
-                                        class="__cf_email__"
-                                        data-cfemail="5930373f36192f3a363737773a3634">[email&#160;protected]</span></a>
+                            <h3>
+                                <a href="mailto:webmaster@example.com">info@ihelpbd.com</a>
                             </h3>
                             <p> Drop us a line</p>
                         </div>
