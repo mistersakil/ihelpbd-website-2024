@@ -43,9 +43,7 @@
     {{ $slot }}
 
     <x-frontend.layout.footer />
-
     @livewireScripts
-
     @includeIf('components.frontend.layout.master_script')
 </body>
 
