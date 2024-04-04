@@ -10,6 +10,7 @@
             </div>
         </div>
     </div>
+    <!-- /.mobile-responsive-nav -->
 
     <div class="desktop-nav nav-area">
         <div class="container-fluid">
@@ -24,6 +25,7 @@
                                 {{ __('home') }}
                             </a>
                         </li>
+                        <!-- /.nav-item -->
                         <li class="nav-item">
                             <a href="javascript:void(0)" class="nav-link">
                                 {{ __('about') }}
@@ -52,30 +54,35 @@
                                 </li>
                             </ul>
                         </li>
+                        <!-- /.nav-item -->
 
                         <li class="nav-item">
                             <a wire:navigate href="{{ route('web.contact') }}" class="nav-link">
                                 {{ __('contact') }}
                             </a>
                         </li>
+                        <!-- /.nav-item -->
                         <li class="nav-item">
                             <a href="{{ route('web.blogs') }}" class="nav-link" wire:navigate>
                                 {{ __('blog') }}
                             </a>
                         </li>
+                        <!-- /.nav-item -->
                         <li class="nav-item">
                             <a href="{{ route('web.products') }}" class="nav-link" wire:navigate>
                                 {{ __('products') }}
                             </a>
                         </li>
+                        <!-- /.nav-item -->
                         <li class="nav-item">
                             <a href="{{ route('web.solutions') }}" class="nav-link" wire:navigate>
                                 {{ __('solutions') }}
                             </a>
                         </li>
+                        <!-- /.nav-item -->
                     </ul>
+                    <!-- /.navbar-nav -->
                     <div class="nav-sidebar">
-
                         <div class="nav-btn">
                             <div class="switch-box">
                                 <label id="switch" class="switch">
@@ -88,6 +95,7 @@
                             </a>
                         </div>
                     </div>
+                    <!-- /.nav-sidebar -->
                     <div class="mobile-nav-area">
                         <div class="mobile-btn">
                             <a href="javascript:void(0)" class="default-btn border-radius-5">
@@ -95,8 +103,13 @@
                             </a>
                         </div>
                     </div>
+                    <!-- /.mobile-nav-area -->
                 </div>
+                <!-- /.navbar-collapse-->
             </nav>
+            <!-- /.navbar-->
         </div>
+        <!-- /.container-fluid -->
     </div>
+    <!-- /.desktop-nav -->
 </div>
