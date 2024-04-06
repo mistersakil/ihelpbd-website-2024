@@ -11,7 +11,9 @@ class AboutPage extends Component
 {
     public string $metaTitle = 'about us';
     public string $module = 'about';
-
+/**
+* return view
+*/
     public function render()
     {
         return view('livewire.frontend.about.about-page')->title($this->metaTitle);
