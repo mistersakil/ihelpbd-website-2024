@@ -4,6 +4,7 @@ namespace App\Livewire\Frontend\About;
 
 use Livewire\Component;
 
+use Illuminate\Contracts\View\View;
 /**
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
  */
