@@ -15,7 +15,7 @@ class AboutPage extends Component
 /**
 * return view
 */
-    public function render()
+    public function render():View
     {
         return view('livewire.frontend.about.about-page')->title($this->metaTitle);
     }
