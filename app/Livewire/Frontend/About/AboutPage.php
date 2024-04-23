@@ -4,6 +4,7 @@ namespace App\Livewire\Frontend\About;
 
 use Livewire\Component;
 
+use Illuminate\Contracts\View\View;
 /**
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
  */
@@ -11,8 +12,10 @@ class AboutPage extends Component
 {
     public string $metaTitle = 'about us';
     public string $module = 'about';
-
-    public function render()
+/**
+* return view
+*/
+    public function render():View
     {
         return view('livewire.frontend.about.about-page')->title($this->metaTitle);
     }
