@@ -29,7 +29,7 @@
 /*
 ******************************************* */
 @import url("./pages-css/navbar.css");
-/* @import url("./pages-css/home-one.css"); */
+@import url("./pages-css/home-one.css");
 @import url("./pages-css/home-two.css");
 /* @import url("./pages-css/home-three.css"); */
 @import url("./pages-css/inner-banner.css");
