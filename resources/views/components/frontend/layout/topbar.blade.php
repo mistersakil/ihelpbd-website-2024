@@ -35,7 +35,9 @@
                             </div>
                         </li>
                         <li>
-                            <div class="icon"><i class="flaticon-placeholder"></i></div>
+                            <div class="icon">
+                                <i class='bx bxs-map'></i>
+                            </div>
                             <div class="content">
                                 <h3><a href="https://goo.gl/maps/uNmtNyknSA3gBH198" target="_blank">32 Barnic, Walse
                                         Street</a></h3>
