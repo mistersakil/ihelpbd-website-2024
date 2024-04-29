@@ -40,7 +40,7 @@
         @endisset
     @endif
 
-    {{-- {{ $slot }} --}}
+    {{ $slot }}
     {{-- 
     <x-frontend.layout.footer />
     @livewireScripts
