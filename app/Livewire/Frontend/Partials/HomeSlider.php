@@ -15,7 +15,6 @@ class HomeSlider extends Component
      *
      * @return  \Illuminate\Contracts\View\View
      */
-
     public function render(): View
     {
         return view('livewire.frontend.partials.home-slider');

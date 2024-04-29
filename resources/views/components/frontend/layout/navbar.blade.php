@@ -4,8 +4,8 @@
             <div class="mobile-responsive-menu">
                 <div class="logo">
                     <a href="index.html">
-                        <img src="assets/images/logos/logo-1.png" class="logo-one" alt="Logo">
-                        <img src="assets/images/logos/logo-3.png" class="logo-two" alt="Logo">
+                        {{-- <img src="assets/images/logos/logo-1.png" class="logo-one" alt="Logo"> --}}
+                        {{-- <img src="assets/images/logos/logo-3.png" class="logo-two" alt="Logo"> --}}
                     </a>
                 </div>
             </div>
@@ -164,15 +164,15 @@
                             </button>
                             <div class="dropdown-menu language-dropdown-menu" aria-labelledby="language1">
                                 <a class="dropdown-item" href="#">
-                                    <img src="assets/images/uk.png" alt="flag">
+                                    {{-- <img src="assets/images/uk.png" alt="flag"> --}}
                                     English
                                 </a>
                                 <a class="dropdown-item" href="#">
-                                    <img src="assets/images/china.png" alt="flag">
+                                    {{-- <img src="assets/images/china.png" alt="flag"> --}}
                                     简体中文
                                 </a>
                                 <a class="dropdown-item" href="#">
-                                    <img src="assets/images/uae.png" alt="flag">
+                                    {{-- <img src="assets/images/uae.png" alt="flag"> --}}
                                     العربيّة
                                 </a>
                             </div>

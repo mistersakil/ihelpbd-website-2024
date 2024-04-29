@@ -100,6 +100,25 @@
             },
         });
 
+        // Project Slider Two
+        $('.project-slider-two').owlCarousel({
+            loop: true,
+            margin: 30,
+            items: 1,
+            thumbs: true,
+            thumbsPrerendered: true,
+            nav: true,
+            dots: false,
+            autoplay: true,
+            smartSpeed: 1500,
+            autoplayHoverPause: true,
+            navText: [
+                "<i class='flaticon-arrow-pointing-to-left'></i>",
+                "<i class='flaticon-arrow-pointing-to-right'></i>"
+            ],
+        })
+
+
         // Testimonial Slider
         $(".testimonial-slider").owlCarousel({
             loop: true,
