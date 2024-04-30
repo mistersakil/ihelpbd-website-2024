@@ -1,7 +1,7 @@
-<li>
-    <select wire:model='selectedLocal' class="form-select" wire:change='changeLocaleAction'>
-        @foreach ($locals as $localKey => $local)
-            <option value="{{ $localKey }}" selected>{{ $local }}</option>
-        @endforeach
-    </select>
-</li>
+<select wire:model='selectedLocal' wire:change='changeLocaleAction' class="form-select aria-labelledby="language1">
+    @foreach ($locals as $localKey => $local)
+        <option class="dropdown-item" value="{{ $localKey }}">
+            {{ $local }}
+        </option>
+    @endforeach
+</select>

@@ -5,7 +5,6 @@
                 <div class="header-logo">
                     <a href="index.html">
                         <img src="{{ Vite::asset('resources/images/logo.png') }}" alt="Images">
-
                     </a>
                 </div>
             </div>
@@ -48,9 +47,10 @@
                 </div>
             </div>
             <div class="col-lg-2 col-md-2">
-                <div class="header-btn">
+                {{-- <div class="header-btn">
                     <a href="contact.html" class="default-btn border-radius-5">Get A Quote</a>
-                </div>
+                </div> --}}
+                @livewire('frontend.partials.local-change-component')
             </div>
         </div>
     </div>

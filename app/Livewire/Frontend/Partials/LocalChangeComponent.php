@@ -44,6 +44,7 @@ class LocalChangeComponent extends Component
     public function changeLocaleAction(): mixed
     {
 
+        
         if (!array_key_exists($this->selectedLocal, $this->locals)) {
             abort(400);
         }

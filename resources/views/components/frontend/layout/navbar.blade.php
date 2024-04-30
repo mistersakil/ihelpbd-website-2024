@@ -3,9 +3,9 @@
         <div class="container-fluid">
             <div class="mobile-responsive-menu">
                 <div class="logo">
-                    <a href="index.html">
-                        {{-- <img src="assets/images/logos/logo-1.png" class="logo-one" alt="Logo"> --}}
-                        {{-- <img src="assets/images/logos/logo-3.png" class="logo-two" alt="Logo"> --}}
+                    <a wire:navigate href="{{ route('web.home') }}">
+                        <img src="{{ Vite::asset('resources/images/logo.png') }}" class="logo-one" alt="Logo">
+
                     </a>
                 </div>
             </div>
@@ -18,8 +18,8 @@
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="#" class="nav-link active">
-                                Home
+                            <a wire:navigate href="{{ route('web.home') }}" class="nav-link active">
+                                {{ __('home') }}
                             </a>
                         </li>
                         <li class="nav-item">
@@ -43,16 +43,6 @@
                                         <li class="nav-item">
                                             <a href="login.html" class="nav-link">
                                                 Log In
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="register.html" class="nav-link">
-                                                Register
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="forgot-password.html" class="nav-link">
-                                                Forgot Password
                                             </a>
                                         </li>
                                     </ul>
@@ -127,26 +117,6 @@
                                         Blog Right Sidebar
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="blog-details.html" class="nav-link">
-                                        Blog Details
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="author.html" class="nav-link">
-                                        Author
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="categories.html" class="nav-link">
-                                        Categories
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="tags.html" class="nav-link">
-                                        Tags
-                                    </a>
-                                </li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -157,27 +127,12 @@
                     </ul>
 
                     <div class="nav-sidebar">
-                        <div class="navbar-language navbar-language-mt dropdown language-option">
-                            <button class="dropdown-toggle" type="button" id="language1" data-bs-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                <i class="bx bx-world"></i>
-                                <span class="lang-name"></span>
-                            </button>
-                            <div class="dropdown-menu language-dropdown-menu" aria-labelledby="language1">
-                                <a class="dropdown-item" href="#">
-                                    {{-- <img src="assets/images/uk.png" alt="flag"> --}}
-                                    English
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    {{-- <img src="assets/images/china.png" alt="flag"> --}}
-                                    Malay
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    {{-- <img src="assets/images/uae.png" alt="flag"> --}}
-                                    বাংলা
-                                </a>
-                            </div>
-                        </div>
+
+
+                        <!-- Change locate -->
+
+
+                        {{-- @livewire('frontend.partials.local-change-component') --}}
 
                         <div class="nav-search">
                             <i id="search-btn" class="bx bx-search"></i>
@@ -194,12 +149,6 @@
                             </div>
                         </div>
 
-                        <div class="modal-icon">
-                            <a href="#" class="burger-menu menu-icon-one d-in-line">
-                                <i class="flaticon-menu"></i>
-                            </a>
-                        </div>
-
                     </div>
                     <div class="mobile-nav-area">
                         <div class="mobile-icon">
@@ -208,7 +157,7 @@
                             </a>
                         </div>
                     </div>
-                    
+
                 </div>
             </nav>
         </div>
