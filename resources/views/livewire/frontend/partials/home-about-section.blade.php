@@ -11,19 +11,15 @@
                     <div class="section-title">
                         <span class="sp-title2">Why Choose iHelp?</span>
                         <h2>Our Business is Your life Making Easier & Comfortable</h2>
-
                     </div>
-
                     <ul class="about-list">
                         <li>
                             <i class='bx bxs-right-arrow-alt'></i>
                             Customized, cost-effective solutions
-
                         </li>
                         <li>
                             <i class='bx bxs-right-arrow-alt'></i>
                             Aerfectly aligned with your budget and preference
-
                         </li>
                         <li>
                             <i class='bx bxs-right-arrow-alt'></i>

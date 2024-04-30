@@ -155,6 +155,7 @@
                             </a>
                         </li>
                     </ul>
+
                     <div class="nav-sidebar">
                         <div class="navbar-language navbar-language-mt dropdown language-option">
                             <button class="dropdown-toggle" type="button" id="language1" data-bs-toggle="dropdown"
@@ -169,14 +170,15 @@
                                 </a>
                                 <a class="dropdown-item" href="#">
                                     {{-- <img src="assets/images/china.png" alt="flag"> --}}
-                                    简体中文
+                                    Malay
                                 </a>
                                 <a class="dropdown-item" href="#">
                                     {{-- <img src="assets/images/uae.png" alt="flag"> --}}
-                                    العربيّة
+                                    বাংলা
                                 </a>
                             </div>
                         </div>
+
                         <div class="nav-search">
                             <i id="search-btn" class="bx bx-search"></i>
                             <div id="search-overlay" class="block">
@@ -191,11 +193,13 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="modal-icon">
                             <a href="#" class="burger-menu menu-icon-one d-in-line">
                                 <i class="flaticon-menu"></i>
                             </a>
                         </div>
+
                     </div>
                     <div class="mobile-nav-area">
                         <div class="mobile-icon">
@@ -204,6 +208,7 @@
                             </a>
                         </div>
                     </div>
+                    
                 </div>
             </nav>
         </div>
