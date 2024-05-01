@@ -3,6 +3,7 @@
 namespace App\Livewire\Frontend\Contact;
 
 use Livewire\Component;
+use Livewire\Attributes\Title;
 use Illuminate\Contracts\View\View;
 
 /**
@@ -18,8 +19,9 @@ class ContactPage extends Component
      *
      * @return  \Illuminate\Contracts\View\View
      */
+    #[Title('contact us')]
     public function render(): View
     {
-        return view('livewire.frontend.contact.contact-page')->title($this->metaTitle);
+        return view('livewire.frontend.contact.contact-page');
     }
 }

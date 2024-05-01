@@ -1,5 +1,10 @@
 import.meta.glob(["../images/**"]);
 
+/* Import css */
+
+resources / backend / app.css;
+import "./backend.css";
+
 /* Import sweetalert2 */
 import Swal from "sweetalert2";
 window.Swal = Swal;

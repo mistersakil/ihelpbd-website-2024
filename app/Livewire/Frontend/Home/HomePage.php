@@ -3,6 +3,7 @@
 namespace App\Livewire\Frontend\Home;
 
 use Livewire\Component;
+use Livewire\Attributes\Title;
 use Illuminate\Contracts\View\View;
 
 /**
@@ -17,8 +18,9 @@ class HomePage extends Component
      *
      * @return  \Illuminate\Contracts\View\View
      */
+    #[Title("home")]
     public function render(): View
     {
-        return view('livewire.frontend.home.home-page')->title($this->metaTitle);
+        return view('livewire.frontend.home.home-page');
     }
 }

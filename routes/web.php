@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Backend\Dashboard\DashboardPage;
 use App\Livewire\Frontend\Home\HomePage;
 use App\Livewire\Frontend\About\AboutPage;
+
 use App\Livewire\Frontend\Blogs\BlogListPage;
 use App\Livewire\Frontend\Contact\ContactPage;
 use App\Livewire\Frontend\Products\ProductListPage;
@@ -19,5 +21,5 @@ Route::name('web.')->group(function () {
 
 ## Backend routes
 Route::prefix('admin')->name('admin.')->group(function () {
-    Route::get('/', HomePage::class)->name('home');
+    Route::get('/', DashboardPage::class)->name('dashboard');
 });

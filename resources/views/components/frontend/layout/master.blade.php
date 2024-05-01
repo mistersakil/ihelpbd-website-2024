@@ -44,7 +44,7 @@
 
     <x-frontend.layout.footer />
     @livewireScripts
-    @includeIf('components.frontend.layout.master_script')
+    @includeIf('components.frontend.layout.master-script')
 </body>
 
 </html>
