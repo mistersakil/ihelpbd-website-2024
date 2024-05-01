@@ -16,3 +16,8 @@ Route::name('web.')->group(function () {
     Route::get('/products', ProductListPage::class)->name('products');
     Route::get('/solutions', SolutionListPage::class)->name('solutions');
 });
+
+## Backend routes
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/', HomePage::class)->name('home');
+});

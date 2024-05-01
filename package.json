@@ -3,7 +3,11 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "dev.back": "vite --config vite.backend.config.js",
+        "build.back": "vite build --config vite.backend.config.js",
+        "dev.all": "yarn run dev && yarn run dev.back",
+        "build.all": "yarn run build && yarn run build.back"
     },
     "devDependencies": {
         "axios": "^1.6.4",
