@@ -22,4 +22,5 @@ Route::name('web.')->group(function () {
 ## Backend routes
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/', DashboardPage::class)->name('dashboard');
+    Route::get('/sliders', DashboardPage::class)->name('dashboard');
 });
