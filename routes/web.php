@@ -1,12 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Livewire\Backend\Dashboard\DashboardPage;
 use App\Livewire\Frontend\Home\HomePage;
 use App\Livewire\Frontend\About\AboutPage;
-
 use App\Livewire\Frontend\Blogs\BlogListPage;
+
 use App\Livewire\Frontend\Contact\ContactPage;
+use App\Livewire\Backend\Dashboard\DashboardPage;
+use App\Livewire\Backend\Sliders\SliderCreatePage;
 use App\Livewire\Frontend\Products\ProductListPage;
 use App\Livewire\Frontend\Solutions\SolutionListPage;
 
@@ -22,5 +23,5 @@ Route::name('web.')->group(function () {
 ## Backend routes
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/', DashboardPage::class)->name('dashboard');
-    Route::get('/sliders', DashboardPage::class)->name('dashboard');
+    Route::get('/sliders', SliderCreatePage::class)->name('sliders');
 });

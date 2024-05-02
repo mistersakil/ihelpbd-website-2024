@@ -84,6 +84,7 @@ if (!function_exists('_icons')) {
             'setting'                   => 'bi bi-wrench-adjustable',
             'settings'                  => 'bi bi-wrench-adjustable-circle',
             'skill'                     => 'bi bi-mortarboard',
+            'sliders'                   => 'bi bi-sliders',
             'twitter'                   => 'bi bi-twitter',
             'tags'                      => 'bi bi-tags',
             'tag'                       => 'bi bi-tag',

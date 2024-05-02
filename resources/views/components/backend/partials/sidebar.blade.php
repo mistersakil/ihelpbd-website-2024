@@ -16,7 +16,7 @@
                 </li>
             @elseif (!$nav_link['nav_is_readonly'] && !$nav_link['nav_has_children'])
                 <li>
-                    <a href="{{ $nav_link['nav_url'] }}">
+                    <a href="{{ $nav_link['nav_url'] }}" wire:navigate>
                         <div class="parent-icon">
                             <i class="{{ $nav_link['nav_icon'] }}"></i>
                         </div>
@@ -39,7 +39,7 @@
                         <ul>
                             @foreach ($nav_link['nav_children'] as $nav_child)
                                 <li>
-                                    <a href="{{ $nav_child['url'] }}" class="text-capitalize">
+                                    <a href="{{ $nav_child['url'] }}" class="text-capitalize" wire:navigate>
                                         <i class="{{ $icon_circle }}"></i>
                                         {{ $nav_child['title'] }}
                                     </a>

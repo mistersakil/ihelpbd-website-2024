@@ -48,6 +48,14 @@ class Sidebar extends Component
                 'nav_has_children' => false,
                 'nav_children' => false
             ],
+            [
+                'nav_url' => route('admin.sliders'),
+                'nav_icon' => _icons('sliders'),
+                'nav_title' => __('sliders'),
+                'nav_is_readonly' => false,
+                'nav_has_children' => false,
+                'nav_children' => false
+            ],
 
             // [
             //     'nav_url' => false,
