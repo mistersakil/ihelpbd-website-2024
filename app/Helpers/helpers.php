@@ -58,6 +58,7 @@ if (!function_exists('_icons')) {
             'heart'                     => 'bi bi-heart',
             'home'                      => 'bi bi-house-door',
             'history'                   => 'bi bi-clock-history',
+            'hide'                      => 'bi bi-eye-slash',
             'image'                     => 'bi bi-card-image',
             'images'                    => 'bi bi-images',
             'lead'                      => 'bi bi-person-gear',

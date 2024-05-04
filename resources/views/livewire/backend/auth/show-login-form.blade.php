@@ -14,16 +14,16 @@
 
                             <div class="input-group">
                                 <div class="input-group-text">
-                                    <i class="bx bxs-envelope"></i>
+                                    <i class="{{ _icons('email') }}"></i>
                                 </div>
                                 <input wire:model.lazy="email" type="text"
                                     class="form-control @error('email') is-invalid @enderror" id="email"
                                     placeholder="{{ __('Enter your email address') }}">
 
                                 @error('email')
-                                <div class="invalid-feedback">
-                                    {{ $message }}
-                                </div>
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
                                 @enderror
                             </div>
 
@@ -42,9 +42,9 @@
                                     class="form-control @error('password') is-invalid @enderror" id="password"
                                     value="12345678" placeholder="{{ __('Enter your password') }}">
                                 @error('password')
-                                <div class="invalid-feedback">
-                                    {{ $message }}
-                                </div>
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
                                 @enderror
                             </div>
 
@@ -55,7 +55,7 @@
                         <div class="col-md-6">
                             <div class="form-check form-switch">
                                 <input wire:model="remember_me" class="form-check-input" type="checkbox"
-                                    id="remember_me" @if($remember_me) checked @endif />
+                                    id="remember_me" @if ($remember_me) checked @endif />
                                 <label class="form-check-label" for="remember_me">{{ __('Remember Me') }}</label>
                             </div>
                         </div>
