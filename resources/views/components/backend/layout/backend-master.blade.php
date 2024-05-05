@@ -21,10 +21,10 @@
     <!--wrapper-->
     <div class="wrapper">
         <!-- sidebar -->
-        <x-backend.partials.sidebar />
+        <x-backend.layout.sidebar />
 
         <!-- header -->
-        <x-backend.partials.header />
+        <x-backend.layout.header />
 
         <!-- main content -->
         <div class="page-wrapper">

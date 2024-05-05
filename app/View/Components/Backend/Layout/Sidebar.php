@@ -1,22 +1,13 @@
 <?php
 
-namespace App\View\Components\Backend\Partials;
+namespace App\View\Components\Backend\Layout;
 
-use Closure;
 use Illuminate\View\Component;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Vite;
 
 class Sidebar extends Component
 {
-
-    /**
-     * Get the view / contents that represent the component.
-     */
-    public function render(): View|Closure|string
-    {
-        return view('components.backend.partials.sidebar');
-    }
 
     public string $logo;
     public string $icon_circle;
@@ -86,5 +77,14 @@ class Sidebar extends Component
 
 
         ];
+    }
+
+
+    /**
+     * Get the view / contents that represent the component.
+     */
+    public function render(): View
+    {
+        return view('components.backend.layout.sidebar');
     }
 }

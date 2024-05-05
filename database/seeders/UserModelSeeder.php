@@ -32,11 +32,10 @@ class UserModelSeeder extends Seeder
             'updated_at'        => now(),
         ]);
 
-        for ($i = 0; $i < 20; $i++) {
+        for ($i = 0; $i < 8; $i++) {
             User::create([
                 'name'          => fake()->name(),
                 'email'         => fake()->unique()->safeEmail(),
-                'mobile_number' => fake()->unique()->phoneNumber(),
                 'is_active'     => rand(0, 1),
                 'password'      => $password,
                 'created_at'    => now(),

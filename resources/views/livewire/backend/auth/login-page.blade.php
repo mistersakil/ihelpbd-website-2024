@@ -65,7 +65,7 @@
                                         </div>
                                         <input wire:model.lazy="password" type="password"
                                             class="form-control @error('password') is-invalid @enderror" id="password"
-                                            value="12345678" placeholder="{{ __('Enter your password') }}">
+                                            value="12345678#" placeholder="{{ __('Enter your password') }}">
                                         @error('password')
                                             <div class="invalid-feedback">
                                                 {{ $message }}

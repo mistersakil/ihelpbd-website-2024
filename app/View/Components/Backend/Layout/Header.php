@@ -1,12 +1,12 @@
 <?php
 
-namespace App\View\Components\Backend\Partials;
+namespace App\View\Components\Backend\Layout;
 
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
 /**
- * Sidebar Component
+ * Header Component
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
  */
 class Header extends Component
@@ -37,6 +37,6 @@ class Header extends Component
      */
     public function render(): View
     {
-        return view('components.backend.partials.header');
+        return view('components.backend.layout.header');
     }
 }

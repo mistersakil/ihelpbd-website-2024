@@ -38,9 +38,6 @@
                     </li>
                     <!-- /.nav-item  -->
 
-                    {{-- <livewire:backend.partials.header-notification-component /> --}}
-
-
                 </ul>
                 <!-- /.navbar-nav  -->
             </div>
@@ -75,7 +72,7 @@
                         <div class="dropdown-divider mb-0"></div>
                     </li>
                     @if ($isDisplayLogoutAction)
-                        <livewire:backend.auth.logout />
+                        <livewire:backend.auth.logout-component />
                     @endif
                 </ul>
                 <!-- /.dropdown-menu -->
