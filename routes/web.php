@@ -5,6 +5,7 @@ use App\Livewire\Backend\Auth\LoginPage;
 use App\Livewire\Frontend\Home\HomePage;
 use App\Livewire\Frontend\About\AboutPage;
 
+use App\Http\Middleware\AuthCheckMiddleware;
 use App\Livewire\Frontend\Blogs\BlogListPage;
 use App\Livewire\Frontend\Contact\ContactPage;
 use App\Livewire\Backend\Dashboard\DashboardPage;
@@ -21,10 +22,13 @@ Route::name('web.')->group(function () {
     Route::get('/solutions', SolutionListPage::class)->name('solutions');
 });
 
+$backendMiddleware = [
+    AuthCheckMiddleware::class
+];
+
 ## Backend routes
-Route::prefix('admin')->name('admin.')->group(function () {
+Route::middleware($backendMiddleware)->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', DashboardPage::class)->name('dashboard');
     Route::get('/sliders', SliderCreatePage::class)->name('sliders');
-
-    Route::get('/login', LoginPage::class)->name('login');
+    Route::get('/login', LoginPage::class)->name('login')->withoutMiddleware([AuthCheckMiddleware::class]);;
 });
