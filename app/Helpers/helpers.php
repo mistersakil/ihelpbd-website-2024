@@ -45,7 +45,7 @@ if (!function_exists('_icons')) {
             'contact'                   => 'bi bi-envelope-open',
             'conversations'             => 'bi bi-person',
             'dashboard'                 => 'bi bi-speedometer2',
-            'dark'                      => 'bi bi-lightbulb',
+            'dark'                      => 'bi bi-lightbulb-fill',
             'default'                   => 'bi bi-info-circle',
             'delete'                    => 'bi bi-trash3',
             'delete_all'                => 'bi bi-trash2',

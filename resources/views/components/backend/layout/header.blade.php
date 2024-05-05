@@ -1,27 +1,12 @@
 <header>
     <div class="topbar d-flex align-items-center">
         <nav class="navbar navbar-expand gap-3">
-            <div class="mobile-toggle-menu"><i class='bx bx-menu'></i>
-            </div>
 
-            <div class="position-relative search-bar d-lg-block d-none" data-bs-toggle="modal"
-                data-bs-target="#SearchModal">
-                <input class="form-control px-5" disabled type="search" placeholder="Search">
-                <span class="position-absolute top-50 search-show ms-3 translate-middle-y start-0 top-50 fs-5">
-                    <i class='bx bx-search'></i>
-                </span>
-            </div>
 
 
             <div class="top-menu ms-auto">
                 <ul class="navbar-nav align-items-center gap-1">
-                    <li class="nav-item mobile-search-icon d-flex d-lg-none" data-bs-toggle="modal"
-                        data-bs-target="#SearchModal">
-                        <a class="nav-link" href="avascript:void(0)">
-                            <i class='bx bx-search'></i>
-                        </a>
-                    </li>
-                    <!-- /.nav-item  -->
+
 
                     <li class="nav-item d-sm-flex">
                         <a class="nav-link" href="{{ route('web.home') }}" title="{{ __('Visit Website') }}"
@@ -33,7 +18,7 @@
 
                     <li class="nav-item dark-mode d-none d-sm-flex">
                         <a class="nav-link dark-mode-icon" href="javascript:void(0)" title="{{ __('Change Theme') }}">
-                            <i class='bx bx-moon'></i>
+                            <i class="{{ _icons('light') }}"></i>
                         </a>
                     </li>
                     <!-- /.nav-item  -->
@@ -53,24 +38,20 @@
                 </a>
                 <!-- /.nav-link -->
                 <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
-                                class="bx bx-user fs-5"></i><span>Profile</span></a>
-                    </li>
-                    <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
-                                class="bx bx-cog fs-5"></i><span>Settings</span></a>
-                    </li>
-                    <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
-                                class="bx bx-home-circle fs-5"></i><span>Dashboard</span></a>
-                    </li>
-                    <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
-                                class="bx bx-dollar-circle fs-5"></i><span>Earnings</span></a>
-                    </li>
-                    <li><a class="dropdown-item d-flex align-items-center" href="javascript:;"><i
-                                class="bx bx-download fs-5"></i><span>Downloads</span></a>
-                    </li>
                     <li>
-                        <div class="dropdown-divider mb-0"></div>
+                        <a class="dropdown-item d-flex align-items-center" href="javascript:;">
+                            <i class="{{ _icons('user') }}"></i>
+                            <span>Profile</span>
+                        </a>
                     </li>
+
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="javascript:;">
+                            <i class="{{ _icons('settings') }}"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+
                     @if ($isDisplayLogoutAction)
                         <livewire:backend.auth.logout-component />
                     @endif
