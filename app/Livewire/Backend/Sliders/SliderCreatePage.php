@@ -8,7 +8,7 @@ use Livewire\Attributes\Layout;
 use Illuminate\Contracts\View\View;
 
 /**
- * Sidebar Component
+ * SliderCreatePage Component
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
  */
 class SliderCreatePage extends Component

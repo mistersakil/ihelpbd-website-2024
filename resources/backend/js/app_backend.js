@@ -1,11 +1,10 @@
 /* Import jQuery */
 import $ from "jquery";
 window.jQuery = window.$ = $;
-import PerfectScrollbar from "perfect-scrollbar";
-window.PerfectScrollbar = PerfectScrollbar;
+
 $(function () {
     "use strict";
-    new PerfectScrollbar(".header-message-list");
+
     $(".mobile-search-icon").on("click", function () {
         $(".search-bar").addClass("full-search-bar");
     }),

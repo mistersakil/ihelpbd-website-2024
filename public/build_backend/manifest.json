@@ -1,0 +1,81 @@
+{
+  "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": {
+    "file": "assets/bootstrap-icons-BOrJxbIo.woff",
+    "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff"
+  },
+  "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": {
+    "file": "assets/bootstrap-icons-BtvjY1KL.woff2",
+    "src": "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2"
+  },
+  "resources/backend/backendCss.css": {
+    "file": "assets/backendCss-BIuNA2lA.css",
+    "src": "resources/backend/backendCss.css",
+    "isEntry": true
+  },
+  "resources/backend/backendJs.js": {
+    "file": "assets/backendJs-CfZU_CON.js",
+    "name": "backendJs",
+    "src": "resources/backend/backendJs.js",
+    "isEntry": true
+  },
+  "resources/backend/fonts/LineIcons.eot": {
+    "file": "assets/LineIcons-BJUrqD8W.eot",
+    "src": "resources/backend/fonts/LineIcons.eot"
+  },
+  "resources/backend/fonts/LineIcons.svg": {
+    "file": "assets/LineIcons--A_6HXRF.svg",
+    "src": "resources/backend/fonts/LineIcons.svg"
+  },
+  "resources/backend/fonts/LineIcons.ttf": {
+    "file": "assets/LineIcons-Cqb3QtOe.ttf",
+    "src": "resources/backend/fonts/LineIcons.ttf"
+  },
+  "resources/backend/fonts/LineIcons.woff": {
+    "file": "assets/LineIcons-DrihXZZM.woff",
+    "src": "resources/backend/fonts/LineIcons.woff"
+  },
+  "resources/backend/fonts/LineIcons.woff2": {
+    "file": "assets/LineIcons-BZgAh_1U.woff2",
+    "src": "resources/backend/fonts/LineIcons.woff2"
+  },
+  "resources/backend/fonts/boxicons.eot": {
+    "file": "assets/boxicons-CASQlNmZ.eot",
+    "src": "resources/backend/fonts/boxicons.eot"
+  },
+  "resources/backend/fonts/boxicons.svg": {
+    "file": "assets/boxicons-Cv8c-MCu.svg",
+    "src": "resources/backend/fonts/boxicons.svg"
+  },
+  "resources/backend/fonts/boxicons.ttf": {
+    "file": "assets/boxicons-BDxpaK7B.ttf",
+    "src": "resources/backend/fonts/boxicons.ttf"
+  },
+  "resources/backend/fonts/boxicons.woff": {
+    "file": "assets/boxicons-BRXHbA3Z.woff",
+    "src": "resources/backend/fonts/boxicons.woff"
+  },
+  "resources/backend/fonts/boxicons.woff2": {
+    "file": "assets/boxicons-D-9kh4JX.woff2",
+    "src": "resources/backend/fonts/boxicons.woff2"
+  },
+  "resources/backend/images/avatar-2.png": {
+    "file": "assets/avatar-2-BjHJVy24.png",
+    "src": "resources/backend/images/avatar-2.png"
+  },
+  "resources/backend/images/register-cover.svg": {
+    "file": "assets/register-cover-CBvYJtEf.svg",
+    "src": "resources/backend/images/register-cover.svg"
+  },
+  "resources/images/avatar.jpg": {
+    "file": "assets/avatar-D1lQrsNr.jpg",
+    "src": "resources/images/avatar.jpg"
+  },
+  "resources/images/favicon.png": {
+    "file": "assets/favicon-BOmR1YV6.png",
+    "src": "resources/images/favicon.png"
+  },
+  "resources/images/logo.png": {
+    "file": "assets/logo-BP3jK-gc.png",
+    "src": "resources/images/logo.png"
+  }
+}

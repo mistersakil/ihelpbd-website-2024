@@ -1772,7 +1772,6 @@ form select.error:focus {
 }
 
 .bg-login {
-    background-image: url(../images/login-images/bg-login-img.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1780,7 +1779,6 @@ form select.error:focus {
 }
 
 .bg-forgot {
-    background-image: url(../images/login-images/bg-forgot-password.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1788,7 +1786,6 @@ form select.error:focus {
 }
 
 .bg-lock-screen {
-    background-image: url(../images/login-images/bg-lock-screen.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

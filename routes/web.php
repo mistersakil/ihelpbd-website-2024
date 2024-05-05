@@ -23,12 +23,17 @@ Route::name('web.')->group(function () {
 });
 
 $backendMiddleware = [
-    AuthCheckMiddleware::class
+    // AuthCheckMiddleware::class
 ];
 
 ## Backend routes
 Route::middleware($backendMiddleware)->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', DashboardPage::class)->name('dashboard');
+
+    ### Sliders 
     Route::get('/sliders', SliderCreatePage::class)->name('sliders');
+    Route::get('/sliders/create', SliderCreatePage::class)->name('sliders.create');
+
+    ### Admin login
     Route::get('/login', LoginPage::class)->name('login')->withoutMiddleware([AuthCheckMiddleware::class]);;
 });

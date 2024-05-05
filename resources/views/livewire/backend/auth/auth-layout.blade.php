@@ -12,7 +12,7 @@
     <!-- Google fonts -->
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    @vite(['resources/backend/backend.js'])
+    @vite('resources/backend/backend.css', 'resources/backend/backend.js')
     @stack('dynamic_css')
     @livewireStyles
 </head>

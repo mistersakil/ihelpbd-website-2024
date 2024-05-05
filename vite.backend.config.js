@@ -6,7 +6,10 @@ export default defineConfig({
         laravel({
             hotFile: "public/hot",
             buildDirectory: "build_backend",
-            input: ["resources/backend/backend.js"],
+            input: [
+                "resources/backend/backendCss.css",
+                "resources/backend/backendJs.js",
+            ],
             refresh: true,
         }),
     ],

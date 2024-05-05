@@ -1,9 +1,4 @@
-import.meta.glob(["../images/**"]);
-
-/* Import css */
-
-resources / backend / app.css;
-import "./backend.css";
+import.meta.glob(["../images/**", "./images/**", "./fonts/**"]);
 
 /* Import sweetalert2 */
 import Swal from "sweetalert2";
@@ -44,16 +39,3 @@ const Toast = Swal.mixin({
 });
 
 window.Toast = Toast;
-
-/** Broadcasting */
-import Echo from "laravel-echo";
-import Pusher from "pusher-js";
-
-window.Pusher = Pusher;
-
-window.Echo = new Echo({
-    broadcaster: "pusher",
-    key: import.meta.env.VITE_PUSHER_APP_KEY,
-    cluster: import.meta.env.VITE_PUSHER_APP_CLUSTER,
-    forceTLS: true,
-});
