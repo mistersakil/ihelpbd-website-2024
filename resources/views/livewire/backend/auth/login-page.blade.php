@@ -2,7 +2,6 @@
     <div class="section-authentication-cover">
 
         <div class="row g-0">
-
             <div
                 class="col-12 col-xl-7 col-xxl-8 auth-cover-left align-items-center justify-content-center d-none d-xl-flex">
 

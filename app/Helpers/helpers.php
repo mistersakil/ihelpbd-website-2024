@@ -49,7 +49,7 @@ if (!function_exists('_icons')) {
             'default'                   => 'bi bi-info-circle',
             'delete'                    => 'bi bi-trash3',
             'delete_all'                => 'bi bi-trash2',
-            'email'                     => 'bi bi-envelope-at',
+            'email'                     => 'bi bi-envelope',
             'edit'                      => 'bi bi-pen',
             'example'                   => 'bi bi-example',
             'facebook'                  => 'bi bi-facebook',
