@@ -5,7 +5,7 @@ export default defineConfig({
     plugins: [
         laravel({
             hotFile: "public/hot",
-            buildDirectory: "build_backend",
+            buildDirectory: "public/build_backend",
             input: [
                 "resources/backend/backendCss.css",
                 "resources/backend/backendJs.js",

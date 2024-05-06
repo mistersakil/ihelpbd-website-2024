@@ -6,12 +6,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
-    <link rel="icon" href="{{ Vite::imageRoot('favicon.png') }}" type="image/png" />
     <title>{{ $title ?? 'Dashboard' }} | {{ config('app.name') }}</title>
 
 
-    {{ Vite::useHotFile('hot')->useBuildDirectory('build_backend')->withEntryPoints('resources/backend/backendCss.css', 'resources/backend/backendJs.js') }}
+    {{-- {{ Vite::useHotFile('hot')->useBuildDirectory('build_backend')->withEntryPoints('resources/backend/backendCss.css', 'resources/backend/backendJs.js') }} --}}
 
+    @vite('resources/backend/backendCss.css')
+    @vite('resources/backend/backendJs.js')
 </head>
 
 <body>
