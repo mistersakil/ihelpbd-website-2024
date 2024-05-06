@@ -51,7 +51,7 @@
         });
 
         // Banner Slider
-        $(".banner-slider").owlCarousel({
+        $("#banner-slider").owlCarousel({
             loop: true,
             margin: 0,
             autoHeight: true,

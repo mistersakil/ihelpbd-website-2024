@@ -1,0 +1,149 @@
+.service-article-content {
+  margin-bottom: 20px;
+}
+
+.service-article-content img {
+  margin-bottom: 25px;
+}
+
+.service-article-content .content h3 {
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+.service-article-content .content p {
+  margin-bottom: 15px;
+}
+
+.service-article-content .content p:last-child {
+  margin-bottom: 0;
+}
+
+.service-article-another .content {
+  margin-bottom: 30px;
+}
+
+.service-article-another .content h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.service-article-another .content p {
+  margin-bottom: 0;
+}
+
+.service-article-another .service-article-img {
+  margin-bottom: 30px;
+}
+
+.service-article-another .services-content-list {
+  margin-bottom: 30px;
+}
+
+.service-article-another .services-content-list h3 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.service-article-another .services-content-list p {
+  margin-bottom: 15px;
+}
+
+.service-article-another .services-content-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-article-another .services-content-list ul li {
+  display: block;
+  font-size: 16px;
+  color: var(--titleColor);
+  margin-bottom: 10px;
+  font-weight: 500;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.service-article-another .services-content-list ul li i {
+  color: var(--orangeColor);
+  margin-right: 5px;
+  position: relative;
+  top: 3px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.service-article-another .services-content-list ul li:hover {
+  color: var(--orangeColor);
+  letter-spacing: 0.25px;
+  margin-left: 2px;
+}
+
+.service-article-another .services-content-list ul li:hover i {
+  color: var(--titleColor);
+}
+
+.service-article-bottom {
+  margin-bottom: 30px;
+}
+
+.service-article-bottom p {
+  margin-bottom: 30px;
+}
+
+.service-article-bottom .service-article-img {
+  margin-bottom: 30px;
+}
+
+/*=================================
+Responsive Css 
+====================================*/
+@media only screen and (max-width: 767px) {
+  .service-article-content .content h3 {
+    font-size: 24px;
+  }
+  .service-article-another .content h3 {
+    font-size: 22px;
+  }
+  .service-article-another .services-content-list {
+    margin-bottom: 30px;
+  }
+  .service-article-another .services-content-list h3 {
+    font-size: 22px;
+  }
+  .service-article-another .services-content-list ul li {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .service-article-content .content h3 {
+    font-size: 24px;
+  }
+  .service-article-another .content h3 {
+    font-size: 22px;
+  }
+  .service-article-another .services-content-list {
+    margin-bottom: 30px;
+  }
+  .service-article-another .services-content-list h3 {
+    font-size: 22px;
+  }
+  .service-article-another .services-content-list ul li {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .service-article-another .services-content-list {
+    margin-bottom: 30px;
+  }
+  .service-article-another .services-content-list h3 {
+    font-size: 22px;
+  }
+  .service-article-another .services-content-list ul li {
+    font-size: 16px;
+  }
+}
+/*# sourceMappingURL=service-details.css.map */

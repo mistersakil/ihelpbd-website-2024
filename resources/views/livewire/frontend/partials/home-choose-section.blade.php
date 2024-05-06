@@ -7,7 +7,7 @@
         <div class="row pt-45 align-items-center justify-content-center">
             <div class="col-lg-5">
                 <div class="choose-img">
-                    <img src="{{ Vite::asset('resources/frontend/images/choose-img1.png') }}" alt="Choose Images">
+                    <img src="{{ Vite::imageWeb('choose-img1.png') }}" alt="Choose Images">
                 </div>
             </div>
             <div class="col-lg-7">
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                     <div class="choose-bg">
-                        <img src="{{ Vite::asset('resources/frontend/images/choose-bg.png') }} " alt="Choose Images">
+                        <img src="{{ Vite::imageWeb('choose-bg.png') }} " alt="Choose Images">
                     </div>
                 </div>
             </div>

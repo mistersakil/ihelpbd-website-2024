@@ -23,7 +23,7 @@
     <link rel="icon" type="image/png" href="{{ Vite::asset('resources/images/favicon.png') }}">
 
 
-    @vite(['resources/frontend/app.css', 'resources/frontend/app.js'])
+    @vite(['resources/assets/web/web-js.js'])
 
     @livewireStyles
 </head>

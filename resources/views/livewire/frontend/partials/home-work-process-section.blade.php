@@ -29,10 +29,10 @@
             </div>
             <div class="col-lg-6">
                 <div class="work-img">
-                    <img src="{{ Vite::asset('resources/frontend/images/work-img.png') }}" alt="Work Images">
-                    <img src="{{ Vite::asset('resources/frontend/images/work-img1.jpg') }}" alt="Work Images">
+                    <img src="{{ Vite::imageWeb('work-img.png') }}" alt="Work Images">
+                    <img src="{{ Vite::imageWeb('work-img1.jpg') }}" alt="Work Images">
                     <div class="line">
-                        <img src="{{ Vite::asset('resources/frontend/images/work-line.png') }}" alt="Work Images">
+                        <img src="{{ Vite::imageWeb('work-line.png') }}" alt="Work Images">
                     </div>
                 </div>
             </div>

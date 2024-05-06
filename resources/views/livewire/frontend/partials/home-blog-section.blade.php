@@ -8,7 +8,7 @@
             <div class="col-lg-6">
                 <div class="blog-card">
                     <a href="blog-details.html">
-                        <img src="{{ Vite::asset('resources/frontend/images/blog-img1.jpg') }}" alt="Blog Images">
+                        <img src="{{ Vite::imageWeb('blog-img1.jpg') }}" alt="Blog Images">
                     </a>
                     <div class="content">
                         <ul>
@@ -29,8 +29,7 @@
                         <div class="blog-left-content">
                             <div class="blog-left-img">
                                 <a href="blog-details.html">
-                                    <img src="{{ Vite::asset('resources/frontend/images/blog-sub1.jpg') }}"
-                                        alt="Blog Images">
+                                    <img src="{{ Vite::imageWeb('blog-sub1.jpg') }}" alt="Blog Images">
                                 </a>
                             </div>
                             <div class="content">
@@ -50,8 +49,7 @@
                         <div class="blog-left-content">
                             <div class="blog-left-img">
                                 <a href="blog-details.html">
-                                    <img src="{{ Vite::asset('resources/frontend/images/blog-sub2.jpg') }}"
-                                        alt="Blog Images">
+                                    <img src="{{ Vite::imageWeb('blog-sub2.jpg') }}" alt="Blog Images">
                                 </a>
                             </div>
                             <div class="content">
@@ -70,8 +68,7 @@
                         <div class="blog-left-content">
                             <div class="blog-left-img">
                                 <a href="blog-details.html">
-                                    <img src="{{ Vite::asset('resources/frontend/images/blog-sub3.jpg') }}"
-                                        alt="Blog Images">
+                                    <img src="{{ Vite::imageWeb('blog-sub3.jpg') }}" alt="Blog Images">
                                 </a>
                             </div>
                             <div class="content">

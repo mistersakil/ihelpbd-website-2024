@@ -1,5 +1,5 @@
 <div class="banner-area-two">
-    <div class="banner-slider owl-carousel owl-theme">
+    <div class="banner-slider owl-carousel owl-theme" id="banner-slider">
         <div class="banner-item">
             <div class="container-fluid">
                 <div class="row align-items-center">
@@ -37,8 +37,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="banner-img-two">
-                            <img src="{{ Vite::asset('resources/frontend/images/home-two-img1.jpg') }}"
-                                alt="Home Images">
+                            <img src="{{ Vite::imageWeb('home-two-img1.jpg') }}" alt="Home Images">
                         </div>
                     </div>
                 </div>
@@ -81,8 +80,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="banner-img-two">
-                            <img src="{{ Vite::asset('resources/frontend/images/home-two-img2.jpg') }}"
-                                alt="Home Images">
+                            <img src="{{ Vite::imageWeb('home-two-img2.jpg') }}" alt="Home Images">
                         </div>
                     </div>
                 </div>
@@ -125,8 +123,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="banner-img-two">
-                            <img src="{{ Vite::asset('resources/frontend/images/home-two-img3.jpg') }}"
-                                alt="Home Images">
+                            <img src="{{ Vite::imageWeb('home-two-img3.jpg') }}" alt="Home Images">
                         </div>
                     </div>
                 </div>

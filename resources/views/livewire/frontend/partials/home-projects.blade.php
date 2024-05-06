@@ -8,16 +8,13 @@
             <div class="col-lg-7">
                 <div class="project-slider-two owl-carousel owl-theme" data-slider-id="1">
                     <div class="project-slider-img">
-                        <img src="{{ Vite::asset('resources/frontend/images/project-style1.jpg') }}"
-                            alt="Project image 1">
+                        <img src="{{ Vite::imageWeb('project-style1.jpg') }}" alt="Project image 1">
                     </div>
                     <div class="project-slider-img">
-                        <img src="{{ Vite::asset('resources/frontend/images/project-style2.jpg') }}"
-                            alt="Project image 2">
+                        <img src="{{ Vite::imageWeb('project-style2.jpg') }}" alt="Project image 2">
                     </div>
                     <div class="project-slider-img">
-                        <img src="{{ Vite::asset('resources/frontend/images/project-style3.jpg') }}"
-                            alt="Project image 3">
+                        <img src="{{ Vite::imageWeb('project-style3.jpg') }}" alt="Project image 3">
                     </div>
                 </div>
             </div>

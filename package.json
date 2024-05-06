@@ -2,12 +2,12 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "dev.back": "vite --config vite.backend.config.js",
-        "build.back": "vite build --config vite.backend.config.js",
-        "dev.all": "npm run dev && npm run dev.back",
-        "build.all": "npm run build && npm run build.back"
+        "web.dev": "vite",
+        "web.build": "vite build",
+        "back.dev": "vite --config vite.backend.config.js",
+        "back.build": "vite build --config vite.backend.config.js",
+        "dev": "npm run web.dev && npm run back.dev",
+        "build": "npm run web.build && npm run back.build"
     },
     "devDependencies": {
         "axios": "^1.6.4",
@@ -26,11 +26,12 @@
         "laravel-echo": "^1.15.1",
         "metismenu": "^3.0.7",
         "pace-js": "^1.2.4",
+        "path": "^0.12.7",
         "perfect-scrollbar": "^1.5.5",
         "progress": "^2.0.3",
         "pusher-js": "^8.0.2",
         "sweetalert2": "^11.10.6",
         "toastr": "^2.1.4",
-        "wowjs": "^1.1.3"
+        "wow.js": "^1.2.2"
     }
 }

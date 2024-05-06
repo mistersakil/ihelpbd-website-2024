@@ -7,8 +7,7 @@
         <div class="testimonial-slider owl-carousel owl-theme">
             <div class="testimonial-item">
                 <div class="content">
-                    <img src="{{ Vite::asset('resources/frontend/images/testimonial-profile1.jpg') }}"
-                        alt="Testimonials Images">
+                    <img src="{{ Vite::imageWeb('testimonial-profile1.jpg') }}" alt="Testimonials Images">
                     <h3>Moris Jacker</h3>
                     <span>Developer</span>
                 </div>
@@ -30,8 +29,7 @@
             </div>
             <div class="testimonial-item">
                 <div class="content">
-                    <img src="{{ Vite::asset('resources/frontend/images/testimonial-profile2.jpg') }}"
-                        alt="Testimonials Images">
+                    <img src="{{ Vite::imageWeb('testimonial-profile2.jpg') }}" alt="Testimonials Images">
                     <h3>Orbindu Jeason</h3>
                     <span>Manager</span>
                 </div>
@@ -53,8 +51,7 @@
             </div>
             <div class="testimonial-item">
                 <div class="content">
-                    <img src="{{ Vite::asset('resources/frontend/images/testimonial-profile3.jpg') }} "
-                        alt="Testimonials Images">
+                    <img src="{{ Vite::imageWeb('testimonial-profile3.jpg') }} " alt="Testimonials Images">
                     <h3>Lithiya Gera</h3>
                     <span>Designer</span>
                 </div>
@@ -76,8 +73,7 @@
             </div>
             <div class="testimonial-item">
                 <div class="content">
-                    <img src="{{ Vite::asset('resources/frontend/images/testimonial-profile1.jpg') }} "
-                        alt="Testimonials Images">
+                    <img src="{{ Vite::imageWeb('testimonial-profile1.jpg') }} " alt="Testimonials Images">
                     <h3>Moris Jacker</h3>
                     <span>Developer</span>
                 </div>

@@ -3,7 +3,7 @@
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-6">
                 <div class="about-img-two">
-                    <img src="{{ Vite::asset('resources/frontend/images/about-img2.jpg') }}" alt="About Images">
+                    <img src="{{ Vite::imageWeb('about-img2.jpg') }}" alt="About Images">
                 </div>
             </div>
             <div class="col-lg-6">
