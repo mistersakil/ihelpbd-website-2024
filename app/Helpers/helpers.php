@@ -35,6 +35,7 @@ if (!function_exists('_icons')) {
             'add'                       => 'bi bi-plus-lg',
             'attachments'               => 'bi bi-folder-symlink',
             'arrow_right'               => 'bi bi-arrow-right-short',
+            'arrow_left'                => 'bi bi-arrow-left-short',
             'blog'                      => 'bi bi-newspaper',
             'bell'                      => 'bi bi-bell',
             'bin'                       => 'bi bi-trash2',

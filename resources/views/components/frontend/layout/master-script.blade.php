@@ -62,8 +62,8 @@
             autoplay: true,
             autoplayHoverPause: true,
             navText: [
-                "<i class='flaticon-arrow-pointing-to-left'></i>",
-                "<i class='flaticon-arrow-pointing-to-right'></i>",
+                "<i class='" + "{{ _icons('arrow_left') }}" + "'></i>",
+                "<i class='" + "{{ _icons('arrow_right') }}" + "'></i>",
             ],
         });
 

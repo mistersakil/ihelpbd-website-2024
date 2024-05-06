@@ -1,5 +1,6 @@
 /* Packages */
 @import "animate.css";
+@import "bootstrap-icons";
 /* Template css */
 @import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import "../../../node_modules/boxicons/css/boxicons.min.css";
