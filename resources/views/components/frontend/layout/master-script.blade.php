@@ -61,10 +61,7 @@
             center: true,
             autoplay: true,
             autoplayHoverPause: true,
-            navText: [
-                "<i class='" + "{{ _icons('arrow_left') }}" + "'></i>",
-                "<i class='" + "{{ _icons('arrow_right') }}" + "'></i>",
-            ],
+
         });
 
         // Services Slider
