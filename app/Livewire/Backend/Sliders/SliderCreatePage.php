@@ -13,11 +13,34 @@ use Illuminate\Contracts\View\View;
  */
 class SliderCreatePage extends Component
 {
+    public string $title = 'sliders';
+    public string $activeItem = 'create';
+
+    public array $state = [];
+
+    /**
+     * @return void
+     */
+    public function mount(): void
+    {
+        $this->getDefaultState();
+    }
+
+    /**
+     * @return void
+     */
+    public function getDefaultState(): void
+    {
+        $this->state = [
+            'title' => ''
+        ];
+    }
+
     /**
      * Render view
      * @return \Illuminate\Contracts\View\View
      */
-    #[Layout('components.backend.layout.backend-master')]
+    #[Layout('components.backend.layout.backend-layout')]
     #[Title('Sliders')]
     public function render(): View
     {

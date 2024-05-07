@@ -1,19 +1,10 @@
 /* Overwritten styles  */
-.sidebar-wrapper .metismenu a .parent-icon {
-    font-size: 18px;
+.page-content {
+    padding: 0.5rem;
 }
-.sidebar-wrapper .metismenu ul a i {
-    font-size: 10px;
-    margin-right: 8px;
-}
-.dark-theme .form-text {
-    color: #6c757d !important;
-}
-.dark-theme .form-control.is-invalid {
-    border-color: #fd3550;
-}
-.dropdown-item {
-    white-space: normal;
+.page-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    font-family: "Bootstrap-icons";
+    content: "\F285";
 }
 
 /* Customized styles  */
@@ -23,13 +14,4 @@
 
 .action_btn {
     font-size: 16px !important;
-}
-.causer {
-    color: cadetblue;
-    font-weight: 400;
-    font-style: oblique;
-    text-decoration: underline;
-    text-decoration-color: lightgray;
-    text-decoration-style: double;
-    text-decoration-thickness: from-font;
 }
