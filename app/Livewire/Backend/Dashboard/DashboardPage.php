@@ -19,7 +19,7 @@ class DashboardPage extends BackendComponent
      *
      * @return  \Illuminate\Contracts\View\View
      */
-    #[Layout('components.backend.layout.backend-master')]
+    #[Layout('components.backend.layout.backend-layout')]
     #[Title('Dashboard')]
     public function render(): View
     {

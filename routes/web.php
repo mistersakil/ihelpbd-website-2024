@@ -23,7 +23,7 @@ Route::name('web.')->group(function () {
 });
 
 $backendMiddleware = [
-    // AuthCheckMiddleware::class
+    AuthCheckMiddleware::class
 ];
 
 ## Backend routes
