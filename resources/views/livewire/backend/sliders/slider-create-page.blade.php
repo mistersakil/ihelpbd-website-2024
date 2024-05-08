@@ -115,13 +115,12 @@
             <!-- /.col -->
             <div class="col-md-4">
                 <div class="file_upload_container">
-                    <div class="card">
+                    <div class="card" x-data="{ uploading: false, progress: 0 }" x-on:livewire-upload-start="uploading = true"
+                        x-on:livewire-upload-finish="uploading = false, progress = 0"
+                        x-on:livewire-upload-cancel="uploading = false" x-on:livewire-upload-error="uploading = false"
+                        x-on:livewire-upload-progress="progress = $event.detail.progress" x-clock>
                         <h5 class="text-secondary text-capitalize text-center">Upload File</h5>
-                        <div class="drop_box" x-data="{ uploading: false, progress: 0 }" x-on:livewire-upload-start="uploading = true"
-                            x-on:livewire-upload-finish="uploading = false, progress = 0"
-                            x-on:livewire-upload-cancel="uploading = false"
-                            x-on:livewire-upload-error="uploading = false"
-                            x-on:livewire-upload-progress="progress = $event.detail.progress" x-clock>
+                        <div class="drop_box">
                             <p class="form-text">Files Supported: JPG, JPEG, PNG</p>
                             <!-- Hidden file input -->
                             <input wire:model="slider_image" type="file" accept=".jpg,.jpeg,.png" id="fileID"
@@ -130,14 +129,14 @@
                             <button type="button" class="btn btn-secondary" id="chooseFileButton">Choose File</button>
                         </div>
                         <div x-show="uploading" x-cloak class="progress" style="height:10px;">
-                            <progress class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
                                 :style="`width: ${progress}%; transition: 3s;`" aria-valuemin="0" aria-valuemax="100"
-                                x-bind:value="progress" wire:target="slider_image"></progress>
+                                x-bind:value="progress" wire:target="slider_image"></div>
                         </div>
                         @if ($slider_image)
                             <div class="chip chip-md ">
                                 <img src="{{ $slider_image->temporaryUrl() }}" alt="Contact Person">
-                                <span class="closebtn">
+                                <span class="closebtn text-danger">
                                     <i class="{{ _icons('delete') }}"></i>
                                 </span>
                             </div>
@@ -191,6 +190,7 @@
 
     </x-backend.addons.card-component>
     <!-- /card-component -->
+
 
     @push('dynamic_js')
     @endpush
