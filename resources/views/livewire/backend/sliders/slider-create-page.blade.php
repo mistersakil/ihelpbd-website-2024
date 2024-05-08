@@ -135,10 +135,19 @@
                                 x-bind:value="progress" wire:target="slider_image"></progress>
                         </div>
                         @if ($slider_image)
-                            <img src="{{ $slider_image->temporaryUrl() }}" class="tmp_img_display">
+                            <div class="chip chip-md ">
+                                <img src="{{ $slider_image->temporaryUrl() }}" alt="Contact Person">
+                                <span class="closebtn">
+                                    <i class="{{ _icons('delete') }}"></i>
+                                </span>
+                            </div>
+                            <!-- /.chip -->
                         @endif
+
                     </div>
+                    <!-- /.card -->
                 </div>
+                <!-- /.file_upload_container -->
 
             </div>
             <!-- /.col -->

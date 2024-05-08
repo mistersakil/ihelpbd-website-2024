@@ -46,6 +46,7 @@ if (!function_exists('_icons')) {
             'cog'                       => 'bi bi-gear',
             'contact'                   => 'bi bi-envelope-open',
             'conversations'             => 'bi bi-person',
+            'close'                     => 'bi bi-person',
             'dashboard'                 => 'bi bi-speedometer2',
             'dark'                      => 'bi bi-lightbulb-fill',
             'default'                   => 'bi bi-info-circle',
