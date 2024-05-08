@@ -16,5 +16,11 @@
     "terms and conditions": "শর্তাবলী",
     "meet our team": "আমাদের টিম",
     "copyright": "কপিরাইট",
-    "all rights reserved by": "সর্বস্বত্ব সংরক্ষিত"
+    "all rights reserved by": "সর্বস্বত্ব সংরক্ষিত",
+    "title": "টাইটেল",
+    "slider title": "স্লাইডার টাইটেল",
+    "minimum character length": ":attribute ন্যূনতম অক্ষর :min",
+    "slider title required": "স্লাইডার টাইটেল প্রয়োজন",
+    "maximum character length": ":attribute সর্বোচ্চ অক্ষর :max",
+    "body": "বডি"
 }

@@ -7,6 +7,13 @@
     content: "\F285";
 }
 
+.input-group
+    > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(
+        .valid-feedback
+    ):not(.invalid-tooltip):not(.invalid-feedback) {
+    box-shadow: none;
+}
+
 /* Customized styles  */
 .sentence_case::first-letter {
     text-transform: uppercase !important;

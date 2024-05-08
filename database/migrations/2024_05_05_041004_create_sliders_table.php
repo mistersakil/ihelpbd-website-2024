@@ -14,11 +14,13 @@ return new class extends Migration
         Schema::create('sliders', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->string('title', 255);
-            $table->text('body');
-            $table->text('link');
-            $table->text('link_text');
-            $table->text('image');
+            $table->string('slider_title', 255);
+            $table->text('slider_body');
+            $table->text('slider_link');
+            $table->text('slider_link_text');
+            $table->text('slider_image');
+            $table->integer('order')->default(0);
+            $table->boolean('is_active')->default(1);
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');

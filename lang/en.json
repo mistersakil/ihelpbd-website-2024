@@ -16,5 +16,11 @@
     "terms and conditions": "Terms & conditions",
     "meet our team": "Meet our team",
     "copyright": "Copyright",
-    "all rights reserved by": "All rights reserved by"
+    "all rights reserved by": "All rights reserved by",
+    "title": "Title",
+    "slider title": "Slider title",
+    "minimum character length": ":attribute minimum character length :min",
+    "slider title required": "Slider title required",
+    "maximum character length": ":attribute maximum character length :max",
+    "body": "Body"
 }

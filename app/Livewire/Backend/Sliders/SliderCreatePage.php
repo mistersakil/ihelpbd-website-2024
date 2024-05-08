@@ -2,10 +2,13 @@
 
 namespace App\Livewire\Backend\Sliders;
 
+use App\Models\Slider;
 use Livewire\Component;
 use Livewire\Attributes\Title;
 use Livewire\Attributes\Layout;
+use Livewire\Attributes\Validate;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\Validator;
 
 /**
  * SliderCreatePage Component
@@ -13,27 +16,65 @@ use Illuminate\Contracts\View\View;
  */
 class SliderCreatePage extends Component
 {
-    public string $title = 'sliders';
+    public string $metaTitle = 'sliders';
     public string $activeItem = 'create';
 
-    public array $state = [];
+    #[Validate]
+    public string $slider_title = '';
+    #[Validate]
+    public string $slider_body = '';
+    public string $slider_link_text = '';
+    public string $slider_link = '';
+    public bool $is_active = true;
 
-    /**
-     * @return void
-     */
-    public function mount(): void
+    public function rules()
     {
-        $this->getDefaultState();
+        Validator::extend('required_if_text_not_empty', function ($attribute, $value, $parameters, $validator) {
+            // Get the value of the `text` field from the request
+            $text = $validator->getData()[$parameters[0]];
+
+            // The `link` field is required if the `text` field is not empty
+            return empty($text) || !empty($value);
+        });
+
+        return [
+            'slider_title' => ['required', 'min:10', 'max:30'],
+            'slider_body' => ['required', 'min:10', 'max:100'],
+            'slider_link' => ['nullable', 'min:10', 'max:100'],
+            'slider_link_text' => ["required_with:slider_link", 'nullable', 'string', 'min:2', 'max:20'],
+
+        ];
     }
 
-    /**
-     * @return void
-     */
-    public function getDefaultState(): void
+    public function messages()
     {
-        $this->state = [
-            'title' => ''
+        return [
+            'slider_title.required' => __(':attribute can not be empty'),
+            'slider_title.min' => __('minimum character length', [':min', ':attribute']),
+            'slider_title.max' => __('maximum character length', [':max', ':attribute']),
+            'slider_body.required' => __(':attribute can not be empty'),
+            'slider_body.min' => __('minimum character length', [':min', ':attribute']),
+            'slider_body.max' => __('maximum character length', [':max', ':attribute']),
+
         ];
+    }
+
+    public function validationAttributes()
+    {
+        return [
+            'slider_title' => __('title'),
+            'slider_body' => __('body'),
+        ];
+    }
+
+    public function save()
+    {
+        $validated = $this->validate();
+
+        dd($validated);
+        // Slider::create($validated);
+
+        return redirect()->to('/posts');
     }
 
     /**
