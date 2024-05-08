@@ -4,6 +4,7 @@ namespace App\Livewire\Backend\Sliders;
 
 use App\Models\Slider;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 use Livewire\Attributes\Title;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Validate;
@@ -16,6 +17,8 @@ use Illuminate\Support\Facades\Validator;
  */
 class SliderCreatePage extends Component
 {
+    use WithFileUploads;
+
     public string $metaTitle = 'sliders';
     public string $activeItem = 'create';
 
@@ -23,19 +26,17 @@ class SliderCreatePage extends Component
     public string $slider_title = '';
     #[Validate]
     public string $slider_body = '';
+    #[Validate]
     public string $slider_link_text = '';
+    #[Validate]
     public string $slider_link = '';
+
+    public $slider_image = '';
+
     public bool $is_active = true;
 
     public function rules()
     {
-        Validator::extend('required_if_text_not_empty', function ($attribute, $value, $parameters, $validator) {
-            // Get the value of the `text` field from the request
-            $text = $validator->getData()[$parameters[0]];
-
-            // The `link` field is required if the `text` field is not empty
-            return empty($text) || !empty($value);
-        });
 
         return [
             'slider_title' => ['required', 'min:10', 'max:30'],

@@ -1,7 +1,7 @@
 <main>
-    @dump($slider_title)
+    {{-- @dump($slider_title)
     @dump($is_active)
-    @dump($slider_link)
+    @dump($slider_link) --}}
     <x-backend.addons.card-component>
         <x-slot:breadcrumb>
             <x-backend.addons.breadcrumb-component :title="$metaTitle" :active-item="$activeItem">
@@ -17,97 +17,131 @@
         <!-- /:breadcrumb -->
 
         <form class="row g-3" class="was-validated">
-            <div class="col-md-6">
-                <label for="slider_title" class="form-label">{{ __('slider title') }}</label>
-                <div class="input-group has-validation">
-                    <span class="input-group-text">
-                        <i class="{{ _icons('title') }}"></i>
-                    </span>
-                    <input wire:model.lazy="slider_title" type="text"
-                        class="form-control  @error('slider_title') is-invalid @enderror" id="slider_title"
-                        wire:dirty.class="border border-warning">
-                    @error('slider_title')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror
+            <div class="col-md-8">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="slider_title" class="form-label">{{ __('slider title') }}</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text">
+                                <i class="{{ _icons('title') }}"></i>
+                            </span>
+                            <input wire:model.lazy="slider_title" type="text"
+                                class="form-control  @error('slider_title') is-invalid @enderror" id="slider_title"
+                                wire:dirty.class="border border-warning">
+                            @error('slider_title')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
 
-                </div>
-                @if (!$errors->has('slider_title'))
-                    <div class="form-text">
-                        {{ __('slider title required') }}
+                        </div>
+                        @if (!$errors->has('slider_title'))
+                            <div class="form-text">
+                                {{ __('slider title required') }}
+                            </div>
+                        @endif
+
                     </div>
-                @endif
+                    <!-- /.col-->
+
+                    <div class="col-md-6">
+                        <label for="slider_body" class="form-label">{{ __('slider body') }}</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text">
+                                <i class="{{ _icons('body') }}"></i>
+                            </span>
+                            <input wire:model.lazy="slider_body" type="text"
+                                class="form-control  @error('slider_body') is-invalid @enderror" id="slider_body"
+                                wire:dirty.class="border border-warning">
+                            @error('slider_body')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+
+                        </div>
+                        @if (!$errors->has('slider_body'))
+                            <div class="form-text">
+                                {{ __('slider body required') }}
+                            </div>
+                        @endif
+
+                    </div>
+                    <!-- /.col-->
+
+                    <div class="col-md-6">
+                        <label for="slider_link_text" class="form-label">{{ __('slider link text') }}</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text">
+                                <i class="{{ _icons('link_text') }}"></i>
+                            </span>
+                            <input wire:model.lazy="slider_link_text" type="text"
+                                class="form-control  @error('slider_link_text') is-invalid @enderror"
+                                id="slider_link_text" wire:dirty.class="border border-warning">
+                            @error('slider_link_text')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+
+                        </div>
+                        @if (!$errors->has('slider_link_text'))
+                            <div class="form-text">
+                                {{ __('slider link text optional') }}
+                            </div>
+                        @endif
+
+                    </div>
+                    <!-- /.col-->
+                    <div class="col-md-6">
+                        <label for="slider_link" class="form-label">{{ __('slider link') }}</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text">
+                                <i class="{{ _icons('link45') }}"></i>
+                            </span>
+                            <input wire:model.lazy="slider_link" type="text"
+                                class="form-control  @error('slider_link') is-invalid @enderror" id="slider_link"
+                                wire:dirty.class="border border-warning">
+                            @error('slider_link')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+
+                        </div>
+                        @if (!$errors->has('slider_link'))
+                            <div class="form-text">
+                                {{ __('slider link required when slider text available') }}
+                            </div>
+                        @endif
+
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.col -->
+            <div class="col-md-4">
+                <div class="file_upload_container">
+                    <div class="card">
+                        <h5 class="text-secondary text-capitalize text-center">Upload File</h5>
+                        <div class="drop_box" x-data="{ uploading: false, progress: 0 }" x-on:livewire-upload-start="uploading = true"
+                            x-on:livewire-upload-finish="uploading = false, progress = 0"
+                            x-on:livewire-upload-cancel="uploading = false"
+                            x-on:livewire-upload-error="uploading = false"
+                            x-on:livewire-upload-progress="progress = $event.detail.progress" x-clock>
+                            <p class="form-text">Files Supported: JPG, JPEG, PNG</p>
+                            <!-- Hidden file input -->
+                            <input wire:model="slider_image" type="file" accept=".jpg,.jpeg,.png" id="fileID"
+                                style="">
+                            <!-- Button -->
+                            <button type="button" class="btn btn-secondary" id="chooseFileButton">Choose File</button>
+                        </div>
+                        <div x-show="uploading" x-cloak class="progress" style="height:10px;">
+                            <progress class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                                :style="`width: ${progress}%; transition: 3s;`" aria-valuemin="0" aria-valuemax="100"
+                                x-bind:value="progress" wire:target="slider_image"></progress>
+                        </div>
+                        @if ($slider_image)
+                            <img src="{{ $slider_image->temporaryUrl() }}" class="tmp_img_display">
+                        @endif
+                    </div>
+                </div>
 
             </div>
-            <!-- /.col-->
-
-            <div class="col-md-6">
-                <label for="slider_body" class="form-label">{{ __('slider body') }}</label>
-                <div class="input-group has-validation">
-                    <span class="input-group-text">
-                        <i class="{{ _icons('body') }}"></i>
-                    </span>
-                    <input wire:model.lazy="slider_body" type="text"
-                        class="form-control  @error('slider_body') is-invalid @enderror" id="slider_body"
-                        wire:dirty.class="border border-warning">
-                    @error('slider_body')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror
-
-                </div>
-                @if (!$errors->has('slider_body'))
-                    <div class="form-text">
-                        {{ __('slider body required') }}
-                    </div>
-                @endif
-
-            </div>
-            <!-- /.col-->
-
-            <div class="col-md-6">
-                <label for="slider_link_text" class="form-label">{{ __('slider link text') }}</label>
-                <div class="input-group has-validation">
-                    <span class="input-group-text">
-                        <i class="{{ _icons('body') }}"></i>
-                    </span>
-                    <input wire:model.lazy="slider_link_text" type="text"
-                        class="form-control  @error('slider_link_text') is-invalid @enderror" id="slider_link_text"
-                        wire:dirty.class="border border-warning">
-                    @error('slider_link_text')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror
-
-                </div>
-                @if (!$errors->has('slider_link_text'))
-                    <div class="form-text">
-                        {{ __('slider link text optional') }}
-                    </div>
-                @endif
-
-            </div>
-            <!-- /.col-->
-            <div class="col-md-6">
-                <label for="slider_link" class="form-label">{{ __('slider link') }}</label>
-                <div class="input-group has-validation">
-                    <span class="input-group-text">
-                        <i class="{{ _icons('body') }}"></i>
-                    </span>
-                    <input wire:model.lazy="slider_link" type="text"
-                        class="form-control  @error('slider_link') is-invalid @enderror" id="slider_link"
-                        wire:dirty.class="border border-warning">
-                    @error('slider_link')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror
-
-                </div>
-                @if (!$errors->has('slider_link'))
-                    <div class="form-text">
-                        {{ __('slider link required when slider text available') }}
-                    </div>
-                @endif
-
-            </div>
-            <!-- /.col-->
-
+            <!-- /.col -->
 
 
         </form>
@@ -124,10 +158,21 @@
                             {{ __('active') }}
                         </label>
                     </div>
-                    <button wire:click="save" type="button" class="btn btn-sm btn-primary px-4 radius-10">
-                        <i class="{{ _icons('save') }}"></i>
-                        Save
-                    </button>
+
+                    <div class="row row-cols-auto g-3">
+                        <div class="col">
+                            <button wire:click="save" type="button" class="btn btn-outline-primary px-4 btn-sm">
+                                <i class="{{ _icons('save') }}"></i>
+                                {{ __('save') }}
+                            </button>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-outline-danger px-4 btn-sm">
+                                <i class="{{ _icons('save') }}"></i>
+                                {{ __('reset') }}
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- /.col -->
@@ -137,5 +182,8 @@
 
     </x-backend.addons.card-component>
     <!-- /card-component -->
+
+    @push('dynamic_js')
+    @endpush
 
 </main>

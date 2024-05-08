@@ -22,3 +22,40 @@
 .action_btn {
     font-size: 16px !important;
 }
+
+/** File upload container **/
+.file_upload_container {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #fcfcfc;
+}
+
+.file_upload_container .card {
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+    height: 300px;
+    background-color: #ffffff;
+    padding: 10px 30px 40px;
+}
+
+.file_upload_container .drop_box {
+    margin: 10px 0;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 3px dotted #a3a3a3;
+    border-radius: 5px;
+    position: relative;
+}
+.file_upload_container .drop_box input[type="file"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
