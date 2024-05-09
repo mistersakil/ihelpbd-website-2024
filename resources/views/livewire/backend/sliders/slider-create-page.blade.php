@@ -87,6 +87,7 @@
 
                     </div>
                     <!-- /.col-->
+
                     <div class="col-md-6">
                         <label for="slider_link" class="form-label">{{ __('slider link') }}</label>
                         <div class="input-group has-validation">
@@ -119,34 +120,49 @@
                         x-on:livewire-upload-finish="uploading = false, progress = 0"
                         x-on:livewire-upload-cancel="uploading = false" x-on:livewire-upload-error="uploading = false"
                         x-on:livewire-upload-progress="progress = $event.detail.progress" x-clock>
+                        <!-- Start: File selection -->
                         <h5 class="text-secondary text-capitalize text-center">Upload File</h5>
                         <div class="drop_box">
                             <p class="form-text">Files Supported: JPG, JPEG, PNG</p>
-                            <!-- Hidden file input -->
+
                             <input wire:model="slider_image" type="file" accept=".jpg,.jpeg,.png" id="fileID"
                                 style="">
-                            <!-- Button -->
+
                             <button type="button" class="btn btn-secondary" id="chooseFileButton">Choose File</button>
                         </div>
+                        <!-- End: File selection -->
 
-                        <button wire:loading wire:target="slider_image" class="btn btn-danger" type="button" disabled>
-                            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-                            {{ __('uploading') }}
-                        </button>
+                        <!-- Start: Loading progress -->
+                        <div wire:loading.flex wire:target="slider_image">
+                            <div wire:loading wire:target="slider_image"
+                                class="chip d-flex items-center justify-content-between">
+                                <section>
+                                    <span class="spinner-grow spinner-grow-sm text-info" role="status"
+                                        aria-hidden="true"></span>
+                                    {{ __('uploading') }}
+                                </section>
+                                <section>
+                                    <i x-on:click="$wire.cancelUpload('slider_image')" title="{{ __('cancel') }}"
+                                        class="{{ _icons('delete') }} text-danger"></i>
+                                </section>
+                            </div>
+                        </div>
+                        <!-- End: Loading progress -->
 
+                        <!-- Start: Upload preview -->
                         @if ($slider_image)
-                            <div wire:target="slider_image" class="chip chip-md" wire:loading.class="d-none"
-                                wire:loading.class.remove="chip chip-md">
+                            <div wire:target="slider_image" wire:loading.class="d-none"
+                                wire:loading.class.remove="chip chip-md" class="chip chip-md">
                                 <img src="{{ $slider_image->temporaryUrl() }}" alt="Contact Person">
                                 <span class="closebtn text-danger">
                                     <i class="{{ _icons('delete') }}"></i>
                                 </span>
                             </div>
-                            <!-- /.chip -->
                         @endif
+                        <!-- End: Upload preview -->
 
                     </div>
-                    <!-- /.card -->
+                    <!-- /.card_wrapper -->
                 </div>
                 <!-- /.file_upload_container -->
 

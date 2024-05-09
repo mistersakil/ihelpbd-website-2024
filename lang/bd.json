@@ -22,5 +22,17 @@
     "minimum character length": ":attribute ন্যূনতম অক্ষর :min",
     "slider title required": "স্লাইডার টাইটেল প্রয়োজন",
     "maximum character length": ":attribute সর্বোচ্চ অক্ষর :max",
-    "body": "বডি"
+    "body": "বডি",
+    "cancel": "বাতিল",
+    "uploading": "আপলোডিং",
+    "slider body": "স্লাইডার বডি",
+    "slider link text": "স্লাইডার লিংক টেক্সট",
+    "slider link": "স্লাইডার লিংক",
+    "active": "সক্রিয়",
+    "save": "সংরক্ষণ করুন",
+    "reset": "রিসেট করুন",
+    "choose file": "ফাইল নির্বাচন করুন",
+    "upload file": "ফাইল আপলোড করুন",
+    "create": "তৈরি করুন",
+    "sliders": "স্লাইডার্স"
 }

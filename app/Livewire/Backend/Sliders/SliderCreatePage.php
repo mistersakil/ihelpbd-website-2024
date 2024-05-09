@@ -19,6 +19,7 @@ class SliderCreatePage extends Component
 {
     use WithFileUploads;
 
+    private int $maxFileUploadSize = (1024 * 5);
     public string $metaTitle = 'sliders';
     public string $activeItem = 'create';
 
@@ -31,6 +32,7 @@ class SliderCreatePage extends Component
     #[Validate]
     public string $slider_link = '';
 
+    #[Validate]
     public $slider_image = '';
 
     public bool $is_active = true;
@@ -43,6 +45,7 @@ class SliderCreatePage extends Component
             'slider_body' => ['required', 'min:10', 'max:100'],
             'slider_link' => ['nullable', 'min:10', 'max:100'],
             'slider_link_text' => ["required_with:slider_link", 'nullable', 'string', 'min:2', 'max:20'],
+            'slider_image' => ['image', "max:{$this->maxFileUploadSize}"],
 
         ];
     }

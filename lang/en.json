@@ -22,5 +22,17 @@
     "minimum character length": ":attribute minimum character length :min",
     "slider title required": "Slider title required",
     "maximum character length": ":attribute maximum character length :max",
-    "body": "Body"
+    "body": "Body",
+    "cancel": "Cancel",
+    "uploading": "Uploading",
+    "slider body": "Slider body",
+    "slider link text": "Slider link text",
+    "slider link": "Slider link",
+    "active": "Active",
+    "save": "Save",
+    "reset": "Reset",
+    "choose file": "Choose file",
+    "upload file": "Upload file",
+    "create": "Create",
+    "sliders": "Sliders"
 }
