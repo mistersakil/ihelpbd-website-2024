@@ -115,7 +115,7 @@
             <!-- /.col -->
             <div class="col-md-4">
                 <div class="file_upload_container">
-                    <div class="card" x-data="{ uploading: false, progress: 0 }" x-on:livewire-upload-start="uploading = true"
+                    <div class="card_wrapper" x-data="{ uploading: false, progress: 0 }" x-on:livewire-upload-start="uploading = true"
                         x-on:livewire-upload-finish="uploading = false, progress = 0"
                         x-on:livewire-upload-cancel="uploading = false" x-on:livewire-upload-error="uploading = false"
                         x-on:livewire-upload-progress="progress = $event.detail.progress" x-clock>
@@ -128,13 +128,15 @@
                             <!-- Button -->
                             <button type="button" class="btn btn-secondary" id="chooseFileButton">Choose File</button>
                         </div>
-                        <div x-show="uploading" x-cloak class="progress" style="height:10px;">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                                :style="`width: ${progress}%; transition: 3s;`" aria-valuemin="0" aria-valuemax="100"
-                                x-bind:value="progress" wire:target="slider_image"></div>
-                        </div>
+
+                        <button wire:loading wire:target="slider_image" class="btn btn-danger" type="button" disabled>
+                            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                            {{ __('uploading') }}
+                        </button>
+
                         @if ($slider_image)
-                            <div class="chip chip-md ">
+                            <div wire:target="slider_image" class="chip chip-md" wire:loading.class="d-none"
+                                wire:loading.class.remove="chip chip-md">
                                 <img src="{{ $slider_image->temporaryUrl() }}" alt="Contact Person">
                                 <span class="closebtn text-danger">
                                     <i class="{{ _icons('delete') }}"></i>

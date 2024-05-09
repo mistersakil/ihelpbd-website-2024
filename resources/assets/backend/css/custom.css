@@ -16,7 +16,6 @@
 
 .chip {
     width: 100%;
-    margin-top: 20px;
 }
 
 /* Customized styles  */
@@ -37,12 +36,12 @@
     background-color: #fcfcfc;
 }
 
-.file_upload_container .card {
+.file_upload_container .card_wrapper {
     border-radius: 10px;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
-    height: 300px;
+    min-height: 200px;
     background-color: #ffffff;
-    padding: 10px 30px 40px;
+    padding: 10px 30px;
 }
 
 .file_upload_container .drop_box {
