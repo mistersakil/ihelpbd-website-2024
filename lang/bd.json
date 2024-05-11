@@ -34,5 +34,7 @@
     "choose file": "ফাইল নির্বাচন করুন",
     "upload file": "ফাইল আপলোড করুন",
     "create": "তৈরি করুন",
-    "sliders": "স্লাইডার্স"
+    "sliders": "স্লাইডার্স",
+    "uploaded file": "উপলোডেড ফাইল",
+    "must be an image": ":attribute একটি ছবি হতে হবে"
 }

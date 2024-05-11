@@ -125,10 +125,10 @@
                         <div class="drop_box">
                             <p class="form-text">Files Supported: JPG, JPEG, PNG</p>
 
-                            <input wire:model="slider_image" type="file" accept=".jpg,.jpeg,.png" id="fileID"
+                            <input wire:model="slider_image" type="file" accept=".jpg,.jpeg,.png,.mp4" id="fileID"
                                 style="">
 
-                            <button type="button" class="btn btn-secondary" id="chooseFileButton">Choose File</button>
+                            <button type="button" class="btn btn-secondary">Choose File</button>
                         </div>
                         <!-- End: File selection -->
 
@@ -141,20 +141,24 @@
                                         aria-hidden="true"></span>
                                     {{ __('uploading') }}
                                 </section>
-                                <section>
-                                    <i x-on:click="$wire.cancelUpload('slider_image')" title="{{ __('cancel') }}"
-                                        class="{{ _icons('delete') }} text-danger"></i>
-                                </section>
+                                {{-- <section wire:click="$cancelUpload('slider_image')">
+                                    <i title="{{ __('cancel') }}" class="{{ _icons('delete') }} text-danger"></i>
+                                </section> --}}
                             </div>
                         </div>
                         <!-- End: Loading progress -->
 
+                        @error('slider_image')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
+
+
                         <!-- Start: Upload preview -->
-                        @if ($slider_image)
+                        @if ($displayTmpUploadedImage && $slider_image)
                             <div wire:target="slider_image" wire:loading.class="d-none"
                                 wire:loading.class.remove="chip chip-md" class="chip chip-md">
                                 <img src="{{ $slider_image->temporaryUrl() }}" alt="Contact Person">
-                                <span class="closebtn text-danger">
+                                <span wire:click="cancelUploadedImg" class="closebtn text-danger">
                                     <i class="{{ _icons('delete') }}"></i>
                                 </span>
                             </div>

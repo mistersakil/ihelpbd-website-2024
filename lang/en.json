@@ -34,5 +34,11 @@
     "choose file": "Choose file",
     "upload file": "Upload file",
     "create": "Create",
-    "sliders": "Sliders"
+    "sliders": "Sliders",
+    "uploaded file": "Uploaded file",
+    "must be an image": ":attribute must be an image",
+    "must be of type image": ":attribute must be of types jpg/jpeg/webp",
+    "max file size": ":attribute max file size :max KBs",
+    "slider": "Slider",
+    "can not be empty": ":attribute can not be empty"
 }
