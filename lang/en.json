@@ -40,5 +40,6 @@
     "must be of type image": ":attribute must be of types jpg/jpeg/webp",
     "max file size": ":attribute max file size :max KBs",
     "slider": "Slider",
-    "can not be empty": ":attribute can not be empty"
+    "can not be empty": ":attribute can not be empty",
+    "image required": ":attribute image required"
 }

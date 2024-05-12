@@ -47,7 +47,7 @@ class SliderCreatePage extends Component
             'slider_body' => ['required', 'min:10', 'max:100'],
             'slider_link' => ['nullable', 'min:10', 'max:100'],
             'slider_link_text' => ["required_with:slider_link", 'nullable', 'string', 'min:2', 'max:20'],
-            'slider_image' => ['image', 'mimes:' . implode(',', $this->supportedImgTypes), "max:{$this->maxFileUploadSize}"],
+            'slider_image' => ['required', 'image', 'mimes:' . implode(',', $this->supportedImgTypes), "max:{$this->maxFileUploadSize}"],
         ];
     }
 
@@ -60,6 +60,7 @@ class SliderCreatePage extends Component
             'slider_body.required' => __('can not be empty', [':attribute']),
             'slider_body.min' => __('minimum character length', [':min', ':attribute']),
             'slider_body.max' => __('maximum character length', [':max', ':attribute']),
+            'slider_image.required' => __('image required', [':attribute']),
             'slider_image.image' => __('must be an image', [':attribute']),
             'slider_image.mimes' => __('must be of type image', [':attribute']),
             'slider_image.max' => __('max file size', [':attribute', ':max']),
@@ -124,6 +125,7 @@ class SliderCreatePage extends Component
      */
     public function deleteTmpUploadedImg(): void
     {
+        $this->reset('slider_image');
         $this->resetValidation('slider_image');
         $this->displayTmpUploadedImage = false;
     }

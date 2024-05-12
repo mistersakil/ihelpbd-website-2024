@@ -148,10 +148,6 @@
                         </div>
                         <!-- End: Loading progress -->
 
-                        @error('slider_image')
-                            <span class="error">{{ $message }}</span>
-                        @enderror
-
 
                         <!-- Start: Upload preview -->
                         @if ($displayTmpUploadedImage && $slider_image)
@@ -164,6 +160,12 @@
                             </div>
                         @endif
                         <!-- End: Upload preview -->
+
+                        <!-- Start: validation error message -->
+                        @error('slider_image')
+                            <span class="error">{{ $message }}</span>
+                        @enderror
+                        <!-- End: validation error message -->
 
                     </div>
                     <!-- /.card_wrapper -->
