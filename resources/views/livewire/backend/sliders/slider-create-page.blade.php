@@ -121,9 +121,18 @@
                         x-on:livewire-upload-cancel="uploading = false" x-on:livewire-upload-error="uploading = false"
                         x-on:livewire-upload-progress="progress = $event.detail.progress" x-clock>
                         <!-- Start: File selection -->
-                        <h5 class="text-secondary text-capitalize text-center">Upload File</h5>
+                        <h6 class="text-secondary text-capitalize text-center">
+                            {{ __('upload slider image') }}
+                        </h6>
                         <div class="drop_box">
-                            <p class="form-text">Files Supported: JPG, JPEG, PNG</p>
+                            <ul class="form-text d-flex flex-column">
+                                <li> {{ __('translations.supported_image_files', ['mimes' => implode(',', $supportedImgTypes)]) }}
+                                </li>
+                                <li> {{ __('translations.image_minimum_dimension', ['minHeight' => $imgMinHeight, 'minWidth' => $imgMinWidth]) }}
+                                </li>
+                                <li> {{ __('translations.image_max_size_mb', ['size' => $maxFileUploadSize / 1024]) }}
+                                </li>
+                            </ul>
 
                             <input wire:model="slider_image" type="file" accept=".jpg,.jpeg,.png,.mp4" id="fileID"
                                 style="">

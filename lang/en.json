@@ -37,9 +37,10 @@
     "sliders": "Sliders",
     "uploaded file": "Uploaded file",
     "must be an image": ":attribute must be an image",
-    "must be of type image": ":attribute must be of types jpg/jpeg/webp",
+    "must be of type image": ":attribute image must be of types jpg/jpeg/png/webp",
     "max file size": ":attribute max file size :max KBs",
     "slider": "Slider",
     "can not be empty": ":attribute can not be empty",
-    "image required": ":attribute image required"
+    "image required": ":attribute image required",
+    "upload slider image": "Upload slider image"
 }

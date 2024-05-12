@@ -6,9 +6,11 @@ use App\Models\Slider;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use Livewire\Attributes\Title;
+use Illuminate\Validation\Rule;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Validate;
 use Illuminate\Contracts\View\View;
+use Illuminate\Validation\Rules\File;
 use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 
 /**
@@ -19,12 +21,14 @@ class SliderCreatePage extends Component
 {
     use WithFileUploads;
 
-    private int $maxFileUploadSize = (1024 * 2);
+    public int $maxFileUploadSize = (1024 * 2);
     public string $metaTitle = 'sliders';
     public string $activeItem = 'create';
     public bool $displayTmpUploadedImage = false;
     public array $supportedImgTypes = ['
     jpg', 'jpeg', 'webp', 'png'];
+    public int $imgMinHeight = 675;
+    public int $imgMinWidth = 865;
 
     #[Validate]
     public string $slider_title = '';
@@ -47,7 +51,16 @@ class SliderCreatePage extends Component
             'slider_body' => ['required', 'min:10', 'max:100'],
             'slider_link' => ['nullable', 'min:10', 'max:100'],
             'slider_link_text' => ["required_with:slider_link", 'nullable', 'string', 'min:2', 'max:20'],
-            'slider_image' => ['required', 'image', 'mimes:' . implode(',', $this->supportedImgTypes), "max:{$this->maxFileUploadSize}"],
+            // 'slider_image' => ['required', 'image', 'mimes:' . implode(',', $this->supportedImgTypes), "max:{$this->maxFileUploadSize}"],
+            'slider_image' => [
+                'required',
+                "max:{$this->maxFileUploadSize}",
+                File::image()
+                    ->types($this->supportedImgTypes)
+                    ->dimensions(Rule::dimensions()
+                        ->minWidth($this->imgMinWidth)
+                        ->minHeight($this->imgMinHeight))
+            ],
         ];
     }
 
@@ -63,7 +76,8 @@ class SliderCreatePage extends Component
             'slider_image.required' => __('image required', [':attribute']),
             'slider_image.image' => __('must be an image', [':attribute']),
             'slider_image.mimes' => __('must be of type image', [':attribute']),
-            'slider_image.max' => __('max file size', [':attribute', ':max']),
+            'slider_image.max' =>  __('translations.image_max_size_mb', ['size' => $this->maxFileUploadSize / 1024]),
+            'slider_image.dimensions' => __('translations.image_minimum_dimension', ['minHeight' => $this->imgMinHeight, 'minWidth' => $this->imgMinWidth]),
 
         ];
     }
@@ -89,8 +103,6 @@ class SliderCreatePage extends Component
 
     public function updating($property, $value): void
     {
-        // dd($property, $value);
-        // dd($property, $this->getTmpUploadedFileExtension($value));
 
         if ($property == 'slider_image') {
             $fileExtension = $this->getTmpUploadedFileExtension($value);
