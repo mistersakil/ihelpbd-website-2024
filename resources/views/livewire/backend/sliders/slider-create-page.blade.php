@@ -158,7 +158,7 @@
                             <div wire:target="slider_image" wire:loading.class="d-none"
                                 wire:loading.class.remove="chip chip-md" class="chip chip-md">
                                 <img src="{{ $slider_image->temporaryUrl() }}" alt="Contact Person">
-                                <span wire:click="cancelUploadedImg" class="closebtn text-danger">
+                                <span wire:click="deleteTmpUploadedImg" class="closebtn text-danger">
                                     <i class="{{ _icons('delete') }}"></i>
                                 </span>
                             </div>

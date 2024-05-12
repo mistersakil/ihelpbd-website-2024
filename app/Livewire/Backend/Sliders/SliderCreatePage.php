@@ -89,10 +89,10 @@ class SliderCreatePage extends Component
     public function updating($property, $value): void
     {
         // dd($property, $value);
-        // dd($property, $this->getFileExtension($value));
+        // dd($property, $this->getTmpUploadedFileExtension($value));
 
         if ($property == 'slider_image') {
-            $fileExtension = $this->getFileExtension($value);
+            $fileExtension = $this->getTmpUploadedFileExtension($value);
             if (in_array($fileExtension, $this->supportedImgTypes)) {
                 $this->displayTmpUploadedImage = true;
             }
@@ -100,12 +100,12 @@ class SliderCreatePage extends Component
     }
 
     /**
-     * getFileExtension method return file extension from an upload file
+     * getTmpUploadedFileExtension method return file extension from an upload file
      *
      * @param \Livewire\Features\SupportFileUploads\TemporaryUploadedFile $file
      * @return string
      */
-    public function getFileExtension(TemporaryUploadedFile $file): string
+    public function getTmpUploadedFileExtension(TemporaryUploadedFile $file): string
     {
         if (!empty($file)) {
             $originalName = $file->getClientOriginalName();
@@ -115,6 +115,20 @@ class SliderCreatePage extends Component
         }
         return 'invalid';
     }
+
+    /**
+     * Delete temporary uploaded image
+     *
+     * @param \Livewire\Features\SupportFileUploads\TemporaryUploadedFile $file
+     * @return string
+     */
+    public function deleteTmpUploadedImg(): void
+    {
+        $this->resetValidation('slider_image');
+        $this->displayTmpUploadedImage = false;
+    }
+
+
 
     /**
      * Render view
