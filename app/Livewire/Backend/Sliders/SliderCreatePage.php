@@ -2,16 +2,16 @@
 
 namespace App\Livewire\Backend\Sliders;
 
-use App\Livewire\Backend\BackendComponent;
 use Livewire\WithFileUploads;
 use Livewire\Attributes\Title;
 use App\Services\SliderService;
 use Illuminate\Validation\Rule;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Validate;
+use App\Services\FileUploadService;
 use Illuminate\Contracts\View\View;
 use Illuminate\Validation\Rules\File;
-use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
+use App\Livewire\Backend\BackendComponent;
 
 /**
  * SliderCreatePage Component
@@ -31,6 +31,7 @@ class SliderCreatePage extends BackendComponent
 
     # Services 
     private SliderService $sliderService;
+    private FileUploadService $fileUploadService;
 
     ## State properties
     public int $user_id;
@@ -48,13 +49,14 @@ class SliderCreatePage extends BackendComponent
     public bool $is_active = true;
 
     /**
-     * boot method to set initial values
+     * Create a new component instance
      *
      * @return void
      */
     public function boot(): void
     {
         $this->sliderService = new SliderService();
+        $this->fileUploadService = new FileUploadService();
     }
 
     /**
@@ -132,29 +134,13 @@ class SliderCreatePage extends BackendComponent
     public function updating($property, $value): void
     {
         if ($property == 'slider_image') {
-            $uploadedFileExtension = $this->getTmpUploadedFileExtension($value);
+            $uploadedFileExtension = $this->fileUploadService->getTmpUploadedFileExtension($value);
             if (in_array($uploadedFileExtension, $this->supportedImgTypes)) {
                 $this->displayTmpUploadedImage = true;
             }
         }
     }
 
-    /**
-     * getTmpUploadedFileExtension method return file extension from an upload file
-     *
-     * @param \Livewire\Features\SupportFileUploads\TemporaryUploadedFile $file
-     * @return string
-     */
-    public function getTmpUploadedFileExtension(TemporaryUploadedFile $file): string
-    {
-        if (!empty($file)) {
-            $originalName = $file->getClientOriginalName();
-            $parts = explode('-', $originalName);
-            $extension = pathinfo(end($parts), PATHINFO_EXTENSION);
-            return $extension;
-        }
-        return 'invalid';
-    }
 
     /**
      * Delete temporary uploaded image

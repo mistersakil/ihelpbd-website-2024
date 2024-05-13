@@ -21,13 +21,21 @@ class SliderService
         'position' => 'center'
     ];
 
-
+    /**
+     * Create a new object instance
+     */
     public function __construct()
     {
         $this->fileUploadService = new FileUploadService();
     }
 
-    public function create(array $inputs)
+    /**
+     * Create new record
+     * @param array $inputs [Input properties to create new record]
+     * @return mixed
+     * @author Sakil Jomadder [sakil.diu.cse@gmail.com]
+     */
+    public function create(array $inputs): mixed
     {
         try {
             $sliderImageTmpFile = $inputs['slider_image'];
@@ -44,11 +52,11 @@ class SliderService
             ## Resize image using image intervention package
             $this->fileUploadService->resizeImage(uploadDirectory: $this->uploadDirectory, disk: $this->disk, fileName: $sliderImageHashedName, dimensions: $this->imgResizeOptions);
 
-
             ## Create new slider
             $inputs['slider_image'] = $sliderImageHashedName;
             return Slider::create($inputs);
         } catch (\Throwable $th) {
+            throw new Exception($th->getMessage());
         }
     }
 }

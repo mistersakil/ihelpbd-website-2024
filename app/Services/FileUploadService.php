@@ -6,6 +6,7 @@ use Exception;
 use Intervention\Image\ImageManager;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Drivers\Gd\Driver;
+use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 
 /**
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
@@ -131,5 +132,23 @@ class FileUploadService
         $tmpFile->storeAs($uploadDirectory, $fileName, $disk);
 
         return true;
+    }
+
+
+    /**
+     * getTmpUploadedFileExtension method return file extension from an tmp uploaded file
+     *
+     * @param \Livewire\Features\SupportFileUploads\TemporaryUploadedFile $file
+     * @return string
+     */
+    public function getTmpUploadedFileExtension(TemporaryUploadedFile $file): string
+    {
+        if (!empty($file)) {
+            $originalName = $file->getClientOriginalName();
+            $parts = explode('-', $originalName);
+            $extension = pathinfo(end($parts), PATHINFO_EXTENSION);
+            return $extension;
+        }
+        return 'invalid';
     }
 }
