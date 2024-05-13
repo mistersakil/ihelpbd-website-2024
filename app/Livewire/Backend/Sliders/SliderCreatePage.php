@@ -5,12 +5,10 @@ namespace App\Livewire\Backend\Sliders;
 use Livewire\WithFileUploads;
 use Livewire\Attributes\Title;
 use App\Services\SliderService;
-use Illuminate\Validation\Rule;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Validate;
 use App\Services\FileUploadService;
 use Illuminate\Contracts\View\View;
-use Illuminate\Validation\Rules\File;
 use App\Livewire\Backend\BackendComponent;
 
 /**
@@ -21,11 +19,11 @@ class SliderCreatePage extends BackendComponent
 {
     use WithFileUploads;
 
-    public int $maxFileUploadSize = (1024 * 5);
     public string $metaTitle = 'sliders';
     public string $activeItem = 'create';
     public bool $displayTmpUploadedImage = false;
-    public array $supportedImgTypes = ['jpg', 'jpeg', 'webp', 'png'];
+    public array $supportedImgTypes;
+    public int $maxFileUploadSize;
     public int $imgMinHeight;
     public int $imgMinWidth;
 
@@ -68,55 +66,43 @@ class SliderCreatePage extends BackendComponent
         $this->user_id = $this->authId;
         $this->imgMinHeight = $this->sliderService->imgResizeOptions['height'];
         $this->imgMinWidth = $this->sliderService->imgResizeOptions['width'];
+        $this->maxFileUploadSize = $this->sliderService->maxFileUploadSize;
+        $this->supportedImgTypes = $this->sliderService->supportedImgTypes;
     }
 
+    /**
+     * Validation rules of the component
+     * @return array
+     */
     public function rules()
     {
-        return [
-            'slider_title' => ['required', 'min:10', 'max:30'],
-            'slider_body' => ['required', 'min:10', 'max:100'],
-            'slider_link' => ['nullable', 'min:10', 'max:100'],
-            'slider_link_text' => ["required_with:slider_link", 'nullable', 'string', 'min:2', 'max:20'],
-            'slider_image' => [
-                'required',
-                "max:{$this->maxFileUploadSize}",
-                File::image()
-                    ->types($this->supportedImgTypes)
-                    ->dimensions(Rule::dimensions()
-                        ->minWidth($this->imgMinWidth)
-                        ->minHeight($this->imgMinHeight))
-            ],
-        ];
+        return $this->sliderService->validationRules();
     }
 
+
+    /**
+     * Validation error messages for state properties of the component
+     * @return array
+     */
     public function messages()
     {
-        return [
-            'slider_title.required' => __('can not be empty', [':attribute ']),
-            'slider_title.min' => __('minimum character length', [':min', ':attribute']),
-            'slider_title.max' => __('maximum character length', [':max', ':attribute']),
-            'slider_body.required' => __('can not be empty', [':attribute']),
-            'slider_body.min' => __('minimum character length', [':min', ':attribute']),
-            'slider_body.max' => __('maximum character length', [':max', ':attribute']),
-            'slider_image.required' => __('image required', [':attribute']),
-            'slider_image.image' => __('must be an image', [':attribute']),
-            'slider_image.mimes' => __('must be of type image', [':attribute']),
-            'slider_image.max' =>  __('translations.image_max_size_mb', ['size' => $this->maxFileUploadSize / 1024]),
-            'slider_image.dimensions' => __('translations.image_minimum_dimension', ['minHeight' => $this->imgMinHeight, 'minWidth' => $this->imgMinWidth]),
-
-        ];
+        return $this->sliderService->validationErrorMessages();
     }
 
+    /**
+     * Alias of state attributes
+     * @return array
+     */
     public function validationAttributes()
     {
-        return [
-            'slider_title' => __('title'),
-            'slider_body' => __('body'),
-            'slider_image' => __('slider'),
-        ];
+        return $this->sliderService->validationAttributesSurname();
     }
 
-    public function save()
+    /**
+     * Save new record
+     * @return void
+     */
+    public function save(): void
     {
         $validated = $this->validate();
         try {
@@ -131,6 +117,13 @@ class SliderCreatePage extends BackendComponent
         }
     }
 
+    /**
+     * Called before updating a component property
+     *
+     * @param $property [Dirty state property]
+     * @param $value [Dirty state property value]
+     * @return void
+     */
     public function updating($property, $value): void
     {
         if ($property == 'slider_image') {
@@ -140,7 +133,6 @@ class SliderCreatePage extends BackendComponent
             }
         }
     }
-
 
     /**
      * Delete temporary uploaded image
