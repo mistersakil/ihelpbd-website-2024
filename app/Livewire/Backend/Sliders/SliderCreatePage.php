@@ -44,6 +44,7 @@ class SliderCreatePage extends BackendComponent
     public string $slider_link = '';
     #[Validate]
     public $slider_image = '';
+    public int $order = 0;
     public bool $is_active = true;
 
     /**
@@ -119,7 +120,7 @@ class SliderCreatePage extends BackendComponent
         try {
             $validated['user_id'] = $this->authId;
             $createdModel = $this->sliderService->create($validated);
-            $this->resetProps();
+            $this->resetStateProps();
 
             ## Dispatch events
             $this->dispatch('toastAlert', message: __('translations.action_successful'), type: 'success');
@@ -172,9 +173,18 @@ class SliderCreatePage extends BackendComponent
      * Resets component all state properties
      * @return void
      */
-    public function resetProps(): void
+    public function resetStateProps(): void
     {
-        $this->reset();
+        $this->resetValidation();
+        $this->reset(
+            'slider_title',
+            'slider_body',
+            'slider_link',
+            'slider_link_text',
+            'slider_image',
+            'order',
+            'is_active'
+        );
     }
 
     /**

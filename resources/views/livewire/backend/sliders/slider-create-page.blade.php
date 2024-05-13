@@ -209,7 +209,7 @@
                             </button>
                         </div>
                         <div class="col">
-                            <button wire:click="resetProps" type="button"
+                            <button wire:click="resetStateProps" type="button"
                                 class="btn btn-outline-danger px-4 btn-sm">
                                 <i class="{{ _icons('reset') }}"></i>
                                 {{ __('reset') }}
