@@ -2,6 +2,7 @@
     {{-- @dump($slider_title)
     @dump($is_active)
     @dump($slider_link) --}}
+    {{-- @dump($displayTmpUploadedImage) --}}
     <x-backend.addons.card-component>
         <x-slot:breadcrumb>
             <x-backend.addons.breadcrumb-component :title="$metaTitle" :active-item="$activeItem">
@@ -208,8 +209,9 @@
                             </button>
                         </div>
                         <div class="col">
-                            <button type="button" class="btn btn-outline-danger px-4 btn-sm">
-                                <i class="{{ _icons('save') }}"></i>
+                            <button wire:click="resetProps" type="button"
+                                class="btn btn-outline-danger px-4 btn-sm">
+                                <i class="{{ _icons('reset') }}"></i>
                                 {{ __('reset') }}
                             </button>
                         </div>

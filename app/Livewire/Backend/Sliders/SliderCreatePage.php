@@ -21,14 +21,13 @@ class SliderCreatePage extends BackendComponent
 {
     use WithFileUploads;
 
-    public int $maxFileUploadSize = (1024 * 2);
+    public int $maxFileUploadSize = (1024 * 5);
     public string $metaTitle = 'sliders';
     public string $activeItem = 'create';
     public bool $displayTmpUploadedImage = false;
-    public array $supportedImgTypes = ['
-    jpg', 'jpeg', 'webp', 'png'];
-    public int $imgMinHeight = 675;
-    public int $imgMinWidth = 865;
+    public array $supportedImgTypes = ['jpg', 'jpeg', 'webp', 'png'];
+    public int $imgMinHeight;
+    public int $imgMinWidth;
 
     # Services 
     private SliderService $sliderService;
@@ -64,6 +63,8 @@ class SliderCreatePage extends BackendComponent
     public function mount(): void
     {
         $this->user_id = $this->authId;
+        $this->imgMinHeight = $this->sliderService->imgResizeOptions['height'];
+        $this->imgMinWidth = $this->sliderService->imgResizeOptions['width'];
     }
 
     public function rules()
@@ -73,7 +74,6 @@ class SliderCreatePage extends BackendComponent
             'slider_body' => ['required', 'min:10', 'max:100'],
             'slider_link' => ['nullable', 'min:10', 'max:100'],
             'slider_link_text' => ["required_with:slider_link", 'nullable', 'string', 'min:2', 'max:20'],
-            // 'slider_image' => ['required', 'image', 'mimes:' . implode(',', $this->supportedImgTypes), "max:{$this->maxFileUploadSize}"],
             'slider_image' => [
                 'required',
                 "max:{$this->maxFileUploadSize}",
@@ -116,29 +116,20 @@ class SliderCreatePage extends BackendComponent
     public function save()
     {
         $validated = $this->validate();
-        $validated['user_id'] = $this->user_id;
-        // dd($validated);
-        // Slider::create($validated);
         try {
+            $validated['user_id'] = $this->authId;
             $createdModel = $this->sliderService->create($validated);
-
-            // dd($createdModel);
-
+            $this->resetProps();
 
             ## Dispatch events
             $this->dispatch('toastAlert', message: __('translations.action_successful'), type: 'success');
         } catch (\Throwable $th) {
             $this->dispatch('toastAlert', message: $th->getMessage(), type: 'error');
         }
-
-
-
-        // return redirect()->to('/posts');
     }
 
     public function updating($property, $value): void
     {
-
         if ($property == 'slider_image') {
             $uploadedFileExtension = $this->getTmpUploadedFileExtension($value);
             if (in_array($uploadedFileExtension, $this->supportedImgTypes)) {
@@ -177,7 +168,14 @@ class SliderCreatePage extends BackendComponent
         $this->displayTmpUploadedImage = false;
     }
 
-
+    /**
+     * Resets component all state properties
+     * @return void
+     */
+    public function resetProps(): void
+    {
+        $this->reset();
+    }
 
     /**
      * Render view

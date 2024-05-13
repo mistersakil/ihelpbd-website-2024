@@ -12,7 +12,15 @@ use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
  */
 class SliderService
 {
-    private FileUploadService $fileUploadService;
+    protected FileUploadService $fileUploadService;
+    public string $disk = 'uploads';
+    public string $uploadDirectory = 'sliders';
+    public array $imgResizeOptions = [
+        'height' => 675,
+        'width' => 865,
+        'position' => 'center'
+    ];
+
 
     public function __construct()
     {
@@ -31,8 +39,11 @@ class SliderService
 
             ## Upload file to local storage
             $sliderImageHashedName = (string) $this->fileUploadService->setHashedNameForTmpUploadedFile($sliderImageTmpFile, $inputs['user_id']);
+            $this->fileUploadService->uploadFilToLocalStorage(uploadDirectory: $this->uploadDirectory, disk: $this->disk, fileName: $sliderImageHashedName, tmpFile: $sliderImageTmpFile);
 
-            $this->fileUploadService->upload_file_to_local_storage(directory: 'sliders', disk: 'uploads', fileName: $sliderImageHashedName, tmpFile: $sliderImageTmpFile);
+            ## Resize image using image intervention package
+            $this->fileUploadService->resizeImage(uploadDirectory: $this->uploadDirectory, disk: $this->disk, fileName: $sliderImageHashedName, dimensions: $this->imgResizeOptions);
+
 
             ## Create new slider
             $inputs['slider_image'] = $sliderImageHashedName;

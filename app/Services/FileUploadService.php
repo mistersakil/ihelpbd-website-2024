@@ -6,7 +6,6 @@ use Exception;
 use Intervention\Image\ImageManager;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Drivers\Gd\Driver;
-use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 
 /**
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
@@ -14,20 +13,25 @@ use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 class FileUploadService
 {
     /**
-     * resizeImage method resize images using image intervention package
+     * Resize uploaded image using image intervention package
      * @param string $fileAbsolutePath
      * @return void
      */
-    public function resizeImage(string $fileAbsolutePath): void
+    public function resizeImage(string $disk, string $uploadDirectory, string $fileName, array $dimensions): void
     {
+
+        $fileAbsolutePath = $this->generateFilePath(disk: $disk, fileName: "{$uploadDirectory}/{$fileName}");
+
+        @['height' => $height, 'width' => $width, 'position' => $position] = $dimensions;
         $manager = new ImageManager(Driver::class);
         $image = $manager->read($fileAbsolutePath);
-        $image->cover(width: 200, height: 200, position: 'center');
-        $image->save();
+
+        $image->cover(width: $width ?? 200, height: $height ?? 200, position: $position ?? 'center')
+            ->save();
     }
 
     /**
-     * generateFilePath method os relevant file path
+     * Generate os relevant file path
      * @param string $disk
      * @param string $fileName     
      * @return string 
@@ -45,7 +49,6 @@ class FileUploadService
      * @param string $disk default 'attachments'
      * @param string $childDirectory default empty
      * @return mixed 
-     * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
      */
     public function removeFilesFromStorage(array $files = [], string $file = '', string $disk = 'attachments', string $childDirectory = ''): mixed
     {
@@ -110,22 +113,22 @@ class FileUploadService
     }
 
     /**
-     * upload_file_to_local_storage method process attachment inputs
+     * Move tmp uploaded file to local storage
      * @param string $disk
-     * @param string $directory
+     * @param string $uploadDirectory
      * @param $tmpFile
      * @param string $fileName
      * @return mixed
      * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
      */
-    public function upload_file_to_local_storage(string $disk = 'uploads', string $directory = '', $tmpFile, string $fileName): mixed
+    public function uploadFilToLocalStorage(string $disk = 'uploads', string $uploadDirectory = '', $tmpFile, string $fileName): bool
     {
-        $finalDirectory = "public/$disk/$directory/";
+        $finalDirectory = "public/$disk/$uploadDirectory/";
 
         if (!Storage::directories($finalDirectory)) {
             Storage::makeDirectory($finalDirectory, 0775, true);
         }
-        $tmpFile->storeAs($directory, $fileName, $disk);
+        $tmpFile->storeAs($uploadDirectory, $fileName, $disk);
 
         return true;
     }
