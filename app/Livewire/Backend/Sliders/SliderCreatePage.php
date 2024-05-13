@@ -2,10 +2,10 @@
 
 namespace App\Livewire\Backend\Sliders;
 
-use App\Models\Slider;
-use Livewire\Component;
+use App\Livewire\Backend\BackendComponent;
 use Livewire\WithFileUploads;
 use Livewire\Attributes\Title;
+use App\Services\SliderService;
 use Illuminate\Validation\Rule;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Validate;
@@ -17,7 +17,7 @@ use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
  * SliderCreatePage Component
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
  */
-class SliderCreatePage extends Component
+class SliderCreatePage extends BackendComponent
 {
     use WithFileUploads;
 
@@ -30,6 +30,11 @@ class SliderCreatePage extends Component
     public int $imgMinHeight = 675;
     public int $imgMinWidth = 865;
 
+    # Services 
+    private SliderService $sliderService;
+
+    ## State properties
+    public int $user_id;
     #[Validate]
     public string $slider_title = '';
     #[Validate]
@@ -38,11 +43,28 @@ class SliderCreatePage extends Component
     public string $slider_link_text = '';
     #[Validate]
     public string $slider_link = '';
-
     #[Validate]
     public $slider_image = '';
-
     public bool $is_active = true;
+
+    /**
+     * boot method to set initial values
+     *
+     * @return void
+     */
+    public function boot(): void
+    {
+        $this->sliderService = new SliderService();
+    }
+
+    /**
+     * Create a new component instance.
+     * @return void
+     */
+    public function mount(): void
+    {
+        $this->user_id = $this->authId;
+    }
 
     public function rules()
     {
@@ -94,19 +116,32 @@ class SliderCreatePage extends Component
     public function save()
     {
         $validated = $this->validate();
-
-        dd($validated);
+        $validated['user_id'] = $this->user_id;
+        // dd($validated);
         // Slider::create($validated);
+        try {
+            $createdModel = $this->sliderService->create($validated);
 
-        return redirect()->to('/posts');
+            dd($createdModel);
+
+
+            ## Dispatch events
+            // $this->dispatch('toast_alert', message: 'Action successful', type: 'success');
+        } catch (\Throwable $th) {
+            // $this->dispatch('toast_alert', message: $th->getMessage(), type: 'error');
+        }
+
+
+
+        // return redirect()->to('/posts');
     }
 
     public function updating($property, $value): void
     {
 
         if ($property == 'slider_image') {
-            $fileExtension = $this->getTmpUploadedFileExtension($value);
-            if (in_array($fileExtension, $this->supportedImgTypes)) {
+            $uploadedFileExtension = $this->getTmpUploadedFileExtension($value);
+            if (in_array($uploadedFileExtension, $this->supportedImgTypes)) {
                 $this->displayTmpUploadedImage = true;
             }
         }

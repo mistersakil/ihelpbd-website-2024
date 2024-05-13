@@ -6,59 +6,59 @@ use Exception;
 use Intervention\Image\ImageManager;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Drivers\Gd\Driver;
+use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 
 /**
- * FileUploadService service class
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
  */
 class FileUploadService
 {
     /**
-     * resize_image method resize images using image intervention package
-     * @param string $file_absolute_path
+     * resizeImage method resize images using image intervention package
+     * @param string $fileAbsolutePath
      * @return void
      */
-    public function resize_image(string $file_absolute_path): void
+    public function resizeImage(string $fileAbsolutePath): void
     {
         $manager = new ImageManager(Driver::class);
-        $image = $manager->read($file_absolute_path);
+        $image = $manager->read($fileAbsolutePath);
         $image->cover(width: 200, height: 200, position: 'center');
         $image->save();
     }
 
     /**
-     * generate_file_path method os relevant file path
+     * generateFilePath method os relevant file path
      * @param string $disk
      * @param string $file_name     
      * @return string 
      */
-    public function generate_file_path(string $disk = 'public', string $file_name): string
+    public function generateFilePath(string $disk = 'public', string $file_name): string
     {
-        return _os_relevant_file_upload_path(Storage::disk($disk)->path($file_name));
+        return osRelevantFileUploadPath(Storage::disk($disk)->path($file_name));
     }
 
 
     /**
-     * remove_files_from_storage  method removes files from local storage
+     * removeFilesFromStorage  method removes files from local storage
      * @param array $files []
      * @param string $file default empty
      * @param string $disk default 'attachments'
-     * @param string $child_directory default empty
+     * @param string $childDirectory default empty
      * @return mixed 
      * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
      */
-    public function remove_files_from_storage(array $files = [], string $file = '', string $disk = 'attachments', string $child_directory = ''): mixed
+    public function removeFilesFromStorage(array $files = [], string $file = '', string $disk = 'attachments', string $childDirectory = ''): mixed
     {
         if (count($files) <= 0 && empty($file)) {
-            throw new Exception(_static_strings('nothing_to_delete'));
+            throw new Exception(__('translations.nothing_to_delete'));
         }
         if (count($files)) {
             foreach ($files as $item) {
-                $this->delete_file(disk: $disk, file: "$child_directory/$item");
+                $this->delete_file(disk: $disk, file: "$childDirectory/$item");
             }
         }
         if (!empty($file)) {
-            $this->delete_file(disk: $disk, file: "$child_directory/$file");
+            $this->delete_file(disk: $disk, file: "$childDirectory/$file");
         }
         return true;
     }
@@ -80,9 +80,9 @@ class FileUploadService
     }
 
     /**
-     * process_attachment_inputs method process attachment inputs
-     * @param string $file
-     * @param string $user_id
+     * process_attachment_inputs method process tmp uploaded file for polymorphic relation
+     * @param string $file tmp uploaded file 
+     * @param string $user_id session user who wants to create record
      * @return array
      * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
      */
@@ -103,7 +103,41 @@ class FileUploadService
     }
 
     /**
-     * process_attachment_inputs method process attachment inputs
+     * setHashedNameForTmpUploadedFile method process tmp uploaded file for single model
+     * @param string $file [tmp uploaded file]
+     * @param string $user_id [session user who wants to create record]
+     * @return array
+     * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
+     */
+    public function setHashedNameForTmpUploadedFile($tmp_file, $user_id, $isSingle = true): mixed
+    {
+        try {
+            ## Throw exception if no file selected to upload
+            if (!$tmp_file instanceof TemporaryUploadedFile) {
+                throw new Exception(__('translations.nothing_to_upload'));
+            }
+
+            $file_hash_name = $tmp_file->hashName();
+            $extension = $tmp_file->getClientOriginalExtension();
+            $file_name = _str_conversion(pathinfo($tmp_file->getClientOriginalName(), PATHINFO_FILENAME), 'strtolower', true, false);
+            $original_file_name = _str_conversion($file_name, 'strtolower', false, true) . ".{$extension}";
+            $file = "{$user_id}-{$file_hash_name}";
+
+            if ($isSingle) return $file;
+
+            $single_attachment_inputs = [
+                "file" => $file,
+                "extension" => $extension,
+                "original_file_name" => $original_file_name,
+            ];
+            return $single_attachment_inputs;
+        } catch (\Throwable $th) {
+            throw new Exception($th->getMessage());
+        }
+    }
+
+    /**
+     * upload_file_to_local_storage method process attachment inputs
      * @param string $disk
      * @param string $directory
      * @param $tmp_file

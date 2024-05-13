@@ -145,13 +145,13 @@ if (!function_exists('_str_conversion')) {
 }
 
 /**
- * _os_relevant_file_upload_path this function will format upload absolute path on any type of operating system
+ * osRelevantFileUploadPath this function will format upload absolute path on any type of operating system
  * @param string $path
  * @return string $path
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
  */
-if (!function_exists('_os_relevant_file_upload_path')) {
-    function _os_relevant_file_upload_path($path)
+if (!function_exists('osRelevantFileUploadPath')) {
+    function osRelevantFileUploadPath($path)
     {
         $path = str_replace('\\', '/',  $path);
         $path = str_replace('///', '/', $path);
@@ -161,26 +161,6 @@ if (!function_exists('_os_relevant_file_upload_path')) {
     }
 }
 
-/**
- * _one_to_multi_array convert one dimensional array to multi dimensional array
- * @param array $array
- * @return array $new_array
- * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
- */
-if (!function_exists('_one_to_multi_array')) {
-    function _one_to_multi_array(array $array, string $section = '')
-    {
-        $new_array = [];
-        foreach ($array as $key => $value) {
-            $item = ['type' => $key, 'value' => $value];
-            if ($section) {
-                $item['section'] = $section;
-            }
-            $new_array[] = $item;
-        }
-        return $new_array;
-    }
-}
 
 /**
  * _sub_string function returns specific length of characters
