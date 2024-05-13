@@ -12,7 +12,6 @@ use Illuminate\Contracts\View\View;
 use App\Livewire\Backend\BackendComponent;
 
 /**
- * SliderCreatePage Component
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
  */
 class SliderCreatePage extends BackendComponent

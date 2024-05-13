@@ -1,15 +1,15 @@
 <?php
 
 /**
- * _date_format function format date as user needs
+ * dateFormat function format date as user needs
  * @param string $date date('Y-m-d')
  * @param string $format "Y-m-d"
  * @return string $date
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
  */
 
-if (!function_exists('_date_format')) {
-    function _date_format($date = "date('Y-m-d')", $format = "Y-m-d")
+if (!function_exists('dateFormat')) {
+    function dateFormat($date = "date('Y-m-d')", $format = "Y-m-d")
     {
         $date = date_create($date);
         $date = date_format($date, $format);
@@ -119,7 +119,7 @@ if (!function_exists('_icons')) {
 
 
 /**
- * Created _str_conversion function convert string as required
+ * Created strConversion function convert string as required
  * @param string $string null
  * @param string $type ucfirst
  * @param bool $remove_dash false
@@ -127,8 +127,8 @@ if (!function_exists('_icons')) {
  * @return string
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
  */
-if (!function_exists('_str_conversion')) {
-    function _str_conversion(string $string = null, string $type = 'ucfirst', bool $remove_dash = false, bool $is_file = false)
+if (!function_exists('strConversion')) {
+    function strConversion(string $string = null, string $type = 'ucfirst', bool $remove_dash = false, bool $is_file = false)
     {
         $string = strtolower(trim($string));
         if ($remove_dash) {
@@ -163,7 +163,7 @@ if (!function_exists('osRelevantFileUploadPath')) {
 
 
 /**
- * _sub_string function returns specific length of characters
+ * subString function returns specific length of characters
  * @param string $str
  * @param int $length 50
  * @param bool $dots true
@@ -171,8 +171,8 @@ if (!function_exists('osRelevantFileUploadPath')) {
  * @return string $str
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
  */
-if (!function_exists('_sub_string')) {
-    function _sub_string(string $str, int $length = 50, bool $dots = false, string $convert = '')
+if (!function_exists('subString')) {
+    function subString(string $str, int $length = 50, bool $dots = false, string $convert = '')
     {
         if (strlen($str) > $length) {
             $str = substr($str, 0, $length);

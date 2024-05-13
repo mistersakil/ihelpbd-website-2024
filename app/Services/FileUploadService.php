@@ -96,8 +96,8 @@ class FileUploadService
 
             $file_hash_name = $tmpFile->hashName();
             $extension = $tmpFile->getClientOriginalExtension();
-            $fileName = _str_conversion(pathinfo($tmpFile->getClientOriginalName(), PATHINFO_FILENAME), 'strtolower', true, false);
-            $original_fileName = _str_conversion($fileName, 'strtolower', false, true) . ".{$extension}";
+            $fileName = strConversion(pathinfo($tmpFile->getClientOriginalName(), PATHINFO_FILENAME), 'strtolower', true, false);
+            $original_fileName = strConversion($fileName, 'strtolower', false, true) . ".{$extension}";
             $file = "{$user_id}-{$file_hash_name}";
 
             if ($isSingle) return $file;
