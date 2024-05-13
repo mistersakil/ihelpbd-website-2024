@@ -202,8 +202,16 @@
                     </div>
 
                     <div class="row row-cols-auto g-3">
+                        <div wire:target="save" wire:loading class="col">
+                            <button class="btn btn-success" type="button" disabled>
+                                <span class="spinner-border spinner-border-sm" role="status"
+                                    aria-hidden="true"></span>
+                                {{ __('translations.processing') }}
+                            </button>
+                        </div>
                         <div class="col">
-                            <button wire:click="save" type="button" class="btn btn-outline-primary px-4 btn-sm">
+                            <button wire:loading.class="btn-secondary" wire:target="save" wire:click="save"
+                                type="button" class="btn btn-outline-primary px-4 btn-sm">
                                 <i class="{{ _icons('save') }}"></i>
                                 {{ __('save') }}
                             </button>
