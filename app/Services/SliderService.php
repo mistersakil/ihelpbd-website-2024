@@ -2,8 +2,10 @@
 
 namespace App\Services;
 
+use Exception;
 use App\Models\Slider;
 use App\Services\FileUploadService;
+use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 
 /**
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
@@ -19,9 +21,23 @@ class SliderService
 
     public function create(array $inputs)
     {
-        $sliderImageTmpFile = $inputs['slider_image'];
-        $sliderImageHashedName = $this->fileUploadService->setHashedNameForTmpUploadedFile($sliderImageTmpFile, 1);
-        $inputs['slider_image'] = $sliderImageHashedName;
-        return Slider::create($inputs);
+        try {
+            $sliderImageTmpFile = $inputs['slider_image'];
+
+            ## Throw exception if no file selected to upload
+            if (!$sliderImageTmpFile instanceof TemporaryUploadedFile) {
+                throw new Exception(__('translations.nothing_to_upload'));
+            }
+
+            ## Upload file to local storage
+            $sliderImageHashedName = (string) $this->fileUploadService->setHashedNameForTmpUploadedFile($sliderImageTmpFile, $inputs['user_id']);
+
+            $this->fileUploadService->upload_file_to_local_storage(directory: 'sliders', disk: 'uploads', fileName: $sliderImageHashedName, tmpFile: $sliderImageTmpFile);
+
+            ## Create new slider
+            $inputs['slider_image'] = $sliderImageHashedName;
+            return Slider::create($inputs);
+        } catch (\Throwable $th) {
+        }
     }
 }

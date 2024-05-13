@@ -122,13 +122,13 @@ class SliderCreatePage extends BackendComponent
         try {
             $createdModel = $this->sliderService->create($validated);
 
-            dd($createdModel);
+            // dd($createdModel);
 
 
             ## Dispatch events
-            // $this->dispatch('toast_alert', message: 'Action successful', type: 'success');
+            $this->dispatch('toastAlert', message: __('translations.action_successful'), type: 'success');
         } catch (\Throwable $th) {
-            // $this->dispatch('toast_alert', message: $th->getMessage(), type: 'error');
+            $this->dispatch('toastAlert', message: $th->getMessage(), type: 'error');
         }
 
 

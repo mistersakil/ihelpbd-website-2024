@@ -7,5 +7,6 @@ return [
     'image_minimum_dimension' => 'Image minimum width :minWidth PX & minimum height :minHeight PX',
     'nothing_to_delete' => 'Nothing to delete',
     'nothing_to_upload' => 'Nothing to upload',
+    'action_successful' => 'Action successful'
 
 ];

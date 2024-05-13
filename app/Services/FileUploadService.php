@@ -29,12 +29,12 @@ class FileUploadService
     /**
      * generateFilePath method os relevant file path
      * @param string $disk
-     * @param string $file_name     
+     * @param string $fileName     
      * @return string 
      */
-    public function generateFilePath(string $disk = 'public', string $file_name): string
+    public function generateFilePath(string $disk = 'public', string $fileName): string
     {
-        return osRelevantFileUploadPath(Storage::disk($disk)->path($file_name));
+        return osRelevantFileUploadPath(Storage::disk($disk)->path($fileName));
     }
 
 
@@ -80,47 +80,20 @@ class FileUploadService
     }
 
     /**
-     * process_attachment_inputs method process tmp uploaded file for polymorphic relation
-     * @param string $file tmp uploaded file 
-     * @param string $user_id session user who wants to create record
-     * @return array
-     * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
-     */
-    public function process_attachment_inputs($tmp_file, $user_id): array
-    {
-        $file_hash_name = $tmp_file->hashName();
-        $extension = $tmp_file->getClientOriginalExtension();
-        $file_name = _str_conversion(pathinfo($tmp_file->getClientOriginalName(), PATHINFO_FILENAME), 'strtolower', true, false);
-        $original_file_name = _str_conversion($file_name, 'strtolower', false, true) . ".{$extension}";
-        $file = "{$user_id}-{$file_hash_name}";
-
-        $single_attachment_inputs = [
-            "file" => $file,
-            "extension" => $extension,
-            "original_file_name" => $original_file_name,
-        ];
-        return is_array($single_attachment_inputs) ? $single_attachment_inputs : [];
-    }
-
-    /**
      * setHashedNameForTmpUploadedFile method process tmp uploaded file for single model
      * @param string $file [tmp uploaded file]
      * @param string $user_id [session user who wants to create record]
      * @return array
      * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
      */
-    public function setHashedNameForTmpUploadedFile($tmp_file, $user_id, $isSingle = true): mixed
+    public function setHashedNameForTmpUploadedFile($tmpFile, $user_id, $isSingle = true): mixed
     {
         try {
-            ## Throw exception if no file selected to upload
-            if (!$tmp_file instanceof TemporaryUploadedFile) {
-                throw new Exception(__('translations.nothing_to_upload'));
-            }
 
-            $file_hash_name = $tmp_file->hashName();
-            $extension = $tmp_file->getClientOriginalExtension();
-            $file_name = _str_conversion(pathinfo($tmp_file->getClientOriginalName(), PATHINFO_FILENAME), 'strtolower', true, false);
-            $original_file_name = _str_conversion($file_name, 'strtolower', false, true) . ".{$extension}";
+            $file_hash_name = $tmpFile->hashName();
+            $extension = $tmpFile->getClientOriginalExtension();
+            $fileName = _str_conversion(pathinfo($tmpFile->getClientOriginalName(), PATHINFO_FILENAME), 'strtolower', true, false);
+            $original_fileName = _str_conversion($fileName, 'strtolower', false, true) . ".{$extension}";
             $file = "{$user_id}-{$file_hash_name}";
 
             if ($isSingle) return $file;
@@ -128,7 +101,7 @@ class FileUploadService
             $single_attachment_inputs = [
                 "file" => $file,
                 "extension" => $extension,
-                "original_file_name" => $original_file_name,
+                "original_fileName" => $original_fileName,
             ];
             return $single_attachment_inputs;
         } catch (\Throwable $th) {
@@ -140,19 +113,19 @@ class FileUploadService
      * upload_file_to_local_storage method process attachment inputs
      * @param string $disk
      * @param string $directory
-     * @param $tmp_file
-     * @param string $file_name
+     * @param $tmpFile
+     * @param string $fileName
      * @return mixed
      * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
      */
-    public function upload_file_to_local_storage(string $disk = 'attachments', string $directory = '', $tmp_file, string $file_name): mixed
+    public function upload_file_to_local_storage(string $disk = 'uploads', string $directory = '', $tmpFile, string $fileName): mixed
     {
-        $final_directory = "public/$disk/$directory/";
+        $finalDirectory = "public/$disk/$directory/";
 
-        if (!Storage::directories($final_directory)) {
-            Storage::makeDirectory($final_directory, 0775, true);
+        if (!Storage::directories($finalDirectory)) {
+            Storage::makeDirectory($finalDirectory, 0775, true);
         }
-        $tmp_file->storeAs($directory, $file_name, $disk);
+        $tmpFile->storeAs($directory, $fileName, $disk);
 
         return true;
     }

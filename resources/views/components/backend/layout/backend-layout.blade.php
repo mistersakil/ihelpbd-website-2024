@@ -48,7 +48,7 @@
     @livewireScripts
     <script type="module">
         /* Toast notification after any action */
-        window.addEventListener('toast_alert', event => {
+        window.addEventListener('toastAlert', event => {
             event.preventDefault();
             Toast.fire({
                 icon: event.detail.type,

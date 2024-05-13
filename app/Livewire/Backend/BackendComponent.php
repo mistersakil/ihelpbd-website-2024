@@ -6,7 +6,6 @@ use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
 
 /**
- * BackendComponent
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
  */
 class BackendComponent extends Component
@@ -15,6 +14,6 @@ class BackendComponent extends Component
 
     public function __construct()
     {
-        $this->authId = Auth::id();
+        $this->authId = Auth::check() ? Auth::id() : 0;
     }
 }
