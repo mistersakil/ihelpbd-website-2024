@@ -10,6 +10,7 @@ use App\Livewire\Frontend\Blogs\BlogListPage;
 use App\Livewire\Frontend\Contact\ContactPage;
 use App\Livewire\Backend\Dashboard\DashboardPage;
 use App\Livewire\Backend\Sliders\SliderCreatePage;
+use App\Livewire\Backend\Sliders\SliderListPage;
 use App\Livewire\Frontend\Products\ProductListPage;
 use App\Livewire\Frontend\Solutions\SolutionListPage;
 
@@ -31,7 +32,7 @@ Route::middleware($backendMiddleware)->prefix('admin')->name('admin.')->group(fu
     Route::get('/', DashboardPage::class)->name('dashboard');
 
     ### Sliders 
-    Route::get('/sliders', SliderCreatePage::class)->name('sliders');
+    Route::get('/sliders', SliderListPage::class)->name('sliders.list');
     Route::get('/sliders/create', SliderCreatePage::class)->name('sliders.create');
 
     ### Admin login

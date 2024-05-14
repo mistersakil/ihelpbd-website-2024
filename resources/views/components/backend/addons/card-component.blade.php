@@ -11,10 +11,13 @@
                 </h5>
             </div>
             <hr>
-        @endif ()
+        @endif
         {{ $slot }}
     </div>
-    <div class="card-footer bg-white">
-        {{ $cardFooter ?? false }}
-    </div>
+    @if (!empty($cardFooter))
+        <div class="card-footer bg-white">
+            {{ $cardFooter }}
+        </div>
+    @endif
+
 </div>

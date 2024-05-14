@@ -1,8 +1,4 @@
 <main>
-    {{-- @dump($slider_title)
-    @dump($is_active)
-    @dump($slider_link) --}}
-    {{-- @dump($displayTmpUploadedImage) --}}
     <x-backend.addons.card-component>
         <x-slot:breadcrumb>
             <x-backend.addons.breadcrumb-component :title="$metaTitle" :active-item="$activeItem">
