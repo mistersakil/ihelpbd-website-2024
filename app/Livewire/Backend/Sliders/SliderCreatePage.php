@@ -18,8 +18,8 @@ class SliderCreatePage extends BackendComponent
 {
     use WithFileUploads;
 
-    public string $metaTitle = 'sliders';
-    public string $activeItem = 'create';
+    public string $module;
+    public string $activeItem;
     public bool $displayTmpUploadedImage = false;
     public array $supportedImgTypes;
     public int $maxFileUploadSize;
@@ -62,6 +62,9 @@ class SliderCreatePage extends BackendComponent
      */
     public function mount(): void
     {
+        $this->module = __('sliders');
+        $this->activeItem = __('create');
+
         $this->user_id = $this->authId;
         $this->imgMinHeight = $this->sliderService->imgResizeOptions['height'];
         $this->imgMinWidth = $this->sliderService->imgResizeOptions['width'];
@@ -169,7 +172,7 @@ class SliderCreatePage extends BackendComponent
      * @return \Illuminate\Contracts\View\View
      */
     #[Layout('components.backend.layout.backend-layout')]
-    #[Title('Sliders')]
+    #[Title('Sliders Create')]
     public function render(): View
     {
         return view('livewire.backend.sliders.slider-create-page');

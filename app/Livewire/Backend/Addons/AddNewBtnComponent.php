@@ -12,11 +12,19 @@ class AddNewBtnComponent extends Component
 {
     public string $title;
     public string $icon;
+    public string $route;
+    public bool $hasRoute;
 
     public function mount(string $title = '', string $icon = '', string $route = '')
     {
         $this->title = !empty($title) ? __($title) : __('add new');
         $this->icon = !empty($icon) ? _icons($icon) : _icons('add');
+        $this->route = '';
+        $this->hasRoute = false;
+        if (!empty($route)) {
+            $this->route = route($route);
+            $this->hasRoute = true;
+        }
     }
 
     /**

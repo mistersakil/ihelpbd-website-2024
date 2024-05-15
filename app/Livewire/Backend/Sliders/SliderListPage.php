@@ -12,16 +12,20 @@ use Illuminate\Contracts\View\View;
  */
 class SliderListPage extends Component
 {
+    public string $module;
+    public string $activeItem;
 
-    public string $metaTitle = 'sliders';
-    public string $activeItem = 'create';
-
+    public function  mount(): void
+    {
+        $this->module = __('sliders');
+        $this->activeItem = __('list');
+    }
     /**
      * Render view
      * @return \Illuminate\Contracts\View\View
      */
     #[Layout('components.backend.layout.backend-layout')]
-    #[Title('Sliders')]
+    #[Title('Sliders List')]
     public function render(): View
     {
         return view('livewire.backend.sliders.slider-list-page');

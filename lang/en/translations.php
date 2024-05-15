@@ -8,6 +8,9 @@ return [
     'nothing_to_delete' => 'Nothing to delete',
     'nothing_to_upload' => 'Nothing to upload',
     'action_successful' => 'Action successful',
-    'processing' => 'Processing ...'
+
+
+
+
 
 ];

@@ -6,11 +6,12 @@ use App\Livewire\Frontend\Home\HomePage;
 use App\Livewire\Frontend\About\AboutPage;
 
 use App\Http\Middleware\AuthCheckMiddleware;
+use App\Http\Middleware\AdminLocaleMiddleware;
 use App\Livewire\Frontend\Blogs\BlogListPage;
 use App\Livewire\Frontend\Contact\ContactPage;
+use App\Livewire\Backend\Sliders\SliderListPage;
 use App\Livewire\Backend\Dashboard\DashboardPage;
 use App\Livewire\Backend\Sliders\SliderCreatePage;
-use App\Livewire\Backend\Sliders\SliderListPage;
 use App\Livewire\Frontend\Products\ProductListPage;
 use App\Livewire\Frontend\Solutions\SolutionListPage;
 
@@ -24,7 +25,8 @@ Route::name('web.')->group(function () {
 });
 
 $backendMiddleware = [
-    AuthCheckMiddleware::class
+    AuthCheckMiddleware::class,
+    AdminLocaleMiddleware::class
 ];
 
 ## Backend routes

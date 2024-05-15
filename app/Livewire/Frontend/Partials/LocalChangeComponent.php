@@ -10,8 +10,8 @@ use Livewire\Component;
  */
 class LocalChangeComponent extends Component
 {
-    public array $locals = [];
-    public string $selectedLocal;
+    public array $locales = [];
+    public string $selectedLocale;
     public $segments;
 
     /**
@@ -21,36 +21,31 @@ class LocalChangeComponent extends Component
      */
     public function mount(): void
     {
-        $this->locals = [
-            'en' => 'English',
-            'bd' => 'বাংলা',
-            'my' => 'Malay'
-        ];
+        $this->locales = localList();
+        $this->selectedLocale = 'en';
 
         if (session()->has('locale')) {
             app()->setLocale(session()->get('locale'));
-            $this->selectedLocal = session()->get('locale');
+            $this->selectedLocale = session()->get('locale');
         } else {
-            $this->selectedLocal = 'en';
-            app()->setLocale($this->selectedLocal);
+            app()->setLocale($this->selectedLocale);
+            $this->selectedLocale = 'en';
         }
     }
 
     /**
-     * changeLocaleAction to change one language to another
+     * changeLocale to change one language to another
      *
      * @return mixed
      */
-    public function changeLocaleAction(): mixed
+    public function changeLocale(): mixed
     {
-
-        
-        if (!array_key_exists($this->selectedLocal, $this->locals)) {
+        if (!array_key_exists($this->selectedLocale, $this->locales)) {
             abort(400);
         }
 
-        app()->setLocale($this->selectedLocal);
-        session()->put('locale', $this->selectedLocal);
+        app()->setLocale($this->selectedLocale);
+        session()->put('locale', $this->selectedLocale);
 
         $url = url()->previous();
         $this->segments = parse_url($url)['path'];

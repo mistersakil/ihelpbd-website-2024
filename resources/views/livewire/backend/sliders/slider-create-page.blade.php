@@ -1,13 +1,14 @@
 <main>
     <x-backend.addons.card-component>
         <x-slot:breadcrumb>
-            <x-backend.addons.breadcrumb-component :title="$metaTitle" :active-item="$activeItem">
+            <x-backend.addons.breadcrumb-component :title="$module" :active-item="$activeItem">
 
-                @can('client-create')
-                    <x-slot:add_new>
-                        <livewire:backend.addons.add-new-component title="add new" />
-                    </x-slot:add_new>
-                @endcan
+                {{-- @can('sliders-create') --}}
+                <x-slot:add_new>
+                    <livewire:backend.addons.add-new-btn-component title="sliders list" icon="list"
+                        route="admin.sliders.list" />
+                </x-slot:add_new>
+                {{-- @endcan --}}
 
             </x-backend.addons.breadcrumb-component>
         </x-slot:breadcrumb>
@@ -55,7 +56,7 @@
                         </div>
                         @if (!$errors->has('slider_body'))
                             <div class="form-text">
-                                {{ __('slider body required') }}
+                                {{ __('sliders body required') }}
                             </div>
                         @endif
 
@@ -78,7 +79,7 @@
                         </div>
                         @if (!$errors->has('slider_link_text'))
                             <div class="form-text">
-                                {{ __('slider link text optional') }}
+                                {{ __('if there is link, slider text required') }}
                             </div>
                         @endif
 
@@ -101,7 +102,7 @@
                         </div>
                         @if (!$errors->has('slider_link'))
                             <div class="form-text">
-                                {{ __('slider link required when slider text available') }}
+                                {{ __('sliders link optional') }}
                             </div>
                         @endif
 
@@ -134,7 +135,7 @@
                             <input wire:model="slider_image" type="file" accept=".jpg,.jpeg,.png,.mp4" id="fileID"
                                 style="">
 
-                            <button type="button" class="btn btn-secondary">Choose File</button>
+                            <button type="button" class="btn btn-secondary">{{ __('choose file') }}</button>
                         </div>
                         <!-- End: File selection -->
 
@@ -202,7 +203,7 @@
                             <button class="btn btn-success" type="button" disabled>
                                 <span class="spinner-border spinner-border-sm" role="status"
                                     aria-hidden="true"></span>
-                                {{ __('translations.processing') }}
+                                {{ __('processing') }}
                             </button>
                         </div>
                         <div class="col">

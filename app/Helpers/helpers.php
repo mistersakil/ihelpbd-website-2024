@@ -41,6 +41,7 @@ if (!function_exists('_icons')) {
             'bin'                       => 'bi bi-trash2',
             'business'                  => 'bi bi-building',
             'body'                      => 'bi bi-body-text',
+            'back'                      => 'bi bi-chevron-left',
             'circle'                    => 'bi bi-circle',
             'clients'                   => 'bi bi-person-hearts',
             'cog'                       => 'bi bi-gear',
@@ -71,6 +72,7 @@ if (!function_exists('_icons')) {
             'link45'                    => 'bi bi-link-45deg',
             'link_text'                 => 'bi bi-text-wrap',
             'logout'                    => 'bi bi-box-arrow-right',
+            'list'                      => 'bi bi-list-nested',
             'messages'                  => 'bi bi-chat-dots',
             'portfolio'                 => 'bi bi-briefcase',
             'products'                  => 'bi bi-boxes',
@@ -193,5 +195,26 @@ if (!function_exists('subString')) {
         }
 
         return $str;
+    }
+}
+
+/**
+ * localList function returns all available locals or a specific local
+ * @param string $localKey [Key of available local
+ * @return mixed
+ * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
+ */
+if (!function_exists('localList')) {
+    function localList(string $localKey = ''): mixed
+    {
+        $locals = [
+            'en' => 'English',
+            'bd' => 'বাংলা',
+            'my' => 'Malay'
+        ];
+        if (array_key_exists($localKey, $locals)) {
+            return $locals[$localKey];
+        }
+        return $locals;
     }
 }

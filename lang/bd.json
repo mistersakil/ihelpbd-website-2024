@@ -36,5 +36,20 @@
     "create": "তৈরি করুন",
     "sliders": "স্লাইডার্স",
     "uploaded file": "উপলোডেড ফাইল",
-    "must be an image": ":attribute একটি ছবি হতে হবে"
+    "must be an image": ":attribute একটি ছবি হতে হবে",
+    "must be of type image": ":attribute ইমেজ ধরন jpg/jpeg/png/webp হতে হবে",
+    "max file size": ":attribute সর্বোচ্চ ফাইলের সাইজ :max কে.বি",
+    "slider": "স্লাইডার",
+    "can not be empty": ":attribute খালি রাখা যাবে না",
+    "image required": ":attribute ইমেজ প্রয়োজন",
+    "upload slider image": "স্লাইডার ইমেজ আপলোড করুন",
+    "list": "লিস্ট",
+    "add new": "নতুন যুক্ত করুন",
+    "processing": "প্রসেসিং ...",
+    "sliders list": "স্লাইডার্স লিস্ট",
+    "sliders body required": "স্লাইডার বডি প্রয়োজন",
+    "sliders link text optional": "স্লাইডার লিঙ্ক টেক্সট ঐচ্ছিক",
+    "if there is link, slider text required": "লিঙ্ক থাকলে, স্লাইডার টেক্সট প্রয়োজন",
+    "sliders link optional": "স্লাইডার লিঙ্ক ঐচ্ছিক",
+    "supported image files": "সমর্থিত ইমেজ ফাইল"
 }
