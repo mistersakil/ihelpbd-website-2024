@@ -49,7 +49,7 @@ class SliderListPage extends Component
      */
     public function paginationView(): string
     {
-        return 'custom-pagination-links-view';
+        return 'livewire.livewire.backend.addons.bootstrap-pagination-component';
     }
 
     /**
@@ -60,7 +60,7 @@ class SliderListPage extends Component
     #[Title('Sliders List')]
     public function render(): View
     {
-        $models = $this->sliderService->getAll(paginate: 2);
+        $models = $this->sliderService->getAll(paginate: 1);
         return view('livewire.backend.sliders.slider-list-page', compact('models'));
     }
 }

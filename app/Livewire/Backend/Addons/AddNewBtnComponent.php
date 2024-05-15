@@ -28,15 +28,6 @@ class AddNewBtnComponent extends Component
     }
 
     /**
-     * show_modal_by_livewire method dispatch browser event
-     * @return void
-     */
-    public function show_modal_by_livewire(): void
-    {
-        $this->dispatchBrowserEvent('show_modal_by_livewire');
-    }
-
-    /**
      * Get the view / contents that represent the component.
      */
     public function render(): View|string

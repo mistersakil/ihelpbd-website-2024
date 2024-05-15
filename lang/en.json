@@ -57,5 +57,9 @@
     "link text": "Link text",
     "order": "Order",
     "status": "Status",
-    "actions": "Actions"
+    "actions": "Actions",
+    "showing": "Showing",
+    "to": "To",
+    "of": "Of",
+    "results": "Results"
 }
