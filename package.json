@@ -4,8 +4,8 @@
     "scripts": {
         "web.dev": "vite --config vite.web.config.js",
         "web.build": "vite build --config vite.web.config.js",
-        "back.dev": "vite --config vite.backend.config.js",
-        "back.build": "vite build --config vite.backend.config.js",
+        "back.dev": "vite --config vite.back.config.js",
+        "back.build": "vite build --config vite.back.config.js",
         "dev": "npm run web.dev && npm run back.dev",
         "build": "npm run web.build && npm run back.build"
     },

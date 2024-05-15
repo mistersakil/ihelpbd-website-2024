@@ -5,6 +5,7 @@ import path from "path";
 export default defineConfig({
     plugins: [
         laravel({
+            hotFile: "public/hot",
             buildDirectory: "build",
             input: ["resources/assets/web/web-js.js"],
             refresh: true,

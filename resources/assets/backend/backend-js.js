@@ -1,7 +1,7 @@
 /* CSS */
 import "./backend-css.css";
 
-import.meta.glob(["../images/**", "./images/**", "./fonts/**"]);
+import.meta.glob(["../../images/**", "./images/**", "./fonts/**"]);
 
 /* Import sweetalert2 */
 import Swal from "sweetalert2";
