@@ -15,6 +15,7 @@ use Illuminate\Contracts\View\View;
 class SliderListPage extends Component
 {
     use WithPagination;
+
     public string $module;
     public string $activeItem;
     # Services 
@@ -35,12 +36,21 @@ class SliderListPage extends Component
      * Create a new component instance.
      * @return void
      */
+
     public function  mount(): void
     {
         $this->module = __('sliders');
         $this->activeItem = __('list');
     }
 
+    /**
+     * Using custom pagination views
+     * @return string
+     */
+    public function paginationView(): string
+    {
+        return 'custom-pagination-links-view';
+    }
 
     /**
      * Render view
