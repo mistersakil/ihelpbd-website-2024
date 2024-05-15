@@ -51,5 +51,11 @@
     "sliders link text optional": "Sliders link text optional",
     "if there is link, slider text required": "If there is link, slider text required",
     "sliders link optional": "Sliders link optional",
-    "supported image files": "Supported image files"
+    "supported image files": "Supported image files",
+    "dashboard": "Dashboard",
+    "link": "Link",
+    "link text": "Link text",
+    "order": "Order",
+    "status": "Status",
+    "actions": "Actions"
 }

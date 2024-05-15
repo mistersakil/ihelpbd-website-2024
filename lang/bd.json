@@ -51,5 +51,11 @@
     "sliders link text optional": "স্লাইডার লিঙ্ক টেক্সট ঐচ্ছিক",
     "if there is link, slider text required": "লিঙ্ক থাকলে, স্লাইডার টেক্সট প্রয়োজন",
     "sliders link optional": "স্লাইডার লিঙ্ক ঐচ্ছিক",
-    "supported image files": "সমর্থিত ইমেজ ফাইল"
+    "supported image files": "সমর্থিত ইমেজ ফাইল",
+    "dashboard": "ড্যাশবোর্ড",
+    "link": "লিঙ্ক",
+    "link text": "লিঙ্ক টেক্সট",
+    "order": "অর্ডার",
+    "status": "স্ট্যাটাস",
+    "actions": "অ্যাকশন"
 }

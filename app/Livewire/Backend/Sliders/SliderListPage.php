@@ -3,7 +3,9 @@
 namespace App\Livewire\Backend\Sliders;
 
 use Livewire\Component;
+use Livewire\WithPagination;
 use Livewire\Attributes\Title;
+use App\Services\SliderService;
 use Livewire\Attributes\Layout;
 use Illuminate\Contracts\View\View;
 
@@ -12,14 +14,34 @@ use Illuminate\Contracts\View\View;
  */
 class SliderListPage extends Component
 {
+    use WithPagination;
     public string $module;
     public string $activeItem;
+    # Services 
+    private SliderService $sliderService;
 
+    /**
+     * Create a new component instance
+     *
+     * @return void
+     */
+    public function boot(): void
+    {
+        $this->sliderService = new SliderService();
+    }
+
+
+    /**
+     * Create a new component instance.
+     * @return void
+     */
     public function  mount(): void
     {
         $this->module = __('sliders');
         $this->activeItem = __('list');
     }
+
+
     /**
      * Render view
      * @return \Illuminate\Contracts\View\View
@@ -28,6 +50,7 @@ class SliderListPage extends Component
     #[Title('Sliders List')]
     public function render(): View
     {
-        return view('livewire.backend.sliders.slider-list-page');
+        $models = $this->sliderService->getAll(paginate: 2);
+        return view('livewire.backend.sliders.slider-list-page', compact('models'));
     }
 }

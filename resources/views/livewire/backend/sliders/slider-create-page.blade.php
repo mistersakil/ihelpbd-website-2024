@@ -148,9 +148,6 @@
                                         aria-hidden="true"></span>
                                     {{ __('uploading') }}
                                 </section>
-                                {{-- <section wire:click="$cancelUpload('slider_image')">
-                                    <i title="{{ __('cancel') }}" class="{{ _icons('delete') }} text-danger"></i>
-                                </section> --}}
                             </div>
                         </div>
                         <!-- End: Loading progress -->
@@ -197,6 +194,7 @@
                             {{ __('active') }}
                         </label>
                     </div>
+                    <!-- /.form-check -->
 
                     <div class="row row-cols-auto g-3">
                         <div wire:target="save" wire:loading class="col">
@@ -206,6 +204,8 @@
                                 {{ __('processing') }}
                             </button>
                         </div>
+                        <!-- /.col -->
+
                         <div class="col">
                             <button wire:loading.class="btn-secondary" wire:target="save" wire:click="save"
                                 type="button" class="btn btn-outline-primary px-4 btn-sm">
@@ -213,6 +213,8 @@
                                 {{ __('save') }}
                             </button>
                         </div>
+                        <!-- /.col -->
+
                         <div class="col">
                             <button wire:click="resetStateProps" type="button"
                                 class="btn btn-outline-danger px-4 btn-sm">
@@ -220,8 +222,12 @@
                                 {{ __('reset') }}
                             </button>
                         </div>
+                        <!-- /.col -->
+
                     </div>
+                    <!-- /.row -->
                 </div>
+                <!-- /.d-flex -->
             </div>
             <!-- /.col -->
 
@@ -230,9 +236,5 @@
 
     </x-backend.addons.card-component>
     <!-- /card-component -->
-
-
-    @push('dynamic_js')
-    @endpush
 
 </main>

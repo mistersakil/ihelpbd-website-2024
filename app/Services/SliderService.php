@@ -122,4 +122,14 @@ class SliderService
 
         ];
     }
+
+    /**
+     * Validation error messages for state properties of the component
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    public function getAll(int $paginate = 5)
+    {
+        $data = Slider::paginate($paginate);
+        return $data;
+    }
 }
