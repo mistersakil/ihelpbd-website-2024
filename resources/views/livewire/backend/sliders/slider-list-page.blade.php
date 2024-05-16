@@ -1,5 +1,4 @@
 <main>
-    @dump($pageNumber)
     <x-backend.addons.card-component>
         <x-slot:breadcrumb>
             <x-backend.addons.breadcrumb-component :title="$module" :active-item="$activeItem">
@@ -32,6 +31,7 @@
 
                         </tr>
                     </thead>
+                    <!-- /thead -->
                     <tbody>
                         @forelse ($models as $model)
                             <tr role="row" class="odd">
@@ -64,10 +64,14 @@
                         @endforelse
 
                     </tbody>
+                    <!-- /tbody -->
                 </table>
+                <!-- /.table -->
                 {{ $models->links() }}
             </div>
+            <!-- /.col -->
         </div>
+        <!-- /.row -->
 
     </x-backend.addons.card-component>
     <!-- /card-component -->

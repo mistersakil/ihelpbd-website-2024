@@ -18,13 +18,23 @@
     width: 100%;
 }
 
-/* Customized styles  */
+/* Custom styles  */
 .sentence_case::first-letter {
     text-transform: uppercase !important;
 }
 
 .action_btn {
     font-size: 16px !important;
+}
+
+.gotoPage {
+    width: 60px;
+    font-size: 18px;
+    color: #505050;
+    background: linear-gradient(to right, #ddd, #999);
+    border: none;
+    text-align: center;
+    border-radius: 10px;
 }
 
 /** File upload container **/

@@ -4,6 +4,9 @@ namespace App\Traits;
 
 use Livewire\WithPagination;
 
+/**
+ * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
+ */
 trait BackendPaginationTrait
 {
     use WithPagination;
@@ -27,13 +30,23 @@ trait BackendPaginationTrait
         }
     }
 
-    public function rendered()
+    /**
+     * Called after render() is called
+     *
+     * @return void
+     */
+    public function rendered(): void
     {
         $this->pageNumber = $this->getPage();
         $this->setPageNumber();
     }
 
-    private function setPageNumber()
+    /**
+     * Set paginator page number on page rendered or updated
+     *
+     * @return void
+     */
+    private function setPageNumber(): void
     {
         $this->setPage($this->pageNumber);
     }
