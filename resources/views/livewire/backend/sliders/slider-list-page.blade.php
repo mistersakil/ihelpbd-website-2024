@@ -16,60 +16,66 @@
 
         <div class="row">
             <div class="col-sm-12 table-responsive">
-                <table id="example" class="table table-striped table-bordered dataTable" style="width: 100%;"
-                    role="grid" aria-describedby="example_info">
-                    <thead>
-                        <tr role="row">
-                            <th>#</th>
-                            <th>{{ __('title') }}</th>
-                            <th>{{ __('body') }}</th>
-                            <th>{{ __('link') }}</th>
-                            <th>{{ __('link text') }}</th>
-                            <th>{{ __('order') }}</th>
-                            <th>{{ __('status') }}</th>
-                            <th>{{ __('actions') }}</th>
+                @if ($models->count())
+                    <table id="example" class="table table-striped table-bordered dataTable" style="width: 100%;"
+                        role="grid" aria-describedby="example_info">
+                        <thead>
+                            <tr role="row">
+                                <th>#</th>
+                                <th>{{ __('title') }}</th>
+                                <th>{{ __('body') }}</th>
+                                <th>{{ __('link') }}</th>
+                                <th>{{ __('link text') }}</th>
+                                <th>{{ __('order') }}</th>
+                                <th>{{ __('status') }}</th>
+                                <th>{{ __('actions') }}</th>
 
-                        </tr>
-                    </thead>
-                    <!-- /thead -->
-                    <tbody>
-                        @forelse ($models as $model)
-                            <tr role="row" class="odd">
-                                <td>
-                                    {{ $loop->index + 1 }}
-                                </td>
-                                <td>
-                                    {{ $model->slider_title }}
-                                </td>
-                                <td>
-                                    {{ $model->slider_body }}
-                                </td>
-                                <td>
-                                    {{ $model->slider_link }}
-                                </td>
-                                <td>
-                                    {{ $model->slider_link_text }}
-                                </td>
-                                <td>
-                                    {{ $model->order }}
-                                </td>
-                                <td>
-                                    {{ $model->is_active }}
-                                </td>
-                                <td>
-                                    {{ $model->created_at }}
-                                </td>
                             </tr>
-                        @empty
-                        @endforelse
+                        </thead>
+                        <!-- /thead -->
+                        <tbody>
+                            @foreach ($models as $model)
+                                <tr role="row" class="odd" wire:key="slider_key_{{ $model->id }}">
+                                    <td>
+                                        {{ $loop->index + 1 }}
+                                    </td>
+                                    <td>
+                                        {{ $model->slider_title }}
+                                    </td>
+                                    <td>
+                                        {{ $model->slider_body }}
+                                    </td>
+                                    <td>
+                                        {{ $model->slider_link }}
+                                    </td>
+                                    <td>
+                                        {{ $model->slider_link_text }}
+                                    </td>
+                                    <td>
+                                        {{ $model->order }}
+                                    </td>
+                                    <td>
+                                        {{-- {{ $model->is_active }} --}}
+                                        <livewire:backend.addons.is-active-component :isActive="$model->is_active"
+                                            wire:key="{{ rand() }}" />
+                                    </td>
+                                    <td>
+                                        {{ $model->created_at }}
+                                    </td>
+                                </tr>
+                            @endforeach
 
-                    </tbody>
-                    <!-- /tbody -->
-                </table>
-                <!-- /.table -->
-                {{ $models->links() }}
+                        </tbody>
+                        <!-- /tbody -->
+                    </table>
+                    <!-- /.table -->
+                    {{ $models->links() }}
+                @else
+                    nothing found
+                @endif
             </div>
             <!-- /.col -->
+
         </div>
         <!-- /.row -->
 
