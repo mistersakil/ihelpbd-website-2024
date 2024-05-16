@@ -1,5 +1,5 @@
 <div class="row mt-3">
-    <div class="col-sm-12 col-md-5">
+    <div class="col-sm-12 col-md-3">
         <p class="text-muted">
             {!! __('showing') !!}
             <span class="fw-semibold">{{ $paginator->firstItem() }}</span>
@@ -10,10 +10,22 @@
             {!! __('results') !!}
         </p>
     </div>
-    <div class="col-sm-12 col-md-7">
+
+    <!-- Start: GoTo page  -->
+    <div class="col-sm-12 col-md-1">
+        <label for="">{{ __('goto') }}</label>
+        <input type="number" wire:model.live="pageNumber" min="1" max="{{ $paginator->total() }}">
+    </div>
+    <!-- End: GoTo page  -->
+
+    <div class="col-sm-12 col-md-8">
+
         @if ($paginator->hasPages())
-            <nav>
-                <ul class="pagination justify-content-end">
+            <nav class="d-flex justify-content-end align-items-start">
+
+
+                <ul class="pagination">
+
                     {{-- Previous Page Link --}}
                     @if ($paginator->onFirstPage())
                         <li class="page-item disabled" aria-disabled="true" aria-label="@lang('pagination.previous')">

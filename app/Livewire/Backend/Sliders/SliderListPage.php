@@ -2,7 +2,7 @@
 
 namespace App\Livewire\Backend\Sliders;
 
-use Livewire\Component;
+use App\Livewire\Backend\BackendComponent;
 use Livewire\WithPagination;
 use Livewire\Attributes\Title;
 use App\Services\SliderService;
@@ -12,12 +12,15 @@ use Illuminate\Contracts\View\View;
 /**
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
  */
-class SliderListPage extends Component
+class SliderListPage extends BackendComponent
 {
     use WithPagination;
 
     public string $module;
     public string $activeItem;
+
+    public int $pageNumber = 1;
+
     # Services 
     private SliderService $sliderService;
 
@@ -44,12 +47,32 @@ class SliderListPage extends Component
     }
 
     /**
+     * Called before updating a component property
+     *
+     * @param $property [Dirty state property]
+     * @param $value [Dirty state property value]
+     * @return void
+     */
+    public function updating($property, $value): void
+    {
+        if ($property == 'pageNumber') {
+            $this->pageNumber = $value == null || $value < 1 ? 1 : $value;
+            $this->setPage($this->pageNumber);
+        }
+    }
+
+    public function updatedPaginators($page, $pageName)
+    {
+        $this->pageNumber = $page;
+    }
+
+    /**
      * Using custom pagination views
      * @return string
      */
     public function paginationView(): string
     {
-        return 'livewire.livewire.backend.addons.bootstrap-pagination-component';
+        return 'livewire.backend.addons.bootstrap-pagination-component';
     }
 
     /**
