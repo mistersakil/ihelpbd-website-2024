@@ -37,11 +37,25 @@ class SliderListPage extends BackendComponent
      * Create a new component instance.
      * @return void
      */
-
     public function  mount(): void
     {
         $this->module = __('sliders');
         $this->activeItem = __('list');
+    }
+
+    /**
+     * Delete model from database
+     * @return void
+     */
+    public function  deleteModel($modelId): void
+    {
+        try {
+            $this->sliderService->deleteModel($modelId);
+            ## Dispatch events
+            $this->dispatch('toastAlert', message: __('action successful'), type: 'success');
+        } catch (\Throwable $th) {
+            $this->dispatch('toastAlert', message: $th->getMessage(), type: 'error');
+        }
     }
 
 

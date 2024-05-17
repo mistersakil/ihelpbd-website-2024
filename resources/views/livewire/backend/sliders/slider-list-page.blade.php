@@ -60,7 +60,8 @@
                                         <a href="" title="{{ __('edit') }}" class="badge bg-info">
                                             <i class="{{ _icons('edit') }}"></i>
                                         </a>
-                                        <a href="" title="{{ __('delete') }}" class="badge bg-danger">
+                                        <a href="javascript:void(0)" wire:click="deleteModel({{ $model->id }})"
+                                            title="{{ __('delete') }}" class="badge bg-danger">
                                             <i class="{{ _icons('delete') }}"></i>
                                         </a>
                                     </td>

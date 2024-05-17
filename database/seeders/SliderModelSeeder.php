@@ -24,7 +24,7 @@ class SliderModelSeeder extends Seeder
      */
     public function run(): void
     {
-        $total_records = 50;
+        $total_records = 5;
         ## Starting message
         $this->command->warn(PHP_EOL . 'Start: Creating Sliders');
         ## Truncate existing records

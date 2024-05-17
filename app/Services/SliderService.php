@@ -148,4 +148,25 @@ class SliderService
             throw new Exception($th->getMessage());
         }
     }
+
+    /**
+     * Delete model from database
+     * @return void
+     */
+    public function  deleteModel($modelId): mixed
+    {
+        try {
+            ## Find model first
+            $model = Slider::find($modelId);
+
+            ## Delete image from storage
+            $this->fileUploadService->removeFilesFromStorage(disk: 'uploads', childDirectory: 'sliders', file: $model->slider_image);
+
+            ## Delete model
+            $model->delete();
+            return $model;
+        } catch (\Throwable $th) {
+            throw new Exception($th->getMessage());
+        }
+    }
 }

@@ -47,13 +47,13 @@ class FileUploadService
 
     /**
      * removeFilesFromStorage  method removes files from local storage
-     * @param array $files []
-     * @param string $file default empty
-     * @param string $disk default 'attachments'
-     * @param string $childDirectory default empty
+     * @param array $files [default empty array]
+     * @param string $file [default empty]
+     * @param string $disk [default 'uploads']
+     * @param string $childDirectory [default empty]
      * @return mixed 
      */
-    public function removeFilesFromStorage(array $files = [], string $file = '', string $disk = 'attachments', string $childDirectory = ''): mixed
+    public function removeFilesFromStorage(array $files = [], string $file = '', string $disk = 'uploads', string $childDirectory = ''): mixed
     {
         if (count($files) <= 0 && empty($file)) {
             throw new Exception(__('translations.nothing_to_delete'));
