@@ -14,8 +14,8 @@
     <!-- Start: GoTo page  -->
     <div class="col-sm-12 col-md-1">
         <label for="gotoPage">{{ __('goto') }}</label>
-        <input type="number" wire:model.live="pageNumber" min="1" max="{{ $paginator->total() }}" id="gotoPage"
-            class="gotoPage">
+        <input type="number" wire:model.live.debounce.1000ms="pageNumber" min="1" max="{{ $paginator->total() }}"
+            id="gotoPage" class="gotoPage">
     </div>
     <!-- End: GoTo page  -->
 

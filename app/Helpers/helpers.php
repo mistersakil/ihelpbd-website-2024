@@ -218,3 +218,24 @@ if (!function_exists('localList')) {
         return $locals;
     }
 }
+
+/**
+ * generateHexColor function generate a random hexadecimal color code
+ * @param string $localKey [Key of available local
+ * @return mixed
+ * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
+ */
+if (!function_exists('generateHexColor')) {
+    function generateHexColor(): string
+    {
+        ## Generate a random RGB color
+        $red = mt_rand(0, 255);
+        $green = mt_rand(0, 255);
+        $blue = mt_rand(0, 255);
+
+        ## Convert RGB to hexadecimal
+        $hexColor = sprintf("%02x%02x%02x", $red, $green, $blue);
+
+        return $hexColor;
+    }
+}

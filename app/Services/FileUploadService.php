@@ -3,9 +3,11 @@
 namespace App\Services;
 
 use Exception;
+use Illuminate\Support\Str;
 use Intervention\Image\ImageManager;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Drivers\Gd\Driver;
+use Intervention\Image\Interfaces\ImageInterface;
 use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 
 /**
@@ -84,7 +86,7 @@ class FileUploadService
     }
 
     /**
-     * setHashedNameForTmpUploadedFile method process tmp uploaded file for single model
+     * Generate hashed name and its other attributes of tem uploaded image
      * @param string $file [tmp uploaded file]
      * @param string $user_id [session user who wants to create record]
      * @return array
@@ -150,5 +152,24 @@ class FileUploadService
             return $extension;
         }
         return 'invalid';
+    }
+
+
+    /**
+     * Create new encoded jpeg image with given dimension using intervention package
+     *
+     * @param int $width
+     * @param int $height
+     * @return string $imgFileName
+     */
+    public function createNewJpgImage(int $width = 1000, int $height = 1000): string
+    {
+
+        $manager = new ImageManager(Driver::class);
+        $image = $manager->create($width, $height)->fill(generateHexColor());
+        $imgFileName = Str::random(20) . '.jpg';
+        Storage::disk('uploads')->put("sliders/{$imgFileName}", $image->toJpeg());
+
+        return $imgFileName;
     }
 }
