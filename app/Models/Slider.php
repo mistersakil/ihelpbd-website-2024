@@ -20,23 +20,4 @@ class Slider extends Model
         'order',
         'is_active'
     ];
-
-    /**
-     * Interact with is_active attribute
-     */
-    protected function isActive(): Attribute
-    {
-        return Attribute::make(
-            set: fn ($value) => !empty($value) ? $value : 1,
-        );
-    }
-    /**
-     * Interact with order attribute
-     */
-    protected function order(): Attribute
-    {
-        return Attribute::make(
-            set: fn ($value) => !empty($value) ? $value : 1,
-        );
-    }
 }

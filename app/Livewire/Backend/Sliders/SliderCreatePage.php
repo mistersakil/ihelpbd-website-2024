@@ -109,11 +109,11 @@ class SliderCreatePage extends BackendComponent
         $validated = $this->validate();
         try {
             $validated['user_id'] = $this->authId;
-            $createdModel = $this->sliderService->create($validated);
+            $this->sliderService->create($validated);
             $this->resetStateProps();
 
             ## Dispatch events
-            $this->dispatch('toastAlert', message: __('translations.action_successful'), type: 'success');
+            $this->dispatch('toastAlert', message: __('action successful'), type: 'success');
         } catch (\Throwable $th) {
             $this->dispatch('toastAlert', message: $th->getMessage(), type: 'error');
         }

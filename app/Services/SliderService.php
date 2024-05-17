@@ -137,18 +137,12 @@ class SliderService
      * Validation error messages for state properties of the component
      * @return \App\Models\Slider
      */
-    public function changeStatus(int $id, int $isActive)
+    public function changeStatus(int $id, bool $isActive)
     {
-        dump($isActive);
-        // $data = Slider::where(['id' => $id])->update(['is_active' => $isActive]);
         try {
             $model = Slider::find($id);
-            // $model->is_active = $isActive == 1 ? '1' : '0';
-            $model->is_active = (bool) 0;
-
-            $modelSaved = $model->save();
-            dd($model, $modelSaved);
-
+            $model->is_active = $isActive ? '1' : '0';
+            $model = $model->save();
             return $model;
         } catch (\Throwable $th) {
             throw new Exception($th->getMessage());

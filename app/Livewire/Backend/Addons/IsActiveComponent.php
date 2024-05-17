@@ -53,13 +53,15 @@ class IsActiveComponent extends Component
      * @param $value [Dirty state property value]
      * @return void
      */
-
     public function changeStatus(): void
     {
-        // dd($this->isActive, $this->modelId);
-        $model = $this->sliderService->changeStatus(id: $this->modelId, isActive: (int) $this->isActive);
-
-        dd($model);
+        try {
+            $this->sliderService->changeStatus(id: $this->modelId, isActive: $this->isActive);
+            ## Dispatch events
+            $this->dispatch('toastAlert', message: __('action successful'), type: 'success');
+        } catch (\Throwable $th) {
+            $this->dispatch('toastAlert', message: $th->getMessage(), type: 'error');
+        }
     }
 
 
