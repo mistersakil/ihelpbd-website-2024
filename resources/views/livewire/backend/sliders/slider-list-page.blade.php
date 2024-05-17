@@ -22,10 +22,9 @@
                         <thead>
                             <tr role="row">
                                 <th>#</th>
+                                <th>{{ __('image') }}</th>
                                 <th>{{ __('title') }}</th>
                                 <th>{{ __('body') }}</th>
-                                <th>{{ __('link') }}</th>
-                                <th>{{ __('link text') }}</th>
                                 <th>{{ __('order') }}</th>
                                 <th>{{ __('status') }}</th>
                                 <th>{{ __('actions') }}</th>
@@ -35,9 +34,12 @@
                         <!-- /thead -->
                         <tbody>
                             @foreach ($models as $model)
-                                <tr role="row" class="odd" wire:key="slider_key_{{ $model->id }}">
+                                <tr class="odd" wire:key="slider_key_{{ $model->id }}">
                                     <td>
                                         {{ $loop->index + 1 }}
+                                    </td>
+                                    <td>
+                                        {!! Vite::showUploadedImg($model->slider_image, 'sliders') !!}
                                     </td>
                                     <td>
                                         {{ $model->slider_title }}
@@ -45,12 +47,7 @@
                                     <td>
                                         {{ $model->slider_body }}
                                     </td>
-                                    <td>
-                                        {{ $model->slider_link }}
-                                    </td>
-                                    <td>
-                                        {{ $model->slider_link_text }}
-                                    </td>
+
                                     <td>
                                         {{ $model->order }}
                                     </td>

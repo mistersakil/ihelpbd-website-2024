@@ -139,14 +139,15 @@ class SliderService
      */
     public function changeStatus(int $id, int $isActive)
     {
-        dump($id, $isActive);
+        dump($isActive);
         // $data = Slider::where(['id' => $id])->update(['is_active' => $isActive]);
         try {
             $model = Slider::find($id);
-            $model->is_active = $isActive == 1 ? '1' : '0';
+            // $model->is_active = $isActive == 1 ? '1' : '0';
+            $model->is_active = (bool) 0;
 
-            dd($model);
-            $model->save();
+            $modelSaved = $model->save();
+            dd($model, $modelSaved);
 
             return $model;
         } catch (\Throwable $th) {

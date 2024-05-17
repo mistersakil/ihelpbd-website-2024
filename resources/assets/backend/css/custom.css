@@ -37,6 +37,16 @@
     border-radius: 10px;
 }
 
+.showUploadedImg {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border-radius: 50%;
+    background: white;
+    object-fit: cover;
+    object-position: center;
+}
+
 /** File upload container **/
 .file_upload_container {
     width: 100%;
