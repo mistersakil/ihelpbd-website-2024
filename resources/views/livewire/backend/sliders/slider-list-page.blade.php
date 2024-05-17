@@ -56,7 +56,7 @@
                                     </td>
                                     <td>
                                         {{-- {{ $model->is_active }} --}}
-                                        <livewire:backend.addons.is-active-component :isActive="$model->is_active"
+                                        <livewire:backend.addons.is-active-component :isActive="$model->is_active" :modelId="$model->id"
                                             wire:key="{{ rand() }}" />
                                     </td>
                                     <td>

@@ -21,7 +21,6 @@ trait BackendPaginationTrait
      * @param $value [Dirty state property value]
      * @return void
      */
-
     public function updating($property, $value): void
     {
         if ($property == 'pageNumber') {

@@ -3,6 +3,7 @@
 namespace App\Livewire\Backend\Addons;
 
 use Livewire\Component;
+use App\Services\SliderService;
 use Illuminate\Contracts\View\View;
 
 /**
@@ -11,14 +12,30 @@ use Illuminate\Contracts\View\View;
 class IsActiveComponent extends Component
 {
     public bool $isActive;
+    public int $modelId;
     public string $statusText;
+
+    # Services 
+    private SliderService $sliderService;
+
+
+    /**
+     * Create a new component instance
+     *
+     * @return void
+     */
+    public function boot(): void
+    {
+        $this->sliderService = new SliderService();
+    }
 
     /**
      * Create a new component instance.
      * @return void
      */
-    public function mount($isActive)
+    public function mount($modelId, $isActive)
     {
+        $this->modelId = (int) $modelId;
         $this->isActive = (bool) $isActive;
         $this->statusText = __("active");
 
@@ -27,6 +44,24 @@ class IsActiveComponent extends Component
             $this->isActive = 0;
         }
     }
+
+
+    /**
+     * Called before updating a component property
+     *
+     * @param $property [Dirty state property]
+     * @param $value [Dirty state property value]
+     * @return void
+     */
+
+    public function changeStatus(): void
+    {
+        // dd($this->isActive, $this->modelId);
+        $model = $this->sliderService->changeStatus(id: $this->modelId, isActive: (int) $this->isActive);
+
+        dd($model);
+    }
+
 
     /**
      * Render view

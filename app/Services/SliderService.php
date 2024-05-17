@@ -132,4 +132,25 @@ class SliderService
         $data = Slider::paginate($paginate);
         return $data;
     }
+
+    /**
+     * Validation error messages for state properties of the component
+     * @return \App\Models\Slider
+     */
+    public function changeStatus(int $id, int $isActive)
+    {
+        dump($id, $isActive);
+        // $data = Slider::where(['id' => $id])->update(['is_active' => $isActive]);
+        try {
+            $model = Slider::find($id);
+            $model->is_active = $isActive == 1 ? '1' : '0';
+
+            dd($model);
+            $model->save();
+
+            return $model;
+        } catch (\Throwable $th) {
+            throw new Exception($th->getMessage());
+        }
+    }
 }
