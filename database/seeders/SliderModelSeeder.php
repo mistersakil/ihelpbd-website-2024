@@ -41,7 +41,8 @@ class SliderModelSeeder extends Seeder
                 'slider_body' => fake()->words(5, true),
                 'slider_link' => fake()->url(),
                 'slider_link_text' => fake()->word(),
-                'slider_image' =>  $this->fileUploadService->createNewJpgImage(width: 865, height: 675)
+                'slider_image' =>  $this->fileUploadService->createNewJpgImage(width: 865, height: 675),
+                'is_active'    => rand(0, 1),
             ];
 
             Slider::create($input);
