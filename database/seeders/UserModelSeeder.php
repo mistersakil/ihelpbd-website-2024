@@ -14,7 +14,7 @@ class UserModelSeeder extends Seeder
      */
     public function run(): void
     {
-        $total_records = 50;
+        $total_records = 20;
         ## Starting message
         $this->command->warn(PHP_EOL . 'Start: Creating Users');
         ## Truncate existing records
@@ -28,7 +28,7 @@ class UserModelSeeder extends Seeder
             'name'              => 'Super Admin',
             'email'             => 'admin@gmail.com',
             'password'          => $password,
-            'is_active'         => 1,
+            'is_active'         => '1',
             'created_at'        => now(),
             'updated_at'        => now(),
         ]);
@@ -37,7 +37,7 @@ class UserModelSeeder extends Seeder
             'name'              => 'sakil jomadder',
             'email'             => 'sakil@gmail.com',
             'password'          => $password,
-            'is_active'         => 1,
+            'is_active'         => '1',
             'created_at'        => now(),
             'updated_at'        => now(),
         ]);
@@ -46,7 +46,7 @@ class UserModelSeeder extends Seeder
             User::create([
                 'name'          => fake()->name(),
                 'email'         => fake()->unique()->safeEmail(),
-                'is_active'     => rand(0, 1),
+                'is_active'    => (string) rand(0, 1),
                 'password'      => $password,
                 'created_at'    => now(),
                 'updated_at'    => now(),

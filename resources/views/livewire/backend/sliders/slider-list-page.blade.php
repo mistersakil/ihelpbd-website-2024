@@ -27,7 +27,7 @@
                                 <th>{{ __('body') }}</th>
                                 <th>{{ __('order') }}</th>
                                 <th>{{ __('status') }}</th>
-                                <th>{{ __('actions') }}</th>
+                                <th class="text-center">{{ __('actions') }}</th>
 
                             </tr>
                         </thead>
@@ -56,8 +56,13 @@
                                         <livewire:backend.addons.is-active-component :isActive="$model->is_active" :modelId="$model->id"
                                             wire:key="{{ rand() }}" />
                                     </td>
-                                    <td>
-                                        {{ $model->created_at }}
+                                    <td class="text-center">
+                                        <a href="" title="{{ __('edit') }}" class="badge bg-info">
+                                            <i class="{{ _icons('edit') }}"></i>
+                                        </a>
+                                        <a href="" title="{{ __('delete') }}" class="badge bg-danger">
+                                            <i class="{{ _icons('delete') }}"></i>
+                                        </a>
                                     </td>
                                 </tr>
                             @endforeach
