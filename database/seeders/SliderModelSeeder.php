@@ -37,10 +37,10 @@ class SliderModelSeeder extends Seeder
         for ($i = 0; $i < $total_records; $i++) {
             $input = [
                 'user_id' => 1,
-                'slider_title' => fake()->word(),
+                'slider_title' => fake()->words(3, true),
                 'slider_body' => fake()->words(5, true),
                 'slider_link' => fake()->url(),
-                'slider_link_text' => fake()->word(),
+                'slider_link_text' => fake()->words(3, true),
                 'slider_image' =>  $this->fileUploadService->createNewJpgImage(width: 865, height: 675),
                 'is_active'    => (string) rand(0, 1),
             ];

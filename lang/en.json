@@ -65,5 +65,7 @@
     "goto": "Go to",
     "inactive": "Inactive",
     "action successful": "Action successful",
-    "existing image": "Existing image"
+    "existing image": "Existing image",
+    "image": "Image",
+    "nothing to upload": "Nothing to upload"
 }

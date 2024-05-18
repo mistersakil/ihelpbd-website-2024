@@ -47,30 +47,75 @@ class SliderService
      * @param array $inputs [Input properties to create new record]
      * @return mixed
      */
-    public function create(array $inputs): mixed
+    public function createModel(array $inputs): mixed
     {
         try {
             $sliderImageTmpFile = $inputs['slider_image'];
 
             ## Throw exception if no file selected to upload
             if (!$sliderImageTmpFile instanceof TemporaryUploadedFile) {
-                throw new Exception(__('translations.nothing_to_upload'));
+                throw new Exception(__('nothing to upload'));
             }
 
-            ## Upload file to local storage
+            ## Get image hashed name
             $sliderImageHashedName = (string) $this->fileUploadService->setHashedNameForTmpUploadedFile($sliderImageTmpFile, $inputs['user_id']);
+
+            ## Upload file to local storage
             $this->fileUploadService->uploadFilToLocalStorage(uploadDirectory: $this->uploadDirectory, disk: $this->disk, fileName: $sliderImageHashedName, tmpFile: $sliderImageTmpFile);
 
             ## Resize image using image intervention package
             $this->fileUploadService->resizeImage(uploadDirectory: $this->uploadDirectory, disk: $this->disk, fileName: $sliderImageHashedName, dimensions: $this->imgResizeOptions);
 
-            ## Create new slider
+            ## Create new record
             $inputs['slider_image'] = $sliderImageHashedName;
+            $inputs['is_active'] = $inputs['is_active'] ? '1' : '0';
+
             return Slider::create($inputs);
         } catch (\Throwable $th) {
             throw new Exception($th->getMessage());
         }
     }
+
+    /**
+     * Update existing recode
+     * @param array $inputs [Input properties to create new record]
+     * @return mixed
+     */
+    public function updateModel(int $id, array $inputs): mixed
+    {
+        try {
+            $sliderImageTmpFile = $inputs['slider_image'];
+
+            ## Throw exception if no file selected to upload
+            if (!empty($sliderImageTmpFile) && $sliderImageTmpFile instanceof TemporaryUploadedFile) {
+
+                ## Get image hashed name
+                $sliderImageHashedName = (string) $this->fileUploadService->setHashedNameForTmpUploadedFile($sliderImageTmpFile, $inputs['user_id']);
+
+                ## Upload file to local storage
+                $this->fileUploadService->uploadFilToLocalStorage(uploadDirectory: $this->uploadDirectory, disk: $this->disk, fileName: $sliderImageHashedName, tmpFile: $sliderImageTmpFile);
+
+                ## Delete image from storage
+                $this->fileUploadService->removeFilesFromStorage(disk: 'uploads', childDirectory: 'sliders', file: $inputs['sliderExistingImg']);
+
+                ## Resize image using image intervention package
+                $this->fileUploadService->resizeImage(uploadDirectory: $this->uploadDirectory, disk: $this->disk, fileName: $sliderImageHashedName, dimensions: $this->imgResizeOptions);
+
+                $inputs['slider_image'] = $sliderImageHashedName;
+            } else {
+                $inputs['slider_image'] = $inputs['sliderExistingImg'];
+            }
+
+            unset($inputs['sliderExistingImg']);
+            $inputs['is_active'] = $inputs['is_active'] ? '1' : '0';
+
+            ## Update existing record
+            return Slider::where(['id' => $id])->update($inputs);
+        } catch (\Throwable $th) {
+            throw new Exception($th->getMessage());
+        }
+    }
+
 
 
     /**
@@ -90,15 +135,17 @@ class SliderService
      * Validation rules of the component
      * @return array
      */
-    public function validationRules()
+    public function validationRules(bool $isSometimes = false)
     {
         return [
             'slider_title' => ['required', 'min:10', 'max:30'],
             'slider_body' => ['required', 'min:10', 'max:100'],
             'slider_link' => ['nullable', 'min:10', 'max:100'],
+            'order' => ['required'],
+            'is_active' => ['required'],
             'slider_link_text' => ["required_with:slider_link", 'nullable', 'string', 'min:2', 'max:20'],
             'slider_image' => [
-                'required',
+                $isSometimes ? 'sometimes' : 'required',
                 "max:{$this->maxFileUploadSize}",
                 File::image()
                     ->types($this->supportedImgTypes)

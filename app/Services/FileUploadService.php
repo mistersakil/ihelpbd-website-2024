@@ -7,7 +7,6 @@ use Illuminate\Support\Str;
 use Intervention\Image\ImageManager;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Drivers\Gd\Driver;
-use Intervention\Image\Interfaces\ImageInterface;
 use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 
 /**

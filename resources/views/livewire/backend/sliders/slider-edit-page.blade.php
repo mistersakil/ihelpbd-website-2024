@@ -110,17 +110,12 @@
                     <!-- /.col -->
 
                     <div class="col-12">
-                        <div class="card radius-10">
-                            <div class="card-body">
-                                <h6 class="card-title text-white text-capitalize text-center bg-secondary py-2">
-                                    {{ __('existing image') }}
-                                </h6>
-                                <div class="d-flex align-items-center">
-                                    <img src="{{ Vite::getUploadedImgPath($sliderExistingImg, 'sliders') }}"
-                                        class="rounded p-1 border" width="100%" height="200"
-                                        alt="sliders_{{ $sliderExistingImg }}">
-                                </div>
-                            </div>
+                        <h6 class="rounded text-white text-capitalize text-center bg-secondary py-2">
+                            {{ __('existing image') }}
+                        </h6>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <img src="{{ Vite::getUploadedImgPath($sliderExistingImg, 'sliders') }}"
+                                class="rounded p-1 border" width="250" alt="sliders_{{ $sliderExistingImg }}">
                         </div>
                     </div>
                     <!-- /.col -->

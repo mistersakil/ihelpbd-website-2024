@@ -43,9 +43,10 @@ class SliderEditPage extends BackendComponent
     #[Validate]
     public string $slider_link;
     #[Validate]
-    public $slider_image;
     public int $order = 0;
-    public bool $is_active = true;
+    #[Validate]
+    public bool $is_active;
+    public $slider_image;
 
     /**
      * Create a new component instance
@@ -92,7 +93,7 @@ class SliderEditPage extends BackendComponent
         $this->slider_link = $model->slider_link;
         $this->user_id = $model->user_id;
         $this->order = $model->order;
-        $this->is_active = $model->is_active;
+        $this->is_active = (bool) $model->is_active;
         $this->slider_image = "";
         $this->sliderExistingImg = $model->slider_image;
     }
@@ -102,7 +103,7 @@ class SliderEditPage extends BackendComponent
      */
     public function rules()
     {
-        return $this->sliderService->validationRules();
+        return $this->sliderService->validationRules(isSometimes: true);
     }
 
 
@@ -133,7 +134,8 @@ class SliderEditPage extends BackendComponent
         $validated = $this->validate();
         try {
             $validated['user_id'] = $this->authId;
-            $this->sliderService->create($validated);
+            $validated['sliderExistingImg'] = $this->sliderExistingImg;
+            $this->sliderService->updateModel(inputs: $validated, id: $this->id);
             $this->resetStateProps();
 
             ## Dispatch events
@@ -180,15 +182,7 @@ class SliderEditPage extends BackendComponent
     public function resetStateProps(): void
     {
         $this->resetValidation();
-        $this->reset(
-            'slider_title',
-            'slider_body',
-            'slider_link',
-            'slider_link_text',
-            'slider_image',
-            'order',
-            'is_active'
-        );
+        $this->setStateProps();
     }
 
     /**
