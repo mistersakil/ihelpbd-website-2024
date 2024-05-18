@@ -1,4 +1,5 @@
 <main>
+    @dump($countModel)
     <x-backend.addons.card-component>
         <x-slot:breadcrumb>
             <x-backend.addons.breadcrumb-component :title="$module" :active-item="$activeItem">
@@ -49,21 +50,34 @@
                                     </td>
 
                                     <td>
-                                        {{ $model->order }}
+                                        {{-- {{ $model->order }} --}}
+                                        <div
+                                            class="d-flex align-items-center justify-content-center gap-2 order-actions">
+                                            <a href="javascript:;" class="bg-gray text-danger border-danger">
+                                                <i class="{{ _icons('arrow_down') }}"></i>
+                                            </a>
+                                            <a href="javascript:;" class="bg-gray text-danger border-danger">
+                                                <i class="{{ _icons('arrow_up') }}"></i>
+                                            </a>
+                                        </div>
                                     </td>
                                     <td>
                                         <livewire:backend.addons.is-active-component :isActive="$model->is_active" :modelId="$model->id"
                                             wire:key="{{ rand() }}" />
                                     </td>
-                                    <td class="text-center">
-                                        <a wire:navigate href="{{ route('admin.sliders.edit', $model->id) }}"
-                                            title="{{ __('edit') }}" class="badge bg-info">
-                                            <i class="{{ _icons('edit') }}"></i>
-                                        </a>
-                                        <a href="javascript:void(0)" wire:click="deleteModel({{ $model->id }})"
-                                            title="{{ __('delete') }}" class="badge bg-danger">
-                                            <i class="{{ _icons('delete') }}"></i>
-                                        </a>
+
+                                    <td>
+                                        <div
+                                            class="d-flex align-items-center justify-content-center gap-1 order-actions">
+                                            <a wire:navigate href="{{ route('admin.sliders.edit', $model->id) }}"
+                                                title="{{ __('edit') }}" class="badge bg-info">
+                                                <i class="{{ _icons('edit') }}"></i>
+                                            </a>
+                                            <a href="javascript:void(0)" wire:click="deleteModel({{ $model->id }})"
+                                                title="{{ __('delete') }}" class="badge bg-danger text-white">
+                                                <i class="{{ _icons('delete') }}"></i>
+                                            </a>
+                                        </div>
                                     </td>
                                 </tr>
                             @endforeach

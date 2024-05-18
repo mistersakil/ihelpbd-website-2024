@@ -67,7 +67,9 @@ class SliderListPage extends BackendComponent
     #[Title('Sliders List')]
     public function render(): View
     {
-        $models = $this->sliderService->getAll(paginate: 5);
-        return view('livewire.backend.sliders.slider-list-page', compact('models'));
+        $models = $this->sliderService->getAllModel(paginate: 5);
+        $countModel = $this->sliderService->countAllModel();
+
+        return view('livewire.backend.sliders.slider-list-page', compact('models', 'countModel'));
     }
 }

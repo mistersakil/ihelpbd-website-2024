@@ -5,6 +5,7 @@ namespace App\Services;
 use Exception;
 use App\Models\Slider;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\DB;
 use App\Services\FileUploadService;
 use Illuminate\Validation\Rules\File;
 use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
@@ -182,10 +183,20 @@ class SliderService
      * Validation error messages for state properties of the component
      * @return \Illuminate\Database\Eloquent\Collection
      */
-    public function getAll(int $paginate = 5)
+    public function getAllModel(int $paginate = 5)
     {
         $data = Slider::paginate($paginate);
         return $data;
+    }
+
+    /**
+     * Count all records from table
+     * @return int
+     */
+    public function countAllModel()
+    {
+        $count = Slider::count();
+        return $count;
     }
 
     /**
