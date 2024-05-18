@@ -52,12 +52,12 @@
                                         {{ $model->order }}
                                     </td>
                                     <td>
-                                        {{-- {{ $model->is_active }} --}}
                                         <livewire:backend.addons.is-active-component :isActive="$model->is_active" :modelId="$model->id"
                                             wire:key="{{ rand() }}" />
                                     </td>
                                     <td class="text-center">
-                                        <a href="" title="{{ __('edit') }}" class="badge bg-info">
+                                        <a wire:navigate href="{{ route('admin.sliders.edit', $model->id) }}"
+                                            title="{{ __('edit') }}" class="badge bg-info">
                                             <i class="{{ _icons('edit') }}"></i>
                                         </a>
                                         <a href="javascript:void(0)" wire:click="deleteModel({{ $model->id }})"

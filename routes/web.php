@@ -6,9 +6,10 @@ use App\Livewire\Frontend\Home\HomePage;
 use App\Livewire\Frontend\About\AboutPage;
 
 use App\Http\Middleware\AuthCheckMiddleware;
-use App\Http\Middleware\AdminLocaleMiddleware;
 use App\Livewire\Frontend\Blogs\BlogListPage;
+use App\Http\Middleware\AdminLocaleMiddleware;
 use App\Livewire\Frontend\Contact\ContactPage;
+use App\Livewire\Backend\Sliders\SliderEditPage;
 use App\Livewire\Backend\Sliders\SliderListPage;
 use App\Livewire\Backend\Dashboard\DashboardPage;
 use App\Livewire\Backend\Sliders\SliderCreatePage;
@@ -36,6 +37,7 @@ Route::middleware($backendMiddleware)->prefix('admin')->name('admin.')->group(fu
     ### Sliders 
     Route::get('/sliders', SliderListPage::class)->name('sliders.list');
     Route::get('/sliders/create', SliderCreatePage::class)->name('sliders.create');
+    Route::get('/sliders/edit/{id}', SliderEditPage::class)->name('sliders.edit');
 
     ### Admin login
     Route::get('/login', LoginPage::class)->name('login')->withoutMiddleware([AuthCheckMiddleware::class]);;

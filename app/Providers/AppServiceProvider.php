@@ -28,5 +28,8 @@ class AppServiceProvider extends ServiceProvider
         Vite::macro('showUploadedImg', function ($fileName, $module) {
             return '<img src="' . asset("storage/uploads/{$module}/{$fileName}") . '" alt="' . $module . '_' . $fileName . '" class="showUploadedImg"';
         });
+        Vite::macro('getUploadedImgPath', function ($fileName, $module) {
+            return asset("storage/uploads/{$module}/{$fileName}");
+        });
     }
 }

@@ -64,5 +64,6 @@
     "results": "Results",
     "goto": "Go to",
     "inactive": "Inactive",
-    "action successful": "Action successful"
+    "action successful": "Action successful",
+    "existing image": "Existing image"
 }

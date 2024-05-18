@@ -35,6 +35,14 @@ class SliderService
     }
 
     /**
+     * Get model details by ID
+     */
+    public function getModelById(int $id)
+    {
+        return Slider::find($id);
+    }
+
+    /**
      * Create new record
      * @param array $inputs [Input properties to create new record]
      * @return mixed
