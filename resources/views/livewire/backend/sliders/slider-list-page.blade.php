@@ -1,5 +1,5 @@
 <main>
-    @dump($countModel)
+    {{-- @dump($countModel) --}}
     <x-backend.addons.card-component>
         <x-slot:breadcrumb>
             <x-backend.addons.breadcrumb-component :title="$module" :active-item="$activeItem">
@@ -54,22 +54,30 @@
                                         <div
                                             class="d-flex align-items-center justify-content-center gap-2 order-actions">
                                             @if ($loop->first)
-                                                <a wire:click="swapOrder({{ $model->id }}, {{ $model->order }})"
-                                                    class="bg-gray text-danger border-danger"
+                                                <a href="javascript:void(0)"
+                                                    wire:click="swapOrder({{ $model->id }}, {{ $model->order }}, 'DOWN')"
+                                                    class="bg-gray
+                                                    text-danger border-danger"
                                                     title="{{ __('order down') }}">
                                                     <i class="{{ _icons('arrow_down') }}"></i>
                                                 </a>
                                             @elseif ($loop->last)
-                                                <a href="javascript:;" class="bg-gray text-success border-success"
+                                                <a href="javascript:void(0)"
+                                                    wire:click="swapOrder({{ $model->id }}, {{ $model->order }}, 'UP')"
+                                                    class="bg-gray text-success border-success"
                                                     title="{{ __('order up') }}">
                                                     <i class="{{ _icons('arrow_up') }}"></i>
                                                 </a>
                                             @else
-                                                <a href="javascript:;" class="bg-gray text-danger border-danger"
+                                                <a href="javascript:void(0)"
+                                                    wire:click="swapOrder({{ $model->id }}, {{ $model->order }}, 'DOWN')"
+                                                    class="bg-gray text-danger border-danger"
                                                     title="{{ __('order down') }}">
                                                     <i class="{{ _icons('arrow_down') }}"></i>
                                                 </a>
-                                                <a href="javascript:;" class="bg-gray text-success border-success"
+                                                <a href="javascript:void(0)"
+                                                    wire:click="swapOrder({{ $model->id }}, {{ $model->order }}, 'UP')"
+                                                    class="bg-gray text-success border-success"
                                                     title="{{ __('order up') }}">
                                                     <i class="{{ _icons('arrow_up') }}"></i>
                                                 </a>

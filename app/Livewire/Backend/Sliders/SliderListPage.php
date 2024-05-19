@@ -58,9 +58,14 @@ class SliderListPage extends BackendComponent
         }
     }
 
-    public function swapOrder(int $modelId, int $order)
+    public function swapOrder(int $modelId, int $orderNo, string $type)
     {
-        dd($order, $modelId);
+        // dd($orderNo, $modelId, $type);
+        $targetedModel = $this->sliderService->getModelById($modelId);
+        $previousModel =  $this->sliderService->previousModel($modelId);
+        $nextModel =  $this->sliderService->nextModel($modelId);
+
+        dd($targetedModel, $previousModel, $nextModel);
     }
 
     /**

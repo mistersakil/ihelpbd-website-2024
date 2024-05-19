@@ -5,7 +5,6 @@ namespace App\Services;
 use Exception;
 use App\Models\Slider;
 use Illuminate\Validation\Rule;
-use Illuminate\Support\Facades\DB;
 use App\Services\FileUploadService;
 use Illuminate\Validation\Rules\File;
 use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
@@ -15,6 +14,7 @@ use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
  */
 class SliderService
 {
+    private string $modelClass = Slider::class;
     protected FileUploadService $fileUploadService;
     public string $disk = 'uploads';
     public string $uploadDirectory = 'sliders';
@@ -40,7 +40,45 @@ class SliderService
      */
     public function getModelById(int $id)
     {
-        return Slider::find($id);
+        return $this->modelClass::find($id);
+    }
+
+    /**
+     *  Method to get the previous record
+     */
+    public function previousModel($modelId)
+    {
+        return $this->modelClass::where('id', '<', $modelId)->orderBy('id', 'desc')->first();
+    }
+
+
+    /*
+    *  Method to get the next record
+    */
+    public function nextModel($modelId)
+    {
+        return $this->modelClass::where('id', '>', $modelId)->orderBy('id', 'asc')->first();
+    }
+
+
+    /**
+     * Validation error messages for state properties of the component
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    public function getAllModel(int $paginate = 5)
+    {
+        $data = $this->modelClass::paginate($paginate);
+        return $data;
+    }
+
+    /**
+     * Count all records from table
+     * @return int
+     */
+    public function countAllModel()
+    {
+        $count = $this->modelClass::count();
+        return $count;
     }
 
     /**
@@ -71,7 +109,7 @@ class SliderService
             $inputs['slider_image'] = $sliderImageHashedName;
             $inputs['is_active'] = $inputs['is_active'] ? '1' : '0';
 
-            return Slider::create($inputs);
+            return $this->modelClass::create($inputs);
         } catch (\Throwable $th) {
             throw new Exception($th->getMessage());
         }
@@ -111,7 +149,7 @@ class SliderService
             $inputs['is_active'] = $inputs['is_active'] ? '1' : '0';
 
             ## Update existing record
-            return Slider::where(['id' => $id])->update($inputs);
+            return $this->modelClass::where(['id' => $id])->update($inputs);
         } catch (\Throwable $th) {
             throw new Exception($th->getMessage());
         }
@@ -179,25 +217,6 @@ class SliderService
         ];
     }
 
-    /**
-     * Validation error messages for state properties of the component
-     * @return \Illuminate\Database\Eloquent\Collection
-     */
-    public function getAllModel(int $paginate = 5)
-    {
-        $data = Slider::paginate($paginate);
-        return $data;
-    }
-
-    /**
-     * Count all records from table
-     * @return int
-     */
-    public function countAllModel()
-    {
-        $count = Slider::count();
-        return $count;
-    }
 
     /**
      * Validation error messages for state properties of the component
@@ -206,7 +225,7 @@ class SliderService
     public function changeStatus(int $id, bool $isActive)
     {
         try {
-            $model = Slider::find($id);
+            $model = $this->modelClass::find($id);
             $model->is_active = $isActive ? '1' : '0';
             $model = $model->save();
             return $model;
@@ -223,7 +242,7 @@ class SliderService
     {
         try {
             ## Find model first
-            $model = Slider::find($modelId);
+            $model = $this->modelClass::find($modelId);
 
             ## Delete image from storage
             $this->fileUploadService->removeFilesFromStorage(disk: 'uploads', childDirectory: 'sliders', file: $model->slider_image);
