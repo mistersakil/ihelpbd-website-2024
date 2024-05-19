@@ -48,7 +48,7 @@ class SliderService
      */
     public function previousModel($modelId)
     {
-        return $this->modelClass::where('id', '<', $modelId)->orderBy('id', 'desc')->first();
+        return $this->modelClass::where('order', '<', $modelId)->orderBy('order', 'desc')->first();
     }
 
 
@@ -57,7 +57,34 @@ class SliderService
     */
     public function nextModel($modelId)
     {
-        return $this->modelClass::where('id', '>', $modelId)->orderBy('id', 'asc')->first();
+        return $this->modelClass::where('order', '>', $modelId)->orderBy('order', 'asc')->first();
+    }
+
+    public function swapOrder(int $modelId, string $type): bool
+    {
+        $targetedModel = $this->getModelById($modelId);
+        $targetedModelOrder = $targetedModel->order;
+
+        if ($type === 'UP') {
+            $previousModel =  $this->previousModel($targetedModel->order);
+            $targetedModel->order = $previousModel->order;
+            $targetedModel->save();
+
+            ## Update previous model order
+            $previousModel->order = $targetedModelOrder;
+            $previousModel->save();
+            return true;
+        } else if ($type === 'DOWN') {
+            $nextModel =  $this->nextModel($targetedModel->order);
+            $targetedModel->order = $nextModel->order;
+            $targetedModel->save();
+
+            ## Update next model order
+            $nextModel->order = $targetedModelOrder;
+            $nextModel->save();
+            return true;
+        }
+        return false;
     }
 
 
@@ -67,7 +94,7 @@ class SliderService
      */
     public function getAllModel(int $paginate = 5)
     {
-        $data = $this->modelClass::paginate($paginate);
+        $data = $this->modelClass::orderBy('order', 'asc')->paginate($paginate);
         return $data;
     }
 

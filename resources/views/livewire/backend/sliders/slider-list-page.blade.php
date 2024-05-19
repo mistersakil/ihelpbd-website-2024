@@ -55,7 +55,7 @@
                                             class="d-flex align-items-center justify-content-center gap-2 order-actions">
                                             @if ($loop->first)
                                                 <a href="javascript:void(0)"
-                                                    wire:click="swapOrder({{ $model->id }}, {{ $model->order }}, 'DOWN')"
+                                                    wire:click="swapOrder({{ $model->id }},  'DOWN')"
                                                     class="bg-gray
                                                     text-danger border-danger"
                                                     title="{{ __('order down') }}">
@@ -63,20 +63,20 @@
                                                 </a>
                                             @elseif ($loop->last)
                                                 <a href="javascript:void(0)"
-                                                    wire:click="swapOrder({{ $model->id }}, {{ $model->order }}, 'UP')"
+                                                    wire:click="swapOrder({{ $model->id }},  'UP')"
                                                     class="bg-gray text-success border-success"
                                                     title="{{ __('order up') }}">
                                                     <i class="{{ _icons('arrow_up') }}"></i>
                                                 </a>
                                             @else
                                                 <a href="javascript:void(0)"
-                                                    wire:click="swapOrder({{ $model->id }}, {{ $model->order }}, 'DOWN')"
+                                                    wire:click="swapOrder({{ $model->id }},  'DOWN')"
                                                     class="bg-gray text-danger border-danger"
                                                     title="{{ __('order down') }}">
                                                     <i class="{{ _icons('arrow_down') }}"></i>
                                                 </a>
                                                 <a href="javascript:void(0)"
-                                                    wire:click="swapOrder({{ $model->id }}, {{ $model->order }}, 'UP')"
+                                                    wire:click="swapOrder({{ $model->id }},  'UP')"
                                                     class="bg-gray text-success border-success"
                                                     title="{{ __('order up') }}">
                                                     <i class="{{ _icons('arrow_up') }}"></i>
