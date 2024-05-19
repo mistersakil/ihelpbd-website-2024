@@ -58,6 +58,10 @@ class SliderListPage extends BackendComponent
         }
     }
 
+    public function swapOrder(int $modelId, int $order)
+    {
+        dd($order, $modelId);
+    }
 
     /**
      * Render view

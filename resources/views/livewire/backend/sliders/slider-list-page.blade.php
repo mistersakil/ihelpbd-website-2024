@@ -26,7 +26,7 @@
                                 <th>{{ __('image') }}</th>
                                 <th>{{ __('title') }}</th>
                                 <th>{{ __('body') }}</th>
-                                <th>{{ __('order') }}</th>
+                                <th class="text-center">{{ __('order') }}</th>
                                 <th>{{ __('status') }}</th>
                                 <th class="text-center">{{ __('actions') }}</th>
 
@@ -53,12 +53,29 @@
                                         {{-- {{ $model->order }} --}}
                                         <div
                                             class="d-flex align-items-center justify-content-center gap-2 order-actions">
-                                            <a href="javascript:;" class="bg-gray text-danger border-danger">
-                                                <i class="{{ _icons('arrow_down') }}"></i>
-                                            </a>
-                                            <a href="javascript:;" class="bg-gray text-danger border-danger">
-                                                <i class="{{ _icons('arrow_up') }}"></i>
-                                            </a>
+                                            @if ($loop->first)
+                                                <a wire:click="swapOrder({{ $model->id }}, {{ $model->order }})"
+                                                    class="bg-gray text-danger border-danger"
+                                                    title="{{ __('order down') }}">
+                                                    <i class="{{ _icons('arrow_down') }}"></i>
+                                                </a>
+                                            @elseif ($loop->last)
+                                                <a href="javascript:;" class="bg-gray text-success border-success"
+                                                    title="{{ __('order up') }}">
+                                                    <i class="{{ _icons('arrow_up') }}"></i>
+                                                </a>
+                                            @else
+                                                <a href="javascript:;" class="bg-gray text-danger border-danger"
+                                                    title="{{ __('order down') }}">
+                                                    <i class="{{ _icons('arrow_down') }}"></i>
+                                                </a>
+                                                <a href="javascript:;" class="bg-gray text-success border-success"
+                                                    title="{{ __('order up') }}">
+                                                    <i class="{{ _icons('arrow_up') }}"></i>
+                                                </a>
+                                            @endif
+
+
                                         </div>
                                     </td>
                                     <td>
