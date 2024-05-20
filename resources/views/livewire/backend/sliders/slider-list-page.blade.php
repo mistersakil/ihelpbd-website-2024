@@ -51,7 +51,14 @@
                                     <td>
                                         <div
                                             class="d-flex align-items-center justify-content-center gap-2 order-actions">
-                                            @if ($firstModel && $models->firstItem() + $index == 1)
+                                            @if ($firstModel && $models->firstItem() + $index == 1 && $countModel == 1)
+                                                <a href="javascript:void(0)"
+                                                    class="bg-gray
+                                                    text-secondary border-secondary"
+                                                    title="{{ __('order not available') }}">
+                                                    <i class="{{ _icons('stop') }}"></i>
+                                                </a>
+                                            @elseif ($firstModel && $models->firstItem() + $index == 1)
                                                 <a href="javascript:void(0)"
                                                     wire:click="swapOrder({{ $model->id }},  'DOWN')"
                                                     class="bg-gray

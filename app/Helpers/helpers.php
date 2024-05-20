@@ -95,6 +95,7 @@ if (!function_exists('_icons')) {
             'skill'                     => 'bi bi-mortarboard',
             'sliders'                   => 'bi bi-sliders',
             'twitter'                   => 'bi bi-twitter',
+            'stop'                      => 'bi bi-person-raised-hand',
             'tags'                      => 'bi bi-tags',
             'tag'                       => 'bi bi-tag',
             'template'                  => 'bi bi-code-slash',

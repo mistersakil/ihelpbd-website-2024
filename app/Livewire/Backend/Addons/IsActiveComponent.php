@@ -55,7 +55,6 @@ class IsActiveComponent extends Component
      */
     public function changeStatus(): void
     {
-        dd($this->modelId, $this->isActive);
         try {
             $this->sliderService->changeStatus(id: $this->modelId, isActive: $this->isActive);
             ## Dispatch events
