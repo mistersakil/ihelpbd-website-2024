@@ -25,6 +25,7 @@ class SliderCreatePage extends BackendComponent
     public int $maxFileUploadSize;
     public int $imgMinHeight;
     public int $imgMinWidth;
+    public string $isActiveText;
 
     # Services 
     private SliderService $sliderService;
@@ -70,6 +71,7 @@ class SliderCreatePage extends BackendComponent
         $this->imgMinWidth = $this->sliderService->imgResizeOptions['width'];
         $this->maxFileUploadSize = $this->sliderService->maxFileUploadSize;
         $this->supportedImgTypes = $this->sliderService->supportedImgTypes;
+        $this->isActiveText = __('active');
     }
 
     /**
@@ -109,7 +111,7 @@ class SliderCreatePage extends BackendComponent
         $validated = $this->validate();
         try {
             $validated['user_id'] = $this->authId;
-            $validated['count'] = $this->sliderService->countAllModel() + 1;
+            $validated['order'] = $this->sliderService->countAllModel() + 1;
             $this->sliderService->createModel($validated);
             $this->resetStateProps();
 
@@ -121,7 +123,7 @@ class SliderCreatePage extends BackendComponent
     }
 
     /**
-     * Called before updating a component property
+     * Called before updating a component property (lifecycle hook)
      *
      * @param $property [Dirty state property]
      * @param $value [Dirty state property value]
@@ -134,6 +136,10 @@ class SliderCreatePage extends BackendComponent
             if (in_array($uploadedFileExtension, $this->supportedImgTypes)) {
                 $this->displayTmpUploadedImage = true;
             }
+        }
+
+        if ($property == 'is_active') {
+            $this->isActiveText = $value ? __('active') : __('inactive');
         }
     }
 
