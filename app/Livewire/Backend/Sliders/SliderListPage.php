@@ -2,9 +2,11 @@
 
 namespace App\Livewire\Backend\Sliders;
 
+use Livewire\Attributes\Url;
 use Livewire\Attributes\Title;
 use App\Services\SliderService;
 use Livewire\Attributes\Layout;
+use App\Traits\BackendFilterTrait;
 use Illuminate\Contracts\View\View;
 use App\Traits\BackendPaginationTrait;
 use App\Livewire\Backend\BackendComponent;
@@ -15,9 +17,21 @@ use App\Livewire\Backend\BackendComponent;
 class SliderListPage extends BackendComponent
 {
     use BackendPaginationTrait;
+    use BackendFilterTrait;
 
+    ## Module props
     public string $module;
     public string $activeItem;
+
+    ## Filter properties
+    #[Url(as: 'query', except: '', history: true)]
+    public ?string $search = '';
+    public array $filter = [];
+
+    ## Query string search
+    // protected $queryString = [
+    //     'search' => ['except' => ''],
+    // ];
 
     # Services 
     private SliderService $sliderService;
@@ -41,6 +55,7 @@ class SliderListPage extends BackendComponent
     {
         $this->module = __('sliders');
         $this->activeItem = __('list');
+        $this->filter = $this->filter_default_values();
     }
 
     /**

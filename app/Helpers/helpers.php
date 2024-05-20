@@ -94,6 +94,7 @@ if (!function_exists('_icons')) {
             'settings'                  => 'bi bi-wrench-adjustable-circle',
             'skill'                     => 'bi bi-mortarboard',
             'sliders'                   => 'bi bi-sliders',
+            'search'                    => 'bi bi-search',
             'twitter'                   => 'bi bi-twitter',
             'stop'                      => 'bi bi-person-raised-hand',
             'tags'                      => 'bi bi-tags',

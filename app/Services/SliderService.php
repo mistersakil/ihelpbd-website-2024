@@ -60,6 +60,10 @@ class SliderService
         return $this->modelClass::where('order', '>', $modelId)->orderBy('order', 'asc')->first();
     }
 
+    /*
+    * Swapping two model order
+    * @return bool
+    */
     public function swapOrder(int $modelId, string $type): bool
     {
         $targetedModel = $this->getModelById($modelId);
@@ -86,7 +90,44 @@ class SliderService
         }
         return false;
     }
+    /**
+     * Collections of model
+     * @param array $filter_options
+     * @return mixed
+     */
+    public function getFilteredModel(array $filter_options = []): mixed
+    {
+        @['paginate' => $paginate, 'select' => $select, 'order_by_field' => $order_by_field, 'order_by_type' => $order_by_type, 'search_text' => $search_text] = $filter_options;
 
+        return $this->modelClass::with(['descendants', 'lead_source', 'creator', 'owner', 'follow_ups', 'sms', 'email_history'])
+            ->when(isset($search_text), function ($query) use ($search_text) {
+                $search_text = "%$search_text%";
+                return $query->where('contact_person', 'like', $search_text)
+                    ->orWhere('primary_phone', 'like', $search_text)
+                    ->orWhere('alternative_phone', 'like', $search_text)
+                    ->orWhere('email', 'like', $search_text)
+                    ->orWhere('address', 'like', $search_text)
+                    ->orWhere('last_follow_up_status', 'like', $search_text)
+                    ->orWhere('last_follow_up_date', 'like', $search_text)
+                    ->orWhere('is_active', 'like', $search_text)
+                    ->orWhere('created_at', 'like', $search_text)
+                    ->orWhere('updated_at', 'like', $search_text)
+                    ->orWhere('email', 'like', $search_text);
+            })
+            ->when(isset($select), function ($query) use ($select) {
+                return $query->select($select);
+            })
+            ->when(isset($order_by_field) && isset($order_by_type), function ($query) use ($order_by_field, $order_by_type) {
+                return $query->orderBy($order_by_field, $order_by_type);
+            }, function ($query) {
+                return $query->orderBy('id', 'asc');
+            })
+            ->when(isset($paginate), function ($query) use ($paginate) {
+                return  $query->paginate($paginate);
+            }, function ($query) {
+                return $query->paginate(10);
+            });
+    }
 
     /**
      * Validation error messages for state properties of the component
