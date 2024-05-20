@@ -34,10 +34,10 @@
                         </thead>
                         <!-- /thead -->
                         <tbody>
-                            @foreach ($models as $model)
+                            @foreach ($models as $index => $model)
                                 <tr class="odd" wire:key="slider_key_{{ $model->id }}">
                                     <td>
-                                        {{ $loop->index + 1 }}
+                                        {{ $models->firstItem() + $index }}
                                     </td>
                                     <td>
                                         {!! Vite::showUploadedImg($model->slider_image, 'sliders') !!}
@@ -50,10 +50,9 @@
                                     </td>
 
                                     <td>
-                                        {{-- {{ $model->order }} --}}
                                         <div
                                             class="d-flex align-items-center justify-content-center gap-2 order-actions">
-                                            @if ($loop->first)
+                                            @if ($firstModel && $models->firstItem() + $index == 1)
                                                 <a href="javascript:void(0)"
                                                     wire:click="swapOrder({{ $model->id }},  'DOWN')"
                                                     class="bg-gray
@@ -61,7 +60,7 @@
                                                     title="{{ __('order down') }}">
                                                     <i class="{{ _icons('arrow_down') }}"></i>
                                                 </a>
-                                            @elseif ($loop->last)
+                                            @elseif ($lastModel && $models->firstItem() + $index == $countModel)
                                                 <a href="javascript:void(0)"
                                                     wire:click="swapOrder({{ $model->id }},  'UP')"
                                                     class="bg-gray text-success border-success"
@@ -105,6 +104,7 @@
                                         </div>
                                     </td>
                                 </tr>
+                                <!-- /tr -->
                             @endforeach
 
                         </tbody>

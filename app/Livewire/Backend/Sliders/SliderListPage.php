@@ -75,6 +75,16 @@ class SliderListPage extends BackendComponent
         $models = $this->sliderService->getAllModel(paginate: 5);
         $countModel = $this->sliderService->countAllModel();
 
-        return view('livewire.backend.sliders.slider-list-page', compact('models', 'countModel'));
+        ## Get the first and last posts, if they exist
+        $firstModel = $models->first();
+        $lastModel = $models->last();
+
+        ## Check if the collection is empty
+        if ($models->isEmpty()) {
+            $firstModel = null;
+            $lastModel = null;
+        }
+
+        return view('livewire.backend.sliders.slider-list-page', compact('models', 'countModel', 'firstModel', 'lastModel'));
     }
 }
