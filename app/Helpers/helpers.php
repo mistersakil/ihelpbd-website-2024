@@ -108,6 +108,7 @@ if (!function_exists('_icons')) {
             'view'                      => 'bi bi-eye',
             'website'                   => 'bi bi-globe-asia-australia',
             'welcome'                   => 'bi bi-megaphone',
+            'warning'                   => 'bi bi-exclamation-triangle',
             'youtube'                   => 'bi bi-youtube',
 
         ];

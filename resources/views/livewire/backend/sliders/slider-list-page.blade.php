@@ -1,5 +1,4 @@
 <main>
-    {{-- @dump($countModel) --}}
     <x-backend.addons.card-component>
         <x-slot:breadcrumb>
             <x-backend.addons.breadcrumb-component :title="$module" :active-item="$activeItem">
@@ -94,7 +93,7 @@
                                         <div
                                             class="d-flex align-items-center justify-content-center gap-1 order-actions">
                                             <a wire:navigate href="{{ route('admin.sliders.edit', $model->id) }}"
-                                                title="{{ __('edit') }}" class="badge bg-info">
+                                                title="{{ __('edit') }}" class="badge bg-info text-white">
                                                 <i class="{{ _icons('edit') }}"></i>
                                             </a>
                                             <a href="javascript:void(0)" wire:click="deleteModel({{ $model->id }})"
@@ -113,7 +112,7 @@
                     <!-- /.table -->
                     {{ $models->links() }}
                 @else
-                    nothing found
+                    <livewire:backend.addons.no-data-found-component goBackRoute="admin.sliders.list" />
                 @endif
             </div>
             <!-- /.col -->

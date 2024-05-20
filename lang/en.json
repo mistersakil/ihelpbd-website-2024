@@ -67,5 +67,9 @@
     "action successful": "Action successful",
     "existing image": "Existing image",
     "image": "Image",
-    "nothing to upload": "Nothing to upload"
+    "nothing to upload": "Nothing to upload",
+    "nothing found": "Nothing found",
+    "no data found": "No data found",
+    "ops": "OOPS!",
+    "go back": "Go back"
 }

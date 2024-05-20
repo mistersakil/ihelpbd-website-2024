@@ -67,5 +67,9 @@
     "action successful": "কর্ম সম্পন্ন হয়েছে",
     "existing image": "বিদ্যমান ছবি",
     "image": "ছবি",
-    "nothing to upload": "nothing to upload"
+    "nothing to upload": "আপলোড করার কিছু নেই",
+    "nothing found": "কিছুই পাওয়া যায়নি",
+    "no data found": "কোনো ডেটা পাওয়া যায়নি",
+    "ops": "উপস!",
+    "go back": "ফিরে যান"
 }
