@@ -91,34 +91,26 @@ class SliderService
         return false;
     }
     /**
-     * Collections of model
-     * @param array $filter_options
+     * Collections of model with search and filter
+     * @param array $filterOptions
      * @return mixed
      */
-    public function getFilteredModel(array $filter_options = []): mixed
+    public function getFilteredModels(array $filterOptions = []): mixed
     {
-        @['paginate' => $paginate, 'select' => $select, 'order_by_field' => $order_by_field, 'order_by_type' => $order_by_type, 'search_text' => $search_text] = $filter_options;
+        @['paginate' => $paginate, 'select' => $select, 'orderBy' => $orderBy, 'orderDirection' => $orderDirection, 'searchText' => $searchText] = $filterOptions;
 
-        return $this->modelClass::with(['descendants', 'lead_source', 'creator', 'owner', 'follow_ups', 'sms', 'email_history'])
-            ->when(isset($search_text), function ($query) use ($search_text) {
-                $search_text = "%$search_text%";
-                return $query->where('contact_person', 'like', $search_text)
-                    ->orWhere('primary_phone', 'like', $search_text)
-                    ->orWhere('alternative_phone', 'like', $search_text)
-                    ->orWhere('email', 'like', $search_text)
-                    ->orWhere('address', 'like', $search_text)
-                    ->orWhere('last_follow_up_status', 'like', $search_text)
-                    ->orWhere('last_follow_up_date', 'like', $search_text)
-                    ->orWhere('is_active', 'like', $search_text)
-                    ->orWhere('created_at', 'like', $search_text)
-                    ->orWhere('updated_at', 'like', $search_text)
-                    ->orWhere('email', 'like', $search_text);
-            })
+        return $this->modelClass::when(isset($searchText), function ($query) use ($searchText) {
+            $searchText = "%$searchText%";
+            return $query->where('slider_title', 'like', $searchText)
+                ->orWhere('slider_body', 'like', $searchText)
+                ->orWhere('slider_link', 'like', $searchText)
+                ->orWhere('slider_link_text', 'like', $searchText);
+        })
             ->when(isset($select), function ($query) use ($select) {
                 return $query->select($select);
             })
-            ->when(isset($order_by_field) && isset($order_by_type), function ($query) use ($order_by_field, $order_by_type) {
-                return $query->orderBy($order_by_field, $order_by_type);
+            ->when(isset($orderBy) && isset($orderDirection), function ($query) use ($orderBy, $orderDirection) {
+                return $query->orderBy($orderBy, $orderDirection);
             }, function ($query) {
                 return $query->orderBy('id', 'asc');
             })

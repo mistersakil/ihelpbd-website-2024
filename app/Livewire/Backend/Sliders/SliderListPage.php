@@ -73,10 +73,28 @@ class SliderListPage extends BackendComponent
         }
     }
 
-    public function swapOrder(int $modelId, string $type)
+
+    /**
+     * Swap order between two model
+     *
+     * @param integer $modelId
+     * @param string $type
+     * @return void
+     */
+    public function swapOrder(int $modelId, string $type): void
     {
-        // dd($orderNo, $modelId, $type);
         $targetedModel = $this->sliderService->swapOrder(modelId: $modelId, type: $type);
+    }
+
+
+    /**
+     * Reset page on search text update
+     *
+     * @return void
+     */
+    function updatedSearch(): void
+    {
+        $this->resetPage();
     }
 
     /**
@@ -87,7 +105,12 @@ class SliderListPage extends BackendComponent
     #[Title('Sliders List')]
     public function render(): View
     {
-        $models = $this->sliderService->getAllModel(paginate: 5);
+        $models = $this->sliderService->getFilteredModels(
+            [
+                'searchText' => $this->search,
+                'paginate' => 5
+            ]
+        );
         $countModel = $this->sliderService->countAllModel();
 
         ## Get the first and last posts, if they exist
