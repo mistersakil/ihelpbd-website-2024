@@ -26,6 +26,7 @@ class SliderEditPage extends BackendComponent
     public int $imgMinHeight;
     public int $imgMinWidth;
     public string $sliderExistingImg;
+    public string $isActiveText;
 
     # Services 
     private SliderService $sliderService;
@@ -96,6 +97,7 @@ class SliderEditPage extends BackendComponent
         $this->is_active = (bool) $model->is_active;
         $this->slider_image = "";
         $this->sliderExistingImg = $model->slider_image;
+        $this->isActiveText = $this->is_active ? __('active') : __('inactive');
     }
     /**
      * Validation rules of the component
@@ -159,6 +161,9 @@ class SliderEditPage extends BackendComponent
             if (in_array($uploadedFileExtension, $this->supportedImgTypes)) {
                 $this->displayTmpUploadedImage = true;
             }
+        }
+        if ($property == 'is_active') {
+            $this->isActiveText = $value ? __('active') : __('inactive');
         }
     }
 

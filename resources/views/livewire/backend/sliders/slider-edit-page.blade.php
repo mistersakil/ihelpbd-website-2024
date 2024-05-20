@@ -210,7 +210,7 @@
                         <input wire:model.live='is_active' class="form-check-input" type="checkbox" role="switch"
                             id="is_active">
                         <label class="form-check-label" for="is_active">
-                            {{ __('active') }}
+                            {{ $isActiveText }}
                         </label>
                     </div>
                     <!-- /.form-check -->
