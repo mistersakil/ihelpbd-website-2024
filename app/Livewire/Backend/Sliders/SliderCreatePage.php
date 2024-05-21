@@ -111,7 +111,7 @@ class SliderCreatePage extends BackendComponent
         $validated = $this->validate();
         try {
             $validated['user_id'] = $this->authId;
-            $validated['order'] = $this->sliderService->countAllModel() + 1;
+            $validated['order'] = $this->sliderService->generateLastOrderNo();
             $this->sliderService->createModel($validated);
             $this->resetStateProps();
 

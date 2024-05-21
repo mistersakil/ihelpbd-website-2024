@@ -73,5 +73,18 @@
     "ops": "OOPS!",
     "go back": "Go back",
     "order not available": "Order not available",
-    "search here": "Search here ..."
+    "search here": "Search here ...",
+    "five": "5",
+    "ten": "10",
+    "twenty five": "25",
+    "fifty": "50",
+    "one hundred": "100",
+    "two hundred": "200",
+    "five hundred": "500",
+    "ascending": "Ascending",
+    "descending": "Descending",
+    "id": "Id",
+    "order direction": "Order direction",
+    "order by": "Order by",
+    "showing records": "Showing records"
 }

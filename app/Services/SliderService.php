@@ -43,21 +43,32 @@ class SliderService
         return $this->modelClass::find($id);
     }
 
+
+    /**
+     * Get a single model based on order direction
+     * @param string $orderDirection [asc || desc]
+     * @return \App\Models\Slider
+     */
+    public function getOnlyModelByOrderDirection(string $orderDirection = 'asc'): mixed
+    {
+        return $this->modelClass::orderBy('order', $orderDirection)->first();
+    }
+
     /**
      *  Method to get the previous record
      */
-    public function previousModel($modelId)
+    public function previousModel($orderNo)
     {
-        return $this->modelClass::where('order', '<', $modelId)->orderBy('order', 'desc')->first();
+        return $this->modelClass::where('order', '<', $orderNo)->orderBy('order', 'desc')->first();
     }
 
 
     /*
     *  Method to get the next record
     */
-    public function nextModel($modelId)
+    public function nextModel($orderNo)
     {
-        return $this->modelClass::where('order', '>', $modelId)->orderBy('order', 'asc')->first();
+        return $this->modelClass::where('order', '>', $orderNo)->orderBy('order', 'asc')->first();
     }
 
     /*
@@ -66,9 +77,10 @@ class SliderService
     */
     public function swapOrder(int $modelId, string $type): bool
     {
+        // dump($modelId, $type);
         $targetedModel = $this->getModelById($modelId);
         $targetedModelOrder = $targetedModel->order;
-
+        // dd($targetedModel, $targetedModelOrder);
         if ($type === 'UP') {
             $previousModel =  $this->previousModel($targetedModel->order);
             $targetedModel->order = $previousModel->order;
@@ -82,10 +94,11 @@ class SliderService
             $nextModel =  $this->nextModel($targetedModel->order);
             $targetedModel->order = $nextModel->order;
             $targetedModel->save();
-
+            // dd($targetedModel, $nextModel);
             ## Update next model order
             $nextModel->order = $targetedModelOrder;
             $nextModel->save();
+
             return true;
         }
         return false;
@@ -97,7 +110,7 @@ class SliderService
      */
     public function getFilteredModels(array $filterOptions = []): mixed
     {
-        @['paginate' => $paginate, 'select' => $select, 'orderBy' => $orderBy, 'orderDirection' => $orderDirection, 'searchText' => $searchText] = $filterOptions;
+        @['perPage' => $perPage, 'select' => $select, 'orderBy' => $orderBy, 'orderDirection' => $orderDirection, 'searchText' => $searchText] = $filterOptions;
 
         return $this->modelClass::when(isset($searchText), function ($query) use ($searchText) {
             $searchText = "%$searchText%";
@@ -114,8 +127,8 @@ class SliderService
             }, function ($query) {
                 return $query->orderBy('id', 'asc');
             })
-            ->when(isset($paginate), function ($query) use ($paginate) {
-                return  $query->paginate($paginate);
+            ->when(isset($perPage), function ($query) use ($perPage) {
+                return  $query->paginate($perPage);
             }, function ($query) {
                 return $query->paginate(10);
             });
@@ -139,6 +152,16 @@ class SliderService
     {
         $count = $this->modelClass::count();
         return $count;
+    }
+
+    /**
+     * To generate last order number when to insert new model
+     * @return int
+     */
+    public function generateLastOrderNo()
+    {
+        $lastModelBasedOnOrderAttribute = $this->getOnlyModelByOrderDirection('desc');
+        return $lastModelBasedOnOrderAttribute ? $lastModelBasedOnOrderAttribute->order + 1 : 1;
     }
 
     /**

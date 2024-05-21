@@ -73,5 +73,18 @@
     "ops": "উপস!",
     "go back": "ফিরে যান",
     "order not available": "সিরিয়াল করা যাবেনা",
-    "search here": "এখানে খুঁজুন ..."
+    "search here": "এখানে খুঁজুন ...",
+    "five": "৫",
+    "ten": "১০",
+    "twenty five": "২৫",
+    "fifty": "৫০",
+    "one hundred": "১০০",
+    "two hundred": "২০০",
+    "five hundred": "৫০০",
+    "ascending": "ছোট থেকে বড়",
+    "descending": "বড় থেকে ছোট",
+    "id": "আইডি",
+    "order direction": "অর্ডার ক্রম",
+    "order by": "অর্ডার বাই",
+    "showing records": "রেকর্ড দেখাচ্ছে"
 }

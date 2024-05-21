@@ -55,7 +55,7 @@ class SliderListPage extends BackendComponent
     {
         $this->module = __('sliders');
         $this->activeItem = __('list');
-        $this->filter = $this->filter_default_values();
+        $this->filter = $this->filterDefaultValues();
     }
 
     /**
@@ -83,7 +83,13 @@ class SliderListPage extends BackendComponent
      */
     public function swapOrder(int $modelId, string $type): void
     {
-        $targetedModel = $this->sliderService->swapOrder(modelId: $modelId, type: $type);
+        // dd($modelId, $type);
+        $this->filter = [
+            ...$this->filter,
+            'orderBy' => 'order',
+            'orderDirection' => 'asc',
+        ];
+        $this->sliderService->swapOrder(modelId: $modelId, type: $type);
     }
 
 
@@ -92,7 +98,7 @@ class SliderListPage extends BackendComponent
      *
      * @return void
      */
-    function updatedSearch(): void
+    function updatingSearch(): void
     {
         $this->resetPage();
     }
@@ -106,23 +112,12 @@ class SliderListPage extends BackendComponent
     public function render(): View
     {
         $models = $this->sliderService->getFilteredModels(
-            [
-                'searchText' => $this->search,
-                'paginate' => 5
-            ]
+            [...$this->filter, 'searchText' => $this->search]
         );
         $countModel = $this->sliderService->countAllModel();
+        $lowerOrderModel = $this->sliderService->getOnlyModelByOrderDirection('asc');
+        $highestOrderModel = $this->sliderService->getOnlyModelByOrderDirection('desc');
 
-        ## Get the first and last posts, if they exist
-        $firstModel = $models->first();
-        $lastModel = $models->last();
-
-        ## Check if the collection is empty
-        if ($models->isEmpty()) {
-            $firstModel = null;
-            $lastModel = null;
-        }
-
-        return view('livewire.backend.sliders.slider-list-page', compact('models', 'countModel', 'firstModel', 'lastModel'));
+        return view('livewire.backend.sliders.slider-list-page', compact('models', 'countModel', 'lowerOrderModel', 'highestOrderModel'));
     }
 }

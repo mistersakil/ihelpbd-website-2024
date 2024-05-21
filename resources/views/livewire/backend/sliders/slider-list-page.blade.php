@@ -1,6 +1,6 @@
 <main>
-    {{-- @dump($search)
-    @dump($filter) --}}
+    {{-- @dump($search) --}}
+    {{-- @dump($filter) --}}
     <x-backend.addons.card-component>
         <x-slot:breadcrumb>
             <x-backend.addons.breadcrumb-component :title="$module" :active-item="$activeItem">
@@ -19,14 +19,14 @@
         <!--########## Filter Section Start  ##########-->
         <div class="row mb-3" id="filter_section">
             <div class="col-12 col-sm">
-                <div class="input-group" title="{{ __('showing records', ['records' => __($filter['per_page'])]) }}">
+                <div class="input-group" title="{{ __('showing records', ['records' => __($filter['perPage'])]) }}">
                     <span class="input-group-text"><i class="{{ _icons('per_page') }}"></i></span>
-                    <select class="form-select" wire:model="filter.per_page">
-                        @isset($filter['per_page_list'])
-                            @foreach ($filter['per_page_list'] as $key => $per_page)
-                                <option value="{{ $per_page['number'] }}" @if ($per_page['default']) selected @endif
-                                    wire:key="per_page_{{ $key }}">
-                                    {{ $per_page['label'] }}
+                    <select class="form-select" wire:model.live="filter.perPage">
+                        @isset($filter['perPageList'])
+                            @foreach ($filter['perPageList'] as $key => $perPage)
+                                <option value="{{ $perPage['number'] }}" @if ($perPage['default']) selected @endif
+                                    wire:key="perPage_{{ $key }}">
+                                    {{ $perPage['label'] }}
                                 </option>
                             @endforeach
                         @endisset
@@ -35,26 +35,27 @@
             </div>
             <!-- /.col -->
             <div class="col-12 col-sm">
-                <div class="input-group"
-                    title="{{ __('order by', ['order_by_field' => __($filter['order_by_field'])]) }}">
-                    <span class="input-group-text"><i class="{{ _icons('order_by') }}"></i></span>
-                    <select class="form-select text-capitalize" wire:model="filter.order_by_field">
+                <div class="input-group" title="{{ __('order by', ['orderBy' => __($filter['orderBy'])]) }}">
+                    <span class="input-group-text">
+                        <i class="{{ _icons('order_by') }}"></i>
+                    </span>
+                    <select wire:model.live="filter.orderBy" class="form-select text-capitalize">
                         <option value="id">{{ __('id') }}</option>
-                        <option value="name">{{ __('name') }}</option>
-                        <option value="email">{{ __('email') }}</option>
-                        <option value="phone">{{ __('phone') }}</option>
+                        <option value="slider_title">{{ __('title') }}</option>
+                        <option value="slider_body">{{ __('body') }}</option>
+                        <option value="slider_link_text">{{ __('link text') }}</option>
+                        <option value="slider_link">{{ __('link') }}</option>
+                        <option value="order">{{ __('order') }}</option>
                         <option value="is_active">{{ __('status') }}</option>
-                        <option value="created_at">{{ __('created on') }}</option>
-                        <option value="updated_at">{{ __('last modified') }}</option>
                     </select>
                 </div>
             </div>
             <!-- /.col -->
             <div class="col-12 col-sm">
                 <div class="input-group"
-                    title="{{ __('order type', ['order_by_type' => __($filter['order_by_type'])]) }}">
-                    <span class="input-group-text"><i class="{{ _icons('order_by_type') }}"></i></span>
-                    <select class="form-select text-capitalize" wire:model="filter.order_by_type">
+                    title="{{ __('order direction', ['orderDirection' => __($filter['orderDirection'])]) }}">
+                    <span class="input-group-text"><i class="{{ _icons('order_direction') }}"></i></span>
+                    <select wire:model.live="filter.orderDirection" class="form-select text-capitalize">
                         <option value="asc">{{ __('ascending') }}</option>
                         <option value="desc">{{ __('descending') }}</option>
                     </select>
@@ -111,39 +112,39 @@
                                     <td>
                                         <div
                                             class="d-flex align-items-center justify-content-center gap-2 order-actions">
-                                            @if ($firstModel && $models->firstItem() + $index == 1 && $countModel == 1)
+                                            @if ($countModel == 1)
                                                 <a href="javascript:void(0)"
                                                     class="bg-gray
                                                     text-secondary border-secondary"
-                                                    title="{{ __('order not available') }}">
+                                                    title="{{ __('order not available') }}" data-step="1">
                                                     <i class="{{ _icons('stop') }}"></i>
                                                 </a>
-                                            @elseif ($firstModel && $models->firstItem() + $index == 1)
+                                            @elseif ($lowerOrderModel->order == $model->order)
                                                 <a href="javascript:void(0)"
                                                     wire:click="swapOrder({{ $model->id }},  'DOWN')"
                                                     class="bg-gray
                                                     text-danger border-danger"
-                                                    title="{{ __('order down') }}">
+                                                    title="{{ __('order down') }}" data-step="2">
                                                     <i class="{{ _icons('arrow_down') }}"></i>
                                                 </a>
-                                            @elseif ($lastModel && $models->firstItem() + $index == $countModel)
+                                            @elseif ($highestOrderModel && $models->firstItem() + $index == $countModel)
                                                 <a href="javascript:void(0)"
                                                     wire:click="swapOrder({{ $model->id }},  'UP')"
                                                     class="bg-gray text-success border-success"
-                                                    title="{{ __('order up') }}">
+                                                    title="{{ __('order up') }}" data-step="3">
                                                     <i class="{{ _icons('arrow_up') }}"></i>
                                                 </a>
                                             @else
                                                 <a href="javascript:void(0)"
                                                     wire:click="swapOrder({{ $model->id }},  'DOWN')"
                                                     class="bg-gray text-danger border-danger"
-                                                    title="{{ __('order down') }}">
+                                                    title="{{ __('order down') }}" data-step="4">
                                                     <i class="{{ _icons('arrow_down') }}"></i>
                                                 </a>
                                                 <a href="javascript:void(0)"
                                                     wire:click="swapOrder({{ $model->id }},  'UP')"
                                                     class="bg-gray text-success border-success"
-                                                    title="{{ __('order up') }}">
+                                                    title="{{ __('order up') }}" data-step="4">
                                                     <i class="{{ _icons('arrow_up') }}"></i>
                                                 </a>
                                             @endif
