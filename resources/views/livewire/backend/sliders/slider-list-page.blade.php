@@ -127,7 +127,7 @@
                                                     title="{{ __('order down') }}" data-step="2">
                                                     <i class="{{ _icons('arrow_down') }}"></i>
                                                 </a>
-                                            @elseif ($highestOrderModel && $models->firstItem() + $index == $countModel)
+                                            @elseif ($highestOrderModel->order == $model->order)
                                                 <a href="javascript:void(0)"
                                                     wire:click="swapOrder({{ $model->id }},  'UP')"
                                                     class="bg-gray text-success border-success"
