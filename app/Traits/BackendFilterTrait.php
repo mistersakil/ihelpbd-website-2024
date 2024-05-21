@@ -2,6 +2,9 @@
 
 namespace App\Traits;
 
+/**
+ * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
+ */
 trait BackendFilterTrait
 {
 
@@ -10,24 +13,17 @@ trait BackendFilterTrait
     private string $orderBy;
     private string $orderDirection;
 
+    /**
+     * Create a new class instance
+     *
+     * @return void
+     */
     public function __construct()
     {
         $this->searchPlaceholderText = __('search here');
         $this->orderBy = 'id';
         $this->orderDirection = 'desc';
-        // $this->user_service =  new UserService;
     }
-
-
-
-    /**
-     * updatingSearch abstract method Resetting Pagination After Filtering Data
-     *
-     * @return void
-     */
-    // abstract public function updatingSearch(): void;
-
-
 
     /**
      * getPerPage() method to return number of items to display per page on a list page

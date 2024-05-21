@@ -77,10 +77,8 @@ class SliderService
     */
     public function swapOrder(int $modelId, string $type): bool
     {
-        // dump($modelId, $type);
         $targetedModel = $this->getModelById($modelId);
         $targetedModelOrder = $targetedModel->order;
-        // dd($targetedModel, $targetedModelOrder);
         if ($type === 'UP') {
             $previousModel =  $this->previousModel($targetedModel->order);
             $targetedModel->order = $previousModel->order;
@@ -94,7 +92,7 @@ class SliderService
             $nextModel =  $this->nextModel($targetedModel->order);
             $targetedModel->order = $nextModel->order;
             $targetedModel->save();
-            // dd($targetedModel, $nextModel);
+
             ## Update next model order
             $nextModel->order = $targetedModelOrder;
             $nextModel->save();

@@ -28,11 +28,6 @@ class SliderListPage extends BackendComponent
     public ?string $search = '';
     public array $filter = [];
 
-    ## Query string search
-    // protected $queryString = [
-    //     'search' => ['except' => ''],
-    // ];
-
     # Services 
     private SliderService $sliderService;
 
@@ -83,7 +78,6 @@ class SliderListPage extends BackendComponent
      */
     public function swapOrder(int $modelId, string $type): void
     {
-        // dd($modelId, $type);
         $this->filter = [
             ...$this->filter,
             'orderBy' => 'order',
