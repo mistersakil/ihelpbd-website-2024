@@ -124,27 +124,27 @@
                                                     wire:click="swapOrder({{ $model->id }},  'DOWN')"
                                                     class="bg-gray
                                                     text-danger border-danger"
-                                                    title="{{ __('order down') }}" data-step="2">
+                                                    title="{{ __('step up') }}" data-step="2">
                                                     <i class="{{ _icons('arrow_down') }}"></i>
                                                 </a>
                                             @elseif ($highestOrderModel->order == $model->order)
                                                 <a href="javascript:void(0)"
                                                     wire:click="swapOrder({{ $model->id }},  'UP')"
                                                     class="bg-gray text-success border-success"
-                                                    title="{{ __('order up') }}" data-step="3">
+                                                    title="{{ __('step up') }}" data-step="3">
                                                     <i class="{{ _icons('arrow_up') }}"></i>
                                                 </a>
                                             @else
                                                 <a href="javascript:void(0)"
                                                     wire:click="swapOrder({{ $model->id }},  'DOWN')"
                                                     class="bg-gray text-danger border-danger"
-                                                    title="{{ __('order down') }}" data-step="4">
+                                                    title="{{ __('step down') }}" data-step="4">
                                                     <i class="{{ _icons('arrow_down') }}"></i>
                                                 </a>
                                                 <a href="javascript:void(0)"
                                                     wire:click="swapOrder({{ $model->id }},  'UP')"
                                                     class="bg-gray text-success border-success"
-                                                    title="{{ __('order up') }}" data-step="4">
+                                                    title="{{ __('step up') }}" data-step="4">
                                                     <i class="{{ _icons('arrow_up') }}"></i>
                                                 </a>
                                             @endif

@@ -86,5 +86,7 @@
     "id": "Id",
     "order direction": "Order direction",
     "order by": "Order by",
-    "showing records": "Showing records"
+    "showing records": "Showing records",
+    "step up": "Step up",
+    "step down": "Step down"
 }
