@@ -7,6 +7,6 @@
     {{-- <livewire:frontend.partials.home-services-section /> --}}
     {{-- <livewire:frontend.partials.home-choose-section /> --}}
     {{-- <livewire:frontend.partials.home-work-process-section /> --}}
-    <livewire:frontend.partials.home-testimonial-section />
-    <livewire:frontend.partials.home-blog-section />
+    {{-- <livewire:frontend.partials.home-testimonial-section /> --}}
+    {{-- <livewire:frontend.partials.home-blog-section /> --}}
 </main>
