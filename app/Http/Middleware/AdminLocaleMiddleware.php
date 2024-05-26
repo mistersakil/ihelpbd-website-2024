@@ -16,7 +16,7 @@ class AdminLocaleMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $currentLocal =  session()->get('locale');
+        $currentLocal =  session()->get('locale') ?? env('APP_LOCALE');
 
         if (!empty($currentLocal)) {
             App::setLocale($currentLocal);

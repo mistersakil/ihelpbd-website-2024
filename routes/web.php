@@ -32,6 +32,8 @@ $backendMiddleware = [
 
 ## Backend routes
 Route::middleware($backendMiddleware)->prefix('admin')->name('admin.')->group(function () {
+        // dump(app()->getLocale());
+    // dump(__('slider title required'));
     Route::get('/', DashboardPage::class)->name('dashboard');
 
     ### Sliders 
