@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "07112af7775727b92ed67d3b4accdb09",
+    "content-hash": "4c72ebf5fee0ee14334d266fa420031d",
     "packages": [
         {
             "name": "brick/math",
@@ -2456,6 +2456,72 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v5.0.2"
             },
             "time": "2024-03-05T20:51:40+00:00"
+        },
+        {
+            "name": "nnjeim/world",
+            "version": "1.1.30",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nnjeim/world.git",
+                "reference": "10ca54b0152a1d9fa55a4beed0d3764b5822c564"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nnjeim/world/zipball/10ca54b0152a1d9fa55a4beed0d3764b5822c564",
+                "reference": "10ca54b0152a1d9fa55a4beed0d3764b5822c564",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "orchestra/testbench": ">=v4.0.0",
+                "phpunit/phpunit": ">=8.5.8"
+            },
+            "type": "laravel-package",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Nnjeim\\World\\WorldServiceProvider"
+                    ],
+                    "aliases": {
+                        "Country": "Nnjeim\\World\\World"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Nnjeim\\World\\": "src/",
+                    "Nnjeim\\World\\Database\\Seeders\\": "src/Database/Seeders/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Najm Njeim",
+                    "email": "najm@njeim.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Laravel countries, states, cities and currencies",
+            "homepage": "https://github.com/nnjeim/world.git",
+            "keywords": [
+                "cities",
+                "countries",
+                "currencies",
+                "laravel",
+                "lumen",
+                "states",
+                "timezones"
+            ],
+            "support": {
+                "issues": "https://github.com/nnjeim/world/issues",
+                "source": "https://github.com/nnjeim/world/tree/1.1.30"
+            },
+            "time": "2024-02-08T17:03:36+00:00"
         },
         {
             "name": "nunomaduro/termwind",
@@ -9218,5 +9284,5 @@
         "php": "^8.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }
