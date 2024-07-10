@@ -139,6 +139,23 @@
             },
         });
 
+        $(".testimonial-slider-two").owlCarousel({
+            loop: true,
+            margin: 10,
+            autoHeight: true,
+            nav: true,
+            items: 1,
+            animateOut: "fadeOutUp",
+            animateIn: "fadeInUp",
+            dots: false,
+            autoplay: true,
+            autoplayHoverPause: true,
+            navText: [
+                "<i class='flaticon-arrow-pointing-to-left'></i>",
+                "<i class='flaticon-arrow-pointing-to-right'></i>",
+            ],
+        });
+
         // FAQ Accordion JS
         $(".accordion")
             .find(".accordion-title")
