@@ -16,7 +16,7 @@ use App\Livewire\Backend\Sliders\SliderCreatePage;
 use App\Livewire\Frontend\Products\ProductListPage;
 use App\Livewire\Frontend\Solutions\SolutionListPage;
 
-Route::name('web.')->group(function () {
+Route::name('web.')->middleware([AdminLocaleMiddleware::class])->group(function () {
     Route::get('/', HomePage::class)->name('home');
     Route::get('/about-us', AboutPage::class)->name('about');
     Route::get('/contact-us', ContactPage::class)->name('contact');

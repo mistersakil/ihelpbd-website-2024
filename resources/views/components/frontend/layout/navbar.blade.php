@@ -23,7 +23,7 @@
                             </a>
                         </li>
                         <!-- /.nav-item -->
-                   
+
                         <li class="nav-item">
                             <a wire:navigate href="{{ route('web.solutions') }}" class="nav-link">
                                 {{ __('solutions') }}
@@ -58,6 +58,7 @@
                             </a>
                         </li>
                         <!-- /.nav-item -->
+
                     </ul>
 
                     <div class="nav-sidebar">

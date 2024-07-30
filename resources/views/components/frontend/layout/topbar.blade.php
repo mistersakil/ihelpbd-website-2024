@@ -3,7 +3,7 @@
         <div class="row justify-content-center align-items-center">
             <div class="col-lg-2">
                 <div class="header-logo">
-                    <a href="index.html">
+                    <a href="{{ route('web.home') }}" wire:navigate>
                         <img src="{{ Vite::asset('resources/images/logo.png') }}" alt="Images">
                     </a>
                 </div>
@@ -17,9 +17,12 @@
                             </div>
                             <div class="content">
                                 <h3>
-                                    <a href="tel:+8801720092787">+8801720092787</a>
+                                    <a href="tel:+8801720092787">
+                                        {{ __('contact number numeric') }}
+                                    </a>
                                 </h3>
                                 <p> Sat to Thus: 8:00 AM - 9:00 PM </p>
+
                             </div>
                         </li>
                         <li>
@@ -40,7 +43,9 @@
                             <div class="content">
                                 <h3><a href="https://goo.gl/maps/uNmtNyknSA3gBH198" target="_blank">32 Barnic, Walse
                                         Street</a></h3>
-                                <p>Get Direction</p>
+                                <p>
+                                    {{ __('get direction') }}
+                                </p>
                             </div>
                         </li>
                     </ul>

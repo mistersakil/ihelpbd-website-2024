@@ -18,7 +18,7 @@ class HomePage extends Component
      *
      * @return  \Illuminate\Contracts\View\View
      */
-    #[Title("home")]
+    #[Title("Home")]
     public function render(): View
     {
         return view('livewire.frontend.home.home-page');

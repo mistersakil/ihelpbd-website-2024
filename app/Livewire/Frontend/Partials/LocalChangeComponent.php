@@ -22,15 +22,9 @@ class LocalChangeComponent extends Component
     public function mount(): void
     {
         $this->locales = localList();
-        $this->selectedLocale = 'en';
+        $this->selectedLocale = session()->has('locale') ?  session()->get('locale') : env('APP_LOCALE');
 
-        if (session()->has('locale')) {
-            app()->setLocale(session()->get('locale'));
-            $this->selectedLocale = session()->get('locale');
-        } else {
-            app()->setLocale($this->selectedLocale);
-            $this->selectedLocale = 'en';
-        }
+        app()->setLocale($this->selectedLocale);
     }
 
     /**
@@ -50,7 +44,7 @@ class LocalChangeComponent extends Component
         $url = url()->previous();
         $this->segments = parse_url($url)['path'];
 
-        return $this->redirect($this->segments, navigate: true);
+        return $this->redirect($this->segments);
     }
 
     /**

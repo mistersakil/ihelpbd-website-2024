@@ -29,8 +29,9 @@
 </head>
 
 <body>
-    <x-frontend.layout.topbar />
-    <x-frontend.layout.navbar />
+    <x-frontend.layout.topbar></x-frontend.layout.topbar>
+    {{-- @includeIf('components.frontend.layout.topbar') --}}
+    <x-frontend.layout.navbar></x-frontend.layout.navbar>
 
     @if (!request()->routeIs('web.home'))
         @isset($innerBanner)
@@ -44,6 +45,7 @@
 
     <x-frontend.layout.footer />
     @livewireScripts
+
     @includeIf('components.frontend.layout.master-script')
 </body>
 
