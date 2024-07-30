@@ -19,7 +19,7 @@ class ContactPage extends Component
      *
      * @return  \Illuminate\Contracts\View\View
      */
-    #[Title('contact us')]
+    #[Title('Contact Us')]
     public function render(): View
     {
         return view('livewire.frontend.contact.contact-page');
