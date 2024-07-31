@@ -22,9 +22,7 @@ class LocalChangeComponent extends Component
     public function mount(): void
     {
         $this->locales = localList();
-        $this->selectedLocale = session()->has('locale') ?  session()->get('locale') : env('APP_LOCALE');
-
-        app()->setLocale($this->selectedLocale);
+        $this->selectedLocale = session()->has('locale') ?  session()->get('locale') : env('APP_LOCALE', 'en');
     }
 
     /**

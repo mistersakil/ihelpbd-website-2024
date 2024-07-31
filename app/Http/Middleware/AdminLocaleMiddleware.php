@@ -16,13 +16,9 @@ class AdminLocaleMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $currentLocal = session()->has('locale') ?  session()->get('locale') : env('APP_LOCALE');
+        $currentLocal = session()->has('locale') ?  session()->get('locale') : env('APP_LOCALE', 'en');
 
-        if (!empty($currentLocal)) {
-            App::setLocale($currentLocal);
-        } else {
-            App::setLocale('en');
-        }
+        App::setLocale($currentLocal);
 
         return $next($request);
     }
