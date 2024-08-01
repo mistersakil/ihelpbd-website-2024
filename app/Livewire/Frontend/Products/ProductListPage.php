@@ -29,7 +29,6 @@ class ProductListPage extends Component
      */
     public function mount(): void
     {
-        $this->productList = $this->productService->getStaticModels();
     }
 
     /**
@@ -40,6 +39,7 @@ class ProductListPage extends Component
     #[Title('Product List')]
     public function render(): View
     {
+        $this->productList = $this->productService->getStaticModels();
         return view('livewire.frontend.products.product-list-page');
     }
 }

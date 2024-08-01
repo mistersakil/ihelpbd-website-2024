@@ -21,11 +21,15 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Vite::macro('imageBack', fn ($asset) => Vite::asset("resources/assets/backend/images/{$asset}"));
+
         Vite::macro('imageWeb', fn ($asset) => Vite::asset("resources/assets/web/images/{$asset}"));
+
         Vite::macro('imageRoot', fn ($asset) => Vite::asset("resources/images/{$asset}"));
+
         Vite::macro('showUploadedImg', function ($fileName, $module) {
             return '<img src="' . asset("storage/uploads/{$module}/{$fileName}") . '" alt="' . $module . '_' . $fileName . '" class="showUploadedImg"';
         });
+
         Vite::macro('getUploadedImgPath', function ($fileName, $module) {
             return asset("storage/uploads/{$module}/{$fileName}");
         });

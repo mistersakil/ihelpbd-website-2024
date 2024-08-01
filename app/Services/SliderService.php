@@ -101,6 +101,8 @@ class SliderService
         }
         return false;
     }
+
+
     /**
      * Collections of model with search and filter
      * @param array $filterOptions
