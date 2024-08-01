@@ -49,45 +49,61 @@ class ProductService
      * Get static models
      * @return \array
      */
-    public function getStaticModels(int $paginate = 5)
+    public function getStaticModels(string $slug = '')
     {
-        return [
+        $products = [
             [
                 'title' => 'product one',
-                'slug' => 'product-one',
+                'slug' => route('web.products.details', ['slug' => 'product-one']),
                 'body' => "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-                'img_featured' => Vite::imageWeb('project-img1.jpg')
+                'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
+                'img_thumb' => Vite::imageWeb('project-img6.jpg'),
             ],
             [
                 'title' => 'product two',
-                'slug' => 'product-two',
+                'slug' => route('web.products.details', ['slug' => 'product-two']),
                 'body' => "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-                'img_featured' => Vite::imageWeb('project-img2.jpg')
+                'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
+                'img_thumb' => Vite::imageWeb('project-img5.jpg')
             ],
             [
                 'title' => 'product three',
-                'slug' => 'product-three',
+                'slug' => route('web.products.details', ['slug' => 'product-three']),
                 'body' => "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-                'img_featured' => Vite::imageWeb('project-img3.jpg')
+                'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
+                'img_thumb' => Vite::imageWeb('project-img4.jpg')
             ],
             [
                 'title' => 'product four',
-                'slug' => 'product-four',
+                'slug' => route('web.products.details', ['slug' => 'product-four']),
                 'body' => "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-                'img_featured' => Vite::imageWeb('project-img4.jpg')
+                'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
+                'img_thumb' => Vite::imageWeb('project-img3.jpg')
             ],
             [
                 'title' => 'product five',
-                'slug' => 'product-five',
+                'slug' => route('web.products.details', ['slug' => 'product-five']),
                 'body' => "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-                'img_featured' => Vite::imageWeb('project-img5.jpg')
+                'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
+                'img_thumb' => Vite::imageWeb('project-img2.jpg')
             ],
             [
                 'title' => 'product six',
-                'slug' => 'product-six',
+                'slug' => route('web.products.details', ['slug' => 'product-six']),
                 'body' => "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-                'img_featured' => Vite::imageWeb('project-img6.jpg')
+                'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
+                'img_thumb' => Vite::imageWeb('project-img1.jpg')
             ],
         ];
+
+        if (!empty($slug)) {
+            $filteredProducts = array_filter($products, function ($product) use ($slug) {
+                return $product['slug'] == $slug;
+            });
+            $firstProduct = reset($filteredProducts);
+            return $firstProduct !== false ? $firstProduct : [];
+        }
+
+        return $products;
     }
 }

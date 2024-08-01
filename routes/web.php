@@ -15,6 +15,7 @@ use App\Livewire\Backend\Dashboard\DashboardPage;
 use App\Livewire\Backend\Sliders\SliderCreatePage;
 use App\Livewire\Frontend\Products\ProductListPage;
 use App\Livewire\Frontend\Solutions\SolutionListPage;
+use App\Livewire\Frontend\Products\ProductDetailsPage;
 
 Route::name('web.')->middleware([AdminLocaleMiddleware::class])->group(function () {
     Route::get('/', HomePage::class)->name('home');
@@ -22,9 +23,11 @@ Route::name('web.')->middleware([AdminLocaleMiddleware::class])->group(function 
     Route::get('/contact-us', ContactPage::class)->name('contact');
     Route::get('/blogs', BlogListPage::class)->name('blogs');
     Route::get('/products', ProductListPage::class)->name('products');
+    Route::get('/products/{slug}', ProductDetailsPage::class)->name('products.details');
     Route::get('/solutions', SolutionListPage::class)->name('solutions');
 });
 
+## Backend middleware group
 $backendMiddleware = [
     AuthCheckMiddleware::class,
     AdminLocaleMiddleware::class
@@ -32,8 +35,7 @@ $backendMiddleware = [
 
 ## Backend routes
 Route::middleware($backendMiddleware)->prefix('admin')->name('admin.')->group(function () {
-    //     dump(app()->getLocale());
-    // dump(__('slider title required'));
+
     Route::get('/', DashboardPage::class)->name('dashboard');
 
     ### Sliders 

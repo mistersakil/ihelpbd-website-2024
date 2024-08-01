@@ -5,20 +5,19 @@ namespace App\Livewire\Frontend\Products;
 use Livewire\Component;
 use Livewire\Attributes\Title;
 use App\Services\ProductService;
-
 use Illuminate\Contracts\View\View;
 
-/**
- * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
- */
-class ProductListPage extends Component
+class ProductDetailsPage extends Component
 {
     ## Meta data
     public string $metaTitle = 'products';
-    public string $module = 'products';
+    public string $module = 'product details';
+
+    ## Route params
+    public string $slug;
 
     ## Component props
-    public array $productList = [];
+    public array $productDetails;
 
     ## Services
     private ProductService $productService;
@@ -32,8 +31,11 @@ class ProductListPage extends Component
      * Create a new component instance.
      * @return void
      */
-    public function mount(): void
+    public function mount(string $slug): void
     {
+        $this->slug = $slug;
+        $slugToFilter = route('web.products.details', ['slug' => $slug]);
+        $this->productDetails = $this->productService->getStaticModels($slugToFilter);
     }
 
     /**
@@ -41,10 +43,9 @@ class ProductListPage extends Component
      *
      * @return  \Illuminate\Contracts\View\View
      */
-    #[Title('Products')]
+    #[Title('Product Details')]
     public function render(): View
     {
-        $this->productList = $this->productService->getStaticModels();
-        return view('livewire.frontend.products.product-list-page');
+        return view('livewire.frontend.products.product-details-page');
     }
 }
