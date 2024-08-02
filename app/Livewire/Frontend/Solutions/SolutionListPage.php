@@ -3,6 +3,7 @@
 namespace App\Livewire\Frontend\Solutions;
 
 use Livewire\Component;
+use Livewire\Attributes\Title;
 use Illuminate\Contracts\View\View;
 
 /**
@@ -10,16 +11,18 @@ use Illuminate\Contracts\View\View;
  */
 class SolutionListPage extends Component
 {
-    public string $metaTitle = 'solution list';
+    public string $metaTitle = 'solution we provide';
     public string $module = 'solutions';
+
 
     /**
      * Render view
      *
      * @return  \Illuminate\Contracts\View\View
      */
+    #[Title('Solutions')]
     public function render(): View
     {
-        return view('livewire.frontend.solutions.solution-list-page')->title($this->metaTitle);
+        return view('livewire.frontend.solutions.solution-list-page');
     }
 }

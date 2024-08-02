@@ -25,6 +25,7 @@ Route::name('web.')->middleware([AdminLocaleMiddleware::class])->group(function 
     Route::get('/products', ProductListPage::class)->name('products');
     Route::get('/products/{slug}', ProductDetailsPage::class)->name('products.details');
     Route::get('/solutions', SolutionListPage::class)->name('solutions');
+    Route::get('/solutions', SolutionListPage::class)->name('solutions');
 });
 
 ## Backend middleware group
