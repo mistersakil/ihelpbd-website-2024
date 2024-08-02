@@ -14,7 +14,7 @@ use Illuminate\Contracts\View\View;
 class ProductListPage extends Component
 {
     ## Meta data
-    public string $metaTitle = 'products';
+    public string $metaTitle = 'our products';
     public string $module = 'products';
 
     ## Component props

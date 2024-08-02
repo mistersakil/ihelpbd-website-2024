@@ -16,6 +16,7 @@ use App\Livewire\Backend\Sliders\SliderCreatePage;
 use App\Livewire\Frontend\Products\ProductListPage;
 use App\Livewire\Frontend\Solutions\SolutionListPage;
 use App\Livewire\Frontend\Products\ProductDetailsPage;
+use App\Livewire\Frontend\Solutions\SolutionDetailsPage;
 
 Route::name('web.')->middleware([AdminLocaleMiddleware::class])->group(function () {
     Route::get('/', HomePage::class)->name('home');
@@ -25,7 +26,7 @@ Route::name('web.')->middleware([AdminLocaleMiddleware::class])->group(function 
     Route::get('/products', ProductListPage::class)->name('products');
     Route::get('/products/{slug}', ProductDetailsPage::class)->name('products.details');
     Route::get('/solutions', SolutionListPage::class)->name('solutions');
-    Route::get('/solutions', SolutionListPage::class)->name('solutions');
+    Route::get('/solutions/{slug}', SolutionDetailsPage::class)->name('solutions.details');
 });
 
 ## Backend middleware group

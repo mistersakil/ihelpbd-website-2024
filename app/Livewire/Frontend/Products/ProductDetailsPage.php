@@ -10,8 +10,8 @@ use Illuminate\Contracts\View\View;
 class ProductDetailsPage extends Component
 {
     ## Meta data
-    public string $metaTitle = 'products';
-    public string $module = 'product details';
+    public string $metaTitle = 'product details';
+    public string $module = 'products';
 
     ## Route params
     public string $slug;
