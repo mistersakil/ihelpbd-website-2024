@@ -15,11 +15,11 @@ class SolutionService
      */
     public function getStaticModels(string $slug = '')
     {
-        $products = [
+        $dataList = [
             [
                 'title' => 'solution one',
                 'sub_title' => 'solution one sub title',
-                'slug' => route('web.products.details', ['slug' => 'solution-one']),
+                'slug' => route('web.solutions.details', ['slug' => 'solution-one']),
                 'body' => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis necessitatibus quod, maiores sequi earum rem odit nostrum inventore accusantium dolor assumenda quisquam. Itaque ab a maiores veritatis repellendus reprehenderit blanditiis!",
                 'img_featured' => Vite::imageWeb('services-large1.jpg'),
                 'img_gallery' => Vite::imageWeb('project-img6.jpg'),
@@ -27,7 +27,7 @@ class SolutionService
             [
                 'title' => 'solution two',
                 'sub_title' => 'solution two sub title',
-                'slug' => route('web.products.details', ['slug' => 'solution-two']),
+                'slug' => route('web.solutions.details', ['slug' => 'solution-two']),
                 'body' => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis necessitatibus quod, maiores sequi earum rem odit nostrum inventore accusantium dolor assumenda quisquam. Itaque ab a maiores veritatis repellendus reprehenderit blanditiis!",
                 'img_featured' => Vite::imageWeb('services-large2.jpg'),
                 'img_gallery' => Vite::imageWeb('project-img6.jpg'),
@@ -36,13 +36,13 @@ class SolutionService
         ];
 
         if (!empty($slug)) {
-            $filteredProducts = array_filter($products, function ($product) use ($slug) {
-                return $product['slug'] == $slug;
+            $filteredItems = array_filter($dataList, function ($item) use ($slug) {
+                return $item['slug'] == $slug;
             });
-            $firstProduct = reset($filteredProducts);
-            return $firstProduct !== false ? $firstProduct : [];
+            $firstItem = reset($filteredItems);
+            return $firstItem !== false ? $firstItem : [];
         }
 
-        return $products;
+        return $dataList;
     }
 }

@@ -9,7 +9,7 @@ use Illuminate\Contracts\View\View;
 class SolutionDetailsPage extends Component
 {
     ## Meta data
-    public string $metaTitle = 'products';
+    public string $metaTitle = 'solution details';
     public string $module = 'solutions';
 
     ## Route params
@@ -33,8 +33,8 @@ class SolutionDetailsPage extends Component
     public function mount(string $slug): void
     {
         $this->slug = $slug;
-        $slugToFilter = route('web.products.details', ['slug' => $slug]);
-        $this->productDetails = $this->productService->getStaticModels($slugToFilter);
+        $slugString = route('web.products.details', ['slug' => $slug]);
+        $this->productDetails = $this->productService->getStaticModels($slugString);
     }
 
     /**

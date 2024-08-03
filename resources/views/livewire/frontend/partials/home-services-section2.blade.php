@@ -32,7 +32,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-lg-6">
                                             <div class="services-tab-img">
-                                                <a href="service-details.html">
+                                                <a wire:navigate href="{{ $data['slug'] }}">
                                                     <img src="{{ $data['img_featured'] }}"
                                                         alt="{{ ucwords($data['title']) }}"></a>
                                             </div>
@@ -55,8 +55,10 @@
                                                         Situation
                                                     </li>
                                                 </ul>
-                                                <a href="service-details.html"
-                                                    class="default-btn border-radius-5">{{ __('read more') }}</a>
+                                                <a wire:navigate href="{{ $data['slug'] }}"
+                                                    class="default-btn border-radius-5">
+                                                    {{ __('read more') }}
+                                                </a>
                                             </div>
                                             <!-- /.services-tab-content -->
                                         </div>
