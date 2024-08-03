@@ -1,10 +1,11 @@
 <div class="services-area-two pt-100 pb-70">
+    {{-- @dump($isShowSectionHeader) --}}
     <div class="container">
-        <div class="section-title text-center">
-            <span class="sp-title">Services</span>
-            <h2>We Provide Best virtual Assistant Service</h2>
+        <div class="section-title text-center ">
+            <span class="sp-title">{{ $sectionTitle }}</span>
+            <h2>{{ $sectionSubTitle }}</h2>
         </div>
-        <div class="tab services-tab pt-45">
+        <div class="tab services-tab {{ $isShowSectionHeader ? 'pt-45' : '' }}">
             <div class="row">
                 <div class="col-lg-12">
                     <ul class="tabs active">
