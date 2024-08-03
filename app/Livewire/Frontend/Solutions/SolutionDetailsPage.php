@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Frontend\Solutions;
 
+use App\Services\SolutionService;
 use Livewire\Component;
 use Livewire\Attributes\Title;
 use Illuminate\Contracts\View\View;
@@ -16,14 +17,15 @@ class SolutionDetailsPage extends Component
     public string $slug;
 
     ## Component props
-    public array $productDetails;
+    public array $itemDetails;
+    public array $solutionList = [];
 
     ## Services
-    // private ProductService $productService;
+    private SolutionService $solutionService;
 
     public function boot()
     {
-        // $this->productService = new ProductService;
+        $this->solutionService = new SolutionService;
     }
 
     /**
@@ -33,8 +35,9 @@ class SolutionDetailsPage extends Component
     public function mount(string $slug): void
     {
         $this->slug = $slug;
-        $slugString = route('web.products.details', ['slug' => $slug]);
-        $this->productDetails = $this->productService->getStaticModels($slugString);
+        $slugString = route('web.solutions.details', ['slug' => $slug]);
+        $this->itemDetails = $this->solutionService->getStaticModels($slugString);
+        $this->solutionList = $this->solutionService->getStaticModels();
     }
 
     /**
