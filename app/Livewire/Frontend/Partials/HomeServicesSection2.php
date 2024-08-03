@@ -10,21 +10,26 @@ use Illuminate\Contracts\View\View;
  */
 class HomeServicesSection2 extends Component
 {
-    ## Meta property
+    ## Meta props
     public $sectionTitle;
     public $sectionSubTitle;
     public $isShowSectionHeader;
+
+    ## Component props
+    public array $dataList;
 
     /**
      * Create a new component instance.
      * @return void
      */
-    public function mount(string $sectionTitle = '', string $sectionSubTitle = ''): void
+    public function mount(array $dataList = [], string $sectionTitle = '', string $sectionSubTitle = ''): void
     {
         $this->sectionTitle = $sectionTitle ? __($sectionTitle) : "";
         $this->sectionSubTitle = $sectionSubTitle ? __($sectionSubTitle) : "";
 
         $this->isShowSectionHeader = (!empty($this->sectionTitle) || !empty($this->sectionSubTitle)) ? true : false;
+
+        $this->dataList = $dataList;
     }
 
 
