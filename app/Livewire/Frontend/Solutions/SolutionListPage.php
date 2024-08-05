@@ -4,6 +4,7 @@ namespace App\Livewire\Frontend\Solutions;
 
 use Livewire\Component;
 use Livewire\Attributes\Title;
+use App\Services\ProductService;
 use App\Services\SolutionService;
 use Illuminate\Contracts\View\View;
 
@@ -17,13 +18,16 @@ class SolutionListPage extends Component
 
     ## Component props
     public array $solutionList = [];
+    public array $productList = [];
 
     ## Services
     private SolutionService $solutionService;
+    private ProductService $productService;
 
     public function boot()
     {
         $this->solutionService = new SolutionService;
+        $this->productService = new ProductService;
     }
 
     /**
