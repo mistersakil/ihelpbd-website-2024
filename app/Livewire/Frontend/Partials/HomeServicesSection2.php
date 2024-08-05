@@ -10,13 +10,11 @@ use Illuminate\Contracts\View\View;
  */
 class HomeServicesSection2 extends Component
 {
-    ## Meta props
-    public $sectionTitle;
-    public $sectionSubTitle;
-    public $isShowSectionHeader;
-
     ## Component props
     public array $dataList;
+    public string $sectionTitle;
+    public string $sectionSubTitle;
+    public string $isShowSectionHeader;
 
     /**
      * Create a new component instance.

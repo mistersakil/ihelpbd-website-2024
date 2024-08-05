@@ -13,28 +13,10 @@ use Illuminate\Contracts\View\View;
  */
 class ProductListPage extends Component
 {
-    ## Meta data
+    ## Component props
     public string $metaTitle = 'our products';
     public string $module = 'products';
 
-    ## Component props
-    public array $productList = [];
-
-    ## Services
-    private ProductService $productService;
-
-    public function boot()
-    {
-        $this->productService = new ProductService;
-    }
-
-    /**
-     * Create a new component instance.
-     * @return void
-     */
-    public function mount(): void
-    {
-    }
 
     /**
      * Render view
@@ -44,7 +26,6 @@ class ProductListPage extends Component
     #[Title('Products')]
     public function render(): View
     {
-        $this->productList = $this->productService->getStaticModels();
         return view('livewire.frontend.products.product-list-page');
     }
 }

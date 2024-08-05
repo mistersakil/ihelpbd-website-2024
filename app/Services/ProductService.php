@@ -49,7 +49,7 @@ class ProductService
      * Get static models
      * @return \array
      */
-    public function getStaticModels(string $slug = '')
+    public function getStaticModels(string $slug = '', int $limit = 5)
     {
         $products = [
             [
@@ -104,6 +104,6 @@ class ProductService
             return $firstProduct !== false ? $firstProduct : [];
         }
 
-        return $products;
+        return collect($products)->take($limit)->toArray();
     }
 }
