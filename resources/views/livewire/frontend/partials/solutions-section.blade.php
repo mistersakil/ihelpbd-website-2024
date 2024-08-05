@@ -1,5 +1,5 @@
 <main class="services-area-two pt-100 pb-70">
-    {{-- @dump($dataList) --}}
+
     <div class="container">
         <div class="section-title text-center ">
             <span class="sp-title">{{ $sectionTitle }}</span>

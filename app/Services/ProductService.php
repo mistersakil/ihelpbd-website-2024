@@ -51,7 +51,7 @@ class ProductService
      */
     public function getStaticModels(string $slug = '', int $limit = 5)
     {
-        $products = [
+        $dataList = [
             [
                 'title' => 'product one',
                 'slug' => route('web.products.details', ['slug' => 'product-one']),
@@ -97,13 +97,13 @@ class ProductService
         ];
 
         if (!empty($slug)) {
-            $filteredProducts = array_filter($products, function ($product) use ($slug) {
+            $filteredProducts = array_filter($dataList, function ($product) use ($slug) {
                 return $product['slug'] == $slug;
             });
             $firstProduct = reset($filteredProducts);
             return $firstProduct !== false ? $firstProduct : [];
         }
 
-        return collect($products)->take($limit)->toArray();
+        return collect($dataList)->take($limit)->toArray();
     }
 }

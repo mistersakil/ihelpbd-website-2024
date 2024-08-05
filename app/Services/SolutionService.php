@@ -13,7 +13,7 @@ class SolutionService
      * Get static models
      * @return \array
      */
-    public function getStaticModels(string $slug = '')
+    public function getStaticModels(string $slug = '', int $limit = 5)
     {
         $dataList = [
             [
@@ -68,7 +68,6 @@ class SolutionService
             $firstItem = reset($filteredItems);
             return $firstItem !== false ? $firstItem : [];
         }
-
-        return $dataList;
+        return collect($dataList)->take($limit)->toArray();
     }
 }

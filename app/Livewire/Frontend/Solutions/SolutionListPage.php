@@ -4,8 +4,6 @@ namespace App\Livewire\Frontend\Solutions;
 
 use Livewire\Component;
 use Livewire\Attributes\Title;
-use App\Services\ProductService;
-use App\Services\SolutionService;
 use Illuminate\Contracts\View\View;
 
 /**
@@ -13,22 +11,9 @@ use Illuminate\Contracts\View\View;
  */
 class SolutionListPage extends Component
 {
+    ## Component props
     public string $metaTitle = 'solution we provide';
     public string $module = 'solutions';
-
-    ## Component props
-    public array $solutionList = [];
-    public array $productList = [];
-
-    ## Services
-    private SolutionService $solutionService;
-    private ProductService $productService;
-
-    public function boot()
-    {
-        $this->solutionService = new SolutionService;
-        $this->productService = new ProductService;
-    }
 
     /**
      * Render view
@@ -38,7 +23,6 @@ class SolutionListPage extends Component
     #[Title('Solutions')]
     public function render(): View
     {
-        $this->solutionList = $this->solutionService->getStaticModels();
         return view('livewire.frontend.solutions.solution-list-page');
     }
 }
