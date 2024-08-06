@@ -11,7 +11,8 @@
     <livewire:frontend.partials.products-section sectionTitle="products" sectionSubTitle="our most valuable products"
         :limit="3" />
 
-    {{-- <livewire:frontend.partials.home-choose-section /> --}}
+    <livewire:frontend.components.why-choose-us-section sectionTitle="why choose us"
+        sectionSubTitle="why you will give us priority" />
 
     {{-- <livewire:frontend.partials.home-work-process-section /> --}}
 
