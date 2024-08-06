@@ -9,6 +9,7 @@
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
+            <!-- /.col -->
             <div class="col-lg-6">
                 <div class="contact-widget-form pl-20">
                     <div class="contact-form">
@@ -22,6 +23,7 @@
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
+                                <!-- /.col -->
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <input type="email" name="email" id="email" class="form-control"
@@ -29,6 +31,7 @@
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
+                                <!-- /.col -->
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <input type="text" name="phone_number" id="phone_number" required
@@ -37,6 +40,7 @@
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
+                                <!-- /.col -->
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <input type="text" name="msg_subject" id="msg_subject" class="form-control"
@@ -44,6 +48,7 @@
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
+                                <!-- /.col -->
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-group">
                                         <textarea name="message" class="form-control" id="message" cols="30" rows="5" required
@@ -51,6 +56,7 @@
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
+                                <!-- /.col -->
                                 <div class="col-lg-12 col-md-12">
                                     <div class="agree-label">
                                         <input type="checkbox" id="chb1">
@@ -60,6 +66,7 @@
                                         </label>
                                     </div>
                                 </div>
+                                <!-- /.col -->
                                 <div class="col-lg-12 col-md-12">
                                     <button type="submit" class="default-btn">
                                         {{ __('send message') }}
@@ -67,11 +74,19 @@
                                     <div id="msgSubmit" class="h3 text-center hidden"></div>
                                     <div class="clearfix"></div>
                                 </div>
+                                <!-- /.col -->
                             </div>
+                            <!-- /.row -->
                         </form>
+                        <!-- /form -->
                     </div>
+                    <!-- /.contact-form -->
                 </div>
+                <!-- /.contact-widget-form -->
             </div>
+            <!-- /.col -->
         </div>
+        <!-- /.row -->
     </div>
+    <!-- /.container -->
 </section>
