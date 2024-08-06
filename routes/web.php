@@ -14,6 +14,7 @@ use App\Livewire\Backend\Sliders\SliderListPage;
 use App\Livewire\Backend\Dashboard\DashboardPage;
 use App\Livewire\Backend\Sliders\SliderCreatePage;
 use App\Livewire\Frontend\About\PrivacyPolicyPage;
+use App\Livewire\Frontend\About\TermsConditionPage;
 use App\Livewire\Frontend\Products\ProductListPage;
 use App\Livewire\Frontend\Solutions\SolutionListPage;
 use App\Livewire\Frontend\Products\ProductDetailsPage;
@@ -29,6 +30,7 @@ Route::name('web.')->middleware([AdminLocaleMiddleware::class])->group(function 
     Route::get('/solutions', SolutionListPage::class)->name('solutions');
     Route::get('/solutions/{slug}', SolutionDetailsPage::class)->name('solutions.details');
     Route::get('/privacy-policy', PrivacyPolicyPage::class)->name('privacy.policy');
+    Route::get('/terms-conditions', TermsConditionPage::class)->name('terms.conditions');
 });
 
 ## Backend middleware group

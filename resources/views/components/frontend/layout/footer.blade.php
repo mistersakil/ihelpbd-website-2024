@@ -96,12 +96,12 @@
                             </li>
                             <li>
                                 <a wire:navigate href="{{ route('web.privacy.policy') }}">
-                                    Privacy Policy
+                                    {{ __('privacy policy') }}
                                 </a>
                             </li>
                             <li>
-                                <a href="terms-condition.html" target="_blank">
-                                    Terms & Condition
+                                <a wire:navigate href="{{ route('web.terms.conditions') }}">
+                                    {{ __('terms conditions') }}
                                 </a>
                             </li>
                         </ul>
