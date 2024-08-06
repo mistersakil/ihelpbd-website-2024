@@ -4,4 +4,6 @@
     </x-slot:innerBanner>
 
     <livewire:frontend.components.contact-card-section />
+
+    <livewire:frontend.components.contact-form-section />
 </main>
