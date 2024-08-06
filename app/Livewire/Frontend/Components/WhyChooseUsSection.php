@@ -42,7 +42,6 @@ class WhyChooseUsSection extends Component
      */
     public function render(): View
     {
-        // $this->dataList = $this->productService->getStaticModels(limit: $this->limit);
         return view('livewire.frontend.components.why-choose-us-section');
     }
 }
