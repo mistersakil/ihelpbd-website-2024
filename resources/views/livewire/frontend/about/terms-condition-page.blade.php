@@ -5,7 +5,6 @@
 
     <div class="terms-conditions-area pt-100 pb-70">
         <div class="container">
-
             <div class="row">
                 <div class="col-lg-12">
                     <div class="single-content">
@@ -34,6 +33,7 @@
                             pulvinar pharetra. In ut lacinia sem.
                         </p>
                     </div>
+                    <!-- /.single-content -->
                     <div class="single-content">
                         <h3>01. Credit Reporting Terms of Service</h3>
                         <p>
@@ -60,6 +60,7 @@
                             pulvinar pharetra. In ut lacinia sem.
                         </p>
                     </div>
+                    <!-- /.single-content -->
                     <div class="single-content">
                         <h3>02. Ownership of Site Agreement to Terms of Use</h3>
                         <p>
@@ -86,6 +87,7 @@
                             pulvinar pharetra. In ut lacinia sem.
                         </p>
                     </div>
+                    <!-- /.single-content -->
                     <div class="single-content">
                         <h3>03. Provision of Services</h3>
                         <p>
@@ -112,6 +114,7 @@
                             pulvinar pharetra. In ut lacinia sem.
                         </p>
                     </div>
+                    <!-- /.single-content -->
                     <div class="single-content">
                         <h3>04. Limitation of Liability</h3>
                         <p>
@@ -138,6 +141,7 @@
                             pulvinar pharetra. In ut lacinia sem.
                         </p>
                     </div>
+                    <!-- /.single-content -->
                     <div class="single-content">
                         <h3>05. Accounts, Passwords and Security</h3>
                         <p>
@@ -164,8 +168,13 @@
                             pulvinar pharetra. In ut lacinia sem.
                         </p>
                     </div>
+                    <!-- /.single-content -->
                 </div>
+                <!-- /.col -->
             </div>
+            <!-- /.row -->
         </div>
+        <!-- /.container -->
     </div>
+    <!-- /.terms-conditions-area -->
 </main>

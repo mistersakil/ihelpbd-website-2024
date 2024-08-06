@@ -12,6 +12,7 @@
                         <div class="right"><i class="flaticon-phone-call-1"></i></div>
                     </div>
                 </div>
+                <!-- /.col -->
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-contact-two">
                         <div class="icon"><i class="flaticon-email"></i></div>
@@ -24,6 +25,7 @@
                         <div class="right"><i class="flaticon-email"></i></div>
                     </div>
                 </div>
+                <!-- /.col -->
                 <div class="col-lg-4 col-md-7">
                     <div class="footer-contact-two">
                         <div class="icon"><i class="flaticon-pin"></i></div>
@@ -35,11 +37,14 @@
                         <div class="right"><i class="flaticon-pin"></i></div>
                     </div>
                 </div>
+                <!-- /.col -->
             </div>
+            <!-- /.row -->
         </div>
+        <!-- /.footer-top-two -->
         <div class="footer-middel pt-100 pb-70">
             <div class="row">
-                <div class="col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-6">
                     <div class="footer-widget">
                         <div class="footer-logo">
                             <a href="index.html">
@@ -48,8 +53,7 @@
                         </div>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
-                            gravida. Risus commodo viverra maecenas
+                            incididunt ut labore et dolore magna aliqua.
                         </p>
                         <ul class="social-link">
                             <li>
@@ -75,23 +79,19 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-2 col-sm-6">
+                <!-- /.col -->
+                <div class="col-lg-3 col-md-6">
                     <div class="footer-widget ps-5">
-                        <h3>Useful Links</h3>
+                        <h3>{{ __('useful links') }}</h3>
                         <ul class="footer-list">
                             <li>
-                                <a href="index.html" target="_blank">
-                                    Home
+                                <a wire:navigate href="{{ route('web.home') }}">
+                                    {{ __('home') }}
                                 </a>
                             </li>
                             <li>
-                                <a href="about.html" target="_blank">
-                                    About Us
-                                </a>
-                            </li>
-                            <li>
-                                <a href="how-works.html" target="_blank">
-                                    How It Works
+                                <a wire:navigate href="{{ route('web.about') }}">
+                                    {{ __('about us') }}
                                 </a>
                             </li>
                             <li>
@@ -107,58 +107,75 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-2 col-sm-6">
+                <!-- /.col -->
+                <div class="col-lg-3 col-md-6">
                     <div class="footer-widget ps-3">
-                        <h3>Quick Links</h3>
+                        <h3>{{ __('quick links') }}</h3>
                         <ul class="footer-list">
                             <li>
-                                <a href="blog-1.html" target="_blank">
-                                    Blog
+                                <a wire:navigate href="{{ route('web.solutions') }}">
+                                    {{ __('solutions') }}
                                 </a>
                             </li>
                             <li>
-                                <a href="blog-details.html" target="_blank">
-                                    Blog Details
+                                <a wire:navigate href="{{ route('web.products') }}">
+                                    {{ __('products') }}
                                 </a>
                             </li>
                             <li>
-                                <a href="testimonials.html" target="_blank">
-                                    Testimonials
+                                <a wire:navigate href="{{ route('web.blogs') }}">
+                                    {{ __('blogs') }}
                                 </a>
                             </li>
                             <li>
-                                <a href="contact.html" target="_blank">
-                                    Contact Us
+                                <a wire:navigate href="{{ route('web.contact') }}">
+                                    {{ __('contact') }}
                                 </a>
                             </li>
-                            <li>
-                                <a href="service-1.html" target="_blank">
-                                    Services
-                                </a>
-                            </li>
+
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
+                <!-- /.col -->
+
+                <div class="col-lg-3 col-md-6">
                     <div class="footer-widget ps-2">
-                        <h3>Newsletter</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices </p>
-                        <div class="newsletter-area">
-                            <form class="newsletter-form" data-toggle="validator" method="POST">
-                                <input type="email" class="form-control" placeholder="Enter Your Email" name="EMAIL"
-                                    required autocomplete="off">
-                                <button class="subscribe-btn" type="submit">
-                                    <i class="bx bx-paper-plane"></i>
-                                </button>
-                                <div id="validator-newsletter" class="form-result"></div>
-                            </form>
+                        <h3>{{ __('contact us') }}</h3>
+                        <div class="work-content">
+                            <div class="content">
+                                <p>+88 01672-063705</p>
+                                <div class="number">
+                                    <i class="{{ _icons('phone2') }}"></i>
+                                </div>
+                            </div>
+                            <!-- /.content -->
+                            <div class="content">
+                                <p>info@ihelpkl.com</p>
+                                <div class="number">
+                                    <i class="{{ _icons('email') }}"></i>
+                                </div>
+                            </div>
+                            <!-- /.content -->
+                            <div class="content">
+                                <p>House-1, Road-15 (New), 28 (Old), Dhanmondi, Dhaka, Bangladesh</p>
+                                <div class="number">
+                                    <i class="{{ _icons('location') }}"></i>
+                                </div>
+                            </div>
+                            <!-- /.content -->
                         </div>
+                        <!-- /.work-content -->
                     </div>
+                    <!-- /.footer-widget -->
                 </div>
+                <!-- /.col -->
             </div>
+            <!-- /.row -->
         </div>
+        <!-- /.footer-middel -->
     </div>
+    <!-- /.container -->
+
     <div class="copyright-area">
         <div class="container">
             <div class="copy-right-text text-center">
@@ -168,5 +185,7 @@
                 </p>
             </div>
         </div>
+        <!-- /.container -->
     </div>
+    <!-- /.copyright-area -->
 </footer>
