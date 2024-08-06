@@ -4,10 +4,12 @@
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-contact-two">
-                        <div class="icon"><i class="flaticon-phone-call-1"></i></div>
+                        <div class="icon">
+                            <i class="{{ _icons('phone') }}"></i>
+                        </div>
                         <div class="content">
-                            <h3><a href="tel:+8801720092787">+8801720092787</a></h3>
-                            <p> Give us a call </p>
+                            <h3><a href="tel:{{ __('brand number') }}">{{ __('brand number') }}</a></h3>
+                            <p> {{ __('give us a call') }} </p>
                         </div>
                         <div class="right"><i class="flaticon-phone-call-1"></i></div>
                     </div>
@@ -15,12 +17,14 @@
                 <!-- /.col -->
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-contact-two">
-                        <div class="icon"><i class="flaticon-email"></i></div>
+                        <div class="icon">
+                            <i class="{{ _icons('email') }}"></i>
+                        </div>
                         <div class="content">
                             <h3>
-                                <a href="mailto:webmaster@example.com">info@ihelpbd.com</a>
+                                <a href="mailto:{{ __('brand email') }}">{{ __('brand email') }}</a>
                             </h3>
-                            <p> Drop us a line</p>
+                            <p>{{ __('drop us a line') }}</p>
                         </div>
                         <div class="right"><i class="flaticon-email"></i></div>
                     </div>
@@ -28,11 +32,15 @@
                 <!-- /.col -->
                 <div class="col-lg-4 col-md-7">
                     <div class="footer-contact-two">
-                        <div class="icon"><i class="flaticon-pin"></i></div>
+                        <div class="icon">
+                            <i class="{{ _icons('email') }}"></i>
+                        </div>
                         <div class="content">
-                            <h3><a href="https://goo.gl/maps/uNmtNyknSA3gBH198" target="_blank">58 ut Sunset road
-                                    East Block</a></h3>
-                            <p> Location</p>
+                            <h3>
+                                <a href="https://goo.gl/maps/uNmtNyknSA3gBH198" target="_blank">
+                                    {{ __('brand address') }}
+                                </a>
+                            </h3>
                         </div>
                         <div class="right"><i class="flaticon-pin"></i></div>
                     </div>
@@ -47,7 +55,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-widget">
                         <div class="footer-logo">
-                            <a href="index.html">
+                            <a wire:navigate href="{{ route('web.home') }}">
                                 <img src="{{ Vite::asset('resources/images/logo.png') }}" alt="Images">
                             </a>
                         </div>
