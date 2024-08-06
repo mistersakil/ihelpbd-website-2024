@@ -17,13 +17,6 @@ class WhyChooseUsSection extends Component
     public string $isShowSectionHeader;
     public int $limit;
 
-    ## Services
-    // private ProductService $productService;
-
-    public function boot()
-    {
-        // $this->productService = new ProductService;
-    }
 
     /**
      * Create a new component instance.
