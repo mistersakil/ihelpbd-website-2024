@@ -95,7 +95,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="privacy-policy.html" target="_blank">
+                                <a wire:navigate href="{{ route('web.privacy.policy') }}">
                                     Privacy Policy
                                 </a>
                             </li>
