@@ -1,9 +1,7 @@
 <?php
 
-use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Application;
-use App\Http\Middleware\AdminLocaleMiddleware;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
