@@ -114,6 +114,7 @@
     "brand email": "info@ihelpkl.com",
     "brand number": "+88 01672-063705",
     "brand address": "House-1, Road-15 (New), 28 (Old), Dhanmondi, Dhaka, Bangladesh",
+    "brand address short": "Dhanmondi, Dhaka, Bangladesh",
     "brand copyright text": "Copyright @ 2024. All rights reserved by",
     "drop us a line": "Drop us a line",
     "give us a call": "Give us a call",
@@ -121,5 +122,7 @@
     "page not found": "Page not found",
     "oops page not found": "Oops! Page Not Found",
     "the page you are looking for might have been removed": "The page you are looking for might have been removed had its name changed or is temporarily unavailable",
-    "return to home page": "Return to home page"
+    "return to home page": "Return to home page",
+    "office hours time": "Sat to Thu: 8:00 AM - 9:00 PM",
+    "get a free estimate": "Get a free estimate"
 }

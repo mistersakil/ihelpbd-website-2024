@@ -33,7 +33,7 @@
                 <div class="col-lg-4 col-md-7">
                     <div class="footer-contact-two">
                         <div class="icon">
-                            <i class="{{ _icons('email') }}"></i>
+                            <i class="{{ _icons('location') }}"></i>
                         </div>
                         <div class="content">
                             <h3>

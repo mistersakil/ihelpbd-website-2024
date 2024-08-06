@@ -114,6 +114,7 @@
     "brand email": "info@ihelpkl.com",
     "brand number": "+৮৮ ০১৬৭২-০৬৩৭০৫",
     "brand address": "বাড়ি-১, রোড-১৫ (নতুন), ২৮ (পুরাতন), ধানমন্ডি, ঢাকা, বাংলাদেশ",
+    "brand address short": "ধানমন্ডি, ঢাকা, বাংলাদেশ",
     "brand copyright text": "কপিরাইট @ ২০২৪. সর্বস্বত্ব সংরক্ষিত",
     "drop us a line": "আমাদের উদ্দেশ্যে লিখুন",
     "give us a call": "আমাদের কল করুন",
@@ -121,5 +122,7 @@
     "page not found": "পেজ পাওয়া যায়নি",
     "oops page not found": "উফ! পেজ পাওয়া যায়নি",
     "the page you are looking for might have been removed": "আপনি যে পেজটি খুঁজছেন তা সরানো হয়েছে বা এর নাম পরিবর্তন করা হয়েছে বা সাময়িকভাবে বন্ধ আছে",
-    "return to home page": "হোমপেজে ফিরে যান"
+    "return to home page": "হোমপেজে ফিরে যান",
+    "office hours time": "শনি থেকে বৃহস্পতি: ৮:০০ এম - ৯:০০ পিএম",
+    "get a free estimate": "বিনামূল্যে মূল্যবিচার পান"
 }
