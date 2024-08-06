@@ -54,7 +54,7 @@
 
                         <li class="nav-item">
                             <a wire:navigate href="{{ route('web.contact') }}" class="nav-link">
-                                {{ __('contact us') }}
+                                {{ __('contact') }}
                             </a>
                         </li>
                         <!-- /.nav-item -->

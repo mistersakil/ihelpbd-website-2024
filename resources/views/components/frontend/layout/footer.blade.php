@@ -143,21 +143,21 @@
                         <h3>{{ __('contact us') }}</h3>
                         <div class="work-content">
                             <div class="content">
-                                <p>+88 01672-063705</p>
+                                <p>{{ __('brand number') }}</p>
                                 <div class="number">
                                     <i class="{{ _icons('phone2') }}"></i>
                                 </div>
                             </div>
                             <!-- /.content -->
                             <div class="content">
-                                <p>info@ihelpkl.com</p>
+                                <p>{{ __('brand email') }}</p>
                                 <div class="number">
                                     <i class="{{ _icons('email') }}"></i>
                                 </div>
                             </div>
                             <!-- /.content -->
                             <div class="content">
-                                <p>House-1, Road-15 (New), 28 (Old), Dhanmondi, Dhaka, Bangladesh</p>
+                                <p>{{ __('brand address') }}</p>
                                 <div class="number">
                                     <i class="{{ _icons('location') }}"></i>
                                 </div>
@@ -180,7 +180,7 @@
         <div class="container">
             <div class="copy-right-text text-center">
                 <p>
-                    {{ __('copyright') }} @ {{ date('Y') }}. {{ __('all rights reserved by') }}
+                    {{ __('brand copyright text') }}
                     <a href="https://ihelpbd.com/" target="_blank">iHelpBD</a>
                 </p>
             </div>

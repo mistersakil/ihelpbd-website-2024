@@ -5,7 +5,7 @@
                 <div class="contact-card">
                     <i class="{{ _icons('phone') }}"></i>
                     <h3>{{ __('phone number') }}</h3>
-                    <p><a href="tel:+8256-569-887">+88 01672-063705</a></p>
+                    <p><a href="tel:{{ __('brand number') }}">{{ __('brand number') }}</a></p>
                 </div>
             </div>
             <!-- /.col -->
@@ -13,7 +13,7 @@
                 <div class="contact-card">
                     <i class="{{ _icons('email') }}"></i>
                     <h3>{{ __('email address') }}</h3>
-                    <p><a href="mailto:hello@vconn.com">info@ihelpkl.com</a></p>
+                    <p><a href="mailto:hello@vconn.com">{{ __('brand email') }}</a></p>
                 </div>
             </div>
             <!-- /.col -->
@@ -21,8 +21,7 @@
                 <div class="contact-card">
                     <i class="{{ _icons('location') }}"></i>
                     <h3>{{ __('address') }}</h3>
-                    <p>House-1, Road-15 (New), 28 (Old), Dhanmondi,
-                        Dhaka, Bangladesh</p>
+                    <p>{{ __('brand address') }}</p>
                 </div>
             </div>
             <!-- /.col -->
