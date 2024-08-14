@@ -1,10 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Frontend\Clear\Clear;
 use App\Livewire\Backend\Auth\LoginPage;
 use App\Livewire\Frontend\Home\HomePage;
-use App\Livewire\Frontend\About\AboutPage;
 
+use App\Livewire\Frontend\About\AboutPage;
 use App\Http\Middleware\AuthCheckMiddleware;
 use App\Livewire\Frontend\Blogs\BlogListPage;
 use App\Http\Middleware\AdminLocaleMiddleware;
@@ -33,6 +34,7 @@ Route::name('web.')->middleware([AdminLocaleMiddleware::class])->group(function 
     Route::get('/privacy-policy', PrivacyPolicyPage::class)->name('privacy.policy');
     Route::get('/terms-conditions', TermsConditionPage::class)->name('terms.conditions');
     Route::get('/404', FourZeroFourPage::class)->name('four.zero.four');
+    Route::get('/clear/cache', Clear::class);
 });
 
 ## Backend middleware group
