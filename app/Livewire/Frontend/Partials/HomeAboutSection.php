@@ -11,20 +11,23 @@ use Illuminate\Contracts\View\View;
 class HomeAboutSection extends Component
 {
     ## Component props
-    public array $dataList;
-    public string $sectionTitle;
-    public string $sectionSubTitle;
-    public string $isShowSectionHeader;
-    public int $limit;
+    public string $title;
+    public string $subTitle;
+    public array $items;
+    public string $img;
 
-    ## Services
-    // private SolutionService $solutionService;
-
-    public function boot()
+    /**
+     * Create a new component instance.
+     * @param array $item 
+     * @return void
+     */
+    public function mount(array $item = []): void
     {
-        // $this->solutionService = new SolutionService;
+        $this->title = isset($item['title']) ? __($item['title']) : '';
+        $this->subTitle = isset($item['subTitle']) ? __($item['subTitle']) : '';
+        $this->items = isset($item['items']) ? $item['items'] : [];
+        $this->img = isset($item['img']) ? $item['img'] : '';
     }
-
 
     /**
      * Render view

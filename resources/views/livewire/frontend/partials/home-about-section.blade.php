@@ -3,41 +3,31 @@
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-6">
                 <div class="about-img-two">
-                    <img src="{{ Vite::imageWeb('about-img2.jpg') }}" alt="About Images">
+                    @if ($img)
+                        <img src="{{ $img }}" alt="About Images">
+                    @endif
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="about-content pl-20">
                     <div class="section-title">
-                        <span class="sp-title2">Why Choose iHelp?</span>
-                        <h2>Our Business is Your life Making Easier & Comfortable</h2>
+                        @if ($title)
+                            <span class="sp-title2">{{ $title }}</span>
+                        @endif
+                        @if ($subTitle)
+                            <h2>{{ $subTitle }}</h2>
+                        @endif
                     </div>
-                    <ul class="about-list">
-                        <li>
-                            <i class='bx bxs-right-arrow-alt'></i>
-                            Customized, cost-effective solutions
-                        </li>
-                        <li>
-                            <i class='bx bxs-right-arrow-alt'></i>
-                            Aerfectly aligned with your budget and preference
-                        </li>
-                        <li>
-                            <i class='bx bxs-right-arrow-alt'></i>
-                            We excel in delivering dedicated development teams
-                        </li>
-                        <li>
-                            <i class='bx bxs-right-arrow-alt'></i>
-                            Our focus on nurturing long-term business relationships
-                        </li>
-                        <li>
-                            <i class='bx bxs-right-arrow-alt'></i>
-                            Aimed at driving tangible business outcomes
-                        </li>
-                        <li>
-                            <i class='bx bxs-right-arrow-alt'></i>
-                            Dedicated development teams is committed to crafting innovative solutions
-                        </li>
-                    </ul>
+                    @if (count($items))
+                        <ul class="about-list">
+                            @foreach ($items as $item)
+                                <li>
+                                    <i class="{{ _icons('arrow_right') }}"></i>
+                                    {{ ucfirst($item) }}
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
                 </div>
             </div>
         </div>

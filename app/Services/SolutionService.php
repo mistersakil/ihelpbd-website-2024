@@ -18,7 +18,7 @@ class SolutionService
         $dataList = [
             [
                 'title' => 'Content Writing',
-                'sub_title' => 'solution one sub title',
+                'subTitle' => 'solution one sub title',
                 'slug' => route('web.solutions.details', ['slug' => 'solution-one']),
                 'body' => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis necessitatibus quod, maiores sequi earum rem odit nostrum inventore accusantium dolor assumenda quisquam. Itaque ab a maiores veritatis repellendus reprehenderit blanditiis!",
                 'img_featured' => Vite::imageWeb('services-large1.jpg'),
@@ -26,19 +26,24 @@ class SolutionService
 
                 'about' => [
                     'title' => 'about us',
-                    'sub_title' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis necessitatibus quod',
+                    'subTitle' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit',
+                    'img' => Vite::imageWeb('about-img2.jpg'),
                     'items' => [
-                        'point number one',
-                        'point number two',
-                        'point number three',
-                        'point number four',
-                        'point number five',
+                        'point number one. point number one. point number one. ',
+                        'point number two. point number two. point number two',
+                        'point number three. point number three. point number three',
+                        'point number four. point number four. point number four',
+                        'point number five. point number five. point number five',
+                        'point number six. point number six. point number six',
+                        'point number seven. point number seven. point number seven',
+                        'point number eight. point number eight. point number eight',
+                        'point number nine. point number nine. point number nine',
                     ]
                 ],
 
                 'projects' => [
                     'title' => 'projects',
-                    'sub_title' => 'our recent projects',
+                    'subTitle' => 'our recent projects',
                     'items' => [
                         [
                             'heading' => 'heading one',
@@ -59,7 +64,7 @@ class SolutionService
                 ],
                 'services' => [
                     'title' => 'services',
-                    'sub_title' => 'our valuable services',
+                    'subTitle' => 'our valuable services',
                     'items' => [
                         [
                             'heading' => 'heading one',
