@@ -48,7 +48,6 @@ class SolutionsSection extends Component
      *
      * @return  \Illuminate\Contracts\View\View
      */
-
     public function render(): View
     {
         $this->dataList = $this->solutionService->getStaticModels();

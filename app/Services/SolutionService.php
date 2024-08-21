@@ -23,41 +23,63 @@ class SolutionService
                 'body' => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis necessitatibus quod, maiores sequi earum rem odit nostrum inventore accusantium dolor assumenda quisquam. Itaque ab a maiores veritatis repellendus reprehenderit blanditiis!",
                 'img_featured' => Vite::imageWeb('services-large1.jpg'),
                 'img_gallery' => Vite::imageWeb('project-img6.jpg'),
-            ],
-            [
-                'title' => 'Project Management',
-                'sub_title' => 'solution two sub title',
-                'slug' => route('web.solutions.details', ['slug' => 'solution-two']),
-                'body' => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis necessitatibus quod, maiores sequi earum rem odit nostrum inventore accusantium dolor assumenda quisquam. Itaque ab a maiores veritatis repellendus reprehenderit blanditiis!",
-                'img_featured' => Vite::imageWeb('services-large2.jpg'),
-                'img_gallery' => Vite::imageWeb('project-img6.jpg'),
-            ],
-            [
-                'title' => 'Contact Center Solution',
-                'sub_title' => 'solution three sub title',
-                'slug' => route('web.solutions.details', ['slug' => 'solution-three']),
-                'body' => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis necessitatibus quod, maiores sequi earum rem odit nostrum inventore accusantium dolor assumenda quisquam. Itaque ab a maiores veritatis repellendus reprehenderit blanditiis!",
-                'img_featured' => Vite::imageWeb('services-large3.jpg'),
-                'img_gallery' => Vite::imageWeb('project-img6.jpg'),
+
+                'about' => [
+                    'title' => 'about us',
+                    'sub_title' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis necessitatibus quod',
+                    'items' => [
+                        'point number one',
+                        'point number two',
+                        'point number three',
+                        'point number four',
+                        'point number five',
+                    ]
+                ],
+
+                'projects' => [
+                    'title' => 'projects',
+                    'sub_title' => 'our recent projects',
+                    'items' => [
+                        [
+                            'heading' => 'heading one',
+                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni',
+                            'img' =>  Vite::imageWeb('services-large1.jpg'),
+                        ],
+                        [
+                            'heading' => 'heading tow',
+                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni',
+                            'img' =>  Vite::imageWeb('services-large1.jpg'),
+                        ],
+                        [
+                            'heading' => 'heading three',
+                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni',
+                            'img' =>  Vite::imageWeb('services-large1.jpg'),
+                        ]
+                    ]
+                ],
+                'services' => [
+                    'title' => 'services',
+                    'sub_title' => 'our valuable services',
+                    'items' => [
+                        [
+                            'heading' => 'heading one',
+                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni',
+                            'img' =>  Vite::imageWeb('services-large1.jpg'),
+                        ],
+                        [
+                            'heading' => 'heading tow',
+                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni',
+                            'img' =>  Vite::imageWeb('services-large1.jpg'),
+                        ],
+                        [
+                            'heading' => 'heading three',
+                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni',
+                            'img' =>  Vite::imageWeb('services-large1.jpg'),
+                        ]
+                    ]
+                ]
             ],
 
-            [
-                'title' => 'Social Media Marketing',
-                'sub_title' => 'solution four sub title',
-                'slug' => route('web.solutions.details', ['slug' => 'solution-four']),
-                'body' => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis necessitatibus quod, maiores sequi earum rem odit nostrum inventore accusantium dolor assumenda quisquam. Itaque ab a maiores veritatis repellendus reprehenderit blanditiis!",
-                'img_featured' => Vite::imageWeb('services-large1.jpg'),
-                'img_gallery' => Vite::imageWeb('project-img6.jpg'),
-            ],
-
-            [
-                'title' => 'Omni Channel',
-                'sub_title' => 'solution five sub title',
-                'slug' => route('web.solutions.details', ['slug' => 'solution-five']),
-                'body' => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis necessitatibus quod, maiores sequi earum rem odit nostrum inventore accusantium dolor assumenda quisquam. Itaque ab a maiores veritatis repellendus reprehenderit blanditiis!",
-                'img_featured' => Vite::imageWeb('services-large1.jpg'),
-                'img_gallery' => Vite::imageWeb('project-img6.jpg'),
-            ],
 
         ];
 
