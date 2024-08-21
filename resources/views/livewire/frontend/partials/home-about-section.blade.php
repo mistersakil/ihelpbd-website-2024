@@ -8,6 +8,7 @@
                     @endif
                 </div>
             </div>
+            <!-- /.col-->
             <div class="col-lg-6">
                 <div class="about-content pl-20">
                     <div class="section-title">
@@ -27,9 +28,14 @@
                                 </li>
                             @endforeach
                         </ul>
+                        <!-- /.about-list -->
                     @endif
                 </div>
+                <!-- /.about-content -->
             </div>
+            <!-- /.col-->
         </div>
+        <!-- /.row-->
     </div>
+    <!-- /.container-->
 </div>
