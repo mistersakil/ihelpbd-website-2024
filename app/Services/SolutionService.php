@@ -69,17 +69,17 @@ class SolutionService
                         [
                             'heading' => 'heading one',
                             'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni',
-                            'img' =>  Vite::imageWeb('project-style1.jpg'),
+                            'icon' =>  _icons('headset'),
                         ],
                         [
                             'heading' => 'heading tow',
                             'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni',
-                            'img' =>  Vite::imageWeb('project-style2.jpg'),
+                            'icon' =>  _icons('resume'),
                         ],
                         [
                             'heading' => 'heading three',
                             'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni',
-                            'img' =>  Vite::imageWeb('project-style3.jpg'),
+                            'icon' =>  _icons('user_gear'),
                         ]
                     ]
                 ]
