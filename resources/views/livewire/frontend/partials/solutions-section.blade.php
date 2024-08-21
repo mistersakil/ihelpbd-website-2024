@@ -2,8 +2,14 @@
 
     <div class="container">
         <div class="section-title text-center ">
-            <span class="sp-title">{{ $sectionTitle }}</span>
-            <h2>{{ $sectionSubTitle }}</h2>
+            <div class="section-title text-center">
+                @if (isset($sectionTitle))
+                    <span class="sp-title2">{{ $sectionTitle }}</span>
+                @endif
+                @if (isset($sectionSubTitle))
+                    <h2>{{ $sectionSubTitle }}</h2>
+                @endif
+            </div>
         </div>
         <!-- /.section-title -->
 

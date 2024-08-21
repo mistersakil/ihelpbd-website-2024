@@ -82,6 +82,27 @@ class SolutionService
                             'icon' =>  _icons('database_lock'),
                         ]
                     ]
+                ],
+                'faqs' => [
+                    'title' => 'query',
+                    'subTitle' => "Faq's on this topic",
+                    'items' => [
+                        [
+                            'heading' => 'Integrated Data Management',
+                            'body' => 'IHELP CRM centralizes customer data across business chains, offering a unified view for personalized engagement and data-driven decisions.',
+                            'icon' =>  _icons('database_gear'),
+                        ],
+                        [
+                            'heading' => 'Real-Time Integration',
+                            'body' => 'Real-time integration allows seamless data flow across branches, providing an up-to-date view of customer activity. This empowers businesses to respond quickly to customer needs and market changes.',
+                            'icon' =>  _icons('realtime'),
+                        ],
+                        [
+                            'heading' => 'Data Security and Compliances',
+                            'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
+                            'icon' =>  _icons('database_lock'),
+                        ]
+                    ]
                 ]
             ],
 

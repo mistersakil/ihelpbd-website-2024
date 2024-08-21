@@ -1,13 +1,12 @@
 <div class="project-area-two pt-100 pb-70">
     <div class="container">
         <div class="section-title text-center">
-            @if ($title)
+            @if (isset($title))
                 <span class="sp-title2">{{ $title }}</span>
             @endif
-            @if ($subTitle)
+            @if (isset($subTitle))
                 <h2>{{ $subTitle }}</h2>
             @endif
-
         </div>
         <!-- /.section-title -->
 

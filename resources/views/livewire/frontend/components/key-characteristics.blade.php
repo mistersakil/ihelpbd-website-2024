@@ -1,14 +1,16 @@
-<div class="why-area pt-100 pb-70">
+<div class="why-area pt-45 pb-45">
     <div class="container">
+
         <div class="section-title text-center">
-            @if ($title)
+            @if (isset($title))
                 <span class="sp-title2">{{ $title }}</span>
             @endif
-            @if ($subTitle)
+            @if (isset($subTitle))
                 <h2>{{ $subTitle }}</h2>
             @endif
         </div>
         <!-- /.section-title -->
+
         <div class="row pt-45 justify-content-center">
             @if (count($items))
                 @foreach ($items as $item)

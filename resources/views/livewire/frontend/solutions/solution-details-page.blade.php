@@ -12,6 +12,9 @@
     @if (array_key_exists('characteristics', $itemDetails))
         <livewire:frontend.components.key-characteristics :item="$itemDetails['characteristics']" />
     @endif
+    @if (array_key_exists('faqs', $itemDetails))
+        <livewire:frontend.components.faq-list :item="$itemDetails['faqs']" />
+    @endif
 
 
 </main>
