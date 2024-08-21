@@ -1,5 +1,4 @@
 <main>
-    {{-- @dump($itemDetails) --}}
     <x-slot:innerBanner>
         <x-frontend.layout.inner-banner :metaTitle="$metaTitle" :module="$module" />
     </x-slot:innerBanner>
@@ -10,8 +9,8 @@
     @if (array_key_exists('projects', $itemDetails))
         <livewire:frontend.partials.home-projects :item="$itemDetails['projects']" />
     @endif
-    @if (array_key_exists('services', $itemDetails))
-        <livewire:frontend.components.key-characteristics :item="$itemDetails['services']" />
+    @if (array_key_exists('characteristics', $itemDetails))
+        <livewire:frontend.components.key-characteristics :item="$itemDetails['characteristics']" />
     @endif
 
 

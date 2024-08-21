@@ -30,6 +30,7 @@ if (!function_exists('_icons')) {
     function _icons(string $icon_name = 'user', bool $all = false)
     {
         $icon_list = [
+            'activity'                  => 'bi bi-activity',
             'about'                     => 'bi bi-person-badge',
             'activity_log'              => 'bi bi-clock-history',
             'add'                       => 'bi bi-plus-lg',
@@ -57,6 +58,9 @@ if (!function_exists('_icons')) {
             'delete'                    => 'bi bi-trash3',
             'delete_all'                => 'bi bi-trash2',
             'document'                  => 'bi bi-journals',
+            'database'                  => 'bi bi-database',
+            'database_gear'                  => 'bi bi-database-gear',
+            'database_lock'             => 'bi bi-database-lock',
             'email'                     => 'bi bi-envelope',
             'edit'                      => 'bi bi-pen',
             'example'                   => 'bi bi-example',
@@ -94,6 +98,7 @@ if (!function_exists('_icons')) {
             'reset'                     => 'bi bi-arrow-repeat',
             'remove'                    => 'bi bi-x-lg',
             'reports'                   => 'bi bi-graph-up-arrow',
+            'realtime'                   => 'bi bi-graph-up',
             'save'                      => 'bi bi-save2',
             'save2'                     => 'bi bi-check2-circle',
             'save3'                     => 'bi bi-check-lg',
