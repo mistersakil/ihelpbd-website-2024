@@ -10,6 +10,26 @@ use Illuminate\Contracts\View\View;
  */
 class HomeProjects extends Component
 {
+    ## Component props
+    public string $title;
+    public string $subTitle;
+    public array $items;
+    public string $img;
+
+    /**
+     * Create a new component instance.
+     * @param array $item 
+     * @return void
+     */
+    public function mount(array $item = []): void
+    {
+        $this->title = isset($item['title']) ? __($item['title']) : '';
+        $this->subTitle = isset($item['subTitle']) ? __($item['subTitle']) : '';
+        $this->items = isset($item['items']) ? $item['items'] : [];
+        $this->img = isset($item['img']) ? $item['img'] : '';
+    }
+
+
     /**
      * Render view
      *

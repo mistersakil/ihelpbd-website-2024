@@ -47,18 +47,18 @@ class SolutionService
                     'items' => [
                         [
                             'heading' => 'heading one',
-                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni',
-                            'img' =>  Vite::imageWeb('services-large1.jpg'),
+                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'img' =>  Vite::imageWeb('project-style1.jpg'),
                         ],
                         [
                             'heading' => 'heading tow',
-                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni',
-                            'img' =>  Vite::imageWeb('services-large1.jpg'),
+                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'img' =>  Vite::imageWeb('project-style2.jpg'),
                         ],
                         [
                             'heading' => 'heading three',
-                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni',
-                            'img' =>  Vite::imageWeb('services-large1.jpg'),
+                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'img' =>  Vite::imageWeb('project-style3.jpg'),
                         ]
                     ]
                 ],
@@ -69,17 +69,17 @@ class SolutionService
                         [
                             'heading' => 'heading one',
                             'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni',
-                            'img' =>  Vite::imageWeb('services-large1.jpg'),
+                            'img' =>  Vite::imageWeb('project-style1.jpg'),
                         ],
                         [
                             'heading' => 'heading tow',
                             'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni',
-                            'img' =>  Vite::imageWeb('services-large1.jpg'),
+                            'img' =>  Vite::imageWeb('project-style2.jpg'),
                         ],
                         [
                             'heading' => 'heading three',
                             'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni',
-                            'img' =>  Vite::imageWeb('services-large1.jpg'),
+                            'img' =>  Vite::imageWeb('project-style3.jpg'),
                         ]
                     ]
                 ]
