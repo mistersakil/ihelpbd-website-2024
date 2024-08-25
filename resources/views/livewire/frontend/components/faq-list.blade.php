@@ -26,45 +26,6 @@
                                 </p>
                             </div>
                         </li>
-                        <li class="accordion-item">
-                            <a class="accordion-title" href="javascript:void(0)">
-                                <i class="bx bx-plus"></i>
-                                How Can We Track Progress?
-                            </a>
-                            <div class="accordion-content" style="display: none;">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod,
-                                    orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="accordion-item">
-                            <a class="accordion-title" href="javascript:void(0)">
-                                <i class="bx bx-plus"></i>
-                                Do You Offer Any Progress Reports?
-                            </a>
-                            <div class="accordion-content">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod,
-                                    orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="accordion-item">
-                            <a class="accordion-title " href="javascript:void(0)">
-                                <i class="bx bx-plus"></i>
-                                Do You Have Dedicated Support Staff? 00
-                            </a>
-                            <div class="accordion-content" style="display: block;">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod,
-                                    orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.
-                                </p>
-                            </div>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -77,45 +38,6 @@
                                 How Do You Recruit Virtual Assistants?
                             </a>
                             <div class="accordion-content" style="display: none;">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod,
-                                    orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="accordion-item">
-                            <a class="accordion-title" href="javascript:void(0)">
-                                <i class="bx bx-plus"></i>
-                                How Can We Track Progress?
-                            </a>
-                            <div class="accordion-content" style="display: none;">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod,
-                                    orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="accordion-item">
-                            <a class="accordion-title" href="javascript:void(0)">
-                                <i class="bx bx-plus"></i>
-                                Do You Offer Any Progress Reports?
-                            </a>
-                            <div class="accordion-content">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod,
-                                    orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="accordion-item">
-                            <a class="accordion-title" href="javascript:void(0)">
-                                <i class="bx bx-plus"></i>
-                                Do You Have Dedicated Support Staff?
-                            </a>
-                            <div class="accordion-content">
                                 <p>
                                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod,
                                     orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam

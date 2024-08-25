@@ -85,7 +85,7 @@ class SolutionService
                 ],
                 'faqs' => [
                     'title' => 'query',
-                    'subTitle' => "Faq's on this topic",
+                    'subTitle' => "Learn more",
                     'items' => [
                         [
                             'heading' => 'Integrated Data Management',
