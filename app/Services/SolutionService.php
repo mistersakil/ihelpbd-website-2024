@@ -18,15 +18,15 @@ class SolutionService
         $dataList = [
             [
                 'title' => 'Content Writing',
-                'subTitle' => 'solution one sub title',
+                'subTitle' => 'Solution one sub title',
                 'slug' => route('web.solutions.details', ['slug' => 'solution-one']),
                 'body' => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis necessitatibus quod, maiores sequi earum rem odit nostrum inventore accusantium dolor assumenda quisquam. Itaque ab a maiores veritatis repellendus reprehenderit blanditiis!",
                 'img_featured' => Vite::imageWeb('services-large1.jpg'),
                 'img_gallery' => Vite::imageWeb('project-img6.jpg'),
 
                 'about' => [
-                    'title' => 'about us',
-                    'subTitle' => 'Lorem ipsum dolor sit, amet consectetur adipisicing elit',
+                    'title' => 'About us',
+                    'subTitle' => 'Solution one about section subtitle',
                     'img' => Vite::imageWeb('about-img2.jpg'),
                     'items' => [
                         'point number one. point number one. point number one. ',
@@ -42,8 +42,8 @@ class SolutionService
                 ],
 
                 'projects' => [
-                    'title' => 'projects',
-                    'subTitle' => 'our recent projects',
+                    'title' => 'Projects',
+                    'subTitle' => 'Our recent projects',
                     'items' => [
                         [
                             'heading' => 'heading one',
@@ -63,7 +63,7 @@ class SolutionService
                     ]
                 ],
                 'characteristics' => [
-                    'title' => 'how we feel',
+                    'title' => 'How we feel',
                     'subTitle' => 'Unified Success',
                     'items' => [
                         [
