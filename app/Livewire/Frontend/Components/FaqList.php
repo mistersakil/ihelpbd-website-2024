@@ -4,6 +4,7 @@ namespace App\Livewire\Frontend\Components;
 
 use Livewire\Component;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Collection;
 
 /**
  * @author Sakil Jomadder <sakil.diu.cse@gmail.com>
@@ -13,7 +14,7 @@ class FaqList extends Component
     ## Component props
     public string $title;
     public string $subTitle;
-    public array $items;
+    public Collection $items;
 
     /**
      * Create a new component instance.
@@ -24,7 +25,7 @@ class FaqList extends Component
     {
         $this->title = isset($item['title']) ? __($item['title']) : '';
         $this->subTitle = isset($item['subTitle']) ? __($item['subTitle']) : '';
-        $this->items = isset($item['items']) ? $item['items'] : [];
+        $this->items = isset($item['items']) ? collect($item['items']) : [];
     }
 
     /**

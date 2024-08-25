@@ -9,45 +9,38 @@
             @endif
         </div>
         <!-- /.section-title -->
-        <div class="row pt-45 ">
-            <div class="col-lg-6">
-                <div class="faq-accordion">
-                    <ul class="accordion">
-                        <li class="accordion-item">
-                            <a class="accordion-title active" href="javascript:void(0)">
-                                <i class="bx bx-plus"></i>
-                                How Do You Recruit Virtual Assistants?
-                            </a>
-                            <div class="accordion-content show">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod,
-                                    orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+        @if ($items->count())
+            <div class="row pt-45">
+                @foreach ($items->chunk(2) as $chunk)
+                    <div class="col-lg-6">
+                        <div class="faq-accordion">
+                            <ul class="accordion">
+                                @foreach ($chunk as $item)
+                                    <li class="accordion-item">
+                                        <a class="accordion-title {{ $loop->first && $loop->parent->first ? 'active' : '' }}"
+                                            href="javascript:void(0)">
+                                            <i class="bx bx-plus"></i>
+                                            {{ $item['heading'] }}
+                                        </a>
+                                        <div
+                                            class="accordion-content {{ $loop->first && $loop->parent->first ? 'show' : '' }}">
+                                            <p>
+                                                {{ $item['body'] }}
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <!-- /.accordion-item -->
+                                @endforeach
+                            </ul>
+                            <!-- /.accordion -->
+                        </div>
+                        <!-- /.faq-accordion -->
+                    </div>
+                    <!-- /.col -->
+                @endforeach
             </div>
-            <div class="col-lg-6">
-                <div class="faq-accordion">
-                    <ul class="accordion">
-                        <li class="accordion-item">
-                            <a class="accordion-title" href="javascript:void(0)">
-                                <i class="bx bx-plus"></i>
-                                How Do You Recruit Virtual Assistants?
-                            </a>
-                            <div class="accordion-content" style="display: none;">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod,
-                                    orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+            <!-- /.row -->
+        @endif
     </div>
+    <!-- /.container -->
 </div>
