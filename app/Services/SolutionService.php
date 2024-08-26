@@ -27,7 +27,7 @@ class SolutionService
                 'about' => [
                     'title' => 'About us',
                     'subTitle' => 'Solution one about section subtitle',
-                    'img' => Vite::imageWeb('about-img2.jpg'),
+                    'img' => Vite::imageWeb('service-details2.jpg'),
                     'items' => [
                         'point number one. point number one. point number one. ',
                         'point number two. point number two. point number two',
@@ -104,9 +104,21 @@ class SolutionService
                             'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
                         ]
                     ]
+                ],
+                'benefits' => [
+                    'title' => 'CRM Benefits',
+                    'subTitle' => "Learn more",
+                    'items' => [
+                        [
+                            'Boost sales and customer satisfaction',
+                            'Streamline operations, cut costs',
+                            'Make data-driven decisions.',
+                            'Improve team collaboration.',
+                        ],
+                    ]
+
                 ]
             ],
-
 
         ];
 
