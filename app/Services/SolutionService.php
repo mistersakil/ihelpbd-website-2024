@@ -27,7 +27,7 @@ class SolutionService
                 'about' => [
                     'title' => 'About us',
                     'subTitle' => 'Solution one about section subtitle',
-                    'img' => Vite::imageWeb('service-details2.jpg'),
+                    'img' => Vite::imageWeb('service-img1.jpg'),
                     'items' => [
                         'point number one. point number one. point number one. ',
                         'point number two. point number two. point number two',
@@ -105,17 +105,34 @@ class SolutionService
                         ]
                     ]
                 ],
-                'benefits' => [
-                    'title' => 'CRM Benefits',
-                    'subTitle' => "Learn more",
-                    'items' => [
-                        [
+                'articles' => [
+                    [
+                        'title' => 'CRM Benefits',
+                        'subTitle' => "Learn more",
+                        'img' => Vite::imageWeb('project-img4.jpg'),
+                        'items' => [
+
                             'Boost sales and customer satisfaction',
                             'Streamline operations, cut costs',
                             'Make data-driven decisions.',
                             'Improve team collaboration.',
-                        ],
+
+                        ]
+                    ],
+                    [
+                        'title' => 'Cloud CRM Advantages',
+                        'subTitle' => "Learn more",
+                        'img' => Vite::imageWeb('project-img5.jpg'),
+                        'items' => [
+
+                            'Boost sales and customer satisfaction',
+                            'Streamline operations, cut costs',
+                            'Make data-driven decisions.',
+                            'Improve team collaboration.',
+
+                        ]
                     ]
+
 
                 ]
             ],
