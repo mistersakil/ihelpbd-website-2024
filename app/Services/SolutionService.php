@@ -373,7 +373,6 @@ class SolutionService
                         ]
                     ]
 
-
                 ]
             ],
 
