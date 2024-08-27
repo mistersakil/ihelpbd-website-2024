@@ -8,9 +8,6 @@ use Illuminate\Contracts\View\View;
 class ArticleSectionOne extends Component
 {
     ## Component props
-    // public string $title;
-    // public string $subTitle;
-    // public string $img;
     public array $items;
 
     /**
@@ -20,9 +17,6 @@ class ArticleSectionOne extends Component
      */
     public function mount(array $items = []): void
     {
-        // $this->title = isset($item['title']) ? __($item['title']) : '';
-        // $this->subTitle = isset($item['subTitle']) ? __($item['subTitle']) : '';
-        // $this->img = isset($item['img']) ? $item['img'] : '';
         $this->items = isset($items) ? $items : [];
     }
 

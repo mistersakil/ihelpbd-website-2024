@@ -46,7 +46,7 @@
                                         <!-- /.col -->
                                         <div class="col-lg-6">
                                             <div class="services-tab-content pl-20">
-                                                <h2>{{ ucwords($data['sub_title']) }}</h2>
+                                                <h2>{{ ucwords($data['subTitle']) }}</h2>
                                                 <p>
                                                     {{ ucwords($data['body']) }}
                                                 </p>
