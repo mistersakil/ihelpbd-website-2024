@@ -17,8 +17,9 @@
                     <div class="row">
                         <div class="col-lg-6 col-sm-6">
                             <div class="choose-card">
-                                <h3>Top Customer Service</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+                                <h3>Your Budget, Your Way</h3>
+                                <p>Our collaboration models have been refined to deliver customized, cost-effective
+                                    solutions.</p>
                                 <i class="{{ _icons('headset') }}"></i>
                                 <div class="circle"></div>
                             </div>
@@ -26,31 +27,40 @@
                         <!-- /.col -->
                         <div class="col-lg-6 col-sm-6">
                             <div class="choose-card">
-                                <h3>Highly Personalized</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+                                <h3>Dedicated Teams</h3>
+                                <p>We excel in delivering dedicated development teams by centering our efforts on your
+                                    unique business.
+                                </p>
                                 <i class="{{ _icons('document') }}"></i>
                                 <div class="circle"></div>
                             </div>
                         </div>
                         <!-- /.col -->
+
                         <div class="col-lg-6 col-sm-6">
                             <div class="choose-card">
-                                <h3>Passionate Talent</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
-                                <i class="{{ _icons('user_heart') }}"></i>
-                                <div class="circle"></div>
-                            </div>
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-lg-6 col-sm-6">
-                            <div class="choose-card">
-                                <h3>Quick Response Team</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+                                <h3>Long-Term Partnerships</h3>
+                                <p>Our focus on nurturing long-term business relationships is evident in our
+                                    consistently high client retention rate.
+                                </p>
                                 <i class="{{ _icons('watch') }}"></i>
                                 <div class="circle"></div>
                             </div>
                         </div>
                         <!-- /.col -->
+
+                        <div class="col-lg-6 col-sm-6">
+                            <div class="choose-card">
+                                <h3>Innovation Driven Results
+                                </h3>
+                                <p>Each of our dedicated development teams is committed to crafting innovative
+                                    solutions.</p>
+                                <i class="{{ _icons('user_heart') }}"></i>
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                        <!-- /.col -->
+
                     </div>
                     <!-- /.row -->
                     <div class="choose-bg">

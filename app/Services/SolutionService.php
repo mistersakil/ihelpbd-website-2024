@@ -17,7 +17,7 @@ class SolutionService
     {
         $dataList = [
             [
-                'title' => 'Content Writing',
+                'title' => 'Web Development',
                 'subTitle' => 'Solution one sub title',
                 'slug' => route('web.solutions.details', ['slug' => 'solution-one']),
                 'body' => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis necessitatibus quod, maiores sequi earum rem odit nostrum inventore accusantium dolor assumenda quisquam. Itaque ab a maiores veritatis repellendus reprehenderit blanditiis!",
@@ -137,58 +137,54 @@ class SolutionService
                 ]
             ],
             [
-                'title' => 'Project Management',
+                'title' => 'Custom CRM Development',
                 'subTitle' => 'Project Management sub title',
-                'slug' => route('web.solutions.details', ['slug' => 'solution-tow']),
+                'slug' => route('web.solutions.details', ['slug' => 'crm']),
                 'body' => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis necessitatibus quod, maiores sequi earum rem odit nostrum inventore accusantium dolor assumenda quisquam. Itaque ab a maiores veritatis repellendus reprehenderit blanditiis!",
                 'img_featured' => Vite::imageWeb('services-large1.jpg'),
                 'img_gallery' => Vite::imageWeb('project-img6.jpg'),
 
                 'about' => [
-                    'title' => 'About Project Management',
-                    'subTitle' => 'Project Management section subtitle',
+                    'title' => '',
+                    'subTitle' => 'Discover the Power of CRM Platform',
                     'img' => Vite::imageWeb('service-img1.jpg'),
                     'items' => [
-                        'point number one. point number one. point number one. ',
-                        'point number two. point number two. point number two',
-                        'point number three. point number three. point number three',
-                        'point number four. point number four. point number four',
-                        'point number five. point number five. point number five',
-                        'point number six. point number six. point number six',
-                        'point number seven. point number seven. point number seven',
-                        'point number eight. point number eight. point number eight',
-                        'point number nine. point number nine. point number nine',
+                        'Maximize Customer Value with an Exceptional CRM Platform',
+                        'Maintaining customer relationships through diligent tracking of interactions',
+                        'A Vital Asset for Every Business to Excel in Customer Relations',
+                        'Make informed decisions with real-time data',
+                        'Effortless Integration with Your Existing Platforms',
                     ]
                 ],
 
                 'projects' => [
                     'title' => 'Projects',
-                    'subTitle' => 'Our recent projects',
+                    'subTitle' => 'Boost Your Business with IHELP CRM',
                     'items' => [
                         [
-                            'heading' => 'heading one',
-                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'heading' => '',
+                            'body' => 'Experience smarter customer relationship management across multiple chains with our CRM system, delivering real-time insights for informed business decisions and personalized customer interactions',
                             'img' =>  Vite::imageWeb('project-style1.jpg'),
                         ],
                         [
-                            'heading' => 'heading tow',
-                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'heading' => '',
+                            'body' => 'Simplify your operations with our IHELP CRM. Centralize data, automate tasks, and uncover customer trends for efficient, sustainable growth',
                             'img' =>  Vite::imageWeb('project-style2.jpg'),
                         ],
                         [
-                            'heading' => 'heading three',
-                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'heading' => '',
+                            'body' => "In a world of constant change, your CRM shouldn't be one of them. Our flexible IHELP solution is built for growth",
                             'img' =>  Vite::imageWeb('project-style3.jpg'),
                         ]
                     ]
                 ],
                 'characteristics' => [
                     'title' => 'How we feel',
-                    'subTitle' => 'Unified Success',
+                    'subTitle' => 'CRM Key Concept',
                     'items' => [
                         [
                             'heading' => 'Integrated Data Management',
-                            'body' => 'IHELP CRM centralizes customer data across business chains, offering a unified view for personalized engagement and data-driven decisions.',
+                            'body' => 'IHELP CRM centralizes customer data across business chains, offering a unified view for personalized engagement and data-driven decisions',
                             'icon' =>  _icons('database_gear'),
                         ],
                         [
@@ -257,7 +253,7 @@ class SolutionService
                 ]
             ],
             [
-                'title' => 'Social Media Marketing',
+                'title' => 'Application integration',
                 'subTitle' => 'Social Media Marketing sub title',
                 'slug' => route('web.solutions.details', ['slug' => 'solution-three']),
                 'body' => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis necessitatibus quod, maiores sequi earum rem odit nostrum inventore accusantium dolor assumenda quisquam. Itaque ab a maiores veritatis repellendus reprehenderit blanditiis!",

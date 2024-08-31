@@ -1,6 +1,6 @@
 <main>
     <x-slot:innerBanner>
-        <x-frontend.layout.inner-banner :metaTitle="$metaTitle" :module="$module" />
+        {{-- <x-frontend.layout.inner-banner :metaTitle="$metaTitle" :module="$module" /> --}}
     </x-slot:innerBanner>
 
     @if (array_key_exists('about', $itemDetails))
@@ -13,7 +13,7 @@
         <livewire:frontend.components.key-characteristics :item="$itemDetails['characteristics']" />
     @endif
 
-    @if (array_key_exists('faqs', $itemDetails))
+    @if (array_key_exists('articles', $itemDetails))
         <livewire:frontend.components.article-section-one :items="$itemDetails['articles']" />
     @endif
 

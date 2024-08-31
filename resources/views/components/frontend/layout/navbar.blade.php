@@ -12,7 +12,7 @@
         </div>
     </div>
 
-    <div class="desktop-nav nav-area desktop-nav-one">
+    <div class="desktop-nav nav-area desktop-nav-one" style="background: #f85f0a42;">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-md navbar-light ">
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">

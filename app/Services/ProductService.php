@@ -53,47 +53,41 @@ class ProductService
     {
         $dataList = [
             [
-                'title' => 'product one',
+                'title' => 'CRM',
                 'slug' => route('web.products.details', ['slug' => 'product-one']),
-                'body' => "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+                'body' => "Discover the Power of CRM Platform",
                 'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
                 'img_thumb' => Vite::imageWeb('project-img6.jpg'),
             ],
             [
-                'title' => 'product two',
+                'title' => 'Complain Management System',
                 'slug' => route('web.products.details', ['slug' => 'product-two']),
                 'body' => "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
                 'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
                 'img_thumb' => Vite::imageWeb('project-img5.jpg')
             ],
             [
-                'title' => 'product three',
+                'title' => 'Task Management',
                 'slug' => route('web.products.details', ['slug' => 'product-three']),
                 'body' => "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
                 'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
                 'img_thumb' => Vite::imageWeb('project-img4.jpg')
             ],
             [
-                'title' => 'product four',
-                'slug' => route('web.products.details', ['slug' => 'product-four']),
+                'title' => 'Omni-channel Contact Center',
+                'slug' => route('web.products.details', ['slug' => 'product-three']),
                 'body' => "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
                 'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
-                'img_thumb' => Vite::imageWeb('project-img3.jpg')
+                'img_thumb' => Vite::imageWeb('project-img4.jpg')
             ],
             [
-                'title' => 'product five',
-                'slug' => route('web.products.details', ['slug' => 'product-five']),
+                'title' => 'Account Management Solution',
+                'slug' => route('web.products.details', ['slug' => 'product-three']),
                 'body' => "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
                 'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
-                'img_thumb' => Vite::imageWeb('project-img2.jpg')
+                'img_thumb' => Vite::imageWeb('project-img5.jpg')
             ],
-            [
-                'title' => 'product six',
-                'slug' => route('web.products.details', ['slug' => 'product-six']),
-                'body' => "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-                'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
-                'img_thumb' => Vite::imageWeb('project-img1.jpg')
-            ],
+
         ];
 
         if (!empty($slug)) {

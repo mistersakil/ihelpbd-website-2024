@@ -17,13 +17,11 @@
                             <ul class="accordion">
                                 @foreach ($chunk as $item)
                                     <li class="accordion-item">
-                                        <a class="accordion-title {{ $loop->first && $loop->parent->first ? 'active' : '' }}"
-                                            href="javascript:void(0)">
+                                        <a class="accordion-title " href="javascript:void(0)">
                                             <i class="bx bx-plus"></i>
                                             {{ $item['heading'] }}
                                         </a>
-                                        <div
-                                            class="accordion-content {{ $loop->first && $loop->parent->first ? 'show' : '' }}">
+                                        <div class="accordion-content ">
                                             <p>
                                                 {{ $item['body'] }}
                                             </p>

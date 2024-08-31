@@ -6,15 +6,15 @@
                     <div class="service-article">
                         <div class="service-article-another">
                             <div class="row align-items-center">
-                                <div class="col-lg-5 col-md-6">
+                                {{-- <div class="col-lg-5 col-md-6">
                                     <div class="service-article-img">
                                         @if (isset($item['img']))
                                             <img src="{{ $item['img'] }}" alt="About Images">
                                         @endif
                                     </div>
-                                </div>
+                                </div> --}}
                                 <!-- /.col -->
-                                <div class="col-lg-7 col-md-6">
+                                <div class="col-lg-6 offset-md-3">
                                     <div class="services-content-list">
                                         @if (isset($item['title']))
                                             <h3>{{ $item['title'] }}</h3>
