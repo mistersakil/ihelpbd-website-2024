@@ -53,10 +53,10 @@ class ProductService
     {
         $dataList = [
             [
-                'title' => 'CRM',
-                'subTitle' => 'Discover the Power of CRM Platform',
+                'title' => 'Complain Management System',
+                'subTitle' => 'Discover the Power of Complain Management System',
                 'slug' => route('web.products.details', ['slug' => 'crm']),
-                'body' => "Discover the Power of CRM Platform",
+                'body' => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae animi laudantium ab vel dolores sed perferendis maiores soluta eum, amet voluptatibus, quidem necessitatibus tempore suscipit. Praesentium doloribus aperiam deserunt accusamus?",
                 'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
                 'img_thumb' => Vite::imageWeb('project-img6.jpg'),
                 'keyPoints' => [
@@ -162,6 +162,334 @@ class ProductService
 
             ],
 
+            [
+                'title' => 'Task Management',
+                'subTitle' => 'Discover the Power of Task Management',
+                'slug' => route('web.products.details', ['slug' => 'crm']),
+                'body' => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui modi doloribus exercitationem sit, asperiores quod obcaecati placeat sequi. Illo repudiandae doloremque, atque dolor harum cum pariatur nobis vitae quidem libero?",
+                'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
+                'img_thumb' => Vite::imageWeb('project-img6.jpg'),
+                'keyPoints' => [
+                    'Maximize Customer Value with an Exceptional CRM Platform',
+                    'Maintaining customer relationships through diligent tracking of interactions',
+                    'A Vital Asset for Every Business to Excel in Customer Relations',
+                    'Make informed decisions with real-time data',
+                    'Effortless Integration with Your Existing Platforms',
+                ],
+
+                'projects' => [
+                    'title' => 'Projects',
+                    'subTitle' => 'Our recent projects',
+                    'items' => [
+                        [
+                            'heading' => 'heading one',
+                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'img' =>  Vite::imageWeb('project-style1.jpg'),
+                        ],
+                        [
+                            'heading' => 'heading tow',
+                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'img' =>  Vite::imageWeb('project-style2.jpg'),
+                        ],
+                        [
+                            'heading' => 'heading three',
+                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'img' =>  Vite::imageWeb('project-style3.jpg'),
+                        ]
+                    ]
+                ],
+                'characteristics' => [
+                    'title' => 'How we feel',
+                    'subTitle' => 'Unified Success',
+                    'items' => [
+                        [
+                            'heading' => 'Integrated Data Management',
+                            'body' => 'IHELP CRM centralizes customer data across business chains, offering a unified view for personalized engagement and data-driven decisions.',
+                            'icon' =>  _icons('database_gear'),
+                        ],
+                        [
+                            'heading' => 'Real-Time Integration',
+                            'body' => 'Real-time integration allows seamless data flow across branches, providing an up-to-date view of customer activity. This empowers businesses to respond quickly to customer needs and market changes.',
+                            'icon' =>  _icons('realtime'),
+                        ],
+                        [
+                            'heading' => 'Data Security and Compliances',
+                            'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
+                            'icon' =>  _icons('database_lock'),
+                        ]
+                    ]
+                ],
+                'faqs' => [
+                    'title' => 'FAQ',
+                    'subTitle' => "Learn more",
+                    'items' => [
+                        [
+                            'heading' => 'Integrated Data Management',
+                            'body' => 'IHELP CRM centralizes customer data across business chains, offering a unified view for personalized engagement and data-driven decisions.',
+                        ],
+                        [
+                            'heading' => 'Real-Time Integration',
+                            'body' => 'Real-time integration allows seamless data flow across branches, providing an up-to-date view of customer activity. This empowers businesses to respond quickly to customer needs and market changes.',
+                        ],
+                        [
+                            'heading' => 'Data Security and Compliances',
+                            'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
+                        ],
+                        [
+                            'heading' => 'Data Security and Compliances two',
+                            'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
+                        ]
+                    ]
+                ],
+                'articles' => [
+                    [
+                        'title' => 'CRM Benefits',
+                        'subTitle' => "Learn more",
+                        'img' => Vite::imageWeb('project-img4.jpg'),
+                        'items' => [
+
+                            'Boost sales and customer satisfaction',
+                            'Streamline operations, cut costs',
+                            'Make data-driven decisions.',
+                            'Improve team collaboration.',
+
+                        ]
+                    ],
+                    [
+                        'title' => 'Cloud CRM Advantages',
+                        'subTitle' => "Learn more",
+                        'img' => Vite::imageWeb('project-img5.jpg'),
+                        'items' => [
+
+                            'Boost sales and customer satisfaction',
+                            'Streamline operations, cut costs',
+                            'Make data-driven decisions.',
+                            'Improve team collaboration.',
+
+                        ]
+                    ]
+                ]
+
+            ],
+
+            [
+                'title' => 'Omni-channel Contact Center',
+                'subTitle' => 'Discover the Power of Omni-channel Contact Center',
+                'slug' => route('web.products.details', ['slug' => 'crm']),
+                'body' => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui modi doloribus exercitationem sit, asperiores quod obcaecati placeat sequi. Illo repudiandae doloremque, atque dolor harum cum pariatur nobis vitae quidem libero?",
+                'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
+                'img_thumb' => Vite::imageWeb('project-img6.jpg'),
+                'keyPoints' => [
+                    'Maximize Customer Value with an Exceptional CRM Platform',
+                    'Maintaining customer relationships through diligent tracking of interactions',
+                    'A Vital Asset for Every Business to Excel in Customer Relations',
+                    'Make informed decisions with real-time data',
+                    'Effortless Integration with Your Existing Platforms',
+                ],
+
+                'projects' => [
+                    'title' => 'Projects',
+                    'subTitle' => 'Our recent projects',
+                    'items' => [
+                        [
+                            'heading' => 'heading one',
+                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'img' =>  Vite::imageWeb('project-style1.jpg'),
+                        ],
+                        [
+                            'heading' => 'heading tow',
+                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'img' =>  Vite::imageWeb('project-style2.jpg'),
+                        ],
+                        [
+                            'heading' => 'heading three',
+                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'img' =>  Vite::imageWeb('project-style3.jpg'),
+                        ]
+                    ]
+                ],
+                'characteristics' => [
+                    'title' => 'How we feel',
+                    'subTitle' => 'Unified Success',
+                    'items' => [
+                        [
+                            'heading' => 'Integrated Data Management',
+                            'body' => 'IHELP CRM centralizes customer data across business chains, offering a unified view for personalized engagement and data-driven decisions.',
+                            'icon' =>  _icons('database_gear'),
+                        ],
+                        [
+                            'heading' => 'Real-Time Integration',
+                            'body' => 'Real-time integration allows seamless data flow across branches, providing an up-to-date view of customer activity. This empowers businesses to respond quickly to customer needs and market changes.',
+                            'icon' =>  _icons('realtime'),
+                        ],
+                        [
+                            'heading' => 'Data Security and Compliances',
+                            'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
+                            'icon' =>  _icons('database_lock'),
+                        ]
+                    ]
+                ],
+                'faqs' => [
+                    'title' => 'FAQ',
+                    'subTitle' => "Learn more",
+                    'items' => [
+                        [
+                            'heading' => 'Integrated Data Management',
+                            'body' => 'IHELP CRM centralizes customer data across business chains, offering a unified view for personalized engagement and data-driven decisions.',
+                        ],
+                        [
+                            'heading' => 'Real-Time Integration',
+                            'body' => 'Real-time integration allows seamless data flow across branches, providing an up-to-date view of customer activity. This empowers businesses to respond quickly to customer needs and market changes.',
+                        ],
+                        [
+                            'heading' => 'Data Security and Compliances',
+                            'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
+                        ],
+                        [
+                            'heading' => 'Data Security and Compliances two',
+                            'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
+                        ]
+                    ]
+                ],
+                'articles' => [
+                    [
+                        'title' => 'CRM Benefits',
+                        'subTitle' => "Learn more",
+                        'img' => Vite::imageWeb('project-img4.jpg'),
+                        'items' => [
+
+                            'Boost sales and customer satisfaction',
+                            'Streamline operations, cut costs',
+                            'Make data-driven decisions.',
+                            'Improve team collaboration.',
+
+                        ]
+                    ],
+                    [
+                        'title' => 'Cloud CRM Advantages',
+                        'subTitle' => "Learn more",
+                        'img' => Vite::imageWeb('project-img5.jpg'),
+                        'items' => [
+
+                            'Boost sales and customer satisfaction',
+                            'Streamline operations, cut costs',
+                            'Make data-driven decisions.',
+                            'Improve team collaboration.',
+
+                        ]
+                    ]
+                ]
+
+            ],
+            [
+                'title' => 'Account Management Solution',
+                'subTitle' => 'Discover the Power of Account Management Solution',
+                'slug' => route('web.products.details', ['slug' => 'crm']),
+                'body' => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui modi doloribus exercitationem sit, asperiores quod obcaecati placeat sequi. Illo repudiandae doloremque, atque dolor harum cum pariatur nobis vitae quidem libero?",
+                'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
+                'img_thumb' => Vite::imageWeb('project-img6.jpg'),
+                'keyPoints' => [
+                    'Maximize Customer Value with an Exceptional CRM Platform',
+                    'Maintaining customer relationships through diligent tracking of interactions',
+                    'A Vital Asset for Every Business to Excel in Customer Relations',
+                    'Make informed decisions with real-time data',
+                    'Effortless Integration with Your Existing Platforms',
+                ],
+
+                'projects' => [
+                    'title' => 'Projects',
+                    'subTitle' => 'Our recent projects',
+                    'items' => [
+                        [
+                            'heading' => 'heading one',
+                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'img' =>  Vite::imageWeb('project-style1.jpg'),
+                        ],
+                        [
+                            'heading' => 'heading tow',
+                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'img' =>  Vite::imageWeb('project-style2.jpg'),
+                        ],
+                        [
+                            'heading' => 'heading three',
+                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'img' =>  Vite::imageWeb('project-style3.jpg'),
+                        ]
+                    ]
+                ],
+                'characteristics' => [
+                    'title' => 'How we feel',
+                    'subTitle' => 'Unified Success',
+                    'items' => [
+                        [
+                            'heading' => 'Integrated Data Management',
+                            'body' => 'IHELP CRM centralizes customer data across business chains, offering a unified view for personalized engagement and data-driven decisions.',
+                            'icon' =>  _icons('database_gear'),
+                        ],
+                        [
+                            'heading' => 'Real-Time Integration',
+                            'body' => 'Real-time integration allows seamless data flow across branches, providing an up-to-date view of customer activity. This empowers businesses to respond quickly to customer needs and market changes.',
+                            'icon' =>  _icons('realtime'),
+                        ],
+                        [
+                            'heading' => 'Data Security and Compliances',
+                            'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
+                            'icon' =>  _icons('database_lock'),
+                        ]
+                    ]
+                ],
+                'faqs' => [
+                    'title' => 'FAQ',
+                    'subTitle' => "Learn more",
+                    'items' => [
+                        [
+                            'heading' => 'Integrated Data Management',
+                            'body' => 'IHELP CRM centralizes customer data across business chains, offering a unified view for personalized engagement and data-driven decisions.',
+                        ],
+                        [
+                            'heading' => 'Real-Time Integration',
+                            'body' => 'Real-time integration allows seamless data flow across branches, providing an up-to-date view of customer activity. This empowers businesses to respond quickly to customer needs and market changes.',
+                        ],
+                        [
+                            'heading' => 'Data Security and Compliances',
+                            'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
+                        ],
+                        [
+                            'heading' => 'Data Security and Compliances two',
+                            'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
+                        ]
+                    ]
+                ],
+                'articles' => [
+                    [
+                        'title' => 'CRM Benefits',
+                        'subTitle' => "Learn more",
+                        'img' => Vite::imageWeb('project-img4.jpg'),
+                        'items' => [
+
+                            'Boost sales and customer satisfaction',
+                            'Streamline operations, cut costs',
+                            'Make data-driven decisions.',
+                            'Improve team collaboration.',
+
+                        ]
+                    ],
+                    [
+                        'title' => 'Cloud CRM Advantages',
+                        'subTitle' => "Learn more",
+                        'img' => Vite::imageWeb('project-img5.jpg'),
+                        'items' => [
+
+                            'Boost sales and customer satisfaction',
+                            'Streamline operations, cut costs',
+                            'Make data-driven decisions.',
+                            'Improve team collaboration.',
+
+                        ]
+                    ]
+                ]
+
+            ],
 
         ];
 
