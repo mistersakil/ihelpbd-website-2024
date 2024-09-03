@@ -25,8 +25,8 @@ class HomeAboutSection extends Component
     {
         $this->title = isset($item['title']) ? __($item['title']) : '';
         $this->subTitle = isset($item['subTitle']) ? __($item['subTitle']) : '';
-        $this->items = isset($item['items']) ? $item['items'] : [];
-        $this->img = isset($item['img']) ? $item['img'] : '';
+        $this->items = isset($item['keyPoints']) ? $item['keyPoints'] : [];
+        $this->img = isset($item['img_thumb']) ? $item['img_thumb'] : '';
     }
 
     /**

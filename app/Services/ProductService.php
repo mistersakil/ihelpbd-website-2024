@@ -54,25 +54,17 @@ class ProductService
         $dataList = [
             [
                 'title' => 'CRM',
+                'subTitle' => 'Discover the Power of CRM Platform',
                 'slug' => route('web.products.details', ['slug' => 'product-one']),
                 'body' => "Discover the Power of CRM Platform",
                 'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
                 'img_thumb' => Vite::imageWeb('project-img6.jpg'),
-                'about' => [
-                    'title' => 'About us',
-                    'subTitle' => 'Solution one about section subtitle',
-                    'img' => Vite::imageWeb('service-img1.jpg'),
-                    'items' => [
-                        'point number one. point number one. point number one. ',
-                        'point number two. point number two. point number two',
-                        'point number three. point number three. point number three',
-                        'point number four. point number four. point number four',
-                        'point number five. point number five. point number five',
-                        'point number six. point number six. point number six',
-                        'point number seven. point number seven. point number seven',
-                        'point number eight. point number eight. point number eight',
-                        'point number nine. point number nine. point number nine',
-                    ]
+                'keyPoints' => [
+                    'Maximize Customer Value with an Exceptional CRM Platform',
+                    'Maintaining customer relationships through diligent tracking of interactions',
+                    'A Vital Asset for Every Business to Excel in Customer Relations',
+                    'Make informed decisions with real-time data',
+                    'Effortless Integration with Your Existing Platforms',
                 ],
 
                 'projects' => [
