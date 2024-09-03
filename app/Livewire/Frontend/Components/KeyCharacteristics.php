@@ -15,6 +15,7 @@ class KeyCharacteristics extends Component
     public string $subTitle;
     public array $items;
     public string $img;
+    public bool $isDisplaySection = true;
 
     /**
      * Create a new component instance.
@@ -23,10 +24,15 @@ class KeyCharacteristics extends Component
      */
     public function mount(array $item = []): void
     {
-        $this->title = isset($item['title']) ? __($item['title']) : '';
-        $this->subTitle = isset($item['subTitle']) ? __($item['subTitle']) : '';
-        $this->items = isset($item['items']) ? $item['items'] : [];
-        $this->img = isset($item['img']) ? $item['img'] : '';
+        if (!isset($item['characteristics'])) {
+            $this->isDisplaySection =  false;
+        } else {
+            $model = $item['characteristics'];
+        }
+        $this->title = isset($model['title']) ? __($model['title']) : '';
+        $this->subTitle = isset($model['subTitle']) ? __($model['subTitle']) : '';
+        $this->items = isset($model['items']) ? $model['items'] : [];
+        $this->img = isset($model['img']) ? $model['img'] : '';
     }
 
 

@@ -8,9 +8,9 @@
 
     <livewire:frontend.partials.home-projects :item="$itemDetails" />
 
-    @if (array_key_exists('characteristics', $itemDetails))
-        <livewire:frontend.components.key-characteristics :item="$itemDetails['characteristics']" />
-    @endif
+
+    <livewire:frontend.components.key-characteristics :item="$itemDetails" />
+
 
     @if (array_key_exists('articles', $itemDetails))
         <livewire:frontend.components.article-section-one :items="$itemDetails['articles']" />
