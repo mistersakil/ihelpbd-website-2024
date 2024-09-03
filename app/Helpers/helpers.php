@@ -84,6 +84,7 @@ if (!function_exists('_icons')) {
             'logout'                    => 'bi bi-box-arrow-right',
             'list'                      => 'bi bi-list-nested',
             'location'                  => 'bi bi-geo-alt-fill',
+            'instagram'                 => 'bi bi-instagram',
             'messages'                  => 'bi bi-chat-dots',
             'mobile'                    => 'bi bi-phone',
             'order_by'                  => 'bi bi-boxes',

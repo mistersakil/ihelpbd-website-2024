@@ -63,22 +63,22 @@
                         <ul class="social-link">
                             <li>
                                 <a href="https://www.facebook.com/" target="_blank">
-                                    <i class="bx bxl-facebook"></i>
+                                    <i class="icon {{ _icons('facebook') }}"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.linkedin.com/" target="_blank">
-                                    <i class="bx bxl-linkedin"></i>
+                                    <i class="icon {{ _icons('linkedin') }}"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.pinterest.com/" target="_blank">
-                                    <i class="bx bxl-pinterest-alt"></i>
+                                <a href="https://www.youtube.com/" target="_blank">
+                                    <i class="icon {{ _icons('youtube') }}"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.instagram.com/" target="_blank">
-                                    <i class="bx bxl-instagram"></i>
+                                    <i class="icon {{ _icons('instagram') }}"></i>
                                 </a>
                             </li>
                         </ul>

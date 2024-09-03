@@ -58,7 +58,7 @@ class ProductService
                 'slug' => route('web.products.details', ['slug' => 'crm']),
                 'body' => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae animi laudantium ab vel dolores sed perferendis maiores soluta eum, amet voluptatibus, quidem necessitatibus tempore suscipit. Praesentium doloribus aperiam deserunt accusamus?",
                 'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
-                'img_thumb' => Vite::imageWeb('project-img6.jpg'),
+                'img_thumb' => Vite::imageWeb('project-img3.jpg'),
                 'keyPoints' => [
                     'Maximize Customer Value with an Exceptional CRM Platform',
                     'Maintaining customer relationships through diligent tracking of interactions',
@@ -168,7 +168,7 @@ class ProductService
                 'slug' => route('web.products.details', ['slug' => 'crm']),
                 'body' => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui modi doloribus exercitationem sit, asperiores quod obcaecati placeat sequi. Illo repudiandae doloremque, atque dolor harum cum pariatur nobis vitae quidem libero?",
                 'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
-                'img_thumb' => Vite::imageWeb('project-img6.jpg'),
+                'img_thumb' => Vite::imageWeb('project-img4.jpg'),
                 'keyPoints' => [
                     'Maximize Customer Value with an Exceptional CRM Platform',
                     'Maintaining customer relationships through diligent tracking of interactions',
@@ -278,7 +278,7 @@ class ProductService
                 'slug' => route('web.products.details', ['slug' => 'crm']),
                 'body' => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui modi doloribus exercitationem sit, asperiores quod obcaecati placeat sequi. Illo repudiandae doloremque, atque dolor harum cum pariatur nobis vitae quidem libero?",
                 'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
-                'img_thumb' => Vite::imageWeb('project-img6.jpg'),
+                'img_thumb' => Vite::imageWeb('project-img5.jpg'),
                 'keyPoints' => [
                     'Maximize Customer Value with an Exceptional CRM Platform',
                     'Maintaining customer relationships through diligent tracking of interactions',

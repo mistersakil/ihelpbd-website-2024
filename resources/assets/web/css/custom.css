@@ -31,3 +31,12 @@
     width: 200px;
     margin-bottom: 20px;
 }
+
+.footer-widget .social-link li a i.icon {
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    display: inline-block;
+    text-transform: none;
+}
