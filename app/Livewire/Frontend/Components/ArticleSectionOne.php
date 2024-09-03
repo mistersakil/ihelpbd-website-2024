@@ -9,15 +9,19 @@ class ArticleSectionOne extends Component
 {
     ## Component props
     public array $items;
-
+    public bool $isDisplaySection = true;
     /**
      * Create a new component instance.
      * @param array $item 
      * @return void
      */
-    public function mount(array $items = []): void
+    public function mount(array $item = []): void
     {
-        $this->items = isset($items) ? $items : [];
+        if (!isset($item['articles']) && !is_array($item)) {
+            $this->isDisplaySection =  false;
+        } else {
+            $this->items = $item['articles'];
+        }
     }
 
     /**

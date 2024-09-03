@@ -15,6 +15,7 @@ class HomeProjects extends Component
     public string $subTitle;
     public array $items;
     public string $img;
+    public bool $isDisplaySection = true;
 
     /**
      * Create a new component instance.
@@ -23,7 +24,11 @@ class HomeProjects extends Component
      */
     public function mount(array $item = []): void
     {
-        $model = isset($item['projects']) ? $item['projects'] : [];
+        if (!isset($item['projects'])) {
+            $this->isDisplaySection =  false;
+        } else {
+            $model = $item['projects'];
+        }
         $this->title = isset($model['title']) ? __($model['title']) : '';
         $this->subTitle = isset($model['subTitle']) ? __($model['subTitle']) : '';
         $this->items = isset($model['items']) ? $model['items'] : [];
