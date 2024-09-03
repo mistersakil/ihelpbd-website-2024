@@ -4,7 +4,7 @@
             <div class="mobile-responsive-menu">
                 <div class="logo">
                     <a wire:navigate href="{{ route('web.home') }}">
-                        <img src="{{ Vite::asset('resources/images/logo.png') }}" class="logo-one" alt="Logo">
+                        <img src="{{ Vite::asset('resources/images/logo-dark.svg') }}" class="logo" alt="Logo">
 
                     </a>
                 </div>

@@ -56,13 +56,10 @@
                     <div class="footer-widget">
                         <div class="footer-logo">
                             <a wire:navigate href="{{ route('web.home') }}">
-                                <img src="{{ Vite::asset('resources/images/logo.png') }}" alt="Images">
+                                <img src="{{ Vite::asset('resources/images/logo.svg') }}" alt="Images"
+                                    class="logo_footer">
                             </a>
                         </div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua.
-                        </p>
                         <ul class="social-link">
                             <li>
                                 <a href="https://www.facebook.com/" target="_blank">

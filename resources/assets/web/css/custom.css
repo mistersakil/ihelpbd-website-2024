@@ -23,3 +23,11 @@
 .desktop-nav .navbar .navbar-nav .nav-item .dropdown-menu {
     z-index: 100;
 }
+.logo {
+    width: 120px;
+}
+
+.logo_footer {
+    width: 200px;
+    margin-bottom: 20px;
+}
