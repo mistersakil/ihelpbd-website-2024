@@ -4,19 +4,19 @@
             <div class="container">
                 <div class="row">
                     @foreach ($items as $item)
-                        <div class="col-6">
+                        <div class="col">
                             <div class="service-article">
                                 <div class="service-article-another">
                                     <div class="row align-items-center">
                                         {{-- <div class="col-lg-5 col-md-6">
-                                    <div class="service-article-img">
-                                        @if (isset($item['img']))
-                                            <img src="{{ $item['img'] }}" alt="About Images">
-                                        @endif
-                                    </div>
-                                </div> --}}
+                                            <div class="service-article-img">
+                                                @if (isset($item['img']))
+                                                    <img src="{{ $item['img'] }}" alt="About Images">
+                                                @endif
+                                            </div>
+                                        </div> --}}
                                         <!-- /.col -->
-                                        <div class="col-lg-6 offset-md-3">
+                                        <div class="col">
                                             <div class="services-content-list">
                                                 @if (isset($item['title']))
                                                     <h3>{{ $item['title'] }}</h3>

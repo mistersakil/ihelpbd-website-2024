@@ -164,17 +164,18 @@ class ProductService
 
             [
                 'title' => 'Task Management',
-                'subTitle' => 'Discover the Power of Task Management',
-                'slug' => route('web.products.details', ['slug' => 'crm']),
+                'subTitle' => 'The ultimate solution for task refinement and process improvement',
+                'slug' => route('web.products.details', ['slug' => 'task-management']),
                 'body' => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui modi doloribus exercitationem sit, asperiores quod obcaecati placeat sequi. Illo repudiandae doloremque, atque dolor harum cum pariatur nobis vitae quidem libero?",
                 'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
                 'img_thumb' => Vite::imageWeb('project-img4.jpg'),
                 'keyPoints' => [
-                    'Maximize Customer Value with an Exceptional CRM Platform',
-                    'Maintaining customer relationships through diligent tracking of interactions',
-                    'A Vital Asset for Every Business to Excel in Customer Relations',
-                    'Make informed decisions with real-time data',
-                    'Effortless Integration with Your Existing Platforms',
+                    'Align work with company objectives',
+                    'Automate processes across all departments',
+                    'Track progress and eliminate bottlenecks',
+                    'Enhance and regulate work order processes',
+                    'Automatically schedule job reminders and alerts',
+                    'Gather performance insights and reports',
                 ],
 
                 'projects' => [
@@ -182,41 +183,57 @@ class ProductService
                     'subTitle' => 'Our recent projects',
                     'items' => [
                         [
-                            'heading' => 'heading one',
-                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'heading' => '',
+                            'body' => 'AI-driven automated service management (AISM) capabilities allow for quicker, more accurate, and efficient delivery of service innovations',
                             'img' =>  Vite::imageWeb('project-style1.jpg'),
                         ],
                         [
-                            'heading' => 'heading tow',
-                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'heading' => '',
+                            'body' => 'Incoming calls, emails, and tickets can be automatically managed from a single platform',
                             'img' =>  Vite::imageWeb('project-style2.jpg'),
                         ],
                         [
-                            'heading' => 'heading three',
-                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'heading' => '',
+                            'body' => 'Simplify priorities with clear project alignment to strategic goals, manage multiple projects efficiently, and speed up progress with enhanced stakeholder visibility',
                             'img' =>  Vite::imageWeb('project-style3.jpg'),
                         ]
                     ]
                 ],
                 'characteristics' => [
-                    'title' => 'How we feel',
-                    'subTitle' => 'Unified Success',
+                    'title' => 'Unified Success',
+                    'subTitle' => 'Key Features',
                     'items' => [
                         [
-                            'heading' => 'Integrated Data Management',
-                            'body' => 'IHELP CRM centralizes customer data across business chains, offering a unified view for personalized engagement and data-driven decisions.',
-                            'icon' =>  _icons('database_gear'),
+                            'heading' => 'Plan',
+                            'body' => 'organize, and collaborate on any company objective using customizable task management tools tailored to meet diverse needs at every level',
+                            'icon' =>  _icons('plan'),
                         ],
                         [
-                            'heading' => 'Real-Time Integration',
-                            'body' => 'Real-time integration allows seamless data flow across branches, providing an up-to-date view of customer activity. This empowers businesses to respond quickly to customer needs and market changes.',
-                            'icon' =>  _icons('realtime'),
+                            'heading' => 'Docs',
+                            'body' => 'Outline business cases, define project scope, and document requirements to ensure everyone has the necessary information to keep work progressing smoothly',
+                            'icon' =>  _icons('docs'),
                         ],
                         [
-                            'heading' => 'Data Security and Compliances',
-                            'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
-                            'icon' =>  _icons('database_lock'),
+                            'heading' => 'Relationships',
+                            'body' => 'Connect tasks, documents, integrations, and more to access related resources and tasks in a centralized location',
+                            'icon' =>  _icons('relationship'),
+                        ],
+                        [
+                            'heading' => 'In-Depth Report Generation',
+                            'body' => 'Effortlessly generate reports on ticket progress, team performance, and issues using the reporting feature',
+                            'icon' =>  _icons('reports'),
+                        ],
+                        [
+                            'heading' => 'More focused on accountability',
+                            'body' => 'Monitor changes to ensure transparency and accountability',
+                            'icon' =>  _icons('focus'),
+                        ],
+                        [
+                            'heading' => 'Team Management & Assignment',
+                            'body' => 'Save time and skip meetings with digital job scheduling, ensuring each job includes all the necessary information',
+                            'icon' =>  _icons('users'),
                         ]
+
                     ]
                 ],
                 'faqs' => [
@@ -243,28 +260,30 @@ class ProductService
                 ],
                 'articles' => [
                     [
-                        'title' => 'CRM Benefits',
+                        'title' => 'Benefits',
                         'subTitle' => "Learn more",
                         'img' => Vite::imageWeb('project-img4.jpg'),
                         'items' => [
-
-                            'Boost sales and customer satisfaction',
-                            'Streamline operations, cut costs',
-                            'Make data-driven decisions.',
-                            'Improve team collaboration.',
-
+                            'Adjusting Timeliness',
+                            'Breaking down project ',
+                            'Track dependencies',
+                            'Archiving complete task',
+                            'Seeing history across all changes',
+                            'Custom filters',
                         ]
                     ],
                     [
-                        'title' => 'Cloud CRM Advantages',
+                        'title' => 'Advantages',
                         'subTitle' => "Learn more",
                         'img' => Vite::imageWeb('project-img5.jpg'),
                         'items' => [
+                            'Manage team',
+                            'Auto-scheduling',
+                            'Auto Notification',
+                            'Easily get access to your customers history and job records',
+                            'Client relationship maintaining via email, sms notification',
+                            'Lead Management',
 
-                            'Boost sales and customer satisfaction',
-                            'Streamline operations, cut costs',
-                            'Make data-driven decisions.',
-                            'Improve team collaboration.',
 
                         ]
                     ]
