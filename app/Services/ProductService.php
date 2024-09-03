@@ -54,17 +54,22 @@ class ProductService
         $dataList = [
             [
                 'title' => 'Complain Management System',
-                'subTitle' => 'Discover the Power of Complain Management System',
-                'slug' => route('web.products.details', ['slug' => 'crm']),
+                'subTitle' => 'All-in-one solution for help desk and customer service operations',
+                'slug' => route('web.products.details', ['slug' => 'complain-management']),
                 'body' => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae animi laudantium ab vel dolores sed perferendis maiores soluta eum, amet voluptatibus, quidem necessitatibus tempore suscipit. Praesentium doloribus aperiam deserunt accusamus?",
                 'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
                 'img_thumb' => Vite::imageWeb('project-img3.jpg'),
                 'keyPoints' => [
-                    'Maximize Customer Value with an Exceptional CRM Platform',
-                    'Maintaining customer relationships through diligent tracking of interactions',
-                    'A Vital Asset for Every Business to Excel in Customer Relations',
-                    'Make informed decisions with real-time data',
-                    'Effortless Integration with Your Existing Platforms',
+                    'Unified platform for managing all customer support interactions',
+                    'Streamlined workflows to enhance efficiency and response times',
+                    'Centralized knowledge base for easy information access',
+                    'Automated ticketing system to track and prioritize customer inquiries',
+                    'Integrations with other business tools for seamless workflows',
+                    'Reporting and analytics to measure performance and identify trends',
+                    'Scalable solution to meet growing customer needs',
+                    'Customer satisfaction metrics to assess customer happiness',
+                    '24/7 support for technical assistance and troubleshooting',
+                    'Customization options to tailor the software to specific requirements',
                 ],
 
                 'projects' => [
@@ -72,18 +77,18 @@ class ProductService
                     'subTitle' => 'Our recent projects',
                     'items' => [
                         [
-                            'heading' => 'heading one',
+                            'heading' => 'Simplified SLA Oversight',
                             'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
                             'img' =>  Vite::imageWeb('project-style1.jpg'),
                         ],
                         [
-                            'heading' => 'heading tow',
-                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'heading' => 'Automated Task Assignment',
+                            'body' => 'Let the system automatically delegate customer tickets to your team. Enhance efficiency with full end-to-end visibility',
                             'img' =>  Vite::imageWeb('project-style2.jpg'),
                         ],
                         [
-                            'heading' => 'heading three',
-                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'heading' => 'Automated Ticket Notifications',
+                            'body' => 'Receive instant alerts for active, unresponsive, or automatically completed tickets',
                             'img' =>  Vite::imageWeb('project-style3.jpg'),
                         ]
                     ]
@@ -93,19 +98,34 @@ class ProductService
                     'subTitle' => 'Unified Success',
                     'items' => [
                         [
-                            'heading' => 'Integrated Data Management',
-                            'body' => 'IHELP CRM centralizes customer data across business chains, offering a unified view for personalized engagement and data-driven decisions.',
-                            'icon' =>  _icons('database_gear'),
+                            'heading' => 'Ticket Tracking and Prioritization',
+                            'body' => 'Assess the urgency of each ticket to determine its priority, and assign it to the appropriate agents for efficient resolution',
+                            'icon' =>  _icons('tracking'),
                         ],
                         [
-                            'heading' => 'Real-Time Integration',
-                            'body' => 'Real-time integration allows seamless data flow across branches, providing an up-to-date view of customer activity. This empowers businesses to respond quickly to customer needs and market changes.',
-                            'icon' =>  _icons('realtime'),
+                            'heading' => 'Email and Phone Management',
+                            'body' => 'Record each customers email and phone number on the ticket for real-time tracking and efficient communication',
+                            'icon' =>  _icons('email'),
                         ],
                         [
-                            'heading' => 'Data Security and Compliances',
-                            'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
-                            'icon' =>  _icons('database_lock'),
+                            'heading' => 'Agent and Team Management',
+                            'body' => 'Clearly define the responsibilities of each team and agent to ensure that incoming tickets are directed to the appropriate agent for prompt resolution',
+                            'icon' =>  _icons('users'),
+                        ],
+                        [
+                            'heading' => 'Ticket Portal',
+                            'body' => 'Simplify the ticket submission process for your customers and enable them to track the progress of their tickets effortlessly',
+                            'icon' =>  _icons('portal'),
+                        ],
+                        [
+                            'heading' => 'Live Chat Support',
+                            'body' => 'Deliver exceptional customer service through direct interactions between the admin and the customer, ensuring immediate assistance and support',
+                            'icon' =>  _icons('live_chat'),
+                        ],
+                        [
+                            'heading' => 'In-Depth Report Generation',
+                            'body' => 'Effortlessly generate reports on ticket progress, team performance, and issues using the reporting feature',
+                            'icon' =>  _icons('reports'),
                         ]
                     ]
                 ],
@@ -133,28 +153,35 @@ class ProductService
                 ],
                 'articles' => [
                     [
-                        'title' => 'CRM Benefits',
+                        'title' => 'Benefits',
                         'subTitle' => "Learn more",
                         'img' => Vite::imageWeb('project-img4.jpg'),
                         'items' => [
+                            'Automated Ticket Assignment: Automatically route tickets to the appropriate agent or team',
+                            'Priority Levels: Assign priority to tickets based on urgency and importance',
+                            'SLA Management: Monitor and enforce service level agreements for timely resolution',
+                            'Real-Time Notifications: Receive alerts for new, overdue, or resolved tickets',
+                            'Customizable Workflows: Tailor ticket workflows to match your business processes',
+                            'Multi-Channel Support: Handle tickets from various channels like email, phone, and chat',
+                            'Knowledge Base Integration: Access and link relevant articles directly within tickets',
 
-                            'Boost sales and customer satisfaction',
-                            'Streamline operations, cut costs',
-                            'Make data-driven decisions.',
-                            'Improve team collaboration.',
+                            'Reporting & Analytics: Track performance metrics, resolution times, and trends',
 
                         ]
                     ],
                     [
-                        'title' => 'Cloud CRM Advantages',
+                        'title' => 'Advantages',
                         'subTitle' => "Learn more",
                         'img' => Vite::imageWeb('project-img5.jpg'),
                         'items' => [
 
-                            'Boost sales and customer satisfaction',
-                            'Streamline operations, cut costs',
-                            'Make data-driven decisions.',
-                            'Improve team collaboration.',
+                            'Collaborative Tools: Enable team collaboration on complex tickets with internal notes and comments',
+                            'Customer Portal: Allow customers to submit and track tickets through a dedicated portal',
+                            'Ticket Status Tracking: Monitor the progress and current status of each ticket',
+                            'Historical Records: Maintain a log of all interactions and actions taken on each ticket',
+                            'Custom Fields: Add specific fields to capture relevant information unique to your organization',
+                            'Escalation Rules: Automatically escalate tickets that are unresolved within a certain time frame',
+                            'Integrations: Connect with other tools like CRM, project management, or communication platforms',
 
                         ]
                     ]
@@ -294,7 +321,7 @@ class ProductService
             [
                 'title' => 'Omni-channel Contact Center',
                 'subTitle' => 'Discover the Power of Omni-channel Contact Center',
-                'slug' => route('web.products.details', ['slug' => 'crm']),
+                'slug' => route('web.products.details', ['slug' => 'omni-channel']),
                 'body' => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui modi doloribus exercitationem sit, asperiores quod obcaecati placeat sequi. Illo repudiandae doloremque, atque dolor harum cum pariatur nobis vitae quidem libero?",
                 'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
                 'img_thumb' => Vite::imageWeb('project-img5.jpg'),
@@ -403,7 +430,7 @@ class ProductService
             [
                 'title' => 'Account Management Solution',
                 'subTitle' => 'Discover the Power of Account Management Solution',
-                'slug' => route('web.products.details', ['slug' => 'crm']),
+                'slug' => route('web.products.details', ['slug' => 'account-management']),
                 'body' => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui modi doloribus exercitationem sit, asperiores quod obcaecati placeat sequi. Illo repudiandae doloremque, atque dolor harum cum pariatur nobis vitae quidem libero?",
                 'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
                 'img_thumb' => Vite::imageWeb('project-img6.jpg'),
