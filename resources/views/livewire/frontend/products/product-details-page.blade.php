@@ -14,9 +14,7 @@
 
     <livewire:frontend.components.article-section-one :item="$itemDetails" />
 
-    @if (array_key_exists('faqs', $itemDetails))
-        <livewire:frontend.components.faq-list :item="$itemDetails['faqs']" />
-    @endif
+    <livewire:frontend.components.faq-list :item="$itemDetails" />
 
 
 </main>

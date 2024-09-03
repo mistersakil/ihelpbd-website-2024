@@ -15,6 +15,7 @@ class FaqList extends Component
     public string $title;
     public string $subTitle;
     public Collection $items;
+    public bool $isDisplaySection = true;
 
     /**
      * Create a new component instance.
@@ -23,9 +24,14 @@ class FaqList extends Component
      */
     public function mount(array $item = []): void
     {
-        $this->title = isset($item['title']) ? __($item['title']) : '';
-        $this->subTitle = isset($item['subTitle']) ? __($item['subTitle']) : '';
-        $this->items = isset($item['items']) ? collect($item['items']) : [];
+        if (!isset($item['faqs'])) {
+            $this->isDisplaySection =  false;
+        } else {
+            $model = $item['faqs'];
+        }
+        $this->title = isset($model['title']) ? __($model['title']) : '';
+        $this->subTitle = isset($model['subTitle']) ? __($model['subTitle']) : '';
+        $this->items = isset($model['items']) ? collect($model['items']) : collect([]);
     }
 
     /**
