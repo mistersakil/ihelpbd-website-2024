@@ -55,7 +55,7 @@ class ProductService
             [
                 'title' => 'CRM',
                 'subTitle' => 'Discover the Power of CRM Platform',
-                'slug' => route('web.products.details', ['slug' => 'product-one']),
+                'slug' => route('web.products.details', ['slug' => 'crm']),
                 'body' => "Discover the Power of CRM Platform",
                 'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
                 'img_thumb' => Vite::imageWeb('project-img6.jpg'),

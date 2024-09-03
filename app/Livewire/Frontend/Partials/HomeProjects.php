@@ -23,10 +23,11 @@ class HomeProjects extends Component
      */
     public function mount(array $item = []): void
     {
-        $this->title = isset($item['title']) ? __($item['title']) : '';
-        $this->subTitle = isset($item['subTitle']) ? __($item['subTitle']) : '';
-        $this->items = isset($item['items']) ? $item['items'] : [];
-        $this->img = isset($item['img']) ? $item['img'] : '';
+        $model = isset($item['projects']) ? $item['projects'] : [];
+        $this->title = isset($model['title']) ? __($model['title']) : '';
+        $this->subTitle = isset($model['subTitle']) ? __($model['subTitle']) : '';
+        $this->items = isset($model['items']) ? $model['items'] : [];
+        $this->img = isset($model['img']) ? $model['img'] : '';
     }
 
 
