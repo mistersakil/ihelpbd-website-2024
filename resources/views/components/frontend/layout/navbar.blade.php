@@ -4,13 +4,15 @@
             <div class="mobile-responsive-menu">
                 <div class="logo">
                     <a wire:navigate href="{{ route('web.home') }}">
-                        <img src="{{ Vite::asset('resources/images/logo-dark.svg') }}" class="logo" alt="Logo">
-
+                        <img src="{{ Vite::asset('resources/images/logo-dark.svg') }}" class="logo_img" alt="Logo">
                     </a>
                 </div>
             </div>
+            <!-- /.mobile-responsive-menu -->
         </div>
+        <!-- /.container-fluid -->
     </div>
+    <!-- /.mobile-responsive-nav -->
 
     <div class="desktop-nav nav-area desktop-nav-one" style="background: #f85f0a42;">
         <div class="container-fluid">
@@ -60,6 +62,7 @@
                         <!-- /.nav-item -->
 
                     </ul>
+                    <!-- /.navbar-nav -->
 
                     <div class="nav-sidebar">
 
@@ -76,9 +79,12 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- /.search-overlay -->
                         </div>
-
+                        <!-- /.nav-search -->
                     </div>
+                    <!-- /.nav-sidebar -->
+
                     <div class="mobile-nav-area">
                         <div class="mobile-icon">
                             <a href="#" class="burger-menu menu-icon-one d-in-line">
@@ -86,9 +92,13 @@
                             </a>
                         </div>
                     </div>
-
+                    <!-- /.mobile-nav-area -->
                 </div>
+                <!-- /.navbar-collapse -->
             </nav>
+            <!-- /.navbar -->
         </div>
+        <!-- /.container-fluid -->
     </div>
+    <!-- /.desktop-nav -->
 </div>

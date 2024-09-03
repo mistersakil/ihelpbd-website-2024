@@ -4,12 +4,12 @@
     </x-slot:innerBanner>
 
     <livewire:frontend.partials.solutions-section sectionTitle="solutions"
-        sectionSubTitle="our provided best solutions" />
+        sectionSubTitle="Our provided best solutions" />
 
-    <livewire:frontend.partials.products-section sectionTitle="products" sectionSubTitle="our most valuable products"
+    <livewire:frontend.partials.products-section sectionTitle="products" sectionSubTitle="Our most valuable products"
         :limit="3" />
 
     <livewire:frontend.components.why-choose-us-section sectionTitle="why choose us"
-        sectionSubTitle="why you will give us priority" />
+        sectionSubTitle="Why you will give us priority" />
 
 </main>

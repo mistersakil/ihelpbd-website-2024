@@ -58,35 +58,118 @@ class ProductService
                 'body' => "Discover the Power of CRM Platform",
                 'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
                 'img_thumb' => Vite::imageWeb('project-img6.jpg'),
+                'about' => [
+                    'title' => 'About us',
+                    'subTitle' => 'Solution one about section subtitle',
+                    'img' => Vite::imageWeb('service-img1.jpg'),
+                    'items' => [
+                        'point number one. point number one. point number one. ',
+                        'point number two. point number two. point number two',
+                        'point number three. point number three. point number three',
+                        'point number four. point number four. point number four',
+                        'point number five. point number five. point number five',
+                        'point number six. point number six. point number six',
+                        'point number seven. point number seven. point number seven',
+                        'point number eight. point number eight. point number eight',
+                        'point number nine. point number nine. point number nine',
+                    ]
+                ],
+
+                'projects' => [
+                    'title' => 'Projects',
+                    'subTitle' => 'Our recent projects',
+                    'items' => [
+                        [
+                            'heading' => 'heading one',
+                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'img' =>  Vite::imageWeb('project-style1.jpg'),
+                        ],
+                        [
+                            'heading' => 'heading tow',
+                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'img' =>  Vite::imageWeb('project-style2.jpg'),
+                        ],
+                        [
+                            'heading' => 'heading three',
+                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'img' =>  Vite::imageWeb('project-style3.jpg'),
+                        ]
+                    ]
+                ],
+                'characteristics' => [
+                    'title' => 'How we feel',
+                    'subTitle' => 'Unified Success',
+                    'items' => [
+                        [
+                            'heading' => 'Integrated Data Management',
+                            'body' => 'IHELP CRM centralizes customer data across business chains, offering a unified view for personalized engagement and data-driven decisions.',
+                            'icon' =>  _icons('database_gear'),
+                        ],
+                        [
+                            'heading' => 'Real-Time Integration',
+                            'body' => 'Real-time integration allows seamless data flow across branches, providing an up-to-date view of customer activity. This empowers businesses to respond quickly to customer needs and market changes.',
+                            'icon' =>  _icons('realtime'),
+                        ],
+                        [
+                            'heading' => 'Data Security and Compliances',
+                            'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
+                            'icon' =>  _icons('database_lock'),
+                        ]
+                    ]
+                ],
+                'faqs' => [
+                    'title' => 'FAQ',
+                    'subTitle' => "Learn more",
+                    'items' => [
+                        [
+                            'heading' => 'Integrated Data Management',
+                            'body' => 'IHELP CRM centralizes customer data across business chains, offering a unified view for personalized engagement and data-driven decisions.',
+                        ],
+                        [
+                            'heading' => 'Real-Time Integration',
+                            'body' => 'Real-time integration allows seamless data flow across branches, providing an up-to-date view of customer activity. This empowers businesses to respond quickly to customer needs and market changes.',
+                        ],
+                        [
+                            'heading' => 'Data Security and Compliances',
+                            'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
+                        ],
+                        [
+                            'heading' => 'Data Security and Compliances two',
+                            'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
+                        ]
+                    ]
+                ],
+                'articles' => [
+                    [
+                        'title' => 'CRM Benefits',
+                        'subTitle' => "Learn more",
+                        'img' => Vite::imageWeb('project-img4.jpg'),
+                        'items' => [
+
+                            'Boost sales and customer satisfaction',
+                            'Streamline operations, cut costs',
+                            'Make data-driven decisions.',
+                            'Improve team collaboration.',
+
+                        ]
+                    ],
+                    [
+                        'title' => 'Cloud CRM Advantages',
+                        'subTitle' => "Learn more",
+                        'img' => Vite::imageWeb('project-img5.jpg'),
+                        'items' => [
+
+                            'Boost sales and customer satisfaction',
+                            'Streamline operations, cut costs',
+                            'Make data-driven decisions.',
+                            'Improve team collaboration.',
+
+                        ]
+                    ]
+                ]
+
             ],
-            [
-                'title' => 'Complain Management System',
-                'slug' => route('web.products.details', ['slug' => 'product-two']),
-                'body' => "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-                'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
-                'img_thumb' => Vite::imageWeb('project-img5.jpg')
-            ],
-            [
-                'title' => 'Task Management',
-                'slug' => route('web.products.details', ['slug' => 'product-three']),
-                'body' => "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-                'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
-                'img_thumb' => Vite::imageWeb('project-img4.jpg')
-            ],
-            [
-                'title' => 'Omni-channel Contact Center',
-                'slug' => route('web.products.details', ['slug' => 'product-three']),
-                'body' => "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-                'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
-                'img_thumb' => Vite::imageWeb('project-img4.jpg')
-            ],
-            [
-                'title' => 'Account Management Solution',
-                'slug' => route('web.products.details', ['slug' => 'product-three']),
-                'body' => "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-                'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
-                'img_thumb' => Vite::imageWeb('project-img5.jpg')
-            ],
+
 
         ];
 

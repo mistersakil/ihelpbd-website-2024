@@ -17,7 +17,7 @@ class ProductDetailsPage extends Component
     public string $slug;
 
     ## Component props
-    public array $productDetails;
+    public array $itemDetails;
 
     ## Services
     private ProductService $productService;
@@ -35,7 +35,7 @@ class ProductDetailsPage extends Component
     {
         $this->slug = $slug;
         $slugToFilter = route('web.products.details', ['slug' => $slug]);
-        $this->productDetails = $this->productService->getStaticModels($slugToFilter);
+        $this->itemDetails = $this->productService->getStaticModels($slugToFilter);
     }
 
     /**
