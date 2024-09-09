@@ -36,18 +36,18 @@ class SolutionService
                     'subTitle' => 'Our recent projects',
                     'items' => [
                         [
-                            'heading' => 'heading one',
-                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'heading' => '',
+                            'body' => 'Boost Your Business with IHELP CRM.',
                             'img' =>  Vite::imageWeb('project-style1.jpg'),
                         ],
                         [
-                            'heading' => 'heading tow',
-                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'heading' => '',
+                            'body' => 'Experience smarter customer relationship management across multiple chains with our CRM system, delivering real-time insights for informed business decisions and personalized customer interactions.',
                             'img' =>  Vite::imageWeb('project-style2.jpg'),
                         ],
                         [
-                            'heading' => 'heading three',
-                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'heading' => '',
+                            'body' => "Simplify your operations with our IHELP CRM. Centralize data, automate tasks, and uncover customer trends for efficient, sustainable growth. ",
                             'img' =>  Vite::imageWeb('project-style3.jpg'),
                         ]
                     ]
