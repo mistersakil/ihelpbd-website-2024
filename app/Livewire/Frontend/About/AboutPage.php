@@ -17,7 +17,7 @@ class AboutPage extends Component
     /**
      * return view
      */
-    #[Title('Blog List')]
+    #[Title('About Us')]
     public function render(): View
     {
         return view('livewire.frontend.about.about-page');

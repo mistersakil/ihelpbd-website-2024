@@ -13,8 +13,8 @@
             <div class="col-lg-6">
                 <div class="about-content pl-20">
                     <div class="section-title">
-                        <span class="sp-title">{{ __('about us') }}</span>
-                        <h2>Our Business is Your life Making Easier &amp; Comfortable</h2>
+                        <span class="sp-title">{{ __('Who are we?') }}</span>
+                        <h2>About iHelpKL</h2>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                             incididunt ulabore et dolore magna aliqua. Quis ipsum suspendisse ultrices

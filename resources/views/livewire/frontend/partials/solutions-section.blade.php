@@ -53,7 +53,7 @@
                                                 @if(isset($data['keyPoints']) && count($data['keyPoints']))
                                                 
                                                 <ul class="services-tab-list">
-                                                @foreach (collect($data['keyPoints'])->take(5) as $inexKeyPoints => $keyPoint)
+                                                @foreach (collect($data['keyPoints'])->take(4) as $inexKeyPoints => $keyPoint)
                                                     <li>
                                                         <i class="{{ _icons('arrow_right') }}"></i> 
                                                         {{ $keyPoint }}

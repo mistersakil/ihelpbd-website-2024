@@ -39,4 +39,13 @@ class AppService
 
         return true;
     }
+
+    /**
+     * About page data
+     *
+     * @return array
+     */
+    public function aboutPageContent():array{
+        return [];
+    }
 }
