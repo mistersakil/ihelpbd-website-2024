@@ -50,17 +50,18 @@
                                                 <p>
                                                     {{ ucwords($data['body']) }}
                                                 </p>
+                                                @if(isset($data['keyPoints']) && count($data['keyPoints']))
+                                                
                                                 <ul class="services-tab-list">
-                                                    <li><i class="flaticon-arrow-pointing-to-right"></i> Innovative
-                                                        Working
-                                                        Activities</li>
-                                                    <li><i class="flaticon-arrow-pointing-to-right"></i> 100% Guarantee
-                                                        Issued
-                                                        for Client</li>
-                                                    <li><i class="flaticon-arrow-pointing-to-right"></i> Turnaround
-                                                        Situation
+                                                @foreach (collect($data['keyPoints'])->take(5) as $inexKeyPoints => $keyPoint)
+                                                    <li>
+                                                        <i class="{{ _icons('arrow_right') }}"></i> 
+                                                        {{ $keyPoint }}
                                                     </li>
+                                                    @endforeach
                                                 </ul>
+                                                
+                                                @endif
                                                 <a wire:navigate href="{{ $data['slug'] }}"
                                                     class="default-btn border-radius-5">
                                                     {{ __('read more') }}
