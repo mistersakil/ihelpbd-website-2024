@@ -46,7 +46,8 @@
                     <!-- /.row-->
                 @endif
             </div>
-            <!-- /.container-->
+            <!-- /.container -->
         </div>
+        <!-- /.project-area-two -->
     @endif
 </main>

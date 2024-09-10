@@ -21,7 +21,7 @@ class SolutionService
                 'subTitle' => 'Discover the Power of CRM Platform',
                 'slug' => route('web.solutions.details', ['slug' => 'crm']),
                 'body' => "Discover the Power of CRM Platform",
-                'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
+                'img_featured' => Vite::imageWeb('blog-img1.jpg'),
                 'img_thumb' => Vite::imageWeb('project-img6.jpg'),
                 'keyPoints' => [
                     'Maximize Customer Value with an Exceptional CRM Platform',
@@ -128,59 +128,73 @@ class SolutionService
 
             [
                 'title' => 'Web Development',
-                'subTitle' => 'Discover the Power of Web Development',
-                'slug' => route('web.solutions.details', ['slug' => 'crm']),
-                'body' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ex soluta recusandae. Cumque nobis, aspernatur laudantium voluptas neque ullam provident ab doloremque iusto quibusdam ipsa debitis quos nisi dignissimos incidunt.",
-                'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
+                'subTitle' => 'Top Custom Web Development Solutions',
+                'slug' => route('web.solutions.details', ['slug' => 'web-development']),
+                'body' => "IHELP delivers innovative web applications for global leaders and startups. With a proven track record in enterprise development, we are committed to excellence and high-quality outcomes",
+                'img_featured' => Vite::imageWeb('blog-img2.jpg'),
                 'img_thumb' => Vite::imageWeb('project-img6.jpg'),
                 'keyPoints' => [
-                    'Maximize Customer Value with an Exceptional CRM Platform',
-                    'Maintaining customer relationships through diligent tracking of interactions',
-                    'A Vital Asset for Every Business to Excel in Customer Relations',
-                    'Make informed decisions with real-time data',
-                    'Effortless Integration with Your Existing Platforms',
+                    'Industry Expertise',
+                    'Cutting-Edge Technolog',
+                    'Client-Centric Approach',                    
                 ],
 
-                'projects' => [
-                    'title' => 'Projects',
-                    'subTitle' => 'Our recent projects',
-                    'items' => [
-                        [
-                            'heading' => 'heading one',
-                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
-                            'img' =>  Vite::imageWeb('project-style1.jpg'),
-                        ],
-                        [
-                            'heading' => 'heading tow',
-                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
-                            'img' =>  Vite::imageWeb('project-style2.jpg'),
-                        ],
-                        [
-                            'heading' => 'heading three',
-                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
-                            'img' =>  Vite::imageWeb('project-style3.jpg'),
-                        ]
-                    ]
-                ],
+              
                 'characteristics' => [
-                    'title' => 'How we feel',
-                    'subTitle' => 'Unified Success',
+                    'title' => 'Grow your business',
+                    'subTitle' => 'How we can help you?',
                     'items' => [
                         [
-                            'heading' => 'Integrated Data Management',
-                            'body' => 'IHELP CRM centralizes customer data across business chains, offering a unified view for personalized engagement and data-driven decisions.',
+                            'heading' => 'Responsive Design',
+                            'body' => 'Ensure the website is mobile-friendly and adapts seamlessly to various screen sizes.',
                             'icon' =>  _icons('database_gear'),
                         ],
                         [
-                            'heading' => 'Real-Time Integration',
-                            'body' => 'Real-time integration allows seamless data flow across branches, providing an up-to-date view of customer activity. This empowers businesses to respond quickly to customer needs and market changes.',
+                            'heading' => 'User-Friendly Navigation',
+                            'body' => 'Implement intuitive navigation to enhance user experience and accessibility.',
                             'icon' =>  _icons('realtime'),
                         ],
                         [
-                            'heading' => 'Data Security and Compliances',
-                            'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
+                            'heading' => 'SEO Optimization',
+                            'body' => 'Integrate SEO best practices to improve visibility on search engines and attract organic traffic.',
+                            'icon' =>  _icons('database_lock'),
+                        ],
+                        [
+                            'heading' => 'Content Management System (CMS)',
+                            'body' => 'Provide a robust CMS for easy content updates and management without technical expertise.',
+                            'icon' =>  _icons('database_lock'),
+                        ],
+                        [
+                            'heading' => 'E-commerce Functionality',
+                            'body' => 'Include secure payment gateways, shopping carts, and inventory management for online stores.',
+                            'icon' =>  _icons('database_lock'),
+                        ],
+                        [
+                            'heading' => 'Analytics and Reporting Tools',
+                            'body' => 'Incorporate tools for tracking user behavior and website performance for data-driven decision-making.',
+                            'icon' =>  _icons('database_lock'),
+                        ],
+                        [
+                            'heading' => 'Fast Loading Speed',
+                            'body' => 'Optimize website performance to ensure quick loading times, enhancing user satisfaction.',
+                            'icon' =>  _icons('database_lock'),
+                        ],
+                        [
+                            'heading' => 'Security Features',
+                            'body' => 'Implement SSL certificates, data encryption, and regular security updates to protect user data.',
+                            'icon' =>  _icons('database_lock'),
+                        ],
+                        [
+                            'heading' => 'Customizable Templates',
+                            'body' => "Offer customizable design templates to reflect the brand's identity and meet specific business needs.",
+                            'icon' =>  _icons('database_lock'),
+                        ],
+                        [
+                            'heading' => 'Integration with Third-Party Services',
+                            'body' => "Facilitate integration with various APIs and services, such as CRM, email marketing, and social media platforms.",
                             'icon' =>  _icons('database_lock'),
                         ]
+                        
                     ]
                 ],
                 'faqs' => [
@@ -240,7 +254,7 @@ class SolutionService
                 'subTitle' => 'Discover the Power of Application integration',
                 'slug' => route('web.solutions.details', ['slug' => 'crm']),
                 'body' => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ex soluta recusandae. Cumque nobis, aspernatur laudantium voluptas neque ullam provident ab doloremque iusto quibusdam ipsa debitis quos nisi dignissimos incidunt.",
-                'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
+                'img_featured' => Vite::imageWeb('blog-img3.jpg'),
                 'img_thumb' => Vite::imageWeb('project-img6.jpg'),
                 'keyPoints' => [
                     'Maximize Customer Value with an Exceptional CRM Platform',

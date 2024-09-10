@@ -2,7 +2,7 @@
 
     <livewire:frontend.partials.home-slider />
     {{-- <livewire:frontend.partials.home-banner /> --}}
-    {{-- <livewire:frontend.partials.home-projects /> --}}
+    <livewire:frontend.partials.home-projects />
 
     {{-- @if (array_key_exists('about', $data))
         <livewire:frontend.partials.home-about-section :item="$data['about']" />
