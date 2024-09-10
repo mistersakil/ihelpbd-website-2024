@@ -135,66 +135,65 @@ class SolutionService
                 'img_thumb' => Vite::imageWeb('project-img6.jpg'),
                 'keyPoints' => [
                     'Industry Expertise',
-                    'Cutting-Edge Technolog',
-                    'Client-Centric Approach',                    
+                    'Cutting-Edge Technology',
+                    'Client-Centric Approach',
                 ],
 
-              
-                'characteristics' => [
+                'services2' => [
                     'title' => 'Grow your business',
-                    'subTitle' => 'How we can help you?',
+                    'subTitle' => 'How can we help you?',
                     'items' => [
                         [
                             'heading' => 'Responsive Design',
                             'body' => 'Ensure the website is mobile-friendly and adapts seamlessly to various screen sizes.',
-                            'icon' =>  _icons('database_gear'),
+                            'icon' =>  _icons('laptop'),
                         ],
                         [
                             'heading' => 'User-Friendly Navigation',
                             'body' => 'Implement intuitive navigation to enhance user experience and accessibility.',
-                            'icon' =>  _icons('realtime'),
+                            'icon' =>  _icons('tracking'),
                         ],
                         [
                             'heading' => 'SEO Optimization',
                             'body' => 'Integrate SEO best practices to improve visibility on search engines and attract organic traffic.',
-                            'icon' =>  _icons('database_lock'),
+                            'icon' =>  _icons('search'),
                         ],
                         [
                             'heading' => 'Content Management System (CMS)',
                             'body' => 'Provide a robust CMS for easy content updates and management without technical expertise.',
-                            'icon' =>  _icons('database_lock'),
+                            'icon' =>  _icons('collection'),
                         ],
                         [
                             'heading' => 'E-commerce Functionality',
                             'body' => 'Include secure payment gateways, shopping carts, and inventory management for online stores.',
-                            'icon' =>  _icons('database_lock'),
+                            'icon' =>  _icons('cart'),
                         ],
                         [
                             'heading' => 'Analytics and Reporting Tools',
                             'body' => 'Incorporate tools for tracking user behavior and website performance for data-driven decision-making.',
-                            'icon' =>  _icons('database_lock'),
+                            'icon' =>  _icons('reports'),
                         ],
                         [
                             'heading' => 'Fast Loading Speed',
                             'body' => 'Optimize website performance to ensure quick loading times, enhancing user satisfaction.',
-                            'icon' =>  _icons('database_lock'),
+                            'icon' =>  _icons('speedometer'),
                         ],
                         [
                             'heading' => 'Security Features',
                             'body' => 'Implement SSL certificates, data encryption, and regular security updates to protect user data.',
-                            'icon' =>  _icons('database_lock'),
+                            'icon' =>  _icons('lock'),
                         ],
                         [
                             'heading' => 'Customizable Templates',
                             'body' => "Offer customizable design templates to reflect the brand's identity and meet specific business needs.",
-                            'icon' =>  _icons('database_lock'),
+                            'icon' =>  _icons('sidebar'),
                         ],
                         [
                             'heading' => 'Integration with Third-Party Services',
                             'body' => "Facilitate integration with various APIs and services, such as CRM, email marketing, and social media platforms.",
-                            'icon' =>  _icons('database_lock'),
+                            'icon' =>  _icons('website'),
                         ]
-                        
+
                     ]
                 ],
                 'faqs' => [
@@ -246,9 +245,11 @@ class SolutionService
 
                         ]
                     ]
-                ]
+                ],
+
 
             ],
+            
             [
                 'title' => 'Application integration',
                 'subTitle' => 'Discover the Power of Application integration',

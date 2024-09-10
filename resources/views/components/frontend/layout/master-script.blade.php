@@ -97,6 +97,35 @@
             },
         });
 
+        // Services Slider Two
+        $('.services-slider-two').owlCarousel({
+            loop: true,
+            margin: 30,
+            autoHeight: true,
+            nav: true,
+            dots: false,
+            animateOut: 'fadeOutUp',
+            animateIn: 'fadeInUp',
+            autoplay: true,
+            autoplayHoverPause: true,
+            navText: [
+                '<i class="bi bi-chevron-left"></i>',
+                '<i class="bi bi-chevron-right"></i>'
+            ],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                576: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                },
+            }
+        })
+
+
         // Project Slider Two
         $('.project-slider-two').owlCarousel({
             loop: true,
