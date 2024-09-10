@@ -196,60 +196,36 @@ class SolutionService
 
                     ]
                 ],
-                'faqs' => [
-                    'title' => 'FAQ',
-                    'subTitle' => "Learn more",
-                    'items' => [
-                        [
-                            'heading' => 'Integrated Data Management',
-                            'body' => 'IHELP CRM centralizes customer data across business chains, offering a unified view for personalized engagement and data-driven decisions.',
-                        ],
-                        [
-                            'heading' => 'Real-Time Integration',
-                            'body' => 'Real-time integration allows seamless data flow across branches, providing an up-to-date view of customer activity. This empowers businesses to respond quickly to customer needs and market changes.',
-                        ],
-                        [
-                            'heading' => 'Data Security and Compliances',
-                            'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
-                        ],
-                        [
-                            'heading' => 'Data Security and Compliances two',
-                            'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
-                        ]
-                    ]
-                ],
+
                 'articles' => [
                     [
-                        'title' => 'CRM Benefits',
+                        'title' => 'Web Solutions We Build',
                         'subTitle' => "Learn more",
                         'img' => Vite::imageWeb('project-img4.jpg'),
                         'items' => [
-
-                            'Boost sales and customer satisfaction',
-                            'Streamline operations, cut costs',
-                            'Make data-driven decisions.',
-                            'Improve team collaboration.',
-
+                            'Corporate Website',
+                            'Portfolio Website ',
+                            'Membership Website',
+                            'E-commerce',
+                            'Member Database',
                         ]
                     ],
                     [
-                        'title' => 'Cloud CRM Advantages',
+                        'title' => 'More On Web Solutions',
                         'subTitle' => "Learn more",
                         'img' => Vite::imageWeb('project-img5.jpg'),
                         'items' => [
-
-                            'Boost sales and customer satisfaction',
-                            'Streamline operations, cut costs',
-                            'Make data-driven decisions.',
-                            'Improve team collaboration.',
-
+                            'Reward Points',
+                            'Payment Gateway',
+                            'Web Design & development',
+                            'Web application Design & development',
                         ]
                     ]
                 ],
 
 
             ],
-            
+
             [
                 'title' => 'Application integration',
                 'subTitle' => 'Discover the Power of Application integration',
