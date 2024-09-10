@@ -17,7 +17,7 @@ class SolutionService
     {
         $dataList = [
             [
-                'title' => 'CRM',
+                'title' => 'Custom CRM Development',
                 'subTitle' => 'Discover the Power of CRM Platform',
                 'slug' => route('web.solutions.details', ['slug' => 'crm']),
                 'body' => "Discover the Power of CRM Platform",

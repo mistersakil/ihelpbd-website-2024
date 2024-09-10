@@ -48,7 +48,7 @@
                                             <div class="services-tab-content pl-20">
                                                 <h2>{{ ucwords($data['subTitle']) }}</h2>
                                                 <p>
-                                                    {{ ucwords($data['body']) }}
+                                                    Key Characterstics
                                                 </p>
                                                 @if(isset($data['keyPoints']) && count($data['keyPoints']))
                                                 
