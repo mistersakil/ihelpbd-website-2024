@@ -164,7 +164,6 @@ class ProductService
                             'Customizable Workflows: Tailor ticket workflows to match your business processes',
                             'Multi-Channel Support: Handle tickets from various channels like email, phone, and chat',
                             'Knowledge Base Integration: Access and link relevant articles directly within tickets',
-
                             'Reporting & Analytics: Track performance metrics, resolution times, and trends',
 
                         ]
@@ -320,107 +319,66 @@ class ProductService
 
             [
                 'title' => 'Omni-channel Contact Center',
-                'subTitle' => 'Discover the Power of Omni-channel Contact Center',
+                'subTitle' => 'Integrated Customer Communication: Omni-channel Contact Center Solution',
                 'slug' => route('web.products.details', ['slug' => 'omni-channel']),
                 'body' => "",
                 'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
                 'img_thumb' => Vite::imageWeb('project-img5.jpg'),
                 'keyPoints' => [
-                    'Maximize Customer Value with an Exceptional CRM Platform',
-                    'Maintaining customer relationships through diligent tracking of interactions',
-                    'A Vital Asset for Every Business to Excel in Customer Relations',
-                    'Make informed decisions with real-time data',
-                    'Effortless Integration with Your Existing Platforms',
+                    "Whatsapp",
+                    "Email",
+                    "SMS",
+                    "Voice chat",
+                    "Web chat",
+
                 ],
 
                 'projects' => [
-                    'title' => 'Projects',
-                    'subTitle' => 'Our recent projects',
+                    'title' => 'Innovative',
+                    'subTitle' => 'iHelP offers the solution',
                     'items' => [
                         [
-                            'heading' => 'heading one',
-                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'heading' => '',
+                            'body' => "An advanced Omni-channel contact center is vital to prevent business loss. iHelpBD's solution integrates voice, chat, email, and CRM into one platform, ensuring a seamless customer journey.",
                             'img' =>  Vite::imageWeb('project-style1.jpg'),
                         ],
                         [
-                            'heading' => 'heading tow',
-                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'heading' => '',
+                            'body' => "This solution gives agents access to a customer's full interaction history for personalized service, allowing customers to use their preferred communication channels for a better experience.",
                             'img' =>  Vite::imageWeb('project-style2.jpg'),
                         ],
                         [
-                            'heading' => 'heading three',
-                            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
+                            'heading' => '',
+                            'body' => "iHelpKL's Omni-channel contact center streamlines operations, helping businesses meet customer expectations, improve satisfaction, and foster loyalty to stay competitive.",
                             'img' =>  Vite::imageWeb('project-style3.jpg'),
                         ]
                     ]
                 ],
-                'characteristics' => [
-                    'title' => 'How we feel',
-                    'subTitle' => 'Unified Success',
-                    'items' => [
-                        [
-                            'heading' => 'Integrated Data Management',
-                            'body' => 'IHELP CRM centralizes customer data across business chains, offering a unified view for personalized engagement and data-driven decisions.',
-                            'icon' =>  _icons('database_gear'),
-                        ],
-                        [
-                            'heading' => 'Real-Time Integration',
-                            'body' => 'Real-time integration allows seamless data flow across branches, providing an up-to-date view of customer activity. This empowers businesses to respond quickly to customer needs and market changes.',
-                            'icon' =>  _icons('realtime'),
-                        ],
-                        [
-                            'heading' => 'Data Security and Compliances',
-                            'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
-                            'icon' =>  _icons('database_lock'),
-                        ]
-                    ]
-                ],
+          
                 'faqs' => [
                     'title' => 'FAQ',
                     'subTitle' => "Learn more",
-                    'items' => [
-                        [
-                            'heading' => 'Integrated Data Management',
-                            'body' => 'IHELP CRM centralizes customer data across business chains, offering a unified view for personalized engagement and data-driven decisions.',
-                        ],
-                        [
-                            'heading' => 'Real-Time Integration',
-                            'body' => 'Real-time integration allows seamless data flow across branches, providing an up-to-date view of customer activity. This empowers businesses to respond quickly to customer needs and market changes.',
-                        ],
-                        [
-                            'heading' => 'Data Security and Compliances',
-                            'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
-                        ],
-                        [
-                            'heading' => 'Data Security and Compliances two',
-                            'body' => 'Secure your data across all chains. Protect customer information with robust security. Build trust through data compliance. Prioritize security in your multi-chain CRM',
-                        ]
-                    ]
+                    'items' => []
                 ],
                 'articles' => [
                     [
-                        'title' => 'CRM Benefits',
+                        'title' => 'Omni-channel Benefits',
                         'subTitle' => "Learn more",
                         'img' => Vite::imageWeb('project-img4.jpg'),
                         'items' => [
-
-                            'Boost sales and customer satisfaction',
-                            'Streamline operations, cut costs',
-                            'Make data-driven decisions.',
-                            'Improve team collaboration.',
-
+                            "The main goal of an Omni-channel contact center is to enhance customer experience.",
+                            "Customers can easily switch to text to send images without repeating their issue.",
+                            "Agents can access prior interactions via CRM, ensuring consistent service.",
                         ]
                     ],
                     [
-                        'title' => 'Cloud CRM Advantages',
+                        'title' => 'Omni-channel Advantages',
                         'subTitle' => "Learn more",
                         'img' => Vite::imageWeb('project-img5.jpg'),
                         'items' => [
-
-                            'Boost sales and customer satisfaction',
-                            'Streamline operations, cut costs',
-                            'Make data-driven decisions.',
-                            'Improve team collaboration.',
+                           "Customers can choose from channels like Facebook Messenger, WhatsApp, email, or web chat, preventing lost opportunities.",
+                            "iHelpKL is committed to providing a seamless customer journey through its Omni-channel solution on a single platform."
+                            
 
                         ]
                     ]

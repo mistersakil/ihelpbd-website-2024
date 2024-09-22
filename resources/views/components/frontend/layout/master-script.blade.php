@@ -2,6 +2,11 @@
     (function($) {
         "use strict";
 
+        const navigationArros = [
+            '<i class="{{ _icons('arrow_left2') }}"></i>',
+            '<i class="{{ _icons('arrow_right2') }}"></i>',
+        ];
+
         // Mean Menu
         $(".mean-menu").meanmenu({
             meanScreenWidth: "991",
@@ -61,6 +66,7 @@
             center: true,
             autoplay: true,
             autoplayHoverPause: true,
+            navText: navigationArros,
 
         });
 
@@ -69,7 +75,6 @@
             loop: true,
             margin: 10,
             autoHeight: true,
-
             animateOut: "fadeOutUp",
             animateIn: "fadeInUp",
             nav: true,
@@ -77,7 +82,7 @@
             center: true,
             autoplay: true,
             autoplayHoverPause: true,
-
+            navText: navigationArros,
             responsive: {
                 0: {
                     items: 1,
@@ -108,10 +113,7 @@
             animateIn: 'fadeInUp',
             autoplay: true,
             autoplayHoverPause: true,
-            navText: [
-                '<i class="bi bi-chevron-left"></i>',
-                '<i class="bi bi-chevron-right"></i>'
-            ],
+            navText: navigationArros,
             responsive: {
                 0: {
                     items: 1
@@ -138,10 +140,7 @@
             autoplay: true,
             smartSpeed: 1500,
             autoplayHoverPause: true,
-            navText: [
-                "<i class='flaticon-arrow-pointing-to-left'></i>",
-                "<i class='flaticon-arrow-pointing-to-right'></i>"
-            ],
+            navText: navigationArros,
         })
 
 
@@ -154,7 +153,7 @@
             dots: false,
             autoplay: true,
             autoplayHoverPause: true,
-
+            navText: navigationArros,
             responsive: {
                 0: {
                     items: 1,
@@ -179,10 +178,7 @@
             dots: false,
             autoplay: true,
             autoplayHoverPause: true,
-            navText: [
-                "<i class='flaticon-arrow-pointing-to-left'></i>",
-                "<i class='flaticon-arrow-pointing-to-right'></i>",
-            ],
+            navText: navigationArros,
         });
 
         // FAQ Accordion JS

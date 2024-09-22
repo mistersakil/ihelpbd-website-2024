@@ -7,7 +7,7 @@
                         <span class="sp-title2">{{ $title }}</span>
                     @endif
                     @if (isset($subTitle))
-                        <h2>{{ $subTitle }}</h2>
+                        <h2>{{ ucwords($subTitle) }}</h2>
                     @endif
                 </div>
                 <!-- /.section-title -->

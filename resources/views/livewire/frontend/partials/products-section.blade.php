@@ -2,7 +2,7 @@
     <div class="container">
         <div class="section-title text-center ">
             <span class="sp-title">{{ $sectionTitle }}</span>
-            <h2>{{ $sectionSubTitle }}</h2>
+            <h2>{{ ucwords($sectionSubTitle) }}</h2>
         </div>
         <!-- /.section-title -->
         <div class="row pt-45 justify-content-center">

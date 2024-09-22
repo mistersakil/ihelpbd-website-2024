@@ -40,9 +40,12 @@
                         @endforeach
                     </div>
                     <!-- /.row -->
+                @else
+                    <livewire:frontend.components.coming-soon content="Coming soon">
                 @endif
             </div>
             <!-- /.container -->
         </div>
+        <!-- /.faq-area -->
     @endif
 </main>
