@@ -392,8 +392,7 @@ class ProductService
                 'slug' => route('web.products.details', ['slug' => 'account-management']),
                 'body' => "",
                 'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
-                'img_thumb' => Vite::imageWeb('project-img6.jpg'),
-            
+                'img_thumb' => Vite::imageWeb('project-img6.jpg'),           
 
 
             ],
