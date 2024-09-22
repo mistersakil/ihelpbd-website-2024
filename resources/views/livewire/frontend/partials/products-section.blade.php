@@ -15,11 +15,11 @@
                         <div class="content content-max">
                             <h3>
                                 <a wire:navigate href="{{ $item['slug'] }}">
-                                    {{ ucfirst($item['title']) }}
+                                    {{ truncate_without_breaking($item['title'], 30) }}
                                 </a>
                             </h3>
                             <p>
-                                {{ ucfirst($item['body']) }}
+                                {{ truncate_without_breaking($item['subTitle'], 80) }}
                             </p>
                         </div>
                     </div>
@@ -28,7 +28,7 @@
                 <!-- /.col-->
             @empty
                 <div class="section-title text-center">
-                    <code>There is no product available right now! Please come back soon</code>
+                    <code>There is no product available right now! We are working on it ...</code>
                 </div>
             @endforelse
 

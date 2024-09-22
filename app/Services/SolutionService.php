@@ -18,7 +18,7 @@ class SolutionService
         $dataList = [
             [
                 'title' => 'Custom CRM Development',
-                'subTitle' => 'Discover the Power of CRM Platform',
+                'subTitle' => 'Discover the Power of CRM Platform ',
                 'slug' => route('web.solutions.details', ['slug' => 'crm']),
                 'body' => "Discover the Power of CRM Platform",
                 'img_featured' => Vite::imageWeb('blog-img1.jpg'),

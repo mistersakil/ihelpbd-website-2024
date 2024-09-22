@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Support\Str;
 /**
  * dateFormat function format date as user needs
  * @param string $date date('Y-m-d')
@@ -284,5 +284,41 @@ if (!function_exists('generateHexColor')) {
         $hexColor = sprintf("%02x%02x%02x", $red, $green, $blue);
 
         return $hexColor;
+    }
+}
+
+
+if (!function_exists('truncate_without_breaking')) {
+    /**
+     * Truncate a string to a specific character length without breaking the last word.
+     * Ensures proper sentence case and avoids cutting off words at the limit.
+     *
+     * @param string $text The input string.
+     * @param int $limit The maximum length of the string (default: 30).
+     * @param string $end The ending to append (optional, default: '...').
+     * @return string
+     */
+    function truncate_without_breaking(string $text, int $limit = 30, string $end = '...'): string
+    {
+        ## Remove leading/trailing whitespace and ensure the string is sentence-cased
+        $text = trim($text);
+        $text = Str::ucfirst(Str::lower($text));
+
+        ## If the string length is already within the limit, return as is
+        if (Str::length($text) <= $limit) {
+            return $text;
+        }
+
+        ## Find the position to truncate without breaking a word
+        $truncated = Str::substr($text, 0, $limit);
+        $lastSpace = strrpos($truncated, ' ');
+
+        ## Trim to the last complete word, if applicable
+        if ($lastSpace !== false) {
+            $truncated = Str::substr($truncated, 0, $lastSpace);
+        }
+
+        ## Return the truncated string with the specified ending
+        return "{$truncated}{$end}";
     }
 }

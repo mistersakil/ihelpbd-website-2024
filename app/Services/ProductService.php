@@ -56,7 +56,7 @@ class ProductService
                 'title' => 'Complain Management System',
                 'subTitle' => 'All-in-one solution for help desk and customer service operations',
                 'slug' => route('web.products.details', ['slug' => 'complain-management']),
-                'body' => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae animi laudantium ab vel dolores sed perferendis maiores soluta eum, amet voluptatibus, quidem necessitatibus tempore suscipit. Praesentium doloribus aperiam deserunt accusamus?",
+                'body' => "",
                 'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
                 'img_thumb' => Vite::imageWeb('project-img3.jpg'),
                 'keyPoints' => [
@@ -193,7 +193,7 @@ class ProductService
                 'title' => 'Task Management',
                 'subTitle' => 'The ultimate solution for task refinement and process improvement',
                 'slug' => route('web.products.details', ['slug' => 'task-management']),
-                'body' => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui modi doloribus exercitationem sit, asperiores quod obcaecati placeat sequi. Illo repudiandae doloremque, atque dolor harum cum pariatur nobis vitae quidem libero?",
+                'body' => "",
                 'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
                 'img_thumb' => Vite::imageWeb('project-img4.jpg'),
                 'keyPoints' => [
@@ -322,7 +322,7 @@ class ProductService
                 'title' => 'Omni-channel Contact Center',
                 'subTitle' => 'Discover the Power of Omni-channel Contact Center',
                 'slug' => route('web.products.details', ['slug' => 'omni-channel']),
-                'body' => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui modi doloribus exercitationem sit, asperiores quod obcaecati placeat sequi. Illo repudiandae doloremque, atque dolor harum cum pariatur nobis vitae quidem libero?",
+                'body' => "",
                 'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
                 'img_thumb' => Vite::imageWeb('project-img5.jpg'),
                 'keyPoints' => [
@@ -432,7 +432,7 @@ class ProductService
                 'title' => 'Account Management Solution',
                 'subTitle' => 'Discover the Power of Account Management Solution',
                 'slug' => route('web.products.details', ['slug' => 'account-management']),
-                'body' => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui modi doloribus exercitationem sit, asperiores quod obcaecati placeat sequi. Illo repudiandae doloremque, atque dolor harum cum pariatur nobis vitae quidem libero?",
+                'body' => "",
                 'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
                 'img_thumb' => Vite::imageWeb('project-img6.jpg'),
                 'keyPoints' => [
