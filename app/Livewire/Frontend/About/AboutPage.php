@@ -22,8 +22,9 @@ class AboutPage extends Component
      * Create a new component instance.     
      * @return void
      */
-    public function mount(): void {
-        $this->about();
+    public function mount(): void
+    {
+        $this->staticData();
     }
 
 
@@ -32,7 +33,7 @@ class AboutPage extends Component
      *
      * @return void
      */
-    public function about(): void
+    public function staticData(): void
     {
         $this->data['about'] = [
             'title' => 'Who Are We?',
@@ -45,6 +46,26 @@ class AboutPage extends Component
                 "Budget-friendly options without compromising quality.",
                 "Projects completed on schedule.",
                 "Elevate your business with tailored technology solutions.",
+            ]
+        ];
+
+        $this->data['projects'] = [
+            'title' => 'Ambitions',
+            'subTitle' => 'Our Goals',
+            'items' => [
+                [
+                    'heading' => 'Vision',
+                    'body' => 'To become a premier software development company delivering innovative solutions that enhance business operations and drive success, while inspiring and empowering individuals to realize their full potential.',
+                    'img' =>  Vite::imageWeb('project-style1.jpg'),
+                ],
+                [
+                    'heading' => 'Mission',
+                    'body' => "Our mission is to create maintainable code and intuitive software that streamlines your business processes for greater efficiency.
+                    
+                    To meet our clients' needs, we excel at customizing processes. Our experience and resources equip us to tackle challenges, even when projects include new features and unique requirements. ",
+                    'img' =>  Vite::imageWeb('project-style2.jpg'),
+                ],
+                
             ]
         ];
     }

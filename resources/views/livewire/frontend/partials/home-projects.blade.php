@@ -1,6 +1,6 @@
 <main>
     @if ($isDisplaySection)
-        <div class="project-area-two pt-100 pb-70">
+        <div class="project-area-two pt-45 pb-45">
             <div class="container">
                 <div class="section-title text-center">
                     @if (isset($title))

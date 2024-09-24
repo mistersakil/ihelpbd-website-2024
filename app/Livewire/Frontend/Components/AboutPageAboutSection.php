@@ -19,15 +19,15 @@ class AboutPageAboutSection extends Component
 
     /**
      * Create a new component instance.
-     * @param array $data 
+     * @param array $item 
      * @return void
      */
-    public function mount(array $data = []): void
+    public function mount(array $item = []): void
     {
-        if (!isset($data['about']) || empty($data['about'])) {
+        if (!isset($item['about']) || empty($item['about'])) {
             $this->isDisplaySection =  false;
         } else {
-            $model = $data['about'];
+            $model = $item['about'];
         }
         $this->title = isset($model['title']) ? __($model['title']) : '';
         $this->subTitle = isset($model['subTitle']) ? __($model['subTitle']) : '';
