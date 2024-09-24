@@ -1,4 +1,4 @@
-<main>
+<section>
     @if ($isDisplaySection)
         <div class="services-area-two services-area-bg pt-100 pb-70">
             <div class="container">
@@ -37,4 +37,4 @@
         </div>
         <!-- /.services-area-two -->
     @endif
-</main>
+</section>

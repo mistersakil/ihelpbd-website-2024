@@ -24,7 +24,7 @@ class KeyCharacteristics extends Component
      */
     public function mount(array $item = []): void
     {
-        if (!isset($item['characteristics'])) {
+        if (!isset($item['characteristics']) || empty($item['characteristics'])) {
             $this->isDisplaySection =  false;
         } else {
             $model = $item['characteristics'];

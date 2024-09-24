@@ -24,7 +24,7 @@ class FaqList extends Component
      */
     public function mount(array $item = []): void
     {
-        if (!isset($item['faqs'])) {
+        if (!isset($item['faqs']) || empty($item['faqs'])) {
             $this->isDisplaySection =  false;
         } else {
             $model = $item['faqs'];

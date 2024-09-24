@@ -17,7 +17,7 @@ class ArticleSectionOne extends Component
      */
     public function mount(array $item = []): void
     {
-        if (!isset($item['articles']) || !is_array($item['articles'])) {
+        if (!isset($item['articles']) || empty($item['articles'])) {
             $this->isDisplaySection =  false;
         } else {
             $this->items = $item['articles'];

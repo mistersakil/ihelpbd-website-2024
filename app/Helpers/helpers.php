@@ -30,6 +30,7 @@ if (!function_exists('_icons')) {
     function _icons(string $icon_name = 'user', bool $all = false)
     {
         $icon_list = [
+            'api'                       => 'bi bi-code-slash',
             'activity'                  => 'bi bi-activity',
             'about'                     => 'bi bi-person-badge',
             'activity_log'              => 'bi bi-clock-history',
@@ -50,6 +51,7 @@ if (!function_exists('_icons')) {
             'bin'                       => 'bi bi-trash2',
             'business'                  => 'bi bi-building',
             'body'                      => 'bi bi-body-text',
+            'boost'                      => 'bi bi-rocket',
             'back'                      => 'bi bi-chevron-left',
             'circle'                    => 'bi bi-circle',
             'clients'                   => 'bi bi-person-hearts',
@@ -134,6 +136,7 @@ if (!function_exists('_icons')) {
             'ticket'                    => 'bi bi-ticket',
             'tracking'                  => 'bi bi-compass',
             'stop'                      => 'bi bi-person-raised-hand',
+            'layers'                    => 'bi bi-layers',
             'tags'                      => 'bi bi-tags',
             'tag'                       => 'bi bi-tag',
             'template'                  => 'bi bi-code-slash',

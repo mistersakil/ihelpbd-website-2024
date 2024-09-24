@@ -194,7 +194,8 @@ class SolutionService
                             'icon' =>  _icons('website'),
                         ]
 
-                    ]
+                    ],
+                    'characteristics' => [],
                 ],
 
                 'articles' => [
@@ -228,13 +229,83 @@ class SolutionService
 
             [
                 'title' => 'Application integration',
-                'subTitle' => 'Coming soon...',
+                'subTitle' => 'Effortless application integration to Boost your business',
                 'slug' => route('web.solutions.details', ['slug' => 'application-integration']),
                 'body' => "",
                 'img_featured' => Vite::imageWeb('blog-img3.jpg'),
                 'img_thumb' => Vite::imageWeb('project-img6.jpg'),
-               
 
+                'keyPoints' => [
+                    "Showcase Professionalism: Instill trust with a quality design",
+                    "Unique Online Presence: Differentiate yourself from competitors",
+                    "Lasting Impressions: Create memorable visuals and content",
+                    "Transform Ideas: Develop tailored web solutions for your vision",
+                    "Drive Business Growth: Implement SEO strategies for visibility",
+                    "Analytics Insights: Use data to improve engagement",
+                    "Enhance Online Presence: Integrate social media for broader reach",
+                    "Responsive Design: Ensure accessibility on all devices",
+
+                ],
+                'services2' => [
+                    'title' => 'Integration Services',
+                    'subTitle' => 'What  Services Included?',
+                    'items' => [
+                        [
+                            'heading' => 'API Integration',
+                            'body' => 'API integration streamlines processes, reduces costs, enhances security, improves customer experience, and fosters collaboration. Embrace it to unlock opportunities and drive innovation for your business success.',
+                            'icon' =>  _icons('api'),
+                        ],
+                        [
+                            'heading' => 'Data Integration',
+                            'body' => 'Centralize data from diverse sources for better connectivity and consolidation. Data integration ensures accurate and accessible information for informed decisions in inventory management, marketing, and financial reporting in retail.',
+                            'icon' =>  _icons('database'),
+                        ],
+                        [
+                            'heading' => 'Cloud Integration',
+                            'body' => 'Cloud integration services offer secure document storage, ensuring universal access for all employees and enabling seamless data transfer between local and cloud environments for optimized efficiency.',
+                            'icon' =>  _icons('upload'),
+                        ],
+                        [
+                            'heading' => 'E-commerce Integration',
+                            'body' => 'Integrating e-commerce platforms with inventory, payroll, and CRM systems enhances online shopping and backend operations, streamlining processes and improving efficiency.',
+                            'icon' =>  _icons('cart'),
+                        ],
+                    ]
+                ],
+                'articles' => [],
+                'faqs' => [],
+                'projects' => [],
+                'characteristics' => [
+                    'title' => 'We Feel Your Need',
+                    'subTitle' => 'Seamless Integration Solutions',
+                    'items' => [
+                        [
+                            'heading' => 'Boost Efficiency',
+                            'body' => 'Simplify and automate intricate tasks within your business, reducing the time and effort needed for manual data entry and system switching. This frees up valuable time for your team to concentrate on strategic tasks.',
+                            'icon' =>  _icons('boost'),
+                        ],
+                        [
+                            'heading' => 'Efficient IT Management',
+                            'body' => 'Benefit from a centralized control center for easier management of interconnected systems, leading to fewer technical issues, quicker problem resolution, and cost savings through streamlined operations.',
+                            'icon' =>  _icons('services'),
+                        ],
+                        [
+                            'heading' => 'Real-Time Insights',
+                            'body' => 'Access real-time data and analytics from integrated systems for a comprehensive view of business operations, including sales tracking, inventory monitoring, and customer insights.',
+                            'icon' =>  _icons('realtime'),
+                        ],
+                        [
+                            'heading' => 'Scalability',
+                            'body' => 'Easily accommodate higher data volumes, more users, and increased demands without major disruptions Empowers your business to evolve and meet future needs.',
+                            'icon' =>  _icons('layers'),
+                        ],
+                        [
+                            'heading' => 'Data Accuracy',
+                            'body' => 'Effortlessly handle larger data volumes, more users, and growing demands with minimal disruptions. Empower your business to adapt and fulfill future requirements seamlessly.',
+                            'icon' =>  _icons('database_lock'),
+                        ],
+                    ]
+                ],
             ],
         ];
 

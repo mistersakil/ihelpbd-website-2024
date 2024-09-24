@@ -26,7 +26,7 @@ class ServicesTwo extends Component
      */
     public function mount(array $item = []): void
     {
-        if (!isset($item['services2'])) {
+        if (!isset($item['services2']) || empty($item['services2'])) {
             $this->isDisplaySection =  false;
         } else {
             $model = $item['services2'];

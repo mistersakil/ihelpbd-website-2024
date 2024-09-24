@@ -24,7 +24,7 @@ class HomeProjects extends Component
      */
     public function mount(array $item = []): void
     {
-        if (!isset($item['projects'])) {
+        if (!isset($item['projects']) || empty($item['projects'])) {
             $this->isDisplaySection =  false;
         } else {
             $model = $item['projects'];
