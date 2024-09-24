@@ -10,6 +10,32 @@ use Illuminate\Contracts\View\View;
  */
 class AboutPageAboutSection extends Component
 {
+    ## Component props
+    public string $title;
+    public string $subTitle;
+    public array $items;
+    public string $img;
+    public bool $isDisplaySection = true;
+
+    /**
+     * Create a new component instance.
+     * @param array $data 
+     * @return void
+     */
+    public function mount(array $data = []): void
+    {
+        if (!isset($data['about']) || empty($data['about'])) {
+            $this->isDisplaySection =  false;
+        } else {
+            $model = $data['about'];
+        }
+        $this->title = isset($model['title']) ? __($model['title']) : '';
+        $this->subTitle = isset($model['subTitle']) ? __($model['subTitle']) : '';
+        $this->items = isset($model['items']) ? $model['items'] : [];
+        $this->img = isset($model['img']) ? $model['img'] : '';
+    }
+
+
     /**
      * Render view
      *
