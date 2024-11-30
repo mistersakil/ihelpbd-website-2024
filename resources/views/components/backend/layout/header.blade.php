@@ -1,9 +1,6 @@
 <header>
     <div class="topbar d-flex align-items-center">
         <nav class="navbar navbar-expand gap-3">
-
-
-
             <div class="top-menu ms-auto">
                 <ul class="navbar-nav align-items-center gap-1">
 

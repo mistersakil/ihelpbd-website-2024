@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Livewire\Frontend\Clear\Clear;
 use App\Livewire\Backend\Auth\LoginPage;
 use App\Livewire\Frontend\Home\HomePage;
-
 use App\Livewire\Frontend\About\AboutPage;
 use App\Http\Middleware\AuthCheckMiddleware;
 use App\Livewire\Frontend\Blogs\BlogListPage;
@@ -45,14 +44,11 @@ $backendMiddleware = [
 
 ## Backend routes
 Route::middleware($backendMiddleware)->prefix('admin')->name('admin.')->group(function () {
-
     Route::get('/', DashboardPage::class)->name('dashboard');
-
     ### Sliders 
     Route::get('/sliders', SliderListPage::class)->name('sliders.list');
     Route::get('/sliders/create', SliderCreatePage::class)->name('sliders.create');
     Route::get('/sliders/edit/{id}', SliderEditPage::class)->name('sliders.edit');
-
     ### Admin login
     Route::get('/login', LoginPage::class)->name('login')->withoutMiddleware([AuthCheckMiddleware::class]);;
 });
