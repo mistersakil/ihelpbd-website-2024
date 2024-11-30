@@ -43,7 +43,7 @@
                             </div>
                             <div class="content">
                                 <h3>
-                                    <a href="https://maps.app.goo.gl/CQC5kxf9FjtVXuY57" target="_blank">
+                                    <a href="{{ _social_media_links('map') }}" target="_blank">
                                         {{ __('brand address short') }}
                                     </a>
                                 </h3>

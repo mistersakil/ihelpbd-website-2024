@@ -62,7 +62,7 @@
                         </div>
                         <ul class="social-link">
                             <li>
-                                <a href="https://www.facebook.com/" target="_blank">
+                                <a href="{{ _social_media_links('facebook') }}" target="_blank">
                                     <i class="icon {{ _icons('facebook') }}"></i>
                                 </a>
                             </li>

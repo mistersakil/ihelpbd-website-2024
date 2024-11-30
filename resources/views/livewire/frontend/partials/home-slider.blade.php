@@ -10,7 +10,7 @@
 
                             <ul class="social-link">
                                 <li>
-                                    <a href="https://www.facebook.com/" target="_blank">
+                                    <a href="{{ _social_media_links('facebook') }}" target="_blank">
                                         <i class="bx bxl-facebook"></i>
                                     </a>
                                 </li>
@@ -49,7 +49,7 @@
 
                             <ul class="social-link">
                                 <li>
-                                    <a href="https://www.facebook.com/" target="_blank">
+                                    <a href="{{ _social_media_links('facebook') }}" target="_blank">
                                         <i class="bx bxl-facebook"></i>
                                     </a>
                                 </li>
@@ -88,7 +88,7 @@
 
                             <ul class="social-link">
                                 <li>
-                                    <a href="https://www.facebook.com/" target="_blank">
+                                    <a href="{{ _social_media_links('facebook') }}" target="_blank">
                                         <i class="bx bxl-facebook"></i>
                                     </a>
                                 </li>

@@ -1,5 +1,7 @@
 <?php
+
 use Illuminate\Support\Str;
+
 /**
  * dateFormat function format date as user needs
  * @param string $date date('Y-m-d')
@@ -323,5 +325,26 @@ if (!function_exists('truncate_without_breaking')) {
 
         ## Return the truncated string with the specified ending
         return "{$truncated}{$end}";
+    }
+}
+
+
+if (!function_exists('_social_media_links')) {
+    /**
+     * Social media link list
+     *
+     * @param string $brand name of the social brands
+     * @return mixed
+     */
+    function _social_media_links(string $brand = ''): mixed
+    {
+        $links = [
+            'facebook' => 'https://www.facebook.com/ihelpkl',
+            'map' => 'https://maps.app.goo.gl/imJJudRDhreKyuam7'
+        ];
+        if (!empty($brand) && array_key_exists($brand, $links)) {
+            return $links[$brand];
+        }
+        return $links;
     }
 }
