@@ -3,10 +3,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="contact-map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.783998027193!2d90.3729483740269!3d23.755080888599164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755bfc91a374a19%3A0x36a2598fad33a7d8!2siHelpBD%20(call%20center%20software)!5e0!3m2!1sen!2sbd!4v1722965400694!5m2!1sen!2sbd"
-                        style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1991.8965619318585!2d101.710675!3d3.149208!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc362832b00e6b%3A0x9514d96ecbe632ce!2sGrand%20Millennium%20Hotel%20Kuala%20Lumpur!5e0!3m2!1sen!2sbd!4v1732950515238!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
             <!-- /.col -->
