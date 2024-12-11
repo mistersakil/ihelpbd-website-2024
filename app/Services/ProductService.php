@@ -225,6 +225,7 @@ class ProductService
                         ]
                     ]
                 ],
+
                 'characteristics' => [
                     'title' => 'Unified Success',
                     'subTitle' => 'Key Features',
@@ -262,6 +263,7 @@ class ProductService
 
                     ]
                 ],
+
                 'faqs' => [
                     'title' => 'FAQ',
                     'subTitle' => "Learn more",
@@ -404,8 +406,8 @@ class ProductService
 
                 ],
                 'projects' => [
-                    'title' => 'Projects',
-                    'subTitle' => 'Why Choose the I Help Omni Pos System?',
+                    'title' => 'Projection',
+                    'subTitle' => 'Why Choose the iPOS System?',
                     'items' => [
                         [
                             // 'heading' => 'Comprehensive Functionality',
@@ -427,7 +429,7 @@ class ProductService
 
                 'characteristics' => [
                     'title' => 'Free Core Features',
-                    'subTitle' => 'Key Features of the I Help OMNI Pos System',
+                    'subTitle' => 'Key Features of the iPOS System',
                     'items' => [
                         [
                             'heading' => 'Sales Processing',
@@ -459,7 +461,7 @@ class ProductService
                 ],
                 'services2' => [
                     'title' => 'Paid Core Features',
-                    'subTitle' => 'Paid Key Features of the POS',
+                    'subTitle' => 'Paid Key Features of the iPOS',
                     'items' => [
                         [
                             'heading' => 'Payment Integration',
@@ -504,37 +506,43 @@ class ProductService
                     ],
                     'characteristics' => [],
                 ],
-                'articles' => [
-                    [
-                        'title' => 'CRM Benefits',
-                        'subTitle' => "Learn more",
-                        'img' => Vite::imageWeb('project-img4.jpg'),
-                        'items' => [
-                            'Efficiency',
-                            'Integration',
-                            'Usability',
-                            'Security',
-                            'Tracking',
-                            'Flexibility',
-                            'Insights',
-                            'Scalability',
+                'choose2' => [
+                    'title' => 'CRM Benefits & Advantages',
+                    'subTitle' => 'An Overview of Why We Need iPOS System',
+                    'imgFeatured' => Vite::imageWeb('choose-img2.jpg'),
+                    'imgThumb' => null,
+                    'imgFrame' => Vite::imageWeb('choose-line.png'),
+                    'list' => [
+                        [
+                            'title' => 'Benefits',
+                            'progress' => 100,
+                            'items' => [
+                                'Efficiency',
+                                'Integration',
+                                'Usability',
+                                'Security',
+                                'Tracking',
+                                'Flexibility',
+                                'Insights',
+                                'Scalability',
 
-                        ]
-                    ],
-                    [
-                        'title' => 'Advantages',
-                        'subTitle' => "Learn more",
-                        'img' => Vite::imageWeb('project-img5.jpg'),
-                        'items' => [
-                            'Automation',
-                            'Accessibility',
-                            'Reliability',
-                            'Customization',
-                            'Support',
-                            'Analytics',
-                            'Performance',
+                            ]
+                        ],
+                        [
+                            'title' => 'Advantages',
+                            'progress' => 100,
+                            'items' => [
+                                'Automation',
+                                'Accessibility',
+                                'Reliability',
+                                'Customization',
+                                'Support',
+                                'Analytics',
+                                'Performance',
+                            ]
                         ]
                     ]
+
                 ]
             ],
 

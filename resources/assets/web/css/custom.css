@@ -40,3 +40,8 @@
     display: inline-block;
     text-transform: none;
 }
+
+
+.services-area-bg {    
+    background-image: url(@imgWeb/service-bg.jpg);
+}

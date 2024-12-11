@@ -11,7 +11,9 @@
 
     <livewire:frontend.components.services-two :item="$itemDetails" />
 
-    <livewire:frontend.components.article-section-one :item="$itemDetails" />
+    {{-- <livewire:frontend.components.article-section-one :item="$itemDetails" /> --}}
+
+    <livewire:frontend.components.why-choose-us-section-two :item="$itemDetails" />
 
     <livewire:frontend.components.faq-list :item="$itemDetails" />
 
