@@ -57,8 +57,8 @@ class ProductService
                 'subTitle' => 'All-in-one solution for help desk and customer service operations',
                 'slug' => route('web.products.details', ['slug' => 'complain-management']),
                 'body' => "",
-                'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
-                'img_thumb' => Vite::imageWeb('project-img3.jpg'),
+                'img_featured' => Vite::imageWeb('ticket.png'),
+                'img_thumb' => Vite::imageWeb('ticket.png'),
                 'keyPoints' => [
                     'Unified platform for managing all customer support interactions',
                     'Streamlined workflows to enhance efficiency and response times',
@@ -79,17 +79,17 @@ class ProductService
                         [
                             'heading' => 'Simplified SLA Oversight',
                             'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime magni, Lorem ipsum dolor, Lorem ipsum dolor',
-                            'img' =>  Vite::imageWeb('project-style1.jpg'),
+                            'img' =>  Vite::imageWeb('ticket-thumb-1.png'),
                         ],
                         [
                             'heading' => 'Automated Task Assignment',
                             'body' => 'Let the system automatically delegate customer tickets to your team. Enhance efficiency with full end-to-end visibility',
-                            'img' =>  Vite::imageWeb('project-style2.jpg'),
+                            'img' =>  Vite::imageWeb('ticket-thumb-2.png'),
                         ],
                         [
                             'heading' => 'Automated Ticket Notifications',
                             'body' => 'Receive instant alerts for active, unresponsive, or automatically completed tickets',
-                            'img' =>  Vite::imageWeb('project-style3.jpg'),
+                            'img' =>  Vite::imageWeb('ticket-thumb-3.png'),
                         ]
                     ]
                 ],
@@ -187,6 +187,76 @@ class ProductService
                 ]
 
             ],
+
+            [
+                'title' => 'Omni-channel Contact Center',
+                'subTitle' => 'Integrated Customer Communication: Omni-channel Contact Center Solution',
+                'slug' => route('web.products.details', ['slug' => 'omni-channel']),
+                'body' => "",
+                'img_featured' => Vite::imageWeb('omni-contact.jpg'),
+                'img_thumb' => Vite::imageWeb('omni-contact-2.jpg'),
+                'keyPoints' => [
+                    "Whatsapp",
+                    "Email",
+                    "SMS",
+                    "Voice chat",
+                    "Web chat",
+
+                ],
+
+                'projects' => [
+                    'title' => 'Innovative',
+                    'subTitle' => 'iHelP offers the solution',
+                    'items' => [
+                        [
+                            'heading' => '',
+                            'body' => "An advanced Omni-channel contact center is vital to prevent business loss. iHelpBD's solution integrates voice, chat, email, and CRM into one platform, ensuring a seamless customer journey.",
+                            'img' =>  Vite::imageWeb('omni-contact-thumb-1.jpg'),
+                        ],
+                        [
+                            'heading' => '',
+                            'body' => "This solution gives agents access to a customer's full interaction history for personalized service, allowing customers to use their preferred communication channels for a better experience.",
+                            'img' =>  Vite::imageWeb('omni-contact-thumb-2.jpg'),
+                        ],
+                        [
+                            'heading' => '',
+                            'body' => "iHelpKL's Omni-channel contact center streamlines operations, helping businesses meet customer expectations, improve satisfaction, and foster loyalty to stay competitive.",
+                            'img' =>  Vite::imageWeb('omni-contact-thumb-3.jpg'),
+                        ]
+                    ]
+                ],
+
+                'faqs' => [
+                    'title' => 'FAQ',
+                    'subTitle' => "Learn more",
+                    'items' => []
+                ],
+                'articles' => [
+                    [
+                        'title' => 'Omni-channel Benefits',
+                        'subTitle' => "Learn more",
+                        'img' => Vite::imageWeb('project-img4.jpg'),
+                        'items' => [
+                            "The main goal of an Omni-channel contact center is to enhance customer experience.",
+                            "Customers can easily switch to text to send images without repeating their issue.",
+                            "Agents can access prior interactions via CRM, ensuring consistent service.",
+                        ]
+                    ],
+                    [
+                        'title' => 'Omni-channel Advantages',
+                        'subTitle' => "Learn more",
+                        'img' => Vite::imageWeb('project-img5.jpg'),
+                        'items' => [
+                            "Customers can choose from channels like Facebook Messenger, WhatsApp, email, or web chat, preventing lost opportunities.",
+                            "iHelpKL is committed to providing a seamless customer journey through its Omni-channel solution on a single platform."
+
+
+                        ]
+                    ]
+                ]
+
+            ],
+
 
             [
                 'title' => 'Task Management',
@@ -319,75 +389,7 @@ class ProductService
 
             ],
 
-            [
-                'title' => 'Omni-channel Contact Center',
-                'subTitle' => 'Integrated Customer Communication: Omni-channel Contact Center Solution',
-                'slug' => route('web.products.details', ['slug' => 'omni-channel']),
-                'body' => "",
-                'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
-                'img_thumb' => Vite::imageWeb('project-img5.jpg'),
-                'keyPoints' => [
-                    "Whatsapp",
-                    "Email",
-                    "SMS",
-                    "Voice chat",
-                    "Web chat",
-
-                ],
-
-                'projects' => [
-                    'title' => 'Innovative',
-                    'subTitle' => 'iHelP offers the solution',
-                    'items' => [
-                        [
-                            'heading' => '',
-                            'body' => "An advanced Omni-channel contact center is vital to prevent business loss. iHelpBD's solution integrates voice, chat, email, and CRM into one platform, ensuring a seamless customer journey.",
-                            'img' =>  Vite::imageWeb('project-style1.jpg'),
-                        ],
-                        [
-                            'heading' => '',
-                            'body' => "This solution gives agents access to a customer's full interaction history for personalized service, allowing customers to use their preferred communication channels for a better experience.",
-                            'img' =>  Vite::imageWeb('project-style2.jpg'),
-                        ],
-                        [
-                            'heading' => '',
-                            'body' => "iHelpKL's Omni-channel contact center streamlines operations, helping businesses meet customer expectations, improve satisfaction, and foster loyalty to stay competitive.",
-                            'img' =>  Vite::imageWeb('project-style3.jpg'),
-                        ]
-                    ]
-                ],
-
-                'faqs' => [
-                    'title' => 'FAQ',
-                    'subTitle' => "Learn more",
-                    'items' => []
-                ],
-                'articles' => [
-                    [
-                        'title' => 'Omni-channel Benefits',
-                        'subTitle' => "Learn more",
-                        'img' => Vite::imageWeb('project-img4.jpg'),
-                        'items' => [
-                            "The main goal of an Omni-channel contact center is to enhance customer experience.",
-                            "Customers can easily switch to text to send images without repeating their issue.",
-                            "Agents can access prior interactions via CRM, ensuring consistent service.",
-                        ]
-                    ],
-                    [
-                        'title' => 'Omni-channel Advantages',
-                        'subTitle' => "Learn more",
-                        'img' => Vite::imageWeb('project-img5.jpg'),
-                        'items' => [
-                            "Customers can choose from channels like Facebook Messenger, WhatsApp, email, or web chat, preventing lost opportunities.",
-                            "iHelpKL is committed to providing a seamless customer journey through its Omni-channel solution on a single platform."
-
-
-                        ]
-                    ]
-                ]
-
-            ],
-
+        
             [
                 'title' => 'Point Of Sale',
                 'subTitle' => 'The ultimate omni-channel approach to sales and customer management',
