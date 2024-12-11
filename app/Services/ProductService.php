@@ -211,17 +211,17 @@ class ProductService
                         [
                             'heading' => '',
                             'body' => 'AI-driven automated service management (AISM) capabilities allow for quicker, more accurate, and efficient delivery of service innovations',
-                            'img' =>  Vite::imageWeb('project-style1.jpg'),
+                            'img' =>  Vite::imageWeb('task-management-thumb-1.png'),
                         ],
                         [
                             'heading' => '',
                             'body' => 'Incoming calls, emails, and tickets can be automatically managed from a single platform',
-                            'img' =>  Vite::imageWeb('project-style2.jpg'),
+                            'img' =>  Vite::imageWeb('task-management-thumb-2.png'),
                         ],
                         [
                             'heading' => '',
                             'body' => 'Simplify priorities with clear project alignment to strategic goals, manage multiple projects efficiently, and speed up progress with enhanced stakeholder visibility',
-                            'img' =>  Vite::imageWeb('project-style3.jpg'),
+                            'img' =>  Vite::imageWeb('task-management-thumb-3.png'),
                         ]
                     ]
                 ],
