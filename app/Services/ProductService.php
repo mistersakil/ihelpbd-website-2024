@@ -193,8 +193,8 @@ class ProductService
                 'subTitle' => 'The ultimate solution for task refinement and process improvement',
                 'slug' => route('web.products.details', ['slug' => 'task-management']),
                 'body' => "",
-                'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
-                'img_thumb' => Vite::imageWeb('project-img4.jpg'),
+                'img_featured' => Vite::imageWeb('task-management.png'),
+                'img_thumb' => Vite::imageWeb('task-management.png'),
                 'keyPoints' => [
                     'Align work with company objectives',
                     'Automate processes across all departments',
@@ -354,7 +354,7 @@ class ProductService
                         ]
                     ]
                 ],
-          
+
                 'faqs' => [
                     'title' => 'FAQ',
                     'subTitle' => "Learn more",
@@ -376,9 +376,9 @@ class ProductService
                         'subTitle' => "Learn more",
                         'img' => Vite::imageWeb('project-img5.jpg'),
                         'items' => [
-                           "Customers can choose from channels like Facebook Messenger, WhatsApp, email, or web chat, preventing lost opportunities.",
+                            "Customers can choose from channels like Facebook Messenger, WhatsApp, email, or web chat, preventing lost opportunities.",
                             "iHelpKL is committed to providing a seamless customer journey through its Omni-channel solution on a single platform."
-                            
+
 
                         ]
                     ]
@@ -387,17 +387,156 @@ class ProductService
             ],
 
             [
-                'title' => 'Account Management Solution',
-                'subTitle' => 'Coming soon',
-                'slug' => route('web.products.details', ['slug' => 'account-management']),
+                'title' => 'Point Of Sale',
+                'subTitle' => 'The ultimate omni-channel approach to sales and customer management',
+                'slug' => route('web.products.details', ['slug' => 'point-of-sale']),
                 'body' => "",
-                'img_featured' => Vite::imageWeb('project-details-img1.jpg'),
-                'img_thumb' => Vite::imageWeb('project-img6.jpg'),           
+                'img_featured' => Vite::imageWeb('pos.png'),
+                'img_thumb' => Vite::imageWeb('pos.png'),
+                'keyPoints' => [
+                    'Provide a centralized solution for maintaining sales &  customer data',
+                    'Facilitate efficient and accurate transaction management.',
+                    'Enable effective tracking of customer details and purchase history.',
+                    'Ensure robust security measures to protect sensitive data.',
+                    'Monitor inventory levels and alert for low stock to prevent shortages.',
+                    'Design an intuitive user interface for ease of use by all staff.',
+                    'Insightful reports on sales performance and customer activity.',
 
+                ],
+                'projects' => [
+                    'title' => 'Projects',
+                    'subTitle' => 'Why Choose the I Help Omni Pos System?',
+                    'items' => [
+                        [
+                            // 'heading' => 'Comprehensive Functionality',
+                            'body' => 'This POS system integrates essential features such as sales processing, customer management, and inventory tracking into a single platform, streamlining operations and reducing the need for multiple systems',
+                            'img' =>  Vite::imageWeb('pos-thumb-1.png'),
+                        ],
+                        [
+                            // 'heading' => 'Enhanced Data Security',
+                            'body' => 'With robust security protocols in place, this solution ensures that sensitive customer and transaction data is protected, fostering trust and compliance with data protection regulations',
+                            'img' =>  Vite::imageWeb('pos-thumb-2.png'),
+                        ],
+                        [
+                            // 'heading' => 'Actionable Insights',
+                            'body' => "The system's reporting and analytics capabilities provide valuable insights into sales trends and customer behavior, enabling data-driven decision-making that can enhance business performance and drive growth",
+                            'img' =>  Vite::imageWeb('pos-thumb-3.png'),
+                        ]
+                    ]
+                ],
 
+                'characteristics' => [
+                    'title' => 'Free Core Features',
+                    'subTitle' => 'Key Features of the I Help OMNI Pos System',
+                    'items' => [
+                        [
+                            'heading' => 'Sales Processing',
+                            'body' => 'Supports transactions for product sales with capabilities for applying discounts, tax calculations, and generating digital receipts',
+                            'icon' =>  _icons('sales'),
+                        ],
+                        [
+                            'heading' => 'Customer Management',
+                            'body' => 'Stores customer information, such as contact details, purchase history, and preferences, to personalize future engagements and enhance customer experience',
+                            'icon' =>  _icons('customer'),
+                        ],
+                        [
+                            'heading' => 'Inventory Management',
+                            'body' => 'Monitors product stock levels, alerts for low inventory, and allows for adjustments in real-time',
+                            'icon' =>  _icons('products'),
+                        ],
+                        [
+                            'heading' => 'User Authentication and Security',
+                            'body' => 'Ensures only authorized personnel access the system, with security protocols in place for data protection',
+                            'icon' =>  _icons('user'),
+                        ],
+                        [
+                            'heading' => 'User Interface (UI) Design',
+                            'body' => 'A user-friendly and intuitive design that enables ease of use for staff at all experience levels',
+                            'icon' =>  _icons('tv'),
+                        ],
+
+                    ]
+                ],
+                'services2' => [
+                    'title' => 'Paid Core Features',
+                    'subTitle' => 'Paid Key Features of the POS',
+                    'items' => [
+                        [
+                            'heading' => 'Payment Integration',
+                            'body' => 'Supports multiple payment options, including credit/debit cards, mobile payments, and cash',
+                            'icon' =>  _icons('dollar'),
+                        ],
+                        [
+                            'heading' => 'Reporting and Analytics',
+                            'body' => 'Offers detailed reports on sales, revenue, and customer behavior for informed decisions',
+                            'icon' =>  _icons('reports'),
+                        ],
+                        [
+                            'heading' => 'Data Segmentation and Marketing',
+                            'body' => 'Enables customer/product segmentation for targeted marketing campaigns',
+                            'icon' =>  _icons('database'),
+                        ],
+                        [
+                            'heading' => 'Complaint Management',
+                            'body' => 'Streamlines the handling of customer complaints to enhance service quality',
+                            'icon' =>  _icons('question2'),
+                        ],
+                        [
+                            'heading' => 'Staff Activity Log',
+                            'body' => 'Tracks user activity within the system for accountability and performance evaluation',
+                            'icon' =>  _icons('users'),
+                        ],
+                        [
+                            'heading' => 'Exportable Reports',
+                            'body' => 'Allows reports to be exported in multiple formats (e.g., PDF, Excel)',
+                            'icon' =>  _icons('reports'),
+                        ],
+                        [
+                            'heading' => 'Data Backup and Recovery',
+                            'body' => 'Automates backups and ensures quick recovery from potential data loss',
+                            'icon' =>  _icons('download'),
+                        ],
+                        [
+                            'heading' => 'Mobile Apps ',
+                            'body' => 'Provides mobile versions of the POS system for on-the-go access and usability',
+                            'icon' =>  _icons('google_play'),
+                        ],
+                    ],
+                    'characteristics' => [],
+                ],
+                'articles' => [
+                    [
+                        'title' => 'CRM Benefits',
+                        'subTitle' => "Learn more",
+                        'img' => Vite::imageWeb('project-img4.jpg'),
+                        'items' => [
+                            'Efficiency',
+                            'Integration',
+                            'Usability',
+                            'Security',
+                            'Tracking',
+                            'Flexibility',
+                            'Insights',
+                            'Scalability',
+
+                        ]
+                    ],
+                    [
+                        'title' => 'Advantages',
+                        'subTitle' => "Learn more",
+                        'img' => Vite::imageWeb('project-img5.jpg'),
+                        'items' => [
+                            'Automation',
+                            'Accessibility',
+                            'Reliability',
+                            'Customization',
+                            'Support',
+                            'Analytics',
+                            'Performance',
+                        ]
+                    ]
+                ]
             ],
-
-
 
         ];
 

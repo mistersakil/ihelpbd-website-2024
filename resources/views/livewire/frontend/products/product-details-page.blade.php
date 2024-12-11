@@ -9,6 +9,8 @@
 
     <livewire:frontend.components.key-characteristics :item="$itemDetails" />
 
+    <livewire:frontend.components.services-two :item="$itemDetails" />
+
     <livewire:frontend.components.article-section-one :item="$itemDetails" />
 
     <livewire:frontend.components.faq-list :item="$itemDetails" />
