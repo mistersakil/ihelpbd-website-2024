@@ -377,14 +377,12 @@ if (!function_exists('_parse_url')) {
             ## Get the path from the URL
             $path = parse_url($url, PHP_URL_PATH);
 
-            // dd($path, $url, $routeName);
             ## Return true if root path identified
             if (empty($path) && $routeName === 'web.home') {
                 return true;
             }
             ## Find the route that matches the path
             $route = Route::getRoutes()->match(request()->create($path));
-            // dump($route->getName(), $routeName);
 
             ## Display the route name
             return !empty($routeName) && $route->getName() === $routeName;

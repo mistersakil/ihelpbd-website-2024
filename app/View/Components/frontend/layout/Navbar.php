@@ -23,8 +23,6 @@ class Navbar extends Component
     {
         $this->logo = Vite::asset('resources/images/logo-dark.svg');
         $this->navItems = $this->getNavItems();
-
-        // dd($this->navItems);
     }
 
     /**
