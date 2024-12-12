@@ -23,7 +23,7 @@
                             @foreach ($navItems as $itemKey => $item)
                                 <li class="nav-item">
                                     @if (isset($item['children']) && is_array($item['children']))
-                                        <a href="javascript:void(0)" class="nav-link">
+                                        <a href="javascript:void(0)" class="nav-link {{ $item['isActive'] }}">
                                             {{ __('company') }}
                                             <i class="bx bx-chevron-down"></i>
                                         </a>
@@ -31,7 +31,7 @@
                                         <ul class="dropdown-menu">
                                             @foreach ($item['children'] as $childKey => $childItem)
                                                 <li class="nav-item">
-                                                    <a wire:navigate href="{{ $childItem['link'] }}" class="nav-link">
+                                                    <a wire:navigate href="{{ $childItem['link'] }}" class="nav-link {{ $childItem['isActive'] }}">
                                                         {{ $childItem['title'] }}
                                                     </a>
                                                 </li>
@@ -39,7 +39,7 @@
                                             @endforeach
                                         </ul>
                                     @else
-                                        <a wire:navigate href="{{ $item['link'] }}" class="nav-link active">
+                                        <a wire:navigate href="{{ $item['link'] }}" class="nav-link {{ $item['isActive'] }}">
                                             {{ $item['title'] }}
                                         </a>
                                     @endif

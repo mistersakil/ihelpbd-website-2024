@@ -23,6 +23,8 @@ class Navbar extends Component
     {
         $this->logo = Vite::asset('resources/images/logo-dark.svg');
         $this->navItems = $this->getNavItems();
+
+        // dd($this->navItems);
     }
 
     /**
@@ -36,38 +38,45 @@ class Navbar extends Component
             [
                 'title' => __('home'),
                 'link' => route('web.home'),
+                'isActive' => _parse_url('web.home') ? 'active': '',
             ],
 
             [
                 'title' => __('products'),
                 'link' => route('web.products'),
+                'isActive' => _parse_url('web.products') ? 'active': '',
             ],
 
             [
                 'title' => __('solutions'),
                 'link' => route('web.solutions'),
+                'isActive' => _parse_url('web.solutions') ? 'active': '',
             ],
 
             [
                 'title' => __('company'),
                 'link' => "javascript:void(0)",
+                'isActive' => _parse_url('web.about') || _parse_url('web.contact') ? 'active': '',
                 'children' => [
                     [
                         'title' => __('about'),
                         'link' => route('web.about'),
+                        'isActive' => _parse_url('web.about') ? 'active': '',
                         'hasChildren' => false,
                     ],
                     [
                         'title' => __('contact'),
                         'link' => route('web.contact'),
+                        'isActive' => _parse_url('web.contact') ? 'active': '',
                         'hasChildren' => false,
                     ],
                 ]
             ],
-            
+
             [
                 'title' => __('learning'),
                 'link' => route('web.blogs'),
+                'isActive' => _parse_url('web.blogs') ? 'active': ''
             ],
 
 
