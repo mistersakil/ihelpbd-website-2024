@@ -42,24 +42,33 @@
 
                         <li class="nav-item">
                             <a wire:navigate href="{{ route('web.blogs') }}" class="nav-link">
-                                {{ __('blogs') }}
+                                {{ __('learning') }}
                             </a>
                         </li>
                         <!-- /.nav-item -->
-
                         <li class="nav-item">
-                            <a wire:navigate href="{{ route('web.about') }}" class="nav-link">
-                                {{ __('about us') }}
+                            <a href="javascript:void(0)" class="nav-link">
+                                {{ __('company') }}
+                                <i class="bx bx-chevron-down"></i>
                             </a>
-                        </li>
-                        <!-- /.nav-item -->
+                            <ul class="dropdown-menu">
 
-                        <li class="nav-item">
-                            <a wire:navigate href="{{ route('web.contact') }}" class="nav-link">
-                                {{ __('contact') }}
-                            </a>
+                                <li class="nav-item">
+                                    <a wire:navigate href="{{ route('web.about') }}" class="nav-link">
+                                        {{ __('about us') }}
+                                    </a>
+                                </li>
+                                <!-- /.nav-item -->
+
+                                <li class="nav-item">
+                                    <a wire:navigate href="{{ route('web.contact') }}" class="nav-link">
+                                        {{ __('contact') }}
+                                    </a>
+                                </li>
+                                <!-- /.nav-item -->
+                            </ul>
                         </li>
-                        <!-- /.nav-item -->
+
 
                     </ul>
                     <!-- /.navbar-nav -->
