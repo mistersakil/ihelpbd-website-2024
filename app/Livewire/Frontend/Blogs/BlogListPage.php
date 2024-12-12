@@ -3,6 +3,7 @@
 namespace App\Livewire\Frontend\Blogs;
 
 use Livewire\Component;
+use App\Services\BlogService;
 use Livewire\Attributes\Title;
 use Illuminate\Contracts\View\View;
 
@@ -11,8 +12,32 @@ use Illuminate\Contracts\View\View;
  */
 class BlogListPage extends Component
 {
-    public string $metaTitle = 'learning material list';
+    ## Component props
+    public string $metaTitle = 'blog list';
     public string $module = 'blogs';
+    public array $dataList = [];
+    private BlogService $blogService;
+
+    /**
+     * Boot component on every render
+     * 
+     * @return void
+     */
+    public function boot(): void
+    {
+        $this->blogService = new BlogService;
+    }
+
+    /**
+     * Create a new component instance.
+     * @return void
+     */
+    public function mount(): void
+    {
+        $this->dataList = $this->blogService->getStaticModels();
+
+     
+    }
 
     /**
      * Render view

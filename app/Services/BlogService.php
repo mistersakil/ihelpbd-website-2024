@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Vite;
 
 /**
@@ -18,10 +19,25 @@ class BlogService
     {
         $dataList = [
             [
-                'title' => 'blog-one',
-                'slug' => route('web.products.details', ['slug' => 'blog-one']),                
-                'img_featured' => Vite::imageWeb('ticket.png'),
-                'img_thumb' => Vite::imageWeb('ticket.png'),           
+                'title' => "Getting Started with iHelpKL's Custom website",
+                'slug' => "javascript:void(0)",                
+                'img_featured' => Vite::imageWeb('pos.png'),
+                'img_thumb' => Vite::imageWeb('pos.png'),
+                'author' => 'Sakil Mahmud',
+                'date' => Carbon::now()->format('d M Y'),
+                'category' => 'software'
+
+
+            ],
+            [
+                'title' => 'Understanding Web Development',
+                'slug' => "javascript:void(0)",                
+                'img_featured' => Vite::imageWeb('pos.png'),
+                'img_thumb' => Vite::imageWeb('pos.png'),
+                'author' => 'Khalid Hasan',
+                'date' => Carbon::now()->subDays(2)->format('d M Y'),
+                'category' => 'software'
+
 
             ],
 
