@@ -4,7 +4,7 @@
             <div class="mobile-responsive-menu">
                 <div class="logo">
                     <a wire:navigate href="{{ route('web.home') }}">
-                        <img src="{{ Vite::asset('resources/images/logo-dark.svg') }}" class="logo_img" alt="Logo">
+                        <img src="{{ $logo }}" class="logo_img" alt="Logo">
                     </a>
                 </div>
             </div>
@@ -19,57 +19,34 @@
             <nav class="navbar navbar-expand-md navbar-light ">
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a wire:navigate href="{{ route('web.home') }}" class="nav-link active">
-                                {{ __('home') }}
-                            </a>
-                        </li>
-                        <!-- /.nav-item -->
-
-                        <li class="nav-item">
-                            <a wire:navigate href="{{ route('web.solutions') }}" class="nav-link">
-                                {{ __('solutions') }}
-                            </a>
-                        </li>
-                        <!-- /.nav-item -->
-
-                        <li class="nav-item">
-                            <a wire:navigate href="{{ route('web.products') }}" class="nav-link">
-                                {{ __('products') }}
-                            </a>
-                        </li>
-                        <!-- /.nav-item -->
-
-                        <li class="nav-item">
-                            <a wire:navigate href="{{ route('web.blogs') }}" class="nav-link">
-                                {{ __('learning') }}
-                            </a>
-                        </li>
-                        <!-- /.nav-item -->
-                        <li class="nav-item">
-                            <a href="javascript:void(0)" class="nav-link">
-                                {{ __('company') }}
-                                <i class="bx bx-chevron-down"></i>
-                            </a>
-                            <ul class="dropdown-menu">
-
+                        @if (isset($navItems) && is_array($navItems) && count($navItems))
+                            @foreach ($navItems as $itemKey => $item)
                                 <li class="nav-item">
-                                    <a wire:navigate href="{{ route('web.about') }}" class="nav-link">
-                                        {{ __('about us') }}
-                                    </a>
+                                    @if (isset($item['children']) && is_array($item['children']))
+                                        <a href="javascript:void(0)" class="nav-link">
+                                            {{ __('company') }}
+                                            <i class="bx bx-chevron-down"></i>
+                                        </a>
+
+                                        <ul class="dropdown-menu">
+                                            @foreach ($item['children'] as $childKey => $childItem)
+                                                <li class="nav-item">
+                                                    <a wire:navigate href="{{ $childItem['link'] }}" class="nav-link">
+                                                        {{ $childItem['title'] }}
+                                                    </a>
+                                                </li>
+                                                <!-- /.nav-item -->
+                                            @endforeach
+                                        </ul>
+                                    @else
+                                        <a wire:navigate href="{{ $item['link'] }}" class="nav-link active">
+                                            {{ $item['title'] }}
+                                        </a>
+                                    @endif
                                 </li>
                                 <!-- /.nav-item -->
-
-                                <li class="nav-item">
-                                    <a wire:navigate href="{{ route('web.contact') }}" class="nav-link">
-                                        {{ __('contact') }}
-                                    </a>
-                                </li>
-                                <!-- /.nav-item -->
-                            </ul>
-                        </li>
-
-
+                            @endforeach
+                        @endif
                     </ul>
                     <!-- /.navbar-nav -->
 
