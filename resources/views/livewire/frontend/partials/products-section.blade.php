@@ -1,4 +1,4 @@
-<main class="project-area pt-100 pb-70">
+<main class="project-area services-area-bg pt-100 pb-70">
     <div class="container">
         <div class="section-title text-center ">
             <span class="sp-title">{{ $sectionTitle }}</span>

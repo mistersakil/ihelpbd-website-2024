@@ -25,7 +25,7 @@ Route::name('web.')->middleware([AdminLocaleMiddleware::class])->group(function 
     Route::get('/', HomePage::class)->name('home');
     Route::get('/about-us', AboutPage::class)->name('about');
     Route::get('/contact-us', ContactPage::class)->name('contact');
-    Route::get('/learning', BlogListPage::class)->name('blogs');
+    Route::get('/blogs', BlogListPage::class)->name('blogs');
     Route::get('/products', ProductListPage::class)->name('products');
     Route::get('/products/{slug}', ProductDetailsPage::class)->name('products.details');
     Route::get('/solutions', SolutionListPage::class)->name('solutions');

@@ -24,7 +24,7 @@
                                 <li class="nav-item">
                                     @if (isset($item['children']) && is_array($item['children']))
                                         <a href="javascript:void(0)" class="nav-link {{ $item['isActive'] }}">
-                                            {{ __('company') }}
+                                            {{ $item['title'] }}
                                             <i class="bx bx-chevron-down"></i>
                                         </a>
 

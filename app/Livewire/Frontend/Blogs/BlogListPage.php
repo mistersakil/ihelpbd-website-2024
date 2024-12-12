@@ -11,8 +11,8 @@ use Illuminate\Contracts\View\View;
  */
 class BlogListPage extends Component
 {
-    public string $metaTitle = 'blog list';
-    public string $module = 'blog';
+    public string $metaTitle = 'learning material list';
+    public string $module = 'blogs';
 
     /**
      * Render view
