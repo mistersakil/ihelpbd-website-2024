@@ -1,8 +1,8 @@
 <main>
     <x-slot:innerBanner>
         <x-frontend.layout.inner-banner :metaTitle="$metaTitle" :module="$module" />
-    </x-slot:innerBanner>    
-    
+    </x-slot:innerBanner>
+
     @if (is_array($dataList) && count($dataList))
         <div class="blog-widget-area pt-100 pb-70">
             <div class="container">
@@ -21,12 +21,18 @@
                                                     <a href="{{ $item['slug'] }}">
                                                         <i class='bx bx-user'></i> {{ $item['author'] }}</a>
                                                 </li>
-                                                <li><i class='bx bx-calendar'></i>  {{ $item['date'] }} </li>
-                                                <li><i class='bx bx-comment-dots'></i>  {{ $item['category'] }}</li>
+                                                <li>
+                                                    <i class='bx bx-calendar'></i> 
+                                                    {{ $item['date'] }} 
+                                                </li>
+                                                <li>
+                                                    <i class='bx bx-comment-dots'></i> 
+                                                    <a href="javascript:void(0)">{{ ucfirst($item['category']) }}</
+                                                </li>
                                             </ul>
                                             <h3>
                                                 <a href="{{ $item['slug'] }}">
-                                                    {{ $item['title'] }}
+                                                    {{ ucfirst($item['title']) }}
                                                 </a>
                                             </h3>
                                             <a href="{{ $item['slug'] }}" class="read-btn">Read More</a>
@@ -41,27 +47,30 @@
 
                     <div class="col-lg-4">
                         <div class="side-bar-area pl-20">
-
                             <div class="side-bar-widget">
                                 <h3 class="title">Recent Post</h3>
                                 <div class="widget-popular-post">
-                                    <article class="item">
-                                        <a href="javascript:void(0)" class="thumb">
-                                            <span class="full-image cover bg1" role="img"></span>
-                                        </a>
-                                        <div class="info">
-                                            <h4 class="title-text">
-                                                <a href="javascript:void(0)">
-                                                    Reasons Why You Need Virtual Assistant
+                                    @if (is_array($dataList) && count($dataList))
+                                        @foreach ($dataList as $key => $item)
+                                            <article class="item">
+                                                <a href="javascript:void(0)" class="thumb">
+                                                    <span class="full-image cover" role="img">
+                                                        <img src="{{ $item['img_thumb'] }}" alt=" {{  $item['title'] }}">
+                                                    </span>
                                                 </a>
-                                            </h4>
+                                                <div class="info">
+                                                    <h4 class="title-text">
+                                                        <a href="javascript:void(0)">
+                                                            {{  $item['title'] }}
+                                                        </a>
+                                                    </h4>
 
-                                            <a href="javascript:void(0)" class="read-btn" target="_blank">Read
-                                                More</a>
-                                        </div>
-                                    </article>
-
-
+                                                    <a href="javascript:void(0)" class="read-btn" target="_blank">Read
+                                                        More</a>
+                                                </div>
+                                            </article>
+                                        @endforeach
+                                    @endif
                                 </div>
                             </div>
 

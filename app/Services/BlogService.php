@@ -21,22 +21,24 @@ class BlogService
             [
                 'title' => "Getting Started with iHelpKL's Custom website",
                 'slug' => "javascript:void(0)",                
-                'img_featured' => Vite::imageWeb('pos.png'),
-                'img_thumb' => Vite::imageWeb('pos.png'),
+                'img_featured' => Vite::imageWeb('custom-website-benefits.png'),
+                'img_thumb' => Vite::imageWeb('custom-website-benefits.png'),
                 'author' => 'Sakil Mahmud',
                 'date' => Carbon::now()->format('d M Y'),
-                'category' => 'software'
+                'category' => 'software',
+                'tags' => 'website, crm, custom website, website development, crm customization'
 
 
             ],
             [
                 'title' => 'Understanding Web Development',
                 'slug' => "javascript:void(0)",                
-                'img_featured' => Vite::imageWeb('pos.png'),
-                'img_thumb' => Vite::imageWeb('pos.png'),
+                'img_featured' => Vite::imageWeb('what-is-web-dev.png'),
+                'img_thumb' => Vite::imageWeb('what-is-web-dev.png'),
                 'author' => 'Khalid Hasan',
                 'date' => Carbon::now()->subDays(2)->format('d M Y'),
-                'category' => 'software'
+                'category' => 'software',
+                'tags' => 'website, crm, custom website, website development, crm customization'
 
 
             ],
