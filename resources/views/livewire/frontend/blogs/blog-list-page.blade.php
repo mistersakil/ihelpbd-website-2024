@@ -26,8 +26,11 @@
                                                     {{ $item['date'] }} 
                                                 </li>
                                                 <li>
-                                                    <i class='bx bx-comment-dots'></i> 
-                                                    <a href="javascript:void(0)">{{ ucfirst($item['category']) }}</
+                                                    
+                                                    <a href="javascript:void(0)">
+                                                        <i class='bx bx-comment-dots'></i> 
+                                                        {{ ucfirst($item['category']) }}
+                                                    </a>
                                                 </li>
                                             </ul>
                                             <h3>

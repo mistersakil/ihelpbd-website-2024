@@ -23,7 +23,7 @@ class BlogService
                 'slug' => "javascript:void(0)",                
                 'img_featured' => Vite::imageWeb('custom-website-benefits.png'),
                 'img_thumb' => Vite::imageWeb('custom-website-benefits.png'),
-                'author' => 'Sakil Mahmud',
+                'author' => 'Mamunur Rashid',
                 'date' => Carbon::now()->format('d M Y'),
                 'category' => 'software',
                 'tags' => 'website, crm, custom website, website development, crm customization'
@@ -35,7 +35,7 @@ class BlogService
                 'slug' => "javascript:void(0)",                
                 'img_featured' => Vite::imageWeb('what-is-web-dev.png'),
                 'img_thumb' => Vite::imageWeb('what-is-web-dev.png'),
-                'author' => 'Khalid Hasan',
+                'author' => 'Mamunur Rashid',
                 'date' => Carbon::now()->subDays(2)->format('d M Y'),
                 'category' => 'software',
                 'tags' => 'website, crm, custom website, website development, crm customization'
